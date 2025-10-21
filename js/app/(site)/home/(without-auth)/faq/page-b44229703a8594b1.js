@@ -1,0 +1,286 @@
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+    [1616],
+    {
+        97829: function (e, t, s) {
+            Promise.resolve().then(s.bind(s, 40253));
+        },
+        40253: function (e, t, s) {
+            "use strict";
+            s.d(t, {
+                default: function () {
+                    return d;
+                },
+            });
+            var r = s(57437),
+                a = s(12443),
+                n = s(61994),
+                l = s(2265);
+            let o = [
+                { category: "top", title: "질문 TOP" },
+                { category: "all", title: "전체" },
+                { category: "ready", title: "준비 \xb7 제작" },
+                { category: "edit", title: "디자인 \xb7 꾸미기" },
+                { category: "analysis", title: "참석의사 \xb7 분석" },
+                { category: "share", title: "공유 \xb7 전달하기" },
+                { category: "event", title: "이벤트 \xb7 혜택" },
+                { category: "partner", title: "파트너 제휴" },
+                { category: "etc", title: "그 외 질문" },
+                { category: "search", title: "검색 결과" },
+            ];
+            function d(e) {
+                let { faqContent: t, isDropdown: s } = e,
+                    [a, d] = (0, l.useState)("top"),
+                    [x, u] = (0, l.useState)(""),
+                    h = function () {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+                        return e.replace(/\s+/g, "");
+                    },
+                    m = e =>
+                        e.trim()
+                            ? t.filter(t => {
+                                  let s = h(e.toLowerCase()),
+                                      r = h((t.title || "").toLowerCase()),
+                                      a = h((t.content || "").toLowerCase()),
+                                      n = (t.title || "").toLowerCase().includes(e.toLowerCase()) || (t.content || "").toLowerCase().includes(e.toLowerCase()),
+                                      l = r.includes(s) || a.includes(s);
+                                  return n || l;
+                              })
+                            : [],
+                    p = m(x).length,
+                    f = "search" === a ? m(x) : "all" === a ? t : t.filter(e => !!e.category && e.category.includes(a));
+                return (0, r.jsxs)("div", {
+                    children: [
+                        (0, r.jsxs)("div", {
+                            className: "relative",
+                            children: [
+                                (0, r.jsx)("div", {
+                                    className: "absolute left-6 top-1/2 -translate-y-1/2 text-tog-999",
+                                    children: (0, r.jsxs)("svg", {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        width: "16",
+                                        height: "16",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        children: [(0, r.jsx)("circle", { cx: "11", cy: "11", r: "8" }), (0, r.jsx)("line", { x1: "21", y1: "21", x2: "16.65", y2: "16.65" })],
+                                    }),
+                                }),
+                                (0, r.jsx)("input", {
+                                    type: "text",
+                                    className:
+                                        "flex w-full border border-input px-5 py-3 pl-14 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 focus-visible:ring-0 focus-visible:ring-offset-0 h-12 md:h-14 shadow-md rounded-3xl border-none placeholder:text-tog-999",
+                                    placeholder: "궁금한 키워드 검색",
+                                    value: x,
+                                    onChange: e => {
+                                        let t = e.target.value;
+                                        (u(t), t.trim() ? d("search") : "search" === a && d("top"));
+                                    },
+                                }),
+                            ],
+                        }),
+                        (0, r.jsxs)("div", {
+                            className: (0, n.Z)("flex w-full justify-between gap-x-4", { "py-4": s, "py-4 md:py-12": !s }),
+                            children: [
+                                (0, r.jsxs)("div", {
+                                    className: "flex flex-wrap gap-2",
+                                    children: [
+                                        o.map(e => {
+                                            if ("search" !== e.category)
+                                                return (0, r.jsx)(i, { category: e.category, title: e.title, selectedCategory: a, setSelectedCategory: d, isDropdown: s }, e.category);
+                                        }),
+                                        (0, r.jsx)("div", {
+                                            className: "flex md:hidden",
+                                            children: (0, r.jsx)(i, { category: "search", title: "검색 결과 (".concat(p, ")"), selectedCategory: a, setSelectedCategory: d, isDropdown: s }),
+                                        }),
+                                    ],
+                                }),
+                                (0, r.jsx)("div", {
+                                    className: "hidden md:flex justify-end",
+                                    children: (0, r.jsx)(i, { category: "search", title: "검색 결과 (".concat(p, ")"), selectedCategory: a, setSelectedCategory: d, isDropdown: s }),
+                                }),
+                            ],
+                        }),
+                        (0, r.jsx)("div", {
+                            className: "flex flex-col gap-y-2.5",
+                            children:
+                                f.length > 0
+                                    ? f.map(e => (0, r.jsx)(c, { ...e, searchKeyword: "search" === a ? x : "", isDropdown: s }, e.id))
+                                    : (0, r.jsx)("div", {
+                                          className: "px-6 py-20 bg-white rounded-lg text-center text-tog-999",
+                                          children: "search" === a ? "검색 결과가 없습니다." : "해당 카테고리에 등록된 질문이 없습니다.",
+                                      }),
+                        }),
+                    ],
+                });
+            }
+            let i = e => {
+                    let { category: t, title: s, selectedCategory: a, setSelectedCategory: l, isDropdown: o } = e;
+                    return (0, r.jsx)("button", {
+                        onClick: () => l(t),
+                        className: (0, n.Z)("w-fit shadow-md rounded-full border-none font-medium", {
+                            "bg-tog-pink text-tog-444": a === t,
+                            "bg-white text-tog-999": a !== t,
+                            "h-8 px-3 text-xs": o,
+                            "h-8 px-4 md:h-12 md:px-5 text-xs md:text-base": !o,
+                        }),
+                        children: (0, r.jsx)("span", { className: "whitespace-nowrap text-center", children: s }),
+                    });
+                },
+                c = e => {
+                    let { id: t, title: s, content: l, imageUrl: o, searchKeyword: d, isDropdown: i } = e,
+                        c = function () {
+                            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+                                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if (!t || !e) return e;
+                            e.replace(/<[^>]*>/g, "");
+                            let s = e,
+                                r = RegExp("(".concat(t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), ")"), "gi"),
+                                a = [];
+                            return (
+                                e.split(/(<[^>]*>)/).forEach(e => {
+                                    e.startsWith("<") || e.endsWith(">") || a.push(e);
+                                }),
+                                a.forEach(e => {
+                                    if (e.match(r)) {
+                                        let t = e.replace(r, '<span class="bg-yellow-100">$1</span>');
+                                        s = s.replace(e, t);
+                                    }
+                                }),
+                                s
+                            );
+                        },
+                        x = d ? c(s || "", d) : s || "",
+                        u = d ? c(l || "", d) : l || "";
+                    return (0, r.jsx)(a.UQ, {
+                        type: "single",
+                        collapsible: !0,
+                        className: "w-full shadow-md rounded-3xl",
+                        children: (0, r.jsx)(a.Qd, {
+                            value: t || "",
+                            className: "relative border-none overflow-hidden",
+                            children: (0, r.jsxs)("div", {
+                                className: "text-sm md:text-base rounded-3xl [&[data-state=open]]:rounded-b-none [&[data-state=open]>*]:rounded-b-none [&[data-state=closed]]:rounded-3xl",
+                                children: [
+                                    (0, r.jsx)(a.o4, {
+                                        className: (0, n.Z)(
+                                            "text-left px-4 md:px-8 py-4 bg-white rounded-3xl [&[data-state=open]]:rounded-b-none [&[data-state=open]]:rounded-t-3xl flex justify-between items-center hover:rounded-3xl",
+                                            { "py-4 [&>svg]:w-2 [&>svg]:h-2": i, "py-4 md:py-5 [&>svg]:w-3 [&>svg]:h-3": !i }
+                                        ),
+                                        children: (0, r.jsxs)("div", {
+                                            className: "flex items-center flex-1 overflow-hidden pr-4",
+                                            children: [
+                                                (0, r.jsx)("div", { className: "mr-2 text-tog-pink-dark flex-shrink-0", children: "Q" }),
+                                                (0, r.jsx)("span", { className: (0, n.Z)("font-normal", { "text-sm": i, "text-sm md:text-base": !i }), dangerouslySetInnerHTML: { __html: x } }),
+                                            ],
+                                        }),
+                                    }),
+                                    (0, r.jsx)(a.vF, {
+                                        className: "bg-[#FBFAF9] rounded-b-3xl faq-content max-w-full overflow-hidden",
+                                        children: (0, r.jsxs)("div", {
+                                            className: "p-7 md:p-9",
+                                            children: [
+                                                (0, r.jsx)("div", { className: (0, n.Z)("whitespace-pre-wrap", { "text-sm": i, "text-sm md:text-base": !i }), dangerouslySetInnerHTML: { __html: u } }),
+                                                o &&
+                                                    (0, r.jsx)("div", {
+                                                        className: "rounded-md py-4 md:py-6 max-w-full overflow-hidden",
+                                                        children: (0, r.jsx)("img", { src: o, alt: s || "", className: "w-full h-auto object-contain rounded-md" }),
+                                                    }),
+                                            ],
+                                        }),
+                                    }),
+                                ],
+                            }),
+                        }),
+                    });
+                };
+        },
+        12443: function (e, t, s) {
+            "use strict";
+            s.d(t, {
+                UQ: function () {
+                    return d;
+                },
+                vF: function () {
+                    return x;
+                },
+                Qd: function () {
+                    return i;
+                },
+                o4: function () {
+                    return c;
+                },
+            });
+            var r = s(57437),
+                a = s(2265),
+                n = s(13134),
+                l = s(94508);
+            function o(e) {
+                let { color: t } = e;
+                return (0, r.jsx)("svg", {
+                    width: 14,
+                    height: 8,
+                    viewBox: "0 0 14 8",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    className: "transition-transform duration-200",
+                    children: (0, r.jsx)("path", { d: "M1 1L6.29289 6.68539C6.68342 7.10487 7.31658 7.10487 7.70711 6.68539L13 1", stroke: t, strokeLinecap: "round" }),
+                });
+            }
+            let d = n.fC,
+                i = a.forwardRef((e, t) => {
+                    let { className: s, ...a } = e;
+                    return (0, r.jsx)(n.ck, { ref: t, className: (0, l.cn)("border-b", s), ...a });
+                });
+            i.displayName = "AccordionItem";
+            let c = a.forwardRef((e, t) => {
+                let { className: s, children: a, ...d } = e;
+                return (0, r.jsx)(n.h4, {
+                    className: "flex",
+                    children: (0, r.jsxs)(n.xz, {
+                        ref: t,
+                        className: (0, l.cn)(
+                            "flex flex-1 items-center justify-between py-4 font-medium shadow-sm transition-all hover:rounded-md hover:bg-[#FFF5F6] [&[data-state=open]>svg]:rotate-180",
+                            s
+                        ),
+                        ...d,
+                        children: [a, "second" === d.about ? (0, r.jsx)(o, { color: "#999" }) : (0, r.jsx)(o, { color: "#444" })],
+                    }),
+                });
+            });
+            c.displayName = n.xz.displayName;
+            let x = a.forwardRef((e, t) => {
+                let { className: s, children: a, ...o } = e;
+                return (0, r.jsx)(n.VY, {
+                    ref: t,
+                    className: "overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+                    ...o,
+                    children: (0, r.jsx)("div", { className: (0, l.cn)("pb-4 pt-0", s), children: a }),
+                });
+            });
+            x.displayName = n.VY.displayName;
+        },
+        94508: function (e, t, s) {
+            "use strict";
+            s.d(t, {
+                cn: function () {
+                    return n;
+                },
+            });
+            var r = s(61994),
+                a = s(53335);
+            function n() {
+                for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
+                return (0, a.m6)((0, r.W)(t));
+            }
+        },
+    },
+    function (e) {
+        (e.O(0, [6137, 9737, 3134, 2971, 2117, 1744], function () {
+            return e((e.s = 97829));
+        }),
+            (_N_E = e.O()));
+    },
+]);

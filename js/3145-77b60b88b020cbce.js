@@ -12,13 +12,13 @@
                 i = n.n(r);
         },
         65878: function (e, t, n) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "Image", {
                     enumerable: !0,
                     get: function () {
                         return v;
                     },
-                }));
+                });
             let r = n(47043),
                 i = n(53099),
                 o = n(57437),
@@ -34,7 +34,7 @@
                 g = {
                     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
                     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-                    path: "/_next/image",
+                    path: "/image",
                     loader: "default",
                     dangerouslyAllowSVG: !1,
                     unoptimized: !1,
@@ -62,10 +62,10 @@
                                         isPropagationStopped: () => i,
                                         persist: () => {},
                                         preventDefault: () => {
-                                            ((r = !0), t.preventDefault());
+                                            (r = !0), t.preventDefault();
                                         },
                                         stopPropagation: () => {
-                                            ((i = !0), t.stopPropagation());
+                                            (i = !0), t.stopPropagation();
                                         },
                                     });
                                 }
@@ -116,7 +116,7 @@
                     src: n,
                     ref: (0, a.useCallback)(
                         e => {
-                            (t && ("function" == typeof t ? t(e) : "object" == typeof t && (t.current = e)), e && (C && (e.src = e.src), e.complete && m(e, p, v, _, w, y, j)));
+                            t && ("function" == typeof t ? t(e) : "object" == typeof t && (t.current = e)), e && (C && (e.src = e.src), e.complete && m(e, p, v, _, w, y, j));
                         },
                         [n, p, v, _, w, C, y, j, t]
                     ),
@@ -124,7 +124,7 @@
                         m(e.currentTarget, p, v, _, w, y, j);
                     },
                     onError: e => {
-                        (S(!0), "empty" !== p && w(!0), C && C(e));
+                        S(!0), "empty" !== p && w(!0), C && C(e);
                     },
                 });
             });
@@ -179,13 +179,13 @@
                 (Object.defineProperty(t.default, "__esModule", { value: !0 }), Object.assign(t.default, t), (e.exports = t.default));
         },
         91436: function (e, t, n) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "AmpStateContext", {
                     enumerable: !0,
                     get: function () {
                         return r;
                     },
-                }));
+                });
             let r = n(47043)._(n(2265)).default.createContext({});
         },
         23964: function (e, t) {
@@ -193,23 +193,23 @@
                 let { ampFirst: t = !1, hybrid: n = !1, hasQuery: r = !1 } = void 0 === e ? {} : e;
                 return t || (n && r);
             }
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "isInAmpMode", {
                     enumerable: !0,
                     get: function () {
                         return n;
                     },
-                }));
+                });
         },
         55346: function (e, t, n) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "getImgProps", {
                     enumerable: !0,
                     get: function () {
                         return l;
                     },
                 }),
-                n(31765));
+                n(31765);
             let r = n(96496),
                 i = n(90128);
             function o(e) {
@@ -259,7 +259,7 @@
                 }
                 if (void 0 === N) throw Error("images.loaderFile detected but the file is missing default export.\nRead more: https://nextjs.org/docs/messages/invalid-images-config");
                 let T = A.loader || N;
-                (delete A.loader, delete A.srcSet);
+                delete A.loader, delete A.srcSet;
                 let F = "__next_img_default" in T;
                 if (F) {
                     if ("custom" === l.loader) throw Error('Image with src "' + d + '" is missing "loader" prop.\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader');
@@ -298,14 +298,14 @@
                                 let t = W / e.height;
                                 B = Math.round(e.width * t);
                             }
-                        } else ((B = e.width), (W = e.height));
+                        } else (B = e.width), (W = e.height);
                     }
                 }
                 let V = !p && ("lazy" === g || void 0 === g);
-                ((!(d = "string" == typeof d ? d : G) || d.startsWith("data:") || d.startsWith("blob:")) && ((c = !0), (V = !1)),
+                (!(d = "string" == typeof d ? d : G) || d.startsWith("data:") || d.startsWith("blob:")) && ((c = !0), (V = !1)),
                     l.unoptimized && (c = !0),
                     F && d.endsWith(".svg") && !l.dangerouslyAllowSVG && (c = !0),
-                    p && (P = "high"));
+                    p && (P = "high");
                 let H = a(h),
                     q = Object.assign(
                         v ? { position: "absolute", height: "100%", width: "100%", left: 0, top: 0, right: 0, bottom: 0, objectFit: E, objectPosition: M } : {},
@@ -316,10 +316,10 @@
                         L || "empty" === x
                             ? null
                             : "blur" === x
-                              ? 'url("data:image/svg+xml;charset=utf-8,' +
-                                (0, r.getImageBlurSvg)({ widthInt: B, heightInt: W, blurWidth: u, blurHeight: s, blurDataURL: C || "", objectFit: q.objectFit }) +
-                                '")'
-                              : 'url("' + x + '")',
+                            ? 'url("data:image/svg+xml;charset=utf-8,' +
+                              (0, r.getImageBlurSvg)({ widthInt: B, heightInt: W, blurWidth: u, blurHeight: s, blurDataURL: C || "", objectFit: q.objectFit }) +
+                              '")'
+                            : 'url("' + x + '")',
                     J = $ ? { backgroundSize: q.objectFit || "cover", backgroundPosition: q.objectPosition || "50% 50%", backgroundRepeat: "no-repeat", backgroundImage: $ } : {},
                     Y = (function (e) {
                         let { config: t, src: n, unoptimized: r, width: i, quality: o, sizes: a, loader: l } = e;
@@ -364,7 +364,7 @@
             }
         },
         38293: function (e, t, n) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 (function (e, t) {
                     for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
                 })(t, {
@@ -374,7 +374,7 @@
                     defaultHead: function () {
                         return f;
                     },
-                }));
+                });
             let r = n(47043),
                 i = n(53099),
                 o = n(57437),
@@ -386,14 +386,14 @@
             function f(e) {
                 void 0 === e && (e = !1);
                 let t = [(0, o.jsx)("meta", { charSet: "utf-8" })];
-                return (e || t.push((0, o.jsx)("meta", { name: "viewport", content: "width=device-width" })), t);
+                return e || t.push((0, o.jsx)("meta", { name: "viewport", content: "width=device-width" })), t;
             }
             function c(e, t) {
                 return "string" == typeof t || "number" == typeof t
                     ? e
                     : t.type === a.default.Fragment
-                      ? e.concat(a.default.Children.toArray(t.props.children).reduce((e, t) => ("string" == typeof t || "number" == typeof t ? e : e.concat(t)), []))
-                      : e.concat(t);
+                    ? e.concat(a.default.Children.toArray(t.props.children).reduce((e, t) => ("string" == typeof t || "number" == typeof t ? e : e.concat(t)), []))
+                    : e.concat(t);
             }
             n(31765);
             let p = ["name", "httpEquiv", "charSet", "itemProp"];
@@ -444,7 +444,7 @@
                         let r = e.key || t;
                         if (!n && "link" === e.type && e.props.href && ["https://fonts.googleapis.com/css", "https://use.typekit.net/"].some(t => e.props.href.startsWith(t))) {
                             let t = { ...(e.props || {}) };
-                            return ((t["data-href"] = t.href), (t.href = void 0), (t["data-optimized-fonts"] = !0), a.default.cloneElement(e, t));
+                            return (t["data-href"] = t.href), (t.href = void 0), (t["data-optimized-fonts"] = !0), a.default.cloneElement(e, t);
                         }
                         return a.default.cloneElement(e, { key: r });
                     });
@@ -475,28 +475,28 @@
                     "'/%3E%3C/svg%3E"
                 );
             }
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "getImageBlurSvg", {
                     enumerable: !0,
                     get: function () {
                         return n;
                     },
-                }));
+                });
         },
         62589: function (e, t, n) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "ImageConfigContext", {
                     enumerable: !0,
                     get: function () {
                         return o;
                     },
-                }));
+                });
             let r = n(47043)._(n(2265)),
                 i = n(90128),
                 o = r.default.createContext(i.imageConfigDefault);
         },
         90128: function (e, t) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 (function (e, t) {
                     for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
                 })(t, {
@@ -506,12 +506,12 @@
                     imageConfigDefault: function () {
                         return r;
                     },
-                }));
+                });
             let n = ["default", "imgix", "cloudinary", "akamai", "custom"],
                 r = {
                     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
                     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-                    path: "/_next/image",
+                    path: "/image",
                     loader: "default",
                     loaderFile: "",
                     domains: [],
@@ -527,7 +527,7 @@
                 };
         },
         48461: function (e, t, n) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 (function (e, t) {
                     for (var n in t) Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
                 })(t, {
@@ -537,7 +537,7 @@
                     getImageProps: function () {
                         return l;
                     },
-                }));
+                });
             let r = n(47043),
                 i = n(55346),
                 o = n(65878),
@@ -548,7 +548,7 @@
                     imgConf: {
                         deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
                         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-                        path: "/_next/image",
+                        path: "/image",
                         loader: "default",
                         dangerouslyAllowSVG: !1,
                         unoptimized: !1,
@@ -564,24 +564,24 @@
                 let { config: t, src: n, width: r, quality: i } = e;
                 return t.path + "?url=" + encodeURIComponent(n) + "&w=" + r + "&q=" + (i || 75);
             }
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "default", {
                     enumerable: !0,
                     get: function () {
                         return r;
                     },
                 }),
-                (n.__next_img_default = !0));
+                (n.__next_img_default = !0);
             let r = n;
         },
         17421: function (e, t, n) {
-            (Object.defineProperty(t, "__esModule", { value: !0 }),
+            Object.defineProperty(t, "__esModule", { value: !0 }),
                 Object.defineProperty(t, "default", {
                     enumerable: !0,
                     get: function () {
                         return l;
                     },
-                }));
+                });
             let r = n(2265),
                 i = "undefined" == typeof window,
                 o = i ? () => {} : r.useLayoutEffect,
@@ -596,7 +596,7 @@
                 }
                 if (i) {
                     var u;
-                    (null == t || null == (u = t.mountedInstances) || u.add(e.children), l());
+                    null == t || null == (u = t.mountedInstances) || u.add(e.children), l();
                 }
                 return (
                     o(() => {

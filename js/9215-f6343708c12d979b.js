@@ -3,10 +3,10 @@
     {
         70350: function (t, e) {
             var n = function (t) {
-                    ((this.message = t),
+                    (this.message = t),
                         (this.toString = function () {
                             return this.constructor.name + ": " + this.message;
-                        }));
+                        });
                 },
                 r = function (t) {
                     this.firstWeekDay = t || 0;
@@ -25,8 +25,8 @@
                         a = 0,
                         l = this.weekStartDate(new Date(t, e, 1));
                     do {
-                        for (a = 0; a < 7; a++) (s.push(r ? r(l) : l), (l = new Date(l.getTime())).setDate(l.getDate() + 1));
-                        (o.push(i ? i(s) : s), (s = []));
+                        for (a = 0; a < 7; a++) s.push(r ? r(l) : l), (l = new Date(l.getTime())).setDate(l.getDate() + 1);
+                        o.push(i ? i(s) : s), (s = []);
                     } while (l.getMonth() <= e && l.getFullYear() === t);
                     return o;
                 },
@@ -38,7 +38,7 @@
                 monthText: function (t, e) {
                     if (void 0 === t) {
                         var n = new Date();
-                        ((t = n.getFullYear()), (e = n.getMonth()));
+                        (t = n.getFullYear()), (e = n.getMonth());
                     }
                     return this.monthDates(
                         t,
@@ -98,7 +98,7 @@
             let r = t => parseFloat(t.toFixed(1));
             class i {
                 constructor(t, e) {
-                    ((this.days = () => r(this.difference / 864e5)),
+                    (this.days = () => r(this.difference / 864e5)),
                         (this.weeks = () => r(this.days() / 7)),
                         (this.hours = () => r(this.difference / 36e5)),
                         (this.minutes = () => r(this.difference / 6e4)),
@@ -120,7 +120,7 @@
                         (this.endOfYear = t => new Date(t.getFullYear() + 1, 0, 0)),
                         (this.date1 = t),
                         (this.date2 = e),
-                        (this.difference = Math.floor(t.getTime() - e.getTime())));
+                        (this.difference = Math.floor(t.getTime() - e.getTime()));
                 }
             }
             Date.diff = (t, e) => new i(t, e);
@@ -157,43 +157,43 @@
                 }
             }
             function a(t, n, l) {
-                (((l = l || {}).arrayMerge = l.arrayMerge || i), (l.isMergeableObject = l.isMergeableObject || e), (l.cloneUnlessOtherwiseSpecified = r));
+                ((l = l || {}).arrayMerge = l.arrayMerge || i), (l.isMergeableObject = l.isMergeableObject || e), (l.cloneUnlessOtherwiseSpecified = r);
                 var c,
                     u,
                     h = Array.isArray(n);
                 return h !== Array.isArray(t)
                     ? r(n, l)
                     : h
-                      ? l.arrayMerge(t, n, l)
-                      : ((u = {}),
-                        (c = l).isMergeableObject(t) &&
-                            o(t).forEach(function (e) {
-                                u[e] = r(t[e], c);
-                            }),
-                        o(n).forEach(function (e) {
-                            (!s(t, e) || (Object.hasOwnProperty.call(t, e) && Object.propertyIsEnumerable.call(t, e))) &&
-                                (s(t, e) && c.isMergeableObject(n[e])
-                                    ? (u[e] = (function (t, e) {
-                                          if (!e.customMerge) return a;
-                                          var n = e.customMerge(t);
-                                          return "function" == typeof n ? n : a;
-                                      })(e, c)(t[e], n[e], c))
-                                    : (u[e] = r(n[e], c)));
-                        }),
-                        u);
+                    ? l.arrayMerge(t, n, l)
+                    : ((u = {}),
+                      (c = l).isMergeableObject(t) &&
+                          o(t).forEach(function (e) {
+                              u[e] = r(t[e], c);
+                          }),
+                      o(n).forEach(function (e) {
+                          (!s(t, e) || (Object.hasOwnProperty.call(t, e) && Object.propertyIsEnumerable.call(t, e))) &&
+                              (s(t, e) && c.isMergeableObject(n[e])
+                                  ? (u[e] = (function (t, e) {
+                                        if (!e.customMerge) return a;
+                                        var n = e.customMerge(t);
+                                        return "function" == typeof n ? n : a;
+                                    })(e, c)(t[e], n[e], c))
+                                  : (u[e] = r(n[e], c)));
+                      }),
+                      u);
             }
-            ((a.all = function (t, e) {
+            (a.all = function (t, e) {
                 if (!Array.isArray(t)) throw Error("first argument should be an array");
                 return t.reduce(function (t, n) {
                     return a(t, n, e);
                 }, {});
             }),
-                (t.exports = a));
+                (t.exports = a);
         },
         99504: function (t, e) {
             "use strict";
             var n, r;
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
+            Object.defineProperty(e, "__esModule", { value: !0 }),
                 (e.Doctype = e.CDATA = e.Tag = e.Style = e.Script = e.Comment = e.Directive = e.Text = e.Root = e.isTag = e.ElementType = void 0),
                 ((r = n = e.ElementType || (e.ElementType = {})).Root = "root"),
                 (r.Text = "text"),
@@ -215,7 +215,7 @@
                 (e.Style = n.Style),
                 (e.Tag = n.Tag),
                 (e.CDATA = n.CDATA),
-                (e.Doctype = n.Doctype));
+                (e.Doctype = n.Doctype);
         },
         43390: function (t, e, n) {
             "use strict";
@@ -225,31 +225,31 @@
                         ? function (t, e, n, r) {
                               void 0 === r && (r = n);
                               var i = Object.getOwnPropertyDescriptor(e, n);
-                              ((!i || ("get" in i ? !e.__esModule : i.writable || i.configurable)) &&
+                              (!i || ("get" in i ? !e.__esModule : i.writable || i.configurable)) &&
                                   (i = {
                                       enumerable: !0,
                                       get: function () {
                                           return e[n];
                                       },
                                   }),
-                                  Object.defineProperty(t, r, i));
+                                  Object.defineProperty(t, r, i);
                           }
                         : function (t, e, n, r) {
-                              (void 0 === r && (r = n), (t[r] = e[n]));
+                              void 0 === r && (r = n), (t[r] = e[n]);
                           }),
                 i =
                     (this && this.__exportStar) ||
                     function (t, e) {
                         for (var n in t) "default" === n || Object.prototype.hasOwnProperty.call(e, n) || r(e, t, n);
                     };
-            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.DomHandler = void 0));
+            Object.defineProperty(e, "__esModule", { value: !0 }), (e.DomHandler = void 0);
             var o = n(99504),
                 s = n(8471);
             i(n(8471), e);
             var a = { withStartIndices: !1, withEndIndices: !1, xmlMode: !1 },
                 l = (function () {
                     function t(t, e, n) {
-                        ((this.dom = []),
+                        (this.dom = []),
                             (this.root = new s.Document(this.dom)),
                             (this.done = !1),
                             (this.tagStack = [this.root]),
@@ -259,14 +259,14 @@
                             "object" == typeof t && ((e = t), (t = void 0)),
                             (this.callback = null != t ? t : null),
                             (this.options = null != e ? e : a),
-                            (this.elementCB = null != n ? n : null));
+                            (this.elementCB = null != n ? n : null);
                     }
                     return (
                         (t.prototype.onparserinit = function (t) {
                             this.parser = t;
                         }),
                         (t.prototype.onreset = function () {
-                            ((this.dom = []), (this.root = new s.Document(this.dom)), (this.done = !1), (this.tagStack = [this.root]), (this.lastNode = null), (this.parser = null));
+                            (this.dom = []), (this.root = new s.Document(this.dom)), (this.done = !1), (this.tagStack = [this.root]), (this.lastNode = null), (this.parser = null);
                         }),
                         (t.prototype.onend = function () {
                             this.done || ((this.done = !0), (this.parser = null), this.handleCallback(null));
@@ -277,19 +277,19 @@
                         (t.prototype.onclosetag = function () {
                             this.lastNode = null;
                             var t = this.tagStack.pop();
-                            (this.options.withEndIndices && (t.endIndex = this.parser.endIndex), this.elementCB && this.elementCB(t));
+                            this.options.withEndIndices && (t.endIndex = this.parser.endIndex), this.elementCB && this.elementCB(t);
                         }),
                         (t.prototype.onopentag = function (t, e) {
                             var n = this.options.xmlMode ? o.ElementType.Tag : void 0,
                                 r = new s.Element(t, e, void 0, n);
-                            (this.addNode(r), this.tagStack.push(r));
+                            this.addNode(r), this.tagStack.push(r);
                         }),
                         (t.prototype.ontext = function (t) {
                             var e = this.lastNode;
-                            if (e && e.type === o.ElementType.Text) ((e.data += t), this.options.withEndIndices && (e.endIndex = this.parser.endIndex));
+                            if (e && e.type === o.ElementType.Text) (e.data += t), this.options.withEndIndices && (e.endIndex = this.parser.endIndex);
                             else {
                                 var n = new s.Text(t);
-                                (this.addNode(n), (this.lastNode = n));
+                                this.addNode(n), (this.lastNode = n);
                             }
                         }),
                         (t.prototype.oncomment = function (t) {
@@ -298,7 +298,7 @@
                                 return;
                             }
                             var e = new s.Comment(t);
-                            (this.addNode(e), (this.lastNode = e));
+                            this.addNode(e), (this.lastNode = e);
                         }),
                         (t.prototype.oncommentend = function () {
                             this.lastNode = null;
@@ -306,7 +306,7 @@
                         (t.prototype.oncdatastart = function () {
                             var t = new s.Text(""),
                                 e = new s.CDATA([t]);
-                            (this.addNode(e), (t.parent = e), (this.lastNode = t));
+                            this.addNode(e), (t.parent = e), (this.lastNode = t);
                         }),
                         (t.prototype.oncdataend = function () {
                             this.lastNode = null;
@@ -322,17 +322,17 @@
                         (t.prototype.addNode = function (t) {
                             var e = this.tagStack[this.tagStack.length - 1],
                                 n = e.children[e.children.length - 1];
-                            (this.options.withStartIndices && (t.startIndex = this.parser.startIndex),
+                            this.options.withStartIndices && (t.startIndex = this.parser.startIndex),
                                 this.options.withEndIndices && (t.endIndex = this.parser.endIndex),
                                 e.children.push(t),
                                 n && ((t.prev = n), (n.next = t)),
                                 (t.parent = e),
-                                (this.lastNode = null));
+                                (this.lastNode = null);
                         }),
                         t
                     );
                 })();
-            ((e.DomHandler = l), (e.default = l));
+            (e.DomHandler = l), (e.default = l);
         },
         8471: function (t, e, n) {
             "use strict";
@@ -355,7 +355,7 @@
                         function n() {
                             this.constructor = t;
                         }
-                        (r(t, e), (t.prototype = null === e ? Object.create(e) : ((n.prototype = e.prototype), new n())));
+                        r(t, e), (t.prototype = null === e ? Object.create(e) : ((n.prototype = e.prototype), new n()));
                     }),
                 o =
                     (this && this.__assign) ||
@@ -367,7 +367,7 @@
                                 return t;
                             }).apply(this, arguments);
                     };
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
+            Object.defineProperty(e, "__esModule", { value: !0 }),
                 (e.cloneNode =
                     e.hasChildren =
                     e.isDocument =
@@ -385,11 +385,11 @@
                     e.Text =
                     e.DataNode =
                     e.Node =
-                        void 0));
+                        void 0);
             var s = n(99504),
                 a = (function () {
                     function t() {
-                        ((this.parent = null), (this.prev = null), (this.next = null), (this.startIndex = null), (this.endIndex = null));
+                        (this.parent = null), (this.prev = null), (this.next = null), (this.startIndex = null), (this.endIndex = null);
                     }
                     return (
                         Object.defineProperty(t.prototype, "parentNode", {
@@ -423,7 +423,7 @@
                             configurable: !0,
                         }),
                         (t.prototype.cloneNode = function (t) {
-                            return (void 0 === t && (t = !1), S(this, t));
+                            return void 0 === t && (t = !1), S(this, t);
                         }),
                         t
                     );
@@ -432,7 +432,7 @@
             var l = (function (t) {
                 function e(e) {
                     var n = t.call(this) || this;
-                    return ((n.data = e), n);
+                    return (n.data = e), n;
                 }
                 return (
                     i(e, t),
@@ -453,7 +453,7 @@
             var c = (function (t) {
                 function e() {
                     var e = (null !== t && t.apply(this, arguments)) || this;
-                    return ((e.type = s.ElementType.Text), e);
+                    return (e.type = s.ElementType.Text), e;
                 }
                 return (
                     i(e, t),
@@ -471,7 +471,7 @@
             var u = (function (t) {
                 function e() {
                     var e = (null !== t && t.apply(this, arguments)) || this;
-                    return ((e.type = s.ElementType.Comment), e);
+                    return (e.type = s.ElementType.Comment), e;
                 }
                 return (
                     i(e, t),
@@ -489,7 +489,7 @@
             var h = (function (t) {
                 function e(e, n) {
                     var r = t.call(this, n) || this;
-                    return ((r.name = e), (r.type = s.ElementType.Directive), r);
+                    return (r.name = e), (r.type = s.ElementType.Directive), r;
                 }
                 return (
                     i(e, t),
@@ -507,7 +507,7 @@
             var d = (function (t) {
                 function e(e) {
                     var n = t.call(this) || this;
-                    return ((n.children = e), n);
+                    return (n.children = e), n;
                 }
                 return (
                     i(e, t),
@@ -543,7 +543,7 @@
             var p = (function (t) {
                 function e() {
                     var e = (null !== t && t.apply(this, arguments)) || this;
-                    return ((e.type = s.ElementType.CDATA), e);
+                    return (e.type = s.ElementType.CDATA), e;
                 }
                 return (
                     i(e, t),
@@ -561,7 +561,7 @@
             var f = (function (t) {
                 function e() {
                     var e = (null !== t && t.apply(this, arguments)) || this;
-                    return ((e.type = s.ElementType.Root), e);
+                    return (e.type = s.ElementType.Root), e;
                 }
                 return (
                     i(e, t),
@@ -578,9 +578,9 @@
             e.Document = f;
             var m = (function (t) {
                 function e(e, n, r, i) {
-                    (void 0 === r && (r = []), void 0 === i && (i = "script" === e ? s.ElementType.Script : "style" === e ? s.ElementType.Style : s.ElementType.Tag));
+                    void 0 === r && (r = []), void 0 === i && (i = "script" === e ? s.ElementType.Script : "style" === e ? s.ElementType.Style : s.ElementType.Tag);
                     var o = t.call(this, r) || this;
-                    return ((o.name = e), (o.attribs = n), (o.type = i), o);
+                    return (o.name = e), (o.attribs = n), (o.type = i), o;
                 }
                 return (
                     i(e, t),
@@ -645,33 +645,33 @@
                     var n,
                         r = e ? k(t.children) : [],
                         i = new m(t.name, o({}, t.attribs), r);
-                    (r.forEach(function (t) {
+                    r.forEach(function (t) {
                         return (t.parent = i);
                     }),
                         null != t.namespace && (i.namespace = t.namespace),
                         t["x-attribsNamespace"] && (i["x-attribsNamespace"] = o({}, t["x-attribsNamespace"])),
                         t["x-attribsPrefix"] && (i["x-attribsPrefix"] = o({}, t["x-attribsPrefix"])),
-                        (n = i));
+                        (n = i);
                 } else if (y(t)) {
                     var r = e ? k(t.children) : [],
                         s = new p(r);
-                    (r.forEach(function (t) {
+                    r.forEach(function (t) {
                         return (t.parent = s);
                     }),
-                        (n = s));
+                        (n = s);
                 } else if (x(t)) {
                     var r = e ? k(t.children) : [],
                         a = new f(r);
-                    (r.forEach(function (t) {
+                    r.forEach(function (t) {
                         return (t.parent = a);
                     }),
                         t["x-mode"] && (a["x-mode"] = t["x-mode"]),
-                        (n = a));
+                        (n = a);
                 } else if (w(t)) {
                     var l = new h(t.name, t.data);
-                    (null != t["x-name"] && ((l["x-name"] = t["x-name"]), (l["x-publicId"] = t["x-publicId"]), (l["x-systemId"] = t["x-systemId"])), (n = l));
+                    null != t["x-name"] && ((l["x-name"] = t["x-name"]), (l["x-publicId"] = t["x-publicId"]), (l["x-systemId"] = t["x-systemId"])), (n = l);
                 } else throw Error("Not implemented yet: ".concat(t.type));
-                return ((n.startIndex = t.startIndex), (n.endIndex = t.endIndex), null != t.sourceCodeLocation && (n.sourceCodeLocation = t.sourceCodeLocation), n);
+                return (n.startIndex = t.startIndex), (n.endIndex = t.endIndex), null != t.sourceCodeLocation && (n.sourceCodeLocation = t.sourceCodeLocation), n;
             }
             function k(t) {
                 for (
@@ -682,10 +682,10 @@
                     n < e.length;
                     n++
                 )
-                    ((e[n].prev = e[n - 1]), (e[n - 1].next = e[n]));
+                    (e[n].prev = e[n - 1]), (e[n - 1].next = e[n]);
                 return e;
             }
-            ((e.Element = m),
+            (e.Element = m),
                 (e.isTag = g),
                 (e.isCDATA = y),
                 (e.isText = v),
@@ -695,11 +695,11 @@
                 (e.hasChildren = function (t) {
                     return Object.prototype.hasOwnProperty.call(t, "children");
                 }),
-                (e.cloneNode = S));
+                (e.cloneNode = S);
         },
         63752: function (t, e) {
             "use strict";
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
+            Object.defineProperty(e, "__esModule", { value: !0 }),
                 (e.CASE_SENSITIVE_TAG_NAMES_MAP = e.CASE_SENSITIVE_TAG_NAMES = void 0),
                 (e.CASE_SENSITIVE_TAG_NAMES = [
                     "animateMotion",
@@ -735,8 +735,8 @@
                     "textPath",
                 ]),
                 (e.CASE_SENSITIVE_TAG_NAMES_MAP = e.CASE_SENSITIVE_TAG_NAMES.reduce(function (t, e) {
-                    return ((t[e.toLowerCase()] = e), t);
-                }, {})));
+                    return (t[e.toLowerCase()] = e), t;
+                }, {}));
         },
         15426: function (t, e) {
             "use strict";
@@ -758,7 +758,7 @@
             if ("function" == typeof h) {
                 var d = new h();
                 c = u = function (t, e) {
-                    return (e && (t = "<".concat(e, ">").concat(t, "</").concat(e, ">")), d.parseFromString(t, "text/html"));
+                    return e && (t = "<".concat(e, ">").concat(t, "</").concat(e, ">")), d.parseFromString(t, "text/html");
                 };
             }
             if ("object" == typeof document && document.implementation) {
@@ -766,16 +766,16 @@
                 c = function (t, e) {
                     if (e) {
                         var n = p.documentElement.querySelector(e);
-                        return (n && (n.innerHTML = t), p);
+                        return n && (n.innerHTML = t), p;
                     }
-                    return ((p.documentElement.innerHTML = t), p);
+                    return (p.documentElement.innerHTML = t), p;
                 };
             }
             var f = "object" == typeof document && document.createElement("template");
-            (f &&
+            f &&
                 f.content &&
                 (n = function (t) {
-                    return ((f.innerHTML = t), f.content.childNodes);
+                    return (f.innerHTML = t), f.content.childNodes;
                 }),
                 (e.default = function (t) {
                     var e,
@@ -804,7 +804,7 @@
                             var m = c(t, o).querySelector(o);
                             return m.childNodes;
                     }
-                }));
+                });
         },
         23082: function (t, e, n) {
             "use strict";
@@ -827,7 +827,7 @@
         },
         56373: function (t, e, n) {
             "use strict";
-            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.formatDOM = e.formatAttributes = void 0));
+            Object.defineProperty(e, "__esModule", { value: !0 }), (e.formatDOM = e.formatAttributes = void 0);
             var r = n(43390),
                 i = n(63752);
             function o(t) {
@@ -837,7 +837,7 @@
                 }
                 return e;
             }
-            ((e.formatAttributes = o),
+            (e.formatAttributes = o),
                 (e.formatDOM = function t(e, n, s) {
                     void 0 === n && (n = null);
                     for (var a, l = [], c = 0, u = e.length; c < u; c++) {
@@ -846,7 +846,7 @@
                             case 1:
                                 var d = (function (t) {
                                     var e;
-                                    return ((e = t = t.toLowerCase()), i.CASE_SENSITIVE_TAG_NAMES_MAP[e] || t);
+                                    return (e = t = t.toLowerCase()), i.CASE_SENSITIVE_TAG_NAMES_MAP[e] || t;
                                 })(h.nodeName);
                                 (a = new r.Element(d, o(h.attributes))).children = t("template" === d ? h.content.childNodes : h.childNodes, a);
                                 break;
@@ -860,13 +860,10 @@
                                 continue;
                         }
                         var p = l[c - 1] || null;
-                        (p && (p.next = a), (a.parent = n), (a.prev = p), (a.next = null), l.push(a));
+                        p && (p.next = a), (a.parent = n), (a.prev = p), (a.next = null), l.push(a);
                     }
-                    return (
-                        s && (((a = new r.ProcessingInstruction(s.substring(0, s.indexOf(" ")).toLowerCase(), s)).next = l[0] || null), (a.parent = n), l.unshift(a), l[1] && (l[1].prev = l[0])),
-                        l
-                    );
-                }));
+                    return s && (((a = new r.ProcessingInstruction(s.substring(0, s.indexOf(" ")).toLowerCase(), s)).next = l[0] || null), (a.parent = n), l.unshift(a), l[1] && (l[1].prev = l[0])), l;
+                });
         },
         17642: function (t, e, n) {
             "use strict";
@@ -904,7 +901,7 @@
                     }
                     i.PRESERVE_CUSTOM_ATTRIBUTES && (n[u] = h);
                 }
-                return ((0, i.setStyleProp)(t.style, n), n);
+                return (0, i.setStyleProp)(t.style, n), n;
             };
         },
         34471: function (t, e, n) {
@@ -938,7 +935,7 @@
                     if (i) {
                         var g = n.replace(m, f);
                         if (d(g)) {
-                            (p > 1 && (g = u(g, { key: g.key || f })), r.push(l(g, m, f)));
+                            p > 1 && (g = u(g, { key: g.key || f })), r.push(l(g, m, f));
                             continue;
                         }
                     }
@@ -964,7 +961,7 @@
                         default:
                             continue;
                     }
-                    (p > 1 && (v.key = f), r.push(l(h(m.name, v, b), m, f)));
+                    p > 1 && (v.key = f), r.push(l(h(m.name, v, b), m, f));
                 }
                 return 1 === r.length ? r[0] : r;
             };
@@ -976,7 +973,7 @@
                 function (t) {
                     return t && t.__esModule ? t : { default: t };
                 };
-            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.htmlToDOM = e.domToReact = e.attributesToProps = e.Text = e.ProcessingInstruction = e.Element = e.Comment = void 0));
+            Object.defineProperty(e, "__esModule", { value: !0 }), (e.htmlToDOM = e.domToReact = e.attributesToProps = e.Text = e.ProcessingInstruction = e.Element = e.Comment = void 0);
             var i = r(n(23082));
             e.htmlToDOM = i.default;
             var o = r(n(17642));
@@ -984,7 +981,7 @@
             var s = r(n(34471));
             e.domToReact = s.default;
             var a = n(43390);
-            (Object.defineProperty(e, "Comment", {
+            Object.defineProperty(e, "Comment", {
                 enumerable: !0,
                 get: function () {
                     return a.Comment;
@@ -1007,7 +1004,7 @@
                     get: function () {
                         return a.Text;
                     },
-                }));
+                });
             var l = { lowerCaseAttributeNames: !1 };
             e.default = function (t, e) {
                 if ("string" != typeof t) throw TypeError("First argument must be a string");
@@ -1021,8 +1018,8 @@
                 function (t) {
                     return t && t.__esModule ? t : { default: t };
                 };
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
-                (e.returnFirstArg = e.canTextBeChildOfNode = e.ELEMENTS_WITH_NO_TEXT_CHILDREN = e.PRESERVE_CUSTOM_ATTRIBUTES = e.setStyleProp = e.isCustomComponent = void 0));
+            Object.defineProperty(e, "__esModule", { value: !0 }),
+                (e.returnFirstArg = e.canTextBeChildOfNode = e.ELEMENTS_WITH_NO_TEXT_CHILDREN = e.PRESERVE_CUSTOM_ATTRIBUTES = e.setStyleProp = e.isCustomComponent = void 0);
             var i = n(2265),
                 o = r(n(95693)),
                 s = new Set(["annotation-xml", "color-profile", "font-face", "font-face-src", "font-face-uri", "font-face-format", "font-face-name", "missing-glyph"]);
@@ -1030,7 +1027,7 @@
                 return t.includes("-") ? !s.has(t) : !!(e && "string" == typeof e.is);
             };
             var a = { reactCompat: !0 };
-            ((e.setStyleProp = function (t, e) {
+            (e.setStyleProp = function (t, e) {
                 if ("string" == typeof t) {
                     if (!t.trim()) {
                         e.style = {};
@@ -1050,7 +1047,7 @@
                 }),
                 (e.returnFirstArg = function (t) {
                     return t;
-                }));
+                });
         },
         80662: function (t) {
             var e = /\/\*[^*]*\*+([^/*][^*]*\*+)*\//g,
@@ -1079,11 +1076,11 @@
                 function p() {
                     var t = { line: u, column: h };
                     return function (e) {
-                        return ((e.position = new f(t)), y(r), e);
+                        return (e.position = new f(t)), y(r), e;
                     };
                 }
                 function f(t) {
-                    ((this.start = t), (this.end = { line: u, column: h }), (this.source = l.source));
+                    (this.start = t), (this.end = { line: u, column: h }), (this.source = l.source);
                 }
                 f.prototype.content = t;
                 var m = [];
@@ -1096,7 +1093,7 @@
                     var n = e.exec(t);
                     if (n) {
                         var r = n[0];
-                        return (d(r), (t = t.slice(r.length)), n);
+                        return d(r), (t = t.slice(r.length)), n;
                     }
                 }
                 function v(t) {
@@ -1110,7 +1107,7 @@
                         for (var n = 2; "" != t.charAt(n) && ("*" != t.charAt(n) || "/" != t.charAt(n + 1)); ) ++n;
                         if (((n += 2), "" === t.charAt(n - 1))) return g("End of comment missing");
                         var r = t.slice(2, n - 2);
-                        return ((h += 2), d(r), (t = t.slice(n)), (h += 2), e({ type: "comment", comment: r }));
+                        return (h += 2), d(r), (t = t.slice(n)), (h += 2), e({ type: "comment", comment: r });
                     }
                 }
                 return (
@@ -1127,7 +1124,7 @@
                                     if ((b(), !y(o))) return g("property missing ':'");
                                     var r = y(s),
                                         l = t({ type: "declaration", property: c(n[0].replace(e, "")), value: r ? c(r[0].replace(e, "")) : "" });
-                                    return (y(a), l);
+                                    return y(a), l;
                                 }
                             })());
 
@@ -1140,17 +1137,17 @@
         },
         26649: function (t) {
             function e(t, e) {
-                ((t.onload = function () {
-                    ((this.onerror = this.onload = null), e(null, t));
+                (t.onload = function () {
+                    (this.onerror = this.onload = null), e(null, t);
                 }),
                     (t.onerror = function () {
-                        ((this.onerror = this.onload = null), e(Error("Failed to load " + this.src), t));
-                    }));
+                        (this.onerror = this.onload = null), e(Error("Failed to load " + this.src), t);
+                    });
             }
             t.exports = function (t, n, r) {
                 var i = document.head || document.getElementsByTagName("head")[0],
                     o = document.createElement("script");
-                ("function" == typeof n && ((r = n), (n = {})),
+                "function" == typeof n && ((r = n), (n = {})),
                     (n = n || {}),
                     (r = r || function () {}),
                     (o.type = n.type || "text/javascript"),
@@ -1170,7 +1167,7 @@
                               };
                           })(o, r),
                     o.onload || e(o, r),
-                    i.appendChild(o));
+                    i.appendChild(o);
             };
         },
         34357: function (t, e, n) {
@@ -1206,8 +1203,8 @@
                 A = /^\[object .+?Constructor\]$/,
                 D = /^(?:0|[1-9]\d*)$/,
                 I = {};
-            ((I[o] = I["[object Array]"] = I[b] = I[w] = I[s] = I[a] = I[x] = I[S] = I[k] = I[M] = I[C] = I[u] = I[h] = I[d] = I[f] = I[m] = I[g] = I[y] = I[E] = I[O] = I[_] = I[T] = !0),
-                (I["[object Error]"] = I[l] = I[v] = !1));
+            (I[o] = I["[object Array]"] = I[b] = I[w] = I[s] = I[a] = I[x] = I[S] = I[k] = I[M] = I[C] = I[u] = I[h] = I[d] = I[f] = I[m] = I[g] = I[y] = I[E] = I[O] = I[_] = I[T] = !0),
+                (I["[object Error]"] = I[l] = I[v] = !1);
             var R = "object" == typeof n.g && n.g && n.g.Object === Object && n.g,
                 N = "object" == typeof self && self && self.Object === Object && self,
                 z = R || N || Function("return this")(),
@@ -1215,10 +1212,10 @@
                 L = j && t && !t.nodeType && t,
                 F = L && L.exports === j;
             function H(t, e) {
-                return (t.set(e[0], e[1]), t);
+                return t.set(e[0], e[1]), t;
             }
             function B(t, e) {
-                return (t.add(e), t);
+                return t.add(e), t;
             }
             function $(t, e, n, r) {
                 var i = -1,
@@ -1334,7 +1331,7 @@
             }
             function tA(t) {
                 var e = new t.constructor(t.byteLength);
-                return (new ti(e).set(new ti(t)), e);
+                return new ti(e).set(new ti(t)), e;
             }
             function tD(t, e, n, r) {
                 n || (n = {});
@@ -1354,7 +1351,7 @@
                 var n = null == t ? void 0 : t[e];
                 return !(!tZ(n) || (X && X in n)) && (tW(n) || W(n) ? te : A).test(tL(n)) ? n : void 0;
             }
-            ((tC.prototype.clear = function () {
+            (tC.prototype.clear = function () {
                 this.__data__ = ty ? ty(null) : {};
             }),
                 (tC.prototype.delete = function (t) {
@@ -1373,7 +1370,7 @@
                     return ty ? void 0 !== e[t] : Q.call(e, t);
                 }),
                 (tC.prototype.set = function (t, e) {
-                    return ((this.__data__[t] = ty && void 0 === e ? i : e), this);
+                    return (this.__data__[t] = ty && void 0 === e ? i : e), this;
                 }),
                 (tE.prototype.clear = function () {
                     this.__data__ = [];
@@ -1394,7 +1391,7 @@
                 (tE.prototype.set = function (t, e) {
                     var n = this.__data__,
                         r = tP(n, t);
-                    return (r < 0 ? n.push([t, e]) : (n[r][1] = e), this);
+                    return r < 0 ? n.push([t, e]) : (n[r][1] = e), this;
                 }),
                 (tO.prototype.clear = function () {
                     this.__data__ = { hash: new tC(), map: new (tp || tE)(), string: new tC() };
@@ -1409,7 +1406,7 @@
                     return tI(this, t).has(t);
                 }),
                 (tO.prototype.set = function (t, e) {
-                    return (tI(this, t).set(t, e), this);
+                    return tI(this, t).set(t, e), this;
                 }),
                 (t_.prototype.clear = function () {
                     this.__data__ = new tE();
@@ -1427,11 +1424,11 @@
                     var n = this.__data__;
                     if (n instanceof tE) {
                         var r = n.__data__;
-                        if (!tp || r.length < 199) return (r.push([t, e]), this);
+                        if (!tp || r.length < 199) return r.push([t, e]), this;
                         n = this.__data__ = new tO(r);
                     }
-                    return (n.set(t, e), this);
-                }));
+                    return n.set(t, e), this;
+                });
             var tN = tc
                     ? V(tc, Object)
                     : function () {
@@ -1549,11 +1546,11 @@
                             return (function (t, e) {
                                 if (e) return t.slice();
                                 var n = new t.constructor(t.length);
-                                return (t.copy(n), n);
+                                return t.copy(n), n;
                             })(e, n);
                         if (Y == d || Y == o || (J && !v)) {
                             if (W(e)) return v ? e : {};
-                            if (((D = "function" != typeof (j = J ? {} : e).constructor || tj(j) ? {} : tZ((L = to(j))) ? ts(L) : {}), !n)) return ((F = (V = D) && tD(e, tV(e), V)), tD(e, tN(e), F));
+                            if (((D = "function" != typeof (j = J ? {} : e).constructor || tj(j) ? {} : tZ((L = to(j))) ? ts(L) : {}), !n)) return (F = (V = D) && tD(e, tV(e), V)), tD(e, tN(e), F);
                         } else {
                             if (!I[Y]) return v ? e : {};
                             D = (function (t, e, n, r) {
@@ -1568,7 +1565,7 @@
                                     case a:
                                         return new c(+t);
                                     case w:
-                                        return ((i = r ? tA(t.buffer) : t.buffer), new t.constructor(i, t.byteOffset, t.byteLength));
+                                        return (i = r ? tA(t.buffer) : t.buffer), new t.constructor(i, t.byteOffset, t.byteLength);
                                     case x:
                                     case S:
                                     case k:
@@ -1578,14 +1575,14 @@
                                     case O:
                                     case _:
                                     case T:
-                                        return ((o = r ? tA(t.buffer) : t.buffer), new t.constructor(o, t.byteOffset, t.length));
+                                        return (o = r ? tA(t.buffer) : t.buffer), new t.constructor(o, t.byteOffset, t.length);
                                     case u:
                                         return $(r ? n(Z(t), !0) : Z(t), H, new t.constructor());
                                     case h:
                                     case g:
                                         return new c(t);
                                     case f:
-                                        return (((l = new t.constructor(t.source, P.exec(t))).lastIndex = t.lastIndex), l);
+                                        return ((l = new t.constructor(t.source, P.exec(t))).lastIndex = t.lastIndex), l;
                                     case m:
                                         return $(r ? n(U(t), !0) : U(t), B, new t.constructor());
                                     case y:
@@ -1614,7 +1611,7 @@
                         !(function (t, e) {
                             for (var n = -1, r = t ? t.length : 0; ++n < r && !1 !== e(t[n], n, t); );
                         })(G || e, function (o, s) {
-                            (G && (o = e[(s = o)]), tT(D, s, t(o, n, r, i, s, e, A)));
+                            G && (o = e[(s = o)]), tT(D, s, t(o, n, r, i, s, e, A));
                         }),
                         D
                     );
@@ -1635,7 +1632,7 @@
                     function (t) {
                         return t && t.__esModule ? t : { default: t };
                     };
-            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.getColors = e.flatten = e.replaceColor = e.colorify = void 0));
+            Object.defineProperty(e, "__esModule", { value: !0 }), (e.getColors = e.flatten = e.replaceColor = e.colorify = void 0);
             var o = i(n(34357));
             e.colorify = function (t, e) {
                 void 0 === t && (t = []);
@@ -1664,7 +1661,7 @@
                 a = function (t) {
                     return Math.round(1e3 * t) / 1e3;
                 };
-            ((e.replaceColor = function (t, e, n) {
+            (e.replaceColor = function (t, e, n) {
                 var i = s(t),
                     l = s(e);
                 if (!i || !l) throw Error("Proper colors must be used for both source and target");
@@ -1684,7 +1681,7 @@
                         else for (var i in n) "object" == typeof n[i] && t(e, n[i]);
                         return n;
                     })(n, o.default(e));
-                }));
+                });
             var l = function (t, e) {
                 var n = 0;
                 return (function t(e, i) {
@@ -2101,7 +2098,7 @@
                     s = !1;
                 return function () {
                     for (var i = [], a = 0; a < arguments.length; a++) i[a] = arguments[a];
-                    return ((s && n === this && e(i, o)) || ((r = t.apply(this, i)), (s = !0), (n = this), (o = i)), r);
+                    return (s && n === this && e(i, o)) || ((r = t.apply(this, i)), (s = !0), (n = this), (o = i)), r;
                 };
             };
         },
@@ -2117,15 +2114,15 @@
         },
         55775: function (t, e, n) {
             "use strict";
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
+            Object.defineProperty(e, "__esModule", { value: !0 }),
                 Object.defineProperty(e, "default", {
                     enumerable: !0,
                     get: function () {
                         return o;
                     },
-                }));
+                });
             let r = n(47043);
-            (n(57437), n(2265));
+            n(57437), n(2265);
             let i = r._(n(15602));
             function o(t, e) {
                 var n;
@@ -2145,13 +2142,13 @@
         },
         81523: function (t, e, n) {
             "use strict";
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
+            Object.defineProperty(e, "__esModule", { value: !0 }),
                 Object.defineProperty(e, "BailoutToCSR", {
                     enumerable: !0,
                     get: function () {
                         return i;
                     },
-                }));
+                });
             let r = n(18993);
             function i(t) {
                 let { reason: e, children: n } = t;
@@ -2161,13 +2158,13 @@
         },
         15602: function (t, e, n) {
             "use strict";
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
+            Object.defineProperty(e, "__esModule", { value: !0 }),
                 Object.defineProperty(e, "default", {
                     enumerable: !0,
                     get: function () {
                         return c;
                     },
-                }));
+                });
             let r = n(57437),
                 i = n(2265),
                 o = n(81523),
@@ -2187,18 +2184,18 @@
                                 : (0, r.jsx)(o.BailoutToCSR, { reason: "next/dynamic", children: (0, r.jsx)(n, { ...t }) });
                         return (0, r.jsx)(i.Suspense, { fallback: a, children: l });
                     }
-                    return ((u.displayName = "LoadableComponent"), u);
+                    return (u.displayName = "LoadableComponent"), u;
                 };
         },
         70049: function (t, e, n) {
             "use strict";
-            (Object.defineProperty(e, "__esModule", { value: !0 }),
+            Object.defineProperty(e, "__esModule", { value: !0 }),
                 Object.defineProperty(e, "PreloadCss", {
                     enumerable: !0,
                     get: function () {
                         return o;
                     },
-                }));
+                });
             let r = n(57437),
                 i = n(20544);
             function o(t) {
@@ -2217,7 +2214,7 @@
                 return 0 === o.length
                     ? null
                     : (0, r.jsx)(r.Fragment, {
-                          children: o.map(t => (0, r.jsx)("link", { precedence: "dynamic", rel: "stylesheet", href: n.assetPrefix + "/_next/" + encodeURI(t), as: "style" }, t)),
+                          children: o.map(t => (0, r.jsx)("link", { precedence: "dynamic", rel: "stylesheet", href: n.assetPrefix + "/css/" + encodeURI(t), as: "style" }, t)),
                       });
             }
         },
@@ -2265,17 +2262,17 @@
                     if (((d = /\b(iPhone|iP[ao]d)/.exec(t)), (p = /\b(iP[ao]d)/.exec(t)), (u = /Android/i.exec(t)), (f = /FBAN\/\w+;/i.exec(t)), (m = /Mobile/i.exec(t)), (h = !!/Win64/.exec(t)), y)) {
                         (e = y[1] ? parseFloat(y[1]) : y[5] ? parseFloat(y[5]) : NaN) && document && document.documentMode && (e = document.documentMode);
                         var b = /(?:Trident\/(\d+.\d+))/.exec(t);
-                        ((s = b ? parseFloat(b[1]) + 4 : e),
+                        (s = b ? parseFloat(b[1]) + 4 : e),
                             (n = y[2] ? parseFloat(y[2]) : NaN),
                             (r = y[3] ? parseFloat(y[3]) : NaN),
-                            (o = (i = y[4] ? parseFloat(y[4]) : NaN) && (y = /(?:Chrome\/(\d+\.\d+))/.exec(t)) && y[1] ? parseFloat(y[1]) : NaN));
+                            (o = (i = y[4] ? parseFloat(y[4]) : NaN) && (y = /(?:Chrome\/(\d+\.\d+))/.exec(t)) && y[1] ? parseFloat(y[1]) : NaN);
                     } else e = n = r = o = i = NaN;
                     if (v) {
                         if (v[1]) {
                             var w = /(?:Mac OS X (\d+(?:[._]\d+)?))/.exec(t);
                             a = !w || parseFloat(w[1].replace("_", "."));
                         } else a = !1;
-                        ((l = !!v[2]), (c = !!v[3]));
+                        (l = !!v[2]), (c = !!v[3]);
                     } else a = l = c = !1;
                 }
             }
@@ -2335,17 +2332,17 @@
             "use strict";
             var r,
                 i = n(89727);
-            (i.canUseDOM && (r = document.implementation && document.implementation.hasFeature && !0 !== document.implementation.hasFeature("", "")),
+            i.canUseDOM && (r = document.implementation && document.implementation.hasFeature && !0 !== document.implementation.hasFeature("", "")),
                 (t.exports = function (t, e) {
                     if (!i.canUseDOM || (e && !("addEventListener" in document))) return !1;
                     var n = "on" + t,
                         o = n in document;
                     if (!o) {
                         var s = document.createElement("div");
-                        (s.setAttribute(n, "return;"), (o = "function" == typeof s[n]));
+                        s.setAttribute(n, "return;"), (o = "function" == typeof s[n]);
                     }
-                    return (!o && r && "wheel" === t && (o = document.implementation.hasFeature("Events.wheel", "3.0")), o);
-                }));
+                    return !o && r && "wheel" === t && (o = document.implementation.hasFeature("Events.wheel", "3.0")), o;
+                });
         },
         11264: function (t, e, n) {
             "use strict";
@@ -2372,10 +2369,10 @@
                     { spinX: e, spinY: n, pixelX: r, pixelY: i }
                 );
             }
-            ((o.getEventType = function () {
+            (o.getEventType = function () {
                 return r.firefox() ? "DOMMouseScroll" : i("wheel") ? "wheel" : "mousewheel";
             }),
-                (t.exports = o));
+                (t.exports = o);
         },
         97046: function (t, e, n) {
             "use strict";
@@ -2476,14 +2473,14 @@
                         (n.initResizeObserver = function () {
                             if (void 0 !== window.ResizeObserver && n.containerRef) {
                                 var t = !0;
-                                ((n.resizeObserver = new window.ResizeObserver(function (e) {
+                                (n.resizeObserver = new window.ResizeObserver(function (e) {
                                     if (t) {
                                         t = !1;
                                         return;
                                     }
                                     n.computeSizes();
                                 })),
-                                    n.resizeObserver.observe(n.containerRef));
+                                    n.resizeObserver.observe(n.containerRef);
                             }
                         }),
                         (n.preventZoomSafari = function (t) {
@@ -2500,11 +2497,11 @@
                                 n.currentDoc.removeEventListener("scroll", n.onScroll));
                         }),
                         (n.clearScrollEvent = function () {
-                            (n.containerRef && n.containerRef.removeEventListener("wheel", n.onWheel), n.wheelTimer && clearTimeout(n.wheelTimer));
+                            n.containerRef && n.containerRef.removeEventListener("wheel", n.onWheel), n.wheelTimer && clearTimeout(n.wheelTimer);
                         }),
                         (n.onMediaLoad = function () {
                             var t = n.computeSizes();
-                            (t && (n.emitCropData(), n.setInitialCrop(t)), n.props.onMediaLoaded && n.props.onMediaLoaded(n.mediaSize));
+                            t && (n.emitCropData(), n.setInitialCrop(t)), n.props.onMediaLoaded && n.props.onMediaLoaded(n.mediaSize);
                         }),
                         (n.setInitialCrop = function (t) {
                             if (n.props.initialCroppedAreaPercentages) {
@@ -2531,7 +2528,7 @@
                                         }),
                                     u = c.crop,
                                     h = c.zoom;
-                                (n.props.onCropChange(u), n.props.onZoomChange && n.props.onZoomChange(h));
+                                n.props.onCropChange(u), n.props.onZoomChange && n.props.onZoomChange(h);
                             } else if (n.props.initialCroppedAreaPixels) {
                                 var d,
                                     p,
@@ -2560,7 +2557,7 @@
                                         { crop: { x: ((b.width - d.width) / 2 - d.x) * S, y: ((b.height - d.height) / 2 - d.y) * S }, zoom: x }),
                                     u = k.crop,
                                     h = k.zoom;
-                                (n.props.onCropChange(u), n.props.onZoomChange && n.props.onZoomChange(h));
+                                n.props.onCropChange(u), n.props.onZoomChange && n.props.onZoomChange(h);
                             }
                         }),
                         (n.computeSizes = function () {
@@ -2572,7 +2569,7 @@
                                 a,
                                 l = n.imageRef.current || n.videoRef.current;
                             if (l && n.containerRef) {
-                                ((n.containerRect = n.containerRef.getBoundingClientRect()), n.saveContainerPosition());
+                                (n.containerRect = n.containerRef.getBoundingClientRect()), n.saveContainerPosition();
                                 var c,
                                     u,
                                     h,
@@ -2609,7 +2606,7 @@
                                             E = { width: n.containerRect.height * C, height: n.containerRect.height };
                                     }
                                 else E = { width: l.offsetWidth, height: l.offsetHeight };
-                                ((n.mediaSize = i(i({}, E), { naturalWidth: S, naturalHeight: k })), n.props.setMediaSize && n.props.setMediaSize(n.mediaSize));
+                                (n.mediaSize = i(i({}, E), { naturalWidth: S, naturalHeight: k })), n.props.setMediaSize && n.props.setMediaSize(n.mediaSize);
                                 var O = n.props.cropSize
                                     ? n.props.cropSize
                                     : ((c = n.mediaSize.width),
@@ -2662,7 +2659,7 @@
                                     2 === t.touches.length ? n.onPinchStart(t) : 1 === t.touches.length && n.onDragStart(e.getTouchPoint(t.touches[0]))));
                         }),
                         (n.onTouchMove = function (t) {
-                            (t.preventDefault(), 2 === t.touches.length ? n.onPinchMove(t) : 1 === t.touches.length && n.onDrag(e.getTouchPoint(t.touches[0])));
+                            t.preventDefault(), 2 === t.touches.length ? n.onPinchMove(t) : 1 === t.touches.length && n.onDrag(e.getTouchPoint(t.touches[0]));
                         }),
                         (n.onGestureStart = function (t) {
                             n.currentDoc &&
@@ -2690,7 +2687,7 @@
                                 r,
                                 o = t.x,
                                 s = t.y;
-                            ((n.dragStartPosition = { x: o, y: s }), (n.dragStartCrop = i({}, n.props.crop)), null === (r = (e = n.props).onInteractionStart) || void 0 === r || r.call(e));
+                            (n.dragStartPosition = { x: o, y: s }), (n.dragStartCrop = i({}, n.props.crop)), null === (r = (e = n.props).onInteractionStart) || void 0 === r || r.call(e);
                         }),
                         (n.onDrag = function (t) {
                             var e = t.x,
@@ -2709,7 +2706,7 @@
                         }),
                         (n.onDragStopped = function () {
                             var t, e;
-                            ((n.isTouching = !1), n.cleanEvents(), n.emitCropData(), null === (e = (t = n.props).onInteractionEnd) || void 0 === e || e.call(t));
+                            (n.isTouching = !1), n.cleanEvents(), n.emitCropData(), null === (e = (t = n.props).onInteractionEnd) || void 0 === e || e.call(t);
                         }),
                         (n.onWheel = function (t) {
                             if (n.currentWindow && (!n.props.onWheelRequest || n.props.onWheelRequest(t))) {
@@ -2717,7 +2714,7 @@
                                 var r = e.getMousePoint(t),
                                     i = a()(t).pixelY,
                                     o = n.props.zoom - (i * n.props.zoomSpeed) / 200;
-                                (n.setNewZoom(o, r, { shouldUpdatePosition: !0 }),
+                                n.setNewZoom(o, r, { shouldUpdatePosition: !0 }),
                                     n.state.hasWheelJustStarted ||
                                         n.setState({ hasWheelJustStarted: !0 }, function () {
                                             var t, e;
@@ -2729,7 +2726,7 @@
                                             var t, e;
                                             return null === (e = (t = n.props).onInteractionEnd) || void 0 === e ? void 0 : e.call(t);
                                         });
-                                    }, 250)));
+                                    }, 250));
                             }
                         }),
                         (n.getPointOnContainer = function (t, e) {
@@ -2793,7 +2790,7 @@
                             if (t) {
                                 var e = t.croppedAreaPercentages,
                                     r = t.croppedAreaPixels;
-                                (n.props.onCropComplete && n.props.onCropComplete(e, r), n.props.onCropAreaChange && n.props.onCropAreaChange(e, r));
+                                n.props.onCropComplete && n.props.onCropComplete(e, r), n.props.onCropAreaChange && n.props.onCropAreaChange(e, r);
                             }
                         }),
                         (n.emitCropAreaChange = function () {
@@ -2807,7 +2804,7 @@
                         (n.recomputeCropPosition = function () {
                             if (n.state.cropSize) {
                                 var t = n.props.restrictPosition ? l(n.props.crop, n.mediaSize, n.state.cropSize, n.props.zoom, n.props.rotation) : n.props.crop;
-                                (n.props.onCropChange(t), n.emitCropData());
+                                n.props.onCropChange(t), n.emitCropData();
                             }
                         }),
                         n
@@ -2818,7 +2815,7 @@
                         function n() {
                             this.constructor = t;
                         }
-                        (r(t, e), (t.prototype = null === e ? Object.create(e) : ((n.prototype = e.prototype), new n())));
+                        r(t, e), (t.prototype = null === e ? Object.create(e) : ((n.prototype = e.prototype), new n()));
                     })(e, t),
                     (e.prototype.componentDidMount = function () {
                         this.currentDoc &&
@@ -2854,24 +2851,24 @@
                             this.props.zoomWithScroll && this.clearScrollEvent());
                     }),
                     (e.prototype.componentDidUpdate = function (t) {
-                        (t.rotation !== this.props.rotation
+                        t.rotation !== this.props.rotation
                             ? (this.computeSizes(), this.recomputeCropPosition())
                             : t.aspect !== this.props.aspect
-                              ? this.computeSizes()
-                              : t.objectFit !== this.props.objectFit
-                                ? this.computeSizes()
-                                : t.zoom !== this.props.zoom
-                                  ? this.recomputeCropPosition()
-                                  : (null === (e = t.cropSize) || void 0 === e ? void 0 : e.height) !== (null === (n = this.props.cropSize) || void 0 === n ? void 0 : n.height) ||
-                                      (null === (r = t.cropSize) || void 0 === r ? void 0 : r.width) !== (null === (i = this.props.cropSize) || void 0 === i ? void 0 : i.width)
-                                    ? this.computeSizes()
-                                    : ((null === (o = t.crop) || void 0 === o ? void 0 : o.x) !== (null === (s = this.props.crop) || void 0 === s ? void 0 : s.x) ||
-                                          (null === (a = t.crop) || void 0 === a ? void 0 : a.y) !== (null === (l = this.props.crop) || void 0 === l ? void 0 : l.y)) &&
-                                      this.emitCropAreaChange(),
+                            ? this.computeSizes()
+                            : t.objectFit !== this.props.objectFit
+                            ? this.computeSizes()
+                            : t.zoom !== this.props.zoom
+                            ? this.recomputeCropPosition()
+                            : (null === (e = t.cropSize) || void 0 === e ? void 0 : e.height) !== (null === (n = this.props.cropSize) || void 0 === n ? void 0 : n.height) ||
+                              (null === (r = t.cropSize) || void 0 === r ? void 0 : r.width) !== (null === (i = this.props.cropSize) || void 0 === i ? void 0 : i.width)
+                            ? this.computeSizes()
+                            : ((null === (o = t.crop) || void 0 === o ? void 0 : o.x) !== (null === (s = this.props.crop) || void 0 === s ? void 0 : s.x) ||
+                                  (null === (a = t.crop) || void 0 === a ? void 0 : a.y) !== (null === (l = this.props.crop) || void 0 === l ? void 0 : l.y)) &&
+                              this.emitCropAreaChange(),
                             t.zoomWithScroll !== this.props.zoomWithScroll &&
                                 this.containerRef &&
                                 (this.props.zoomWithScroll ? this.containerRef.addEventListener("wheel", this.onWheel, { passive: !1 }) : this.clearScrollEvent()),
-                            t.video !== this.props.video && (null === (c = this.videoRef.current) || void 0 === c || c.load()));
+                            t.video !== this.props.video && (null === (c = this.videoRef.current) || void 0 === c || c.load());
                         var e,
                             n,
                             r,
@@ -2913,7 +2910,7 @@
                     (e.prototype.onPinchStart = function (t) {
                         var n = e.getTouchPoint(t.touches[0]),
                             r = e.getTouchPoint(t.touches[1]);
-                        ((this.lastPinchDistance = u(n, r)), (this.lastPinchRotation = h(n, r)), this.onDragStart(f(n, r)));
+                        (this.lastPinchDistance = u(n, r)), (this.lastPinchRotation = h(n, r)), this.onDragStart(f(n, r));
                     }),
                     (e.prototype.onPinchMove = function (t) {
                         var n = this;
@@ -2921,16 +2918,16 @@
                             var r = e.getTouchPoint(t.touches[0]),
                                 i = e.getTouchPoint(t.touches[1]),
                                 o = f(r, i);
-                            (this.onDrag(o),
+                            this.onDrag(o),
                                 this.rafPinchTimeout && this.currentWindow.cancelAnimationFrame(this.rafPinchTimeout),
                                 (this.rafPinchTimeout = this.currentWindow.requestAnimationFrame(function () {
                                     var t = u(r, i),
                                         e = n.props.zoom * (t / n.lastPinchDistance);
-                                    (n.setNewZoom(e, o, { shouldUpdatePosition: !1 }), (n.lastPinchDistance = t));
+                                    n.setNewZoom(e, o, { shouldUpdatePosition: !1 }), (n.lastPinchDistance = t);
                                     var s = h(r, i),
                                         a = n.props.rotation + (s - n.lastPinchRotation);
-                                    (n.props.onRotationChange && n.props.onRotationChange(a), (n.lastPinchRotation = s));
-                                })));
+                                    n.props.onRotationChange && n.props.onRotationChange(a), (n.lastPinchRotation = s);
+                                }));
                         }
                     }),
                     (e.prototype.render = function () {
@@ -3098,7 +3095,7 @@
                         return o != o && s != s;
                     })(t, o);
                 } catch (t) {
-                    if ((t.message || "").match(/stack|recursion/i)) return (console.warn("react-fast-compare cannot handle circular refs"), !1);
+                    if ((t.message || "").match(/stack|recursion/i)) return console.warn("react-fast-compare cannot handle circular refs"), !1;
                     throw t;
                 }
             };
@@ -3118,17 +3115,17 @@
                 h = (t, e, n) => ((n = null != t ? r(a(t)) : {}), u(!e && t && t.__esModule ? n : i(n, "default", { value: t, enumerable: !0 }), t)),
                 d = (t, e, n) => (c(t, "symbol" != typeof e ? e + "" : e, n), n),
                 p = {};
-            (((t, e) => {
+            ((t, e) => {
                 for (var n in e) i(t, n, { get: e[n], enumerable: !0 });
             })(p, { default: () => v }),
-                (t.exports = u(i({}, "__esModule", { value: !0 }), p)));
+                (t.exports = u(i({}, "__esModule", { value: !0 }), p));
             var f = h(n(2265)),
                 m = h(n(8727)),
                 g = n(61105),
                 y = n(65700);
             class v extends f.Component {
                 constructor() {
-                    (super(...arguments),
+                    super(...arguments),
                         d(this, "mounted", !1),
                         d(this, "isReady", !1),
                         d(this, "isPlaying", !1),
@@ -3142,7 +3139,7 @@
                                 this.progress();
                                 return;
                             }
-                            ((this.player = t), this.player.load(this.props.url), this.progress());
+                            (this.player = t), this.player.load(this.props.url), this.progress();
                         }),
                         d(this, "getInternalPlayer", t => (this.player ? this.player[t] : null)),
                         d(this, "progress", () => {
@@ -3152,40 +3149,40 @@
                                     n = this.getDuration();
                                 if (n) {
                                     let r = { playedSeconds: t, played: t / n };
-                                    (null !== e && ((r.loadedSeconds = e), (r.loaded = e / n)),
+                                    null !== e && ((r.loadedSeconds = e), (r.loaded = e / n)),
                                         (r.playedSeconds !== this.prevPlayed || r.loadedSeconds !== this.prevLoaded) && this.props.onProgress(r),
                                         (this.prevPlayed = r.playedSeconds),
-                                        (this.prevLoaded = r.loadedSeconds));
+                                        (this.prevLoaded = r.loadedSeconds);
                                 }
                             }
                             this.progressTimeout = setTimeout(this.progress, this.props.progressFrequency || this.props.progressInterval);
                         }),
                         d(this, "handleReady", () => {
                             if (!this.mounted) return;
-                            ((this.isReady = !0), (this.isLoading = !1));
+                            (this.isReady = !0), (this.isLoading = !1);
                             let { onReady: t, playing: e, volume: n, muted: r } = this.props;
-                            (t(),
+                            t(),
                                 r || null === n || this.player.setVolume(n),
                                 this.loadOnReady ? (this.player.load(this.loadOnReady, !0), (this.loadOnReady = null)) : e && this.player.play(),
-                                this.handleDurationCheck());
+                                this.handleDurationCheck();
                         }),
                         d(this, "handlePlay", () => {
-                            ((this.isPlaying = !0), (this.isLoading = !1));
+                            (this.isPlaying = !0), (this.isLoading = !1);
                             let { onStart: t, onPlay: e, playbackRate: n } = this.props;
-                            (this.startOnPlay && (this.player.setPlaybackRate && 1 !== n && this.player.setPlaybackRate(n), t(), (this.startOnPlay = !1)),
+                            this.startOnPlay && (this.player.setPlaybackRate && 1 !== n && this.player.setPlaybackRate(n), t(), (this.startOnPlay = !1)),
                                 e(),
                                 this.seekOnPlay && (this.seekTo(this.seekOnPlay), (this.seekOnPlay = null)),
-                                this.handleDurationCheck());
+                                this.handleDurationCheck();
                         }),
                         d(this, "handlePause", t => {
-                            ((this.isPlaying = !1), this.isLoading || this.props.onPause(t));
+                            (this.isPlaying = !1), this.isLoading || this.props.onPause(t);
                         }),
                         d(this, "handleEnded", () => {
                             let { activePlayer: t, loop: e, onEnded: n } = this.props;
-                            (t.loopOnEnded && e && this.seekTo(0), e || ((this.isPlaying = !1), n()));
+                            t.loopOnEnded && e && this.seekTo(0), e || ((this.isPlaying = !1), n());
                         }),
                         d(this, "handleError", (...t) => {
-                            ((this.isLoading = !1), this.props.onError(...t));
+                            (this.isLoading = !1), this.props.onError(...t);
                         }),
                         d(this, "handleDurationCheck", () => {
                             clearTimeout(this.durationCheckTimeout);
@@ -3194,35 +3191,35 @@
                         }),
                         d(this, "handleLoaded", () => {
                             this.isLoading = !1;
-                        }));
+                        });
                 }
                 componentDidMount() {
                     this.mounted = !0;
                 }
                 componentWillUnmount() {
-                    (clearTimeout(this.progressTimeout),
+                    clearTimeout(this.progressTimeout),
                         clearTimeout(this.durationCheckTimeout),
                         this.isReady && this.props.stopOnUnmount && (this.player.stop(), this.player.disablePIP && this.player.disablePIP()),
-                        (this.mounted = !1));
+                        (this.mounted = !1);
                 }
                 componentDidUpdate(t) {
                     if (!this.player) return;
                     let { url: e, playing: n, volume: r, muted: i, playbackRate: o, pip: s, loop: a, activePlayer: l, disableDeferredLoading: c } = this.props;
                     if (!(0, m.default)(t.url, e)) {
                         if (this.isLoading && !l.forceLoad && !c && !(0, y.isMediaStream)(e)) {
-                            (console.warn(`ReactPlayer: the attempt to load ${e} is being deferred until the player has loaded`), (this.loadOnReady = e));
+                            console.warn(`ReactPlayer: the attempt to load ${e} is being deferred until the player has loaded`), (this.loadOnReady = e);
                             return;
                         }
-                        ((this.isLoading = !0), (this.startOnPlay = !0), (this.onDurationCalled = !1), this.player.load(e, this.isReady));
+                        (this.isLoading = !0), (this.startOnPlay = !0), (this.onDurationCalled = !1), this.player.load(e, this.isReady);
                     }
-                    (t.playing || !n || this.isPlaying || this.player.play(),
+                    t.playing || !n || this.isPlaying || this.player.play(),
                         t.playing && !n && this.isPlaying && this.player.pause(),
                         !t.pip && s && this.player.enablePIP && this.player.enablePIP(),
                         t.pip && !s && this.player.disablePIP && this.player.disablePIP(),
                         t.volume !== r && null !== r && this.player.setVolume(r),
                         t.muted !== i && (i ? this.player.mute() : (this.player.unmute(), null !== r && setTimeout(() => this.player.setVolume(r)))),
                         t.playbackRate !== o && this.player.setPlaybackRate && this.player.setPlaybackRate(o),
-                        t.loop !== a && this.player.setLoop && this.player.setLoop(a));
+                        t.loop !== a && this.player.setLoop && this.player.setLoop(a);
                 }
                 getDuration() {
                     return this.isReady ? this.player.getDuration() : null;
@@ -3269,7 +3266,7 @@
                         : null;
                 }
             }
-            (d(v, "displayName", "Player"), d(v, "propTypes", g.propTypes), d(v, "defaultProps", g.defaultProps));
+            d(v, "displayName", "Player"), d(v, "propTypes", g.propTypes), d(v, "defaultProps", g.defaultProps);
         },
         10947: function (t, e, n) {
             var r = Object.create,
@@ -3286,10 +3283,10 @@
                 h = (t, e, n) => ((n = null != t ? r(a(t)) : {}), u(!e && t && t.__esModule ? n : i(n, "default", { value: t, enumerable: !0 }), t)),
                 d = (t, e, n) => (c(t, "symbol" != typeof e ? e + "" : e, n), n),
                 p = {};
-            (((t, e) => {
+            ((t, e) => {
                 for (var n in e) i(t, n, { get: e[n], enumerable: !0 });
             })(p, { createReactPlayer: () => O }),
-                (t.exports = u(i({}, "__esModule", { value: !0 }), p)));
+                (t.exports = u(i({}, "__esModule", { value: !0 }), p));
             var f = h(n(2265)),
                 m = h(n(51567)),
                 g = h(n(1410)),
@@ -3308,7 +3305,7 @@
                     return (
                         (n = class extends f.Component {
                             constructor() {
-                                (super(...arguments),
+                                super(...arguments),
                                     d(this, "state", { showPreview: !!this.props.light }),
                                     d(this, "references", {
                                         wrapper: t => {
@@ -3319,7 +3316,7 @@
                                         },
                                     }),
                                     d(this, "handleClickPreview", t => {
-                                        (this.setState({ showPreview: !1 }), this.props.onClickPreview(t));
+                                        this.setState({ showPreview: !1 }), this.props.onClickPreview(t);
                                     }),
                                     d(this, "showPreview", () => {
                                         this.setState({ showPreview: !0 });
@@ -3369,14 +3366,14 @@
                                             activePlayer: e.lazyPlayer || e,
                                             onReady: this.handleReady,
                                         });
-                                    }));
+                                    });
                             }
                             shouldComponentUpdate(t, e) {
                                 return !(0, y.default)(this.props, t) || !(0, y.default)(this.state, e);
                             }
                             componentDidUpdate(t) {
                                 let { light: e } = this.props;
-                                (!t.light && e && this.setState({ showPreview: !0 }), t.light && !e && this.setState({ showPreview: !1 }));
+                                !t.light && e && this.setState({ showPreview: !0 }), t.light && !e && this.setState({ showPreview: !1 });
                             }
                             renderPreview(t) {
                                 if (!t) return null;
@@ -3429,10 +3426,10 @@
                     return t;
                 },
                 p = {};
-            (((t, e) => {
+            ((t, e) => {
                 for (var n in e) a(t, n, { get: e[n], enumerable: !0 });
             })(p, { default: () => y }),
-                (t.exports = d(a({}, "__esModule", { value: !0 }), p)));
+                (t.exports = d(a({}, "__esModule", { value: !0 }), p));
             var f = ((o = null != (r = n(12329)) ? s(u(r)) : {}), d(!i && r && r.__esModule ? o : a(o, "default", { value: r, enumerable: !0 }), r)),
                 m = n(10947);
             let g = f.default[f.default.length - 1];
@@ -3444,7 +3441,7 @@
                 o = Object.getOwnPropertyNames,
                 s = Object.prototype.hasOwnProperty,
                 a = {};
-            (((t, e) => {
+            ((t, e) => {
                 for (var n in e) r(t, n, { get: e[n], enumerable: !0 });
             })(a, {
                 AUDIO_EXTENSIONS: () => k,
@@ -3471,7 +3468,7 @@
                 (t.exports = ((t, e, n, a) => {
                     if ((e && "object" == typeof e) || "function" == typeof e) for (let l of o(e)) s.call(t, l) || l === n || r(t, l, { get: () => e[l], enumerable: !(a = i(e, l)) || a.enumerable });
                     return t;
-                })(r({}, "__esModule", { value: !0 }), a)));
+                })(r({}, "__esModule", { value: !0 }), a));
             var l = n(65700);
             let c =
                     /(?:youtu\.be\/|youtube(?:-nocookie|education)?\.com\/(?:embed\/|v\/|watch\/|watch\?v=|watch\?.+&v=|shorts\/|live\/))((\w|-){11})|youtube\.com\/playlist\?list=|youtube\.com\/user\//,
@@ -3522,13 +3519,13 @@
                 o = Object.getOwnPropertyNames,
                 s = Object.prototype.hasOwnProperty,
                 a = {};
-            (((t, e) => {
+            ((t, e) => {
                 for (var n in e) r(t, n, { get: e[n], enumerable: !0 });
             })(a, { default: () => u }),
                 (t.exports = ((t, e, n, a) => {
                     if ((e && "object" == typeof e) || "function" == typeof e) for (let l of o(e)) s.call(t, l) || l === n || r(t, l, { get: () => e[l], enumerable: !(a = i(e, l)) || a.enumerable });
                     return t;
-                })(r({}, "__esModule", { value: !0 }), a)));
+                })(r({}, "__esModule", { value: !0 }), a));
             var l = n(65700),
                 c = n(59375),
                 u = [
@@ -3566,10 +3563,10 @@
                     return t;
                 },
                 p = {};
-            (((t, e) => {
+            ((t, e) => {
                 for (var n in e) a(t, n, { get: e[n], enumerable: !0 });
             })(p, { defaultProps: () => C, propTypes: () => k }),
-                (t.exports = d(a({}, "__esModule", { value: !0 }), p)));
+                (t.exports = d(a({}, "__esModule", { value: !0 }), p));
             let {
                     string: f,
                     bool: m,
@@ -3725,7 +3722,7 @@
                 },
                 u = (t, e, n) => ((n = null != t ? r(a(t)) : {}), c(!e && t && t.__esModule ? n : i(n, "default", { value: t, enumerable: !0 }), t)),
                 h = {};
-            (((t, e) => {
+            ((t, e) => {
                 for (var n in e) i(t, n, { get: e[n], enumerable: !0 });
             })(h, {
                 callPlayer: () => P,
@@ -3741,7 +3738,7 @@
                 randomString: () => k,
                 supportsWebKitPresentationMode: () => I,
             }),
-                (t.exports = c(i({}, "__esModule", { value: !0 }), h)));
+                (t.exports = c(i({}, "__esModule", { value: !0 }), h));
             var d = u(n(2265)),
                 p = u(n(26649)),
                 f = u(n(51567));
@@ -3765,7 +3762,7 @@
                                 n = v.exec(t);
                             for (; null !== n; ) {
                                 let [, r, i] = n;
-                                ("h" === i && (e += 3600 * parseInt(r, 10)), "m" === i && (e += 60 * parseInt(r, 10)), "s" === i && (e += parseInt(r, 10)), (n = v.exec(t)));
+                                "h" === i && (e += 3600 * parseInt(r, 10)), "m" === i && (e += 60 * parseInt(r, 10)), "s" === i && (e += parseInt(r, 10)), (n = v.exec(t));
                             }
                             return e;
                         })(t);
@@ -3790,10 +3787,10 @@
                 return window[t]
                     ? window[t]
                     : window.exports && window.exports[t]
-                      ? window.exports[t]
-                      : window.module && window.module.exports && window.module.exports[t]
-                        ? window.module.exports[t]
-                        : null;
+                    ? window.exports[t]
+                    : window.module && window.module.exports && window.module.exports[t]
+                    ? window.module.exports[t]
+                    : null;
             }
             let E = {},
                 O = function (t, e, n = null, r = () => !0, i = p.default) {
@@ -3812,7 +3809,7 @@
                               if (n) {
                                   let t = window[n];
                                   window[n] = function () {
-                                      (t && t(), s(C(e)));
+                                      t && t(), s(C(e));
                                   };
                               }
                               i(t, r => {
@@ -3832,7 +3829,7 @@
             function P(t, ...e) {
                 if (!this.player || !this.player[t]) {
                     let e = `ReactPlayer: ${this.constructor.displayName} player could not call %c${t}%c \u2013 `;
-                    return (this.player ? this.player[t] || (e += "The method was not available") : (e += "The player was not available"), console.warn(e, "font-weight: bold", ""), null);
+                    return this.player ? this.player[t] || (e += "The method was not available") : (e += "The player was not available"), console.warn(e, "font-weight: bold", ""), null;
                 }
                 return this.player[t](...e);
             }
@@ -3850,17 +3847,17 @@
         49455: function (t, e, n) {
             "use strict";
             function r(t, e, n, r, i, o, s) {
-                ((this.acceptsBooleans = 2 === e || 3 === e || 4 === e),
+                (this.acceptsBooleans = 2 === e || 3 === e || 4 === e),
                     (this.attributeName = r),
                     (this.attributeNamespace = i),
                     (this.mustUseProperty = n),
                     (this.propertyName = t),
                     (this.type = e),
                     (this.sanitizeURL = o),
-                    (this.removeEmptyString = s));
+                    (this.removeEmptyString = s);
             }
             let i = {};
-            (["children", "dangerouslySetInnerHTML", "defaultValue", "defaultChecked", "innerHTML", "suppressContentEditableWarning", "suppressHydrationWarning", "style"].forEach(t => {
+            ["children", "dangerouslySetInnerHTML", "defaultValue", "defaultChecked", "innerHTML", "suppressContentEditableWarning", "suppressHydrationWarning", "style"].forEach(t => {
                 i[t] = new r(t, 0, !1, t, null, !1, !1);
             }),
                 [
@@ -3915,10 +3912,10 @@
                 }),
                 ["rowSpan", "start"].forEach(t => {
                     i[t] = new r(t, 5, !1, t.toLowerCase(), null, !1, !1);
-                }));
+                });
             let o = /[\-\:]([a-z])/g,
                 s = t => t[1].toUpperCase();
-            ([
+            [
                 "accent-height",
                 "alignment-baseline",
                 "arabic-form",
@@ -4010,7 +4007,7 @@
                 (i.xlinkHref = new r("xlinkHref", 1, !1, "xlink:href", "http://www.w3.org/1999/xlink", !0, !1)),
                 ["src", "href", "action", "formAction"].forEach(t => {
                     i[t] = new r(t, 1, !1, t.toLowerCase(), null, !0, !0);
-                }));
+                });
             let { CAMELCASE: a, SAME: l, possibleStandardNames: c } = n(46626),
                 u = RegExp.prototype.test.bind(
                     RegExp(
@@ -4019,9 +4016,9 @@
                 ),
                 h = Object.keys(c).reduce((t, e) => {
                     let n = c[e];
-                    return (n === l ? (t[e] = e) : n === a ? (t[e.toLowerCase()] = e) : (t[e] = n), t);
+                    return n === l ? (t[e] = e) : n === a ? (t[e.toLowerCase()] = e) : (t[e] = n), t;
                 }, {});
-            ((e.BOOLEAN = 3),
+            (e.BOOLEAN = 3),
                 (e.BOOLEANISH_STRING = 2),
                 (e.NUMERIC = 5),
                 (e.OVERLOADED_BOOLEAN = 4),
@@ -4032,10 +4029,10 @@
                     return i.hasOwnProperty(t) ? i[t] : null;
                 }),
                 (e.isCustomAttribute = u),
-                (e.possibleStandardNames = h));
+                (e.possibleStandardNames = h);
         },
         46626: function (t, e) {
-            ((e.SAME = 0),
+            (e.SAME = 0),
                 (e.CAMELCASE = 1),
                 (e.possibleStandardNames = {
                     accept: 0,
@@ -4521,7 +4518,7 @@
                     yChannelSelector: 1,
                     z: 0,
                     zoomAndPan: 1,
-                }));
+                });
         },
         65647: function (t, e, n) {
             var r,
@@ -4592,7 +4589,7 @@
             function y(t) {
                 return t.oldIndicies && t.oldIndicies.length > 0 ? "multidrag" : t.swapItem ? "swap" : "normal";
             }
-            (u(t.exports, "Sortable", () => $882b6d93070905b3$re_export$Sortable),
+            u(t.exports, "Sortable", () => $882b6d93070905b3$re_export$Sortable),
                 u(t.exports, "Direction", () => $882b6d93070905b3$re_export$Direction),
                 u(t.exports, "DOMRect", () => $882b6d93070905b3$re_export$DOMRect),
                 u(t.exports, "GroupOptions", () => $882b6d93070905b3$re_export$GroupOptions),
@@ -4603,14 +4600,14 @@
                 u(t.exports, "SortableEvent", () => $882b6d93070905b3$re_export$SortableEvent),
                 u(t.exports, "SortableOptions", () => $882b6d93070905b3$re_export$SortableOptions),
                 u(t.exports, "Utils", () => $882b6d93070905b3$re_export$Utils),
-                u(t.exports, "ReactSortable", () => b));
+                u(t.exports, "ReactSortable", () => b);
             let v = { dragging: null };
             class b extends a.Component {
                 static defaultProps = { clone: t => t };
                 constructor(t) {
-                    (super(t), (this.ref = (0, a.createRef)()));
+                    super(t), (this.ref = (0, a.createRef)());
                     let e = [...t.list].map(t => Object.assign(t, { chosen: !1, selected: !1 }));
-                    (t.setList(e, this.sortable, v),
+                    t.setList(e, this.sortable, v),
                         c(l)(
                             !t.plugins,
                             `
@@ -4618,7 +4615,7 @@ Plugins prop is no longer supported.
 Instead, mount it with "Sortable.mount(new MultiDrag())"
 Please read the updated README.md at https://github.com/SortableJS/react-sortablejs.
       `
-                        ));
+                        );
                 }
                 componentDidMount() {
                     if (null === this.ref.current) return;
@@ -4708,7 +4705,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 prepareOnHandlerPropAndDOM(t) {
                     return e => {
-                        (this.callOnHandlerProp(e, t), this[t](e));
+                        this.callOnHandlerProp(e, t), this[t](e);
                     };
                 }
                 prepareOnHandlerProp(t) {
@@ -4723,12 +4720,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 onAdd(t) {
                     let { list: e, setList: n, clone: r } = this.props,
                         i = f(t, [...v.dragging.props.list]);
-                    (d(i),
+                    d(i),
                         n(
                             g(i, e, t, r).map(t => Object.assign(t, { selected: !1 })),
                             this.sortable,
                             v
-                        ));
+                        );
                 }
                 onRemove(t) {
                     let { list: e, setList: n } = this.props,
@@ -4749,12 +4746,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             default:
                                 c(l)(!0, `mode "${r}" cannot clone. Please remove "props.clone" from <ReactSortable/> when using the "${r}" plugin`);
                         }
-                        (d(e),
+                        d(e),
                             i.forEach(e => {
                                 let n = e.oldIndex,
                                     r = this.props.clone(e.item, t);
                                 o.splice(n, 1, r);
-                            }));
+                            });
                     }
                     n((o = o.map(t => Object.assign(t, { selected: !1 }))), this.sortable, v);
                 }
@@ -4785,7 +4782,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     n(
                         e.map((e, n) => {
                             let r = e;
-                            return (n === t.oldIndex && (r = Object.assign(e, { chosen: !0 })), r);
+                            return n === t.oldIndex && (r = Object.assign(e, { chosen: !0 })), r;
                         }),
                         this.sortable,
                         v
@@ -4796,7 +4793,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     n(
                         e.map((e, n) => {
                             let r = e;
-                            return (n === t.oldIndex && (r = Object.assign(r, { chosen: !1 })), r);
+                            return n === t.oldIndex && (r = Object.assign(r, { chosen: !1 })), r;
                         }),
                         this.sortable,
                         v
@@ -4809,27 +4806,27 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 onSelect(t) {
                     let { list: e, setList: n } = this.props,
                         r = e.map(t => Object.assign(t, { selected: !1 }));
-                    (t.newIndicies.forEach(e => {
+                    t.newIndicies.forEach(e => {
                         let n = e.index;
                         if (-1 === n) {
-                            (console.log(`"${t.type}" had indice of "${e.index}", which is probably -1 and doesn't usually happen here.`), console.log(t));
+                            console.log(`"${t.type}" had indice of "${e.index}", which is probably -1 and doesn't usually happen here.`), console.log(t);
                             return;
                         }
                         r[n].selected = !0;
                     }),
-                        n(r, this.sortable, v));
+                        n(r, this.sortable, v);
                 }
                 onDeselect(t) {
                     let { list: e, setList: n } = this.props,
                         r = e.map(t => Object.assign(t, { selected: !1 }));
-                    (t.newIndicies.forEach(t => {
+                    t.newIndicies.forEach(t => {
                         let e = t.index;
                         -1 !== e && (r[e].selected = !0);
                     }),
-                        n(r, this.sortable, v));
+                        n(r, this.sortable, v);
                 }
             }
-            ((r = t.exports),
+            (r = t.exports),
                 Object.keys((i = {})).forEach(function (t) {
                     "default" === t ||
                         "__esModule" === t ||
@@ -4840,7 +4837,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 return i[t];
                             },
                         });
-                }));
+                });
         },
         98799: function (t, e, n) {
             "use strict";
@@ -4848,11 +4845,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 var n = Object.keys(t);
                 if (Object.getOwnPropertySymbols) {
                     var r = Object.getOwnPropertySymbols(t);
-                    (e &&
+                    e &&
                         (r = r.filter(function (e) {
                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         })),
-                        n.push.apply(n, r));
+                        n.push.apply(n, r);
                 }
                 return n;
             }
@@ -4862,13 +4859,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     e % 2
                         ? r(Object(n), !0).forEach(function (e) {
                               var r;
-                              ((r = n[e]), e in t ? Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = r));
+                              (r = n[e]), e in t ? Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (t[e] = r);
                           })
                         : Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                          : r(Object(n)).forEach(function (e) {
-                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                            });
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : r(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          });
                 }
                 return t;
             }
@@ -4901,7 +4898,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function l(t) {
                 if ("undefined" != typeof window && window.navigator) return !!navigator.userAgent.match(t);
             }
-            (n.r(e),
+            n.r(e),
                 n.d(e, {
                     MultiDrag: function () {
                         return el;
@@ -4912,7 +4909,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     Swap: function () {
                         return t9;
                     },
-                }));
+                });
             var c = l(/(?:Trident.*rv[ :]?11\.|msie|iemobile|Windows Phone)/i),
                 u = l(/Edge/i),
                 h = l(/firefox/i),
@@ -4966,7 +4963,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             document.defaultView && document.defaultView.getComputedStyle ? (n = document.defaultView.getComputedStyle(t, "")) : t.currentStyle && (n = t.currentStyle),
                             void 0 === e ? n : n[e]
                         );
-                    (e in r || -1 !== e.indexOf("webkit") || (e = "-webkit-" + e), (r[e] = n + ("string" == typeof n ? "" : "px")));
+                    e in r || -1 !== e.indexOf("webkit") || (e = "-webkit-" + e), (r[e] = n + ("string" == typeof n ? "" : "px"));
                 }
             }
             function k(t, e) {
@@ -5011,7 +5008,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     h,
                                     d,
                                     p = i.getBoundingClientRect();
-                                ((s -= p.top + parseInt(S(i, "border-top-width"))), (a -= p.left + parseInt(S(i, "border-left-width"))), (l = s + o.height), (u = a + o.width));
+                                (s -= p.top + parseInt(S(i, "border-top-width"))), (a -= p.left + parseInt(S(i, "border-left-width"))), (l = s + o.height), (u = a + o.width);
                                 break;
                             }
                         while ((i = i.parentNode));
@@ -5062,7 +5059,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         var i = k(t),
                             o = i.a,
                             s = i.d;
-                        ((e += t.scrollLeft * o), (n += t.scrollTop * s));
+                        (e += t.scrollLeft * o), (n += t.scrollTop * s);
                     } while (t !== r && (t = t.parentNode));
                 return [e, n];
             }
@@ -5094,15 +5091,15 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 return function () {
                     if (!J) {
                         var n = arguments;
-                        (1 === n.length ? t.call(this, n[0]) : t.apply(this, n),
+                        1 === n.length ? t.call(this, n[0]) : t.apply(this, n),
                             (J = setTimeout(function () {
                                 J = void 0;
-                            }, e)));
+                            }, e));
                     }
                 };
             }
             function N(t, e, n) {
-                ((t.scrollLeft += e), (t.scrollTop += n));
+                (t.scrollLeft += e), (t.scrollTop += n);
             }
             function z(t) {
                 var e = window.Polymer,
@@ -5110,10 +5107,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 return e && e.dom ? e.dom(t).cloneNode(!0) : n ? n(t).clone(!0)[0] : t.cloneNode(!0);
             }
             function j(t, e) {
-                (S(t, "position", "absolute"), S(t, "top", e.top), S(t, "left", e.left), S(t, "width", e.width), S(t, "height", e.height));
+                S(t, "position", "absolute"), S(t, "top", e.top), S(t, "left", e.left), S(t, "width", e.width), S(t, "height", e.height);
             }
             function L(t) {
-                (S(t, "position", ""), S(t, "top", ""), S(t, "left", ""), S(t, "width", ""), S(t, "height", ""));
+                S(t, "position", ""), S(t, "top", ""), S(t, "left", ""), S(t, "width", ""), S(t, "height", "");
             }
             function F(t, e, n) {
                 var r = {};
@@ -5125,10 +5122,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 a,
                                 l,
                                 c = E(i);
-                            ((r.left = Math.min(null !== (o = r.left) && void 0 !== o ? o : 1 / 0, c.left)),
+                            (r.left = Math.min(null !== (o = r.left) && void 0 !== o ? o : 1 / 0, c.left)),
                                 (r.top = Math.min(null !== (s = r.top) && void 0 !== s ? s : 1 / 0, c.top)),
                                 (r.right = Math.max(null !== (a = r.right) && void 0 !== a ? a : -1 / 0, c.right)),
-                                (r.bottom = Math.max(null !== (l = r.bottom) && void 0 !== l ? l : -1 / 0, c.bottom)));
+                                (r.bottom = Math.max(null !== (l = r.bottom) && void 0 !== l ? l : -1 / 0, c.bottom));
                         }
                     }),
                     (r.width = r.right - r.left),
@@ -5144,17 +5141,17 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 W = {
                     mount: function (t) {
                         for (var e in $) !$.hasOwnProperty(e) || e in t || (t[e] = $[e]);
-                        (B.forEach(function (e) {
+                        B.forEach(function (e) {
                             if (e.pluginName === t.pluginName) throw "Sortable: Cannot mount plugin ".concat(t.pluginName, " more than once");
                         }),
-                            B.push(t));
+                            B.push(t);
                     },
                     pluginEvent: function (t, e, n) {
                         var r = this;
-                        ((this.eventCanceled = !1),
+                        (this.eventCanceled = !1),
                             (n.cancel = function () {
                                 r.eventCanceled = !0;
-                            }));
+                            });
                         var o = t + "Global";
                         B.forEach(function (r) {
                             e[r.pluginName] &&
@@ -5166,7 +5163,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             var i = r.pluginName;
                             if (t.options[i] || r.initializeByDefault) {
                                 var o = new r(t, e, t.options);
-                                ((o.sortable = t), (o.options = t.options), (t[i] = o), s(n, o.defaults));
+                                (o.sortable = t), (o.options = t.options), (t[i] = o), s(n, o.defaults);
                             }
                         }),
                         t.options))
@@ -5213,7 +5210,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     var v,
                         b = e.options,
                         w = "on" + r.charAt(0).toUpperCase() + r.substr(1);
-                    (!window.CustomEvent || c || u ? (v = document.createEvent("Event")).initEvent(r, !0, !0) : (v = new CustomEvent(r, { bubbles: !0, cancelable: !0 })),
+                    !window.CustomEvent || c || u ? (v = document.createEvent("Event")).initEvent(r, !0, !0) : (v = new CustomEvent(r, { bubbles: !0, cancelable: !0 })),
                         (v.to = a || n),
                         (v.from = l || n),
                         (v.item = o || n),
@@ -5223,10 +5220,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (v.oldDraggableIndex = p),
                         (v.newDraggableIndex = f),
                         (v.originalEvent = m),
-                        (v.pullMode = g ? g.lastPutMode : void 0));
+                        (v.pullMode = g ? g.lastPutMode : void 0);
                     var x = i(i({}, y), W.getEventProperties(r, e));
                     for (var S in x) v[S] = x[S];
-                    (n && n.dispatchEvent(v), b[w] && b[w].call(e, v));
+                    n && n.dispatchEvent(v), b[w] && b[w].call(e, v);
                 }
             }
             var V = ["evt"],
@@ -5243,12 +5240,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         r,
                                         i = {},
                                         o = Object.keys(t);
-                                    for (r = 0; r < o.length; r++) ((n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]));
+                                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
                                     return i;
                                 })(t, e);
                             if (Object.getOwnPropertySymbols) {
                                 var o = Object.getOwnPropertySymbols(t);
-                                for (r = 0; r < o.length; r++) ((n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]));
+                                for (r = 0; r < o.length; r++) (n = o[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
                             }
                             return i;
                         })(n, V);
@@ -5333,7 +5330,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (t_) {
                         if (c) return !1;
                         var t = document.createElement("x");
-                        return ((t.style.cssText = "pointer-events:auto"), "auto" === t.style.pointerEvents);
+                        return (t.style.cssText = "pointer-events:auto"), "auto" === t.style.pointerEvents;
                     }
                 })(),
                 tD = function (t, e) {
@@ -5393,7 +5390,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     }
                     var n = {},
                         r = t.group;
-                    ((r && "object" == o(r)) || (r = { name: r }), (n.name = r.name), (n.checkPull = e(r.pull, !0)), (n.checkPut = e(r.put)), (n.revertClone = r.revertClone), (t.group = n));
+                    (r && "object" == o(r)) || (r = { name: r }), (n.name = r.name), (n.checkPull = e(r.pull, !0)), (n.checkPut = e(r.put)), (n.revertClone = r.revertClone), (t.group = n);
                 },
                 tz = function () {
                     !tA && X && S(X, "display", "none");
@@ -5406,7 +5403,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 document.addEventListener(
                     "click",
                     function (t) {
-                        if (tx) return (t.preventDefault(), t.stopPropagation && t.stopPropagation(), t.stopImmediatePropagation && t.stopImmediatePropagation(), (tx = !1), !1);
+                        if (tx) return t.preventDefault(), t.stopPropagation && t.stopPropagation(), t.stopImmediatePropagation && t.stopImmediatePropagation(), (tx = !1), !1;
                     },
                     !0
                 );
@@ -5416,7 +5413,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (e) {
                             var n = {};
                             for (var r in t) t.hasOwnProperty(r) && (n[r] = t[r]);
-                            ((n.target = n.rootEl = e), (n.preventDefault = void 0), (n.stopPropagation = void 0), e[H]._onDragOver(n));
+                            (n.target = n.rootEl = e), (n.preventDefault = void 0), (n.stopPropagation = void 0), e[H]._onDragOver(n);
                         }
                     }
                 },
@@ -5425,7 +5422,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 };
             function tH(t, e) {
                 if (!(t && t.nodeType && 1 === t.nodeType)) throw "Sortable: `el` must be an HTMLElement, not ".concat({}.toString.call(t));
-                ((this.el = t), (this.options = e = s({}, e)), (t[H] = this));
+                (this.el = t), (this.options = e = s({}, e)), (t[H] = this);
                 var n,
                     r,
                     o = {
@@ -5469,7 +5466,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     };
                 for (var a in (W.initializePlugins(this, t, o), o)) a in e || (e[a] = o[a]);
                 for (var l in (tN(e), this)) "_" === l.charAt(0) && "function" == typeof this[l] && (this[l] = this[l].bind(this));
-                ((this.nativeDraggable = !e.forceFallback && tP),
+                (this.nativeDraggable = !e.forceFallback && tP),
                     this.nativeDraggable && (this.options.touchStartThreshold = 1),
                     e.supportPointer ? g(t, "pointerdown", this._onTapStart) : (g(t, "mousedown", this._onTapStart), g(t, "touchstart", this._onTapStart)),
                     this.nativeDraggable && (g(t, "dragover", this), g(t, "dragenter", this)),
@@ -5480,7 +5477,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         ((r = []),
                         {
                             captureAnimationState: function () {
-                                ((r = []),
+                                (r = []),
                                     this.options.animation &&
                                         [].slice.call(this.el.children).forEach(function (t) {
                                             if ("none" !== S(t, "display") && t !== tH.ghost) {
@@ -5492,7 +5489,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 }
                                                 t.fromRect = e;
                                             }
-                                        }));
+                                        });
                             },
                             addAnimationState: function (t) {
                                 r.push(t);
@@ -5512,12 +5509,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             animateAll: function (t) {
                                 var e = this;
                                 if (!this.options.animation) {
-                                    (clearTimeout(n), "function" == typeof t && t());
+                                    clearTimeout(n), "function" == typeof t && t();
                                     return;
                                 }
                                 var i = !1,
                                     o = 0;
-                                (r.forEach(function (t) {
+                                r.forEach(function (t) {
                                     var n,
                                         r = 0,
                                         s = t.target,
@@ -5527,7 +5524,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         u = s.prevToRect,
                                         h = t.rect,
                                         d = k(s, !0);
-                                    (d && ((l.top -= d.f), (l.left -= d.e)),
+                                    d && ((l.top -= d.f), (l.left -= d.e)),
                                         (s.toRect = l),
                                         s.thisAnimationDuration &&
                                             I(c, l) &&
@@ -5543,9 +5540,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                             (o = Math.max(o, r)),
                                             clearTimeout(s.animationResetTimer),
                                             (s.animationResetTimer = setTimeout(function () {
-                                                ((s.animationTime = 0), (s.prevFromRect = null), (s.fromRect = null), (s.prevToRect = null), (s.thisAnimationDuration = null));
+                                                (s.animationTime = 0), (s.prevFromRect = null), (s.fromRect = null), (s.prevToRect = null), (s.thisAnimationDuration = null);
                                             }, r)),
-                                            (s.thisAnimationDuration = r)));
+                                            (s.thisAnimationDuration = r));
                                 }),
                                     clearTimeout(n),
                                     i
@@ -5553,17 +5550,17 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                               "function" == typeof t && t();
                                           }, o))
                                         : "function" == typeof t && t(),
-                                    (r = []));
+                                    (r = []);
                             },
                             animate: function (t, e, n, r) {
                                 if (r) {
-                                    (S(t, "transition", ""), S(t, "transform", ""));
+                                    S(t, "transition", ""), S(t, "transform", "");
                                     var i = k(this.el),
                                         o = i && i.a,
                                         s = i && i.d,
                                         a = (e.left - n.left) / (o || 1),
                                         l = (e.top - n.top) / (s || 1);
-                                    ((t.animatingX = !!a),
+                                    (t.animatingX = !!a),
                                         (t.animatingY = !!l),
                                         S(t, "transform", "translate3d(" + a + "px," + l + "px,0)"),
                                         (this.forRepaintDummy = t.offsetWidth),
@@ -5571,12 +5568,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         S(t, "transform", "translate3d(0,0,0)"),
                                         "number" == typeof t.animated && clearTimeout(t.animated),
                                         (t.animated = setTimeout(function () {
-                                            (S(t, "transition", ""), S(t, "transform", ""), (t.animated = !1), (t.animatingX = !1), (t.animatingY = !1));
-                                        }, r)));
+                                            S(t, "transition", ""), S(t, "transform", ""), (t.animated = !1), (t.animatingX = !1), (t.animatingY = !1);
+                                        }, r));
                                 }
                             },
                         })
-                    ));
+                    );
             }
             function tB(t, e, n, r, i, o, s, a) {
                 var l,
@@ -5610,7 +5607,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function tV(t) {
                 return clearTimeout(t);
             }
-            ((tH.prototype = {
+            (tH.prototype = {
                 constructor: tH,
                 _isOutsideThisEl: function (t) {
                     this.el.contains(t) || t === this.el || (tg = null);
@@ -5648,13 +5645,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         ) {
                             if (((tr = P(a)), (to = P(a, r.draggable)), "function" == typeof c)) {
                                 if (c.call(this, t, a, this)) {
-                                    (Y({ sortable: e, rootEl: l, name: "filter", targetEl: a, toEl: n, fromEl: n }), U("filter", e, { evt: t }), i && t.cancelable && t.preventDefault());
+                                    Y({ sortable: e, rootEl: l, name: "filter", targetEl: a, toEl: n, fromEl: n }), U("filter", e, { evt: t }), i && t.cancelable && t.preventDefault();
                                     return;
                                 }
                             } else if (
                                 c &&
                                 (c = c.split(",").some(function (r) {
-                                    if ((r = b(l, r.trim(), n, !1))) return (Y({ sortable: e, rootEl: r, name: "filter", targetEl: a, fromEl: n, toEl: n }), U("filter", e, { evt: t }), !0);
+                                    if ((r = b(l, r.trim(), n, !1))) return Y({ sortable: e, rootEl: r, name: "filter", targetEl: a, fromEl: n, toEl: n }), U("filter", e, { evt: t }), !0;
                                 }))
                             ) {
                                 i && t.cancelable && t.preventDefault();
@@ -5689,11 +5686,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     i._onDrop();
                                     return;
                                 }
-                                (i._disableDelayedDragEvents(),
+                                i._disableDelayedDragEvents(),
                                     !h && i.nativeDraggable && (q.draggable = !0),
                                     i._triggerDragStart(t, e),
                                     Y({ sortable: i, name: "choose", originalEvent: t }),
-                                    x(q, s.chosenClass, !0));
+                                    x(q, s.chosenClass, !0);
                             }),
                             s.ignore.split(",").forEach(function (t) {
                                 M(q, t.trim(), t$);
@@ -5714,13 +5711,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 this._onDrop();
                                 return;
                             }
-                            (g(a, "mouseup", i._disableDelayedDrag),
+                            g(a, "mouseup", i._disableDelayedDrag),
                                 g(a, "touchend", i._disableDelayedDrag),
                                 g(a, "touchcancel", i._disableDelayedDrag),
                                 g(a, "mousemove", i._delayedDragTouchMoveHandler),
                                 g(a, "touchmove", i._delayedDragTouchMoveHandler),
                                 s.supportPointer && g(a, "pointermove", i._delayedDragTouchMoveHandler),
-                                (i._dragStartTimer = setTimeout(r, s.delay)));
+                                (i._dragStartTimer = setTimeout(r, s.delay));
                         }
                     }
                 },
@@ -5730,26 +5727,26 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         Math.floor(this.options.touchStartThreshold / ((this.nativeDraggable && window.devicePixelRatio) || 1)) && this._disableDelayedDrag();
                 },
                 _disableDelayedDrag: function () {
-                    (q && t$(q), clearTimeout(this._dragStartTimer), this._disableDelayedDragEvents());
+                    q && t$(q), clearTimeout(this._dragStartTimer), this._disableDelayedDragEvents();
                 },
                 _disableDelayedDragEvents: function () {
                     var t = this.el.ownerDocument;
-                    (y(t, "mouseup", this._disableDelayedDrag),
+                    y(t, "mouseup", this._disableDelayedDrag),
                         y(t, "touchend", this._disableDelayedDrag),
                         y(t, "touchcancel", this._disableDelayedDrag),
                         y(t, "mousemove", this._delayedDragTouchMoveHandler),
                         y(t, "touchmove", this._delayedDragTouchMoveHandler),
-                        y(t, "pointermove", this._delayedDragTouchMoveHandler));
+                        y(t, "pointermove", this._delayedDragTouchMoveHandler);
                 },
                 _triggerDragStart: function (t, e) {
-                    ((e = e || ("touch" == t.pointerType && t)),
+                    (e = e || ("touch" == t.pointerType && t)),
                         !this.nativeDraggable || e
                             ? this.options.supportPointer
                                 ? g(document, "pointermove", this._onTouchMove)
                                 : e
-                                  ? g(document, "touchmove", this._onTouchMove)
-                                  : g(document, "mousemove", this._onTouchMove)
-                            : (g(q, "dragend", this), g(G, "dragstart", this._onDragStart)));
+                                ? g(document, "touchmove", this._onTouchMove)
+                                : g(document, "mousemove", this._onTouchMove)
+                            : (g(q, "dragend", this), g(G, "dragstart", this._onDragStart));
                     try {
                         document.selection
                             ? tZ(function () {
@@ -5760,14 +5757,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 },
                 _dragStarted: function (t, e) {
                     if (((tw = !1), G && q)) {
-                        (U("dragStarted", this, { evt: e }), this.nativeDraggable && g(document, "dragover", tF));
+                        U("dragStarted", this, { evt: e }), this.nativeDraggable && g(document, "dragover", tF);
                         var n = this.options;
-                        (t || x(q, n.dragClass, !1), x(q, n.ghostClass, !0), (tH.active = this), t && this._appendGhost(), Y({ sortable: this, name: "start", originalEvent: e }));
+                        t || x(q, n.dragClass, !1), x(q, n.ghostClass, !0), (tH.active = this), t && this._appendGhost(), Y({ sortable: this, name: "start", originalEvent: e });
                     } else this._nulling();
                 },
                 _emulateDragOver: function () {
                     if (tu) {
-                        ((this._lastX = tu.clientX), (this._lastY = tu.clientY), tz());
+                        (this._lastX = tu.clientX), (this._lastY = tu.clientY), tz();
                         for (var t = document.elementFromPoint(tu.clientX, tu.clientY), e = t; t && t.shadowRoot && (t = t.shadowRoot.elementFromPoint(tu.clientX, tu.clientY)) !== e; ) e = t;
                         if ((q.parentNode[H]._isOutsideThisEl(t), e))
                             do {
@@ -5796,7 +5793,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (X) {
                             o ? ((o.e += c - (th || 0)), (o.f += u - (td || 0))) : (o = { a: 1, b: 0, c: 0, d: 1, e: c, f: u });
                             var h = "matrix(".concat(o.a, ",").concat(o.b, ",").concat(o.c, ",").concat(o.d, ",").concat(o.e, ",").concat(o.f, ")");
-                            (S(X, "webkitTransform", h), S(X, "mozTransform", h), S(X, "msTransform", h), S(X, "transform", h), (th = c), (td = u), (tu = i));
+                            S(X, "webkitTransform", h), S(X, "mozTransform", h), S(X, "msTransform", h), S(X, "transform", h), (th = c), (td = u), (tu = i);
                         }
                         t.cancelable && t.preventDefault();
                     }
@@ -5808,9 +5805,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             n = this.options;
                         if (p) {
                             for (tb = t; "static" === S(tb, "position") && "none" === S(tb, "transform") && tb !== document; ) tb = tb.parentNode;
-                            (tb !== document.body && tb !== document.documentElement ? (tb === document && (tb = C()), (e.top += tb.scrollTop), (e.left += tb.scrollLeft)) : (tb = C()), (tC = A(tb)));
+                            tb !== document.body && tb !== document.documentElement ? (tb === document && (tb = C()), (e.top += tb.scrollTop), (e.left += tb.scrollLeft)) : (tb = C()), (tC = A(tb));
                         }
-                        (x((X = q.cloneNode(!0)), n.ghostClass, !1),
+                        x((X = q.cloneNode(!0)), n.ghostClass, !1),
                             x(X, n.fallbackClass, !0),
                             x(X, n.dragClass, !0),
                             S(X, "transition", ""),
@@ -5827,7 +5824,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             S(X, "pointerEvents", "none"),
                             (tH.ghost = X),
                             t.appendChild(X),
-                            S(X, "transform-origin", (tp / parseInt(X.style.width)) * 100 + "% " + (tf / parseInt(X.style.height)) * 100 + "%"));
+                            S(X, "transform-origin", (tp / parseInt(X.style.width)) * 100 + "% " + (tf / parseInt(X.style.height)) * 100 + "%");
                     }
                 },
                 _onDragStart: function (t, e) {
@@ -5838,11 +5835,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         this._onDrop();
                         return;
                     }
-                    (U("setupClone", this),
+                    U("setupClone", this),
                         tH.eventCanceled ||
                             ((te = z(q)).removeAttribute("id"), (te.draggable = !1), (te.style["will-change"] = ""), this._hideClone(), x(te, this.options.chosenClass, !1), (tH.clone = te)),
                         (n.cloneId = tZ(function () {
-                            (U("clone", n), tH.eventCanceled || (n.options.removeCloneOnHide || G.insertBefore(te, q), n._hideClone(), Y({ sortable: n, name: "clone" })));
+                            U("clone", n), tH.eventCanceled || (n.options.removeCloneOnHide || G.insertBefore(te, q), n._hideClone(), Y({ sortable: n, name: "clone" }));
                         })),
                         e || x(q, i.dragClass, !0),
                         e
@@ -5857,7 +5854,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (n._dragStartId = tZ(n._dragStarted.bind(n, e, t))),
                         g(document, "selectstart", n),
                         (tm = !0),
-                        d && S(document.body, "user-select", "none"));
+                        d && S(document.body, "user-select", "none");
                 },
                 _onDragOver: function (t) {
                     var e,
@@ -5879,7 +5876,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (q.contains(t.target) || (a.animated && a.animatingX && a.animatingY) || f._ignoreWhileAnimating === a) return tn(!1);
                         if (((tx = !1), u && !l.disabled && (h ? d || (r = K !== G) : tl === this || ((this.lastPutMode = ta.checkPull(this, u, q, t)) && c.checkPut(this, u, q, t))))) {
                             if (((o = "vertical" === this._getDirection(t, a)), (e = E(q)), tt("dragOverValid"), tH.eventCanceled)) return m;
-                            if (r) return ((K = G), te(), this._hideClone(), tt("revert"), tH.eventCanceled || (Q ? G.insertBefore(q, Q) : G.appendChild(q)), tn(!0));
+                            if (r) return (K = G), te(), this._hideClone(), tt("revert"), tH.eventCanceled || (Q ? G.insertBefore(q, Q) : G.appendChild(q)), tn(!0);
                             var g = T(s, l.draggable);
                             if (
                                 !g ||
@@ -5890,7 +5887,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             ) {
                                 if (g === q) return tn(!1);
                                 if ((g && s === t.target && (a = g), a && (n = E(a)), !1 !== tB(G, s, q, e, a, n, t, !!a)))
-                                    return (te(), g && g.nextSibling ? s.insertBefore(q, g.nextSibling) : s.appendChild(q), (K = s), tr(), tn(!0));
+                                    return te(), g && g.nextSibling ? s.insertBefore(q, g.nextSibling) : s.appendChild(q), (K = s), tr(), tn(!0);
                             } else if (
                                 g &&
                                 ((M = o),
@@ -5900,7 +5897,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             ) {
                                 var y = _(s, 0, l, !0);
                                 if (y === q) return tn(!1);
-                                if (((n = E((a = y))), !1 !== tB(G, s, q, e, a, n, t, !1))) return (te(), s.insertBefore(q, y), (K = s), tr(), tn(!0));
+                                if (((n = E((a = y))), !1 !== tB(G, s, q, e, a, n, t, !1))) return te(), s.insertBefore(q, y), (K = s), tr(), tn(!0);
                             } else if (a.parentNode === s) {
                                 n = E(a);
                                 var v,
@@ -5936,11 +5933,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         })(t, a, n, o, j ? 1 : l.swapThreshold, null == l.invertedSwapThreshold ? l.swapThreshold : l.invertedSwapThreshold, tM, tg === a)))
                                 ) {
                                     var W = P(q);
-                                    do ((W -= R), (D = K.children[W]));
+                                    do (W -= R), (D = K.children[W]);
                                     while (D && ("none" === S(D, "display") || D === X));
                                 }
                                 if (0 === R || D === a) return tn(!1);
-                                ((tg = a), (ty = R));
+                                (tg = a), (ty = R);
                                 var Z = a.nextElementSibling,
                                     V = !1,
                                     J = tB(G, s, q, e, a, n, t, (V = 1 === R));
@@ -5988,7 +5985,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         );
                     }
                     function te() {
-                        (tt("dragOverAnimationCapture"), f.captureAnimationState(), f !== p && p.captureAnimationState());
+                        tt("dragOverAnimationCapture"), f.captureAnimationState(), f !== p && p.captureAnimationState();
                     }
                     function tn(e) {
                         return (
@@ -5999,7 +5996,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 tl !== f && f !== tH.active ? (tl = f) : f === tH.active && tl && (tl = null),
                                 p === f && (f._ignoreWhileAnimating = a),
                                 f.animateAll(function () {
-                                    (tt("dragOverAnimationComplete"), (f._ignoreWhileAnimating = null));
+                                    tt("dragOverAnimationComplete"), (f._ignoreWhileAnimating = null);
                                 }),
                                 f !== p && (p.animateAll(), (p._ignoreWhileAnimating = null))),
                             ((a !== q || q.animated) && (a !== s || a.animated)) || (tg = null),
@@ -6009,21 +6006,21 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         );
                     }
                     function tr() {
-                        ((ti = P(q)), (ts = P(q, l.draggable)), Y({ sortable: f, name: "change", toEl: s, newIndex: ti, newDraggableIndex: ts, originalEvent: t }));
+                        (ti = P(q)), (ts = P(q, l.draggable)), Y({ sortable: f, name: "change", toEl: s, newIndex: ti, newDraggableIndex: ts, originalEvent: t });
                     }
                 },
                 _ignoreWhileAnimating: null,
                 _offMoveEvents: function () {
-                    (y(document, "mousemove", this._onTouchMove),
+                    y(document, "mousemove", this._onTouchMove),
                         y(document, "touchmove", this._onTouchMove),
                         y(document, "pointermove", this._onTouchMove),
                         y(document, "dragover", tL),
                         y(document, "mousemove", tL),
-                        y(document, "touchmove", tL));
+                        y(document, "touchmove", tL);
                 },
                 _offUpEvents: function () {
                     var t = this.el.ownerDocument;
-                    (y(t, "mouseup", this._onDrop), y(t, "touchend", this._onDrop), y(t, "pointerup", this._onDrop), y(t, "touchcancel", this._onDrop), y(document, "selectstart", this));
+                    y(t, "mouseup", this._onDrop), y(t, "touchend", this._onDrop), y(t, "pointerup", this._onDrop), y(t, "touchcancel", this._onDrop), y(document, "selectstart", this);
                 },
                 _onDrop: function (t) {
                     var e = this.el,
@@ -6032,7 +6029,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         this._nulling();
                         return;
                     }
-                    ((tw = !1),
+                    (tw = !1),
                         (tM = !1),
                         (tk = !1),
                         clearInterval(this._loopId),
@@ -6064,15 +6061,15 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                       tl && tl.save())
                                     : ti !== tr && ti >= 0 && (Y({ sortable: this, name: "update", toEl: K, originalEvent: t }), Y({ sortable: this, name: "sort", toEl: K, originalEvent: t })),
                                 tH.active && ((null == ti || -1 === ti) && ((ti = tr), (ts = to)), Y({ sortable: this, name: "end", toEl: K, originalEvent: t }), this.save()))),
-                        this._nulling());
+                        this._nulling();
                 },
                 _nulling: function () {
-                    (U("nulling", this),
+                    U("nulling", this),
                         (G = q = K = X = Q = te = tt = tn = tc = tu = tm = ti = ts = tr = to = tg = ty = tl = ta = tH.dragged = tH.ghost = tH.clone = tH.active = null),
                         tO.forEach(function (t) {
                             t.checked = !0;
                         }),
-                        (tO.length = th = td = 0));
+                        (tO.length = th = td = 0);
                 },
                 handleEvent: function (t) {
                     switch (t.type) {
@@ -6103,7 +6100,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 sort: function (t, e) {
                     var n = {},
                         r = this.el;
-                    (this.toArray().forEach(function (t, e) {
+                    this.toArray().forEach(function (t, e) {
                         var i = r.children[e];
                         b(i, this.options.draggable, r, !1) && (n[t] = i);
                     }, this),
@@ -6111,7 +6108,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         t.forEach(function (t) {
                             n[t] && (r.removeChild(n[t]), r.appendChild(n[t]));
                         }),
-                        e && this.animateAll());
+                        e && this.animateAll();
                 },
                 save: function () {
                     var t = this.options.store;
@@ -6124,12 +6121,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     var n = this.options;
                     if (void 0 === e) return n[t];
                     var r = W.modifyOption(this, t, e);
-                    (void 0 !== r ? (n[t] = r) : (n[t] = e), "group" === t && tN(n));
+                    void 0 !== r ? (n[t] = r) : (n[t] = e), "group" === t && tN(n);
                 },
                 destroy: function () {
                     U("destroy", this);
                     var t = this.el;
-                    ((t[H] = null),
+                    (t[H] = null),
                         y(t, "mousedown", this._onTapStart),
                         y(t, "touchstart", this._onTapStart),
                         y(t, "pointerdown", this._onTapStart),
@@ -6140,7 +6137,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         this._onDrop(),
                         this._disableDelayedDragEvents(),
                         tS.splice(tS.indexOf(this.el), 1),
-                        (this.el = null));
+                        (this.el = null);
                 },
                 _hideClone: function () {
                     tn || (U("hideClone", this), tH.eventCanceled || (S(te, "display", "none"), this.options.removeCloneOnHide && te.parentNode && te.parentNode.removeChild(te), (tn = !0)));
@@ -6152,10 +6149,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     }
                     if (tn) {
                         if ((U("showClone", this), tH.eventCanceled)) return;
-                        (q.parentNode != G || this.options.group.revertClone ? (Q ? G.insertBefore(te, Q) : G.appendChild(te)) : G.insertBefore(te, q),
+                        q.parentNode != G || this.options.group.revertClone ? (Q ? G.insertBefore(te, Q) : G.appendChild(te)) : G.insertBefore(te, q),
                             this.options.group.revertClone && this.animate(q, te),
                             S(te, "display", ""),
-                            (tn = !1));
+                            (tn = !1);
                     }
                 },
             }),
@@ -6190,16 +6187,16 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }),
                 (tH.mount = function () {
                     for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
-                    (e[0].constructor === Array && (e = e[0]),
+                    e[0].constructor === Array && (e = e[0]),
                         e.forEach(function (t) {
                             if (!t.prototype || !t.prototype.constructor) throw "Sortable: Mounted plugin must be a constructor function, not ".concat({}.toString.call(t));
-                            (t.utils && (tH.utils = i(i({}, tH.utils), t.utils)), W.mount(t));
-                        }));
+                            t.utils && (tH.utils = i(i({}, tH.utils), t.utils)), W.mount(t);
+                        });
                 }),
                 (tH.create = function (t, e) {
                     return new tH(t, e);
                 }),
-                (tH.version = "1.15.2"));
+                (tH.version = "1.15.2");
             var tU,
                 tY,
                 tJ,
@@ -6209,10 +6206,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 tG = [],
                 tQ = !1;
             function t0() {
-                (tG.forEach(function (t) {
+                tG.forEach(function (t) {
                     clearInterval(t.pid);
                 }),
-                    (tG = []));
+                    (tG = []);
             }
             function t1() {
                 clearInterval(tX);
@@ -6252,7 +6249,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             var A = x && (Math.abs(v - o) <= a && T + b < M) - (Math.abs(y - o) <= a && !!T),
                                 I = k && (Math.abs(g - s) <= a && P + w < O) - (Math.abs(m - s) <= a && !!P);
                             if (!tG[h]) for (var R = 0; R <= h; R++) tG[R] || (tG[R] = {});
-                            ((tG[h].vx != A || tG[h].vy != I || tG[h].el !== p) &&
+                            (tG[h].vx != A || tG[h].vy != I || tG[h].el !== p) &&
                                 ((tG[h].el = p),
                                 (tG[h].vx = A),
                                 (tG[h].vy = I),
@@ -6268,7 +6265,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         }.bind({ layer: h }),
                                         24
                                     )))),
-                                h++);
+                                h++;
                         } while (e.bubbleScroll && d !== c && (d = D(d, !1)));
                         tQ = u;
                     }
@@ -6286,7 +6283,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         s();
                         var c = e.changedTouches && e.changedTouches.length ? e.changedTouches[0] : e,
                             u = document.elementFromPoint(c.clientX, c.clientY);
-                        (a(), l && !l.el.contains(u) && (o("spill"), this.onSpill({ dragEl: r, putSortable: n })));
+                        a(), l && !l.el.contains(u) && (o("spill"), this.onSpill({ dragEl: r, putSortable: n }));
                     }
                 };
             function t5() {}
@@ -6312,9 +6309,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     l = this.options;
                                 if (n && n !== a) {
                                     var c = t7;
-                                    (!1 !== r(n) ? (x(n, l.swapClass, !0), (t7 = n)) : (t7 = null), c && c !== t7 && x(c, l.swapClass, !1));
+                                    !1 !== r(n) ? (x(n, l.swapClass, !0), (t7 = n)) : (t7 = null), c && c !== t7 && x(c, l.swapClass, !1);
                                 }
-                                (o(), e(!0), s());
+                                o(), e(!0), s();
                             }
                         },
                         drop: function (t) {
@@ -6328,7 +6325,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 l = t.dragEl,
                                 c = a || this.sortable,
                                 u = this.options;
-                            (t7 && x(t7, u.swapClass, !1),
+                            t7 && x(t7, u.swapClass, !1),
                                 t7 &&
                                     (u.swap || (a && a.options.swap)) &&
                                     l !== t7 &&
@@ -6343,7 +6340,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         o.isEqualNode(l) ||
                                         ((n = P(l)), (r = P(e)), i.isEqualNode(o) && n < r && r++, i.insertBefore(e, i.children[n]), o.insertBefore(l, o.children[r])),
                                     c.animateAll(),
-                                    c !== s && s.animateAll()));
+                                    c !== s && s.animateAll());
                         },
                         nulling: function () {
                             t7 = null;
@@ -6357,7 +6354,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     })
                 );
             }
-            ((t5.prototype = {
+            (t5.prototype = {
                 startIndex: null,
                 dragStart: function (t) {
                     var e = t.oldDraggableIndex;
@@ -6366,9 +6363,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 onSpill: function (t) {
                     var e = t.dragEl,
                         n = t.putSortable;
-                    (this.sortable.captureAnimationState(), n && n.captureAnimationState());
+                    this.sortable.captureAnimationState(), n && n.captureAnimationState();
                     var r = _(this.sortable.el, this.startIndex, this.options);
-                    (r ? this.sortable.el.insertBefore(e, r) : this.sortable.el.appendChild(e), this.sortable.animateAll(), n && n.animateAll());
+                    r ? this.sortable.el.insertBefore(e, r) : this.sortable.el.appendChild(e), this.sortable.animateAll(), n && n.animateAll();
                 },
                 drop: t3,
             }),
@@ -6377,11 +6374,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     onSpill: function (t) {
                         var e = t.dragEl,
                             n = t.putSortable || this.sortable;
-                        (n.captureAnimationState(), e.parentNode && e.parentNode.removeChild(e), n.animateAll());
+                        n.captureAnimationState(), e.parentNode && e.parentNode.removeChild(e), n.animateAll();
                     },
                     drop: t3,
                 }),
-                s(t6, { pluginName: "removeOnSpill" }));
+                s(t6, { pluginName: "removeOnSpill" });
             var t7,
                 t4,
                 t8,
@@ -6396,7 +6393,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function el() {
                 function t(t) {
                     for (var e in this) "_" === e.charAt(0) && "function" == typeof this[e] && (this[e] = this[e].bind(this));
-                    (t.options.avoidImplicitDeselect ||
+                    t.options.avoidImplicitDeselect ||
                         (t.options.supportPointer
                             ? g(document, "pointerup", this._deselectMultiDrag)
                             : (g(document, "mouseup", this._deselectMultiDrag), g(document, "touchend", this._deselectMultiDrag))),
@@ -6408,14 +6405,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             avoidImplicitDeselect: !1,
                             setData: function (e, n) {
                                 var r = "";
-                                (er.length && t8 === t
+                                er.length && t8 === t
                                     ? er.forEach(function (t, e) {
                                           r += (e ? ", " : "") + t.textContent;
                                       })
                                     : (r = n.textContent),
-                                    e.setData("Text", r));
+                                    e.setData("Text", r);
                             },
-                        }));
+                        });
                 }
                 return (
                     (t.prototype = {
@@ -6432,13 +6429,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 n = t.cancel;
                             if (this.isMultiDrag) {
                                 for (var r = 0; r < er.length; r++)
-                                    (ei.push(z(er[r])),
+                                    ei.push(z(er[r])),
                                         (ei[r].sortableIndex = er[r].sortableIndex),
                                         (ei[r].draggable = !1),
                                         (ei[r].style["will-change"] = ""),
                                         x(ei[r], this.options.selectedClass, !1),
-                                        er[r] === et && x(ei[r], this.options.chosenClass, !1));
-                                (e._hideClone(), n());
+                                        er[r] === et && x(ei[r], this.options.chosenClass, !1);
+                                e._hideClone(), n();
                             }
                         },
                         clone: function (t) {
@@ -6468,14 +6465,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 r = t.cancel;
                             this.isMultiDrag &&
                                 (ei.forEach(function (t) {
-                                    (S(t, "display", "none"), e.options.removeCloneOnHide && t.parentNode && t.parentNode.removeChild(t));
+                                    S(t, "display", "none"), e.options.removeCloneOnHide && t.parentNode && t.parentNode.removeChild(t);
                                 }),
                                 n(),
                                 (en = !0),
                                 r());
                         },
                         dragStartGlobal: function (t) {
-                            (t.sortable,
+                            t.sortable,
                                 !this.isMultiDrag && t8 && t8.multiDrag._deselectMultiDrag(),
                                 er.forEach(function (t) {
                                     t.sortableIndex = P(t);
@@ -6483,7 +6480,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 (er = er.sort(function (t, e) {
                                     return t.sortableIndex - e.sortableIndex;
                                 })),
-                                (ea = !0));
+                                (ea = !0);
                         },
                         dragStarted: function (t) {
                             var e = this,
@@ -6494,20 +6491,20 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         t !== et && S(t, "position", "absolute");
                                     });
                                     var r = E(et, !1, !0, !0);
-                                    (er.forEach(function (t) {
+                                    er.forEach(function (t) {
                                         t !== et && j(t, r);
                                     }),
                                         (es = !0),
-                                        (eo = !0));
+                                        (eo = !0);
                                 }
                                 n.animateAll(function () {
-                                    ((es = !1),
+                                    (es = !1),
                                         (eo = !1),
                                         e.options.animation &&
                                             er.forEach(function (t) {
                                                 L(t);
                                             }),
-                                        e.options.sort && eu());
+                                        e.options.sort && eu();
                                 });
                             }
                         },
@@ -6525,7 +6522,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 o = t.dragRect;
                             er.length > 1 &&
                                 (er.forEach(function (t) {
-                                    (i.addAnimationState({ target: t, rect: es ? E(t) : o }), L(t), (t.fromRect = o), n.removeAnimationState(t));
+                                    i.addAnimationState({ target: t, rect: es ? E(t) : o }), L(t), (t.fromRect = o), n.removeAnimationState(t);
                                 }),
                                 (es = !1),
                                 (e = !this.options.removeCloneOnHide),
@@ -6545,21 +6542,21 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             if (r) {
                                 if ((n && i._hideClone(), (eo = !1), a.animation && er.length > 1 && (es || (!n && !i.options.sort && !s)))) {
                                     var l = E(et, !1, !0, !0);
-                                    (er.forEach(function (t) {
+                                    er.forEach(function (t) {
                                         t !== et && (j(t, l), o.appendChild(t));
                                     }),
-                                        (es = !0));
+                                        (es = !0);
                                 }
                                 if (!n) {
                                     if ((es || eu(), er.length > 1)) {
                                         var c = en;
-                                        (i._showClone(e),
+                                        i._showClone(e),
                                             i.options.animation &&
                                                 !en &&
                                                 c &&
                                                 ei.forEach(function (t) {
-                                                    (i.addAnimationState({ target: t, rect: ee }), (t.fromRect = ee), (t.thisAnimationDuration = null));
-                                                }));
+                                                    i.addAnimationState({ target: t, rect: ee }), (t.fromRect = ee), (t.thisAnimationDuration = null);
+                                                });
                                     } else i._showClone(e);
                                 }
                             }
@@ -6576,7 +6573,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             ) {
                                 ee = s({}, e);
                                 var i = k(et, !0);
-                                ((ee.top -= i.f), (ee.left -= i.e));
+                                (ee.top -= i.f), (ee.left -= i.e);
                             }
                         },
                         dragOverAnimationComplete: function () {
@@ -6596,7 +6593,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     u = r.children;
                                 if (!ea) {
                                     if ((c.multiDragKey && !this.multiDragKeyDown && this._deselectMultiDrag(), x(et, c.selectedClass, !~er.indexOf(et)), ~er.indexOf(et)))
-                                        (er.splice(er.indexOf(et), 1), (t4 = null), Z({ sortable: i, rootEl: n, name: "deselect", targetEl: et, originalEvent: e }));
+                                        er.splice(er.indexOf(et), 1), (t4 = null), Z({ sortable: i, rootEl: n, name: "deselect", targetEl: et, originalEvent: e });
                                     else {
                                         if ((er.push(et), Z({ sortable: i, rootEl: n, name: "select", targetEl: et, originalEvent: e }), e.shiftKey && t4 && i.el.contains(t4))) {
                                             var h,
@@ -6623,28 +6620,28 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                     er.forEach(function (t) {
                                                         if (((t.thisAnimationDuration = null), t !== et)) {
                                                             var e = es ? E(t) : m;
-                                                            ((t.fromRect = e), l.addAnimationState({ target: t, rect: e }));
+                                                            (t.fromRect = e), l.addAnimationState({ target: t, rect: e });
                                                         }
                                                     })),
                                                 eu(),
                                                 er.forEach(function (t) {
-                                                    (u[g] ? r.insertBefore(t, u[g]) : r.appendChild(t), g++);
+                                                    u[g] ? r.insertBefore(t, u[g]) : r.appendChild(t), g++;
                                                 }),
                                                 s === P(et)))
                                         ) {
                                             var y = !1;
-                                            (er.forEach(function (t) {
+                                            er.forEach(function (t) {
                                                 if (t.sortableIndex !== P(t)) {
                                                     y = !0;
                                                     return;
                                                 }
                                             }),
-                                                y && (o("update"), o("sort")));
+                                                y && (o("update"), o("sort"));
                                         }
-                                        (er.forEach(function (t) {
+                                        er.forEach(function (t) {
                                             L(t);
                                         }),
-                                            l.animateAll());
+                                            l.animateAll();
                                     }
                                     t8 = l;
                                 }
@@ -6655,21 +6652,21 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             }
                         },
                         nullingGlobal: function () {
-                            ((this.isMultiDrag = ea = !1), (ei.length = 0));
+                            (this.isMultiDrag = ea = !1), (ei.length = 0);
                         },
                         destroyGlobal: function () {
-                            (this._deselectMultiDrag(),
+                            this._deselectMultiDrag(),
                                 y(document, "pointerup", this._deselectMultiDrag),
                                 y(document, "mouseup", this._deselectMultiDrag),
                                 y(document, "touchend", this._deselectMultiDrag),
                                 y(document, "keydown", this._checkKeyDown),
-                                y(document, "keyup", this._checkKeyUp));
+                                y(document, "keyup", this._checkKeyUp);
                         },
                         _deselectMultiDrag: function (t) {
                             if (!((void 0 !== ea && ea) || t8 !== this.sortable || (t && b(t.target, this.options.draggable, this.sortable.el, !1))) && (!t || 0 === t.button))
                                 for (; er.length; ) {
                                     var e = er[0];
-                                    (x(e, this.options.selectedClass, !1), er.shift(), Z({ sortable: this.sortable, rootEl: this.sortable.el, name: "deselect", targetEl: e, originalEvent: t }));
+                                    x(e, this.options.selectedClass, !1), er.shift(), Z({ sortable: this.sortable, rootEl: this.sortable.el, name: "deselect", targetEl: e, originalEvent: t });
                                 }
                         },
                         _checkKeyDown: function (t) {
@@ -6700,9 +6697,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             return (
                                 er.forEach(function (t) {
                                     var i;
-                                    (n.push({ multiDragElement: t, index: t.sortableIndex }),
+                                    n.push({ multiDragElement: t, index: t.sortableIndex }),
                                         (i = es && t !== et ? -1 : es ? P(t, ":not(." + e.options.selectedClass + ")") : P(t)),
-                                        r.push({ multiDragElement: t, index: i }));
+                                        r.push({ multiDragElement: t, index: i });
                                 }),
                                 {
                                     items:
@@ -6731,7 +6728,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         },
                         optionListeners: {
                             multiDragKey: function (t) {
-                                return ("ctrl" === (t = t.toLowerCase()) ? (t = "Control") : t.length > 1 && (t = t.charAt(0).toUpperCase() + t.substr(1)), t);
+                                return "ctrl" === (t = t.toLowerCase()) ? (t = "Control") : t.length > 1 && (t = t.charAt(0).toUpperCase() + t.substr(1)), t;
                             },
                         },
                     })
@@ -6748,7 +6745,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     t !== et && t.parentNode && t.parentNode.removeChild(t);
                 });
             }
-            (tH.mount(
+            tH.mount(
                 new (function () {
                     function t() {
                         for (var t in ((this.defaults = { scroll: !0, forceAutoScrollFallback: !1, scrollSensitivity: 30, scrollSpeed: 10, bubbleScroll: !0 }), this))
@@ -6761,17 +6758,17 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 this.sortable.nativeDraggable
                                     ? g(document, "dragover", this._handleAutoScroll)
                                     : this.options.supportPointer
-                                      ? g(document, "pointermove", this._handleFallbackAutoScroll)
-                                      : e.touches
-                                        ? g(document, "touchmove", this._handleFallbackAutoScroll)
-                                        : g(document, "mousemove", this._handleFallbackAutoScroll);
+                                    ? g(document, "pointermove", this._handleFallbackAutoScroll)
+                                    : e.touches
+                                    ? g(document, "touchmove", this._handleFallbackAutoScroll)
+                                    : g(document, "mousemove", this._handleFallbackAutoScroll);
                             },
                             dragOverCompleted: function (t) {
                                 var e = t.originalEvent;
                                 this.options.dragOverBubble || e.rootEl || this._handleAutoScroll(e);
                             },
                             drop: function () {
-                                (this.sortable.nativeDraggable
+                                this.sortable.nativeDraggable
                                     ? y(document, "dragover", this._handleAutoScroll)
                                     : (y(document, "pointermove", this._handleFallbackAutoScroll),
                                       y(document, "touchmove", this._handleFallbackAutoScroll),
@@ -6779,10 +6776,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     t1(),
                                     t0(),
                                     clearTimeout(J),
-                                    (J = void 0));
+                                    (J = void 0);
                             },
                             nulling: function () {
-                                ((tK = tY = tU = tQ = tX = tJ = tq = null), (tG.length = 0));
+                                (tK = tY = tU = tQ = tX = tJ = tq = null), (tG.length = 0);
                             },
                             _handleFallbackAutoScroll: function (t) {
                                 this._handleAutoScroll(t, !0);
@@ -6800,7 +6797,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         (tX && t1(),
                                         (tX = setInterval(function () {
                                             var o = D(document.elementFromPoint(r, i), !0);
-                                            (o !== s && ((s = o), t0()), t2(t, n.options, o, e));
+                                            o !== s && ((s = o), t0()), t2(t, n.options, o, e);
                                         }, 10)),
                                         (tJ = r),
                                         (tq = i));
@@ -6818,7 +6815,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 })()
             ),
                 tH.mount(t6, t5),
-                (e.default = tH));
+                (e.default = tH);
         },
         95693: function (t, e, n) {
             "use strict";
@@ -6840,11 +6837,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     n
                 );
             }
-            ((o.default = o), (t.exports = o));
+            (o.default = o), (t.exports = o);
         },
         96172: function (t, e) {
             "use strict";
-            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.camelCase = void 0));
+            Object.defineProperty(e, "__esModule", { value: !0 }), (e.camelCase = void 0);
             var n = /^--[a-zA-Z0-9-]+$/,
                 r = /-([a-z])/g,
                 i = /^[^-]+$/,
@@ -6892,12 +6889,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function r(t, e) {
                 if (!t) throw Error("Invariant failed");
             }
-            (n.r(e),
+            n.r(e),
                 n.d(e, {
                     default: function () {
                         return r;
                     },
-                }));
+                });
         },
         83135: function (t, e, n) {
             "use strict";
@@ -7010,7 +7007,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             defaultProp: y,
                             onChange: t => {
                                 var e;
-                                (null === (e = [..._.current][A.current]) || void 0 === e || e.focus(), w(t));
+                                null === (e = [..._.current][A.current]) || void 0 === e || e.focus(), w(t);
                             },
                         }),
                         z = (0, i.useRef)(R);
@@ -7025,13 +7022,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             var r, i;
                             let o = (function (t = [], e, n) {
                                 let r = [...t];
-                                return ((r[n] = e), r.sort((t, e) => t - e));
+                                return (r[n] = e), r.sort((t, e) => t - e);
                             })(t, s, e);
                             if (((r = o), !(!((i = f * h) > 0) || Math.min(...r.slice(0, -1).map((t, e) => r[e + 1] - t)) >= i))) return t;
                             {
                                 A.current = o.indexOf(s);
                                 let e = String(o) !== String(t);
-                                return (e && n && x(o), e ? o : t);
+                                return e && n && x(o), e ? o : t;
                             }
                         });
                     }
@@ -7103,7 +7100,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     function k(t) {
                         let e = b.current || m.getBoundingClientRect(),
                             r = H([0, e.width], S ? [n, o] : [o, n]);
-                        return ((b.current = e), r(t - e.left));
+                        return (b.current = e), r(t - e.left);
                     }
                     return (0, i.createElement)(
                         O,
@@ -7122,7 +7119,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     null == h || h(e);
                                 },
                                 onSlideEnd: () => {
-                                    ((b.current = void 0), null == d || d());
+                                    (b.current = void 0), null == d || d();
                                 },
                                 onStepKeyDown: t => {
                                     let e = y[S ? "from-left" : "from-right"].includes(t.key);
@@ -7141,7 +7138,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     function v(t) {
                         let e = m.current || p.current.getBoundingClientRect(),
                             r = H([0, e.height], g ? [o, n] : [n, o]);
-                        return ((m.current = e), r(t - e.top));
+                        return (m.current = e), r(t - e.top);
                     }
                     return (0, i.createElement)(
                         O,
@@ -7160,7 +7157,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     null == c || c(e);
                                 },
                                 onSlideEnd: () => {
-                                    ((m.current = void 0), null == u || u());
+                                    (m.current = void 0), null == u || u();
                                 },
                                 onStepKeyDown: t => {
                                     let e = y[g ? "from-bottom" : "from-top"].includes(t.key);
@@ -7182,7 +7179,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             }),
                             onPointerDown: (0, s.M)(t.onPointerDown, t => {
                                 let e = t.target;
-                                (e.setPointerCapture(t.pointerId), t.preventDefault(), f.thumbs.has(e) ? e.focus() : o(t));
+                                e.setPointerCapture(t.pointerId), t.preventDefault(), f.thumbs.has(e) ? e.focus() : o(t);
                             }),
                             onPointerMove: (0, s.M)(t.onPointerMove, t => {
                                 t.target.hasPointerCapture(t.pointerId) && a(t);
@@ -7297,7 +7294,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 n = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value").set;
                             if (s !== e && n) {
                                 let r = new Event("input", { bubbles: !0 });
-                                (n.call(t, e), t.dispatchEvent(r));
+                                n.call(t, e), t.dispatchEvent(r);
                             }
                         }, [s, e]),
                         (0, i.createElement)("input", (0, r.Z)({ style: { display: "none" } }, n, { ref: o, defaultValue: e }))
@@ -7355,7 +7352,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             (0, r.Z)({ type: "button", role: "switch", "aria-checked": C, "aria-required": d, "data-state": w(C), "data-disabled": p ? "" : void 0, disabled: p, value: f }, y, {
                                 ref: S,
                                 onClick: (0, o.M)(t.onClick, t => {
-                                    (E(t => !t), M && ((k.current = t.isPropagationStopped()), k.current || t.stopPropagation()));
+                                    E(t => !t), M && ((k.current = t.isPropagationStopped()), k.current || t.stopPropagation());
                                 }),
                             })
                         ),
@@ -7378,7 +7375,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 e = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "checked").set;
                             if (l !== n && e) {
                                 let r = new Event("click", { bubbles: o });
-                                (e.call(t, n), t.dispatchEvent(r));
+                                e.call(t, n), t.dispatchEvent(r);
                             }
                         }, [l, n, o]),
                         (0, i.createElement)(
@@ -7449,12 +7446,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
         },
         24475: function (t, e, n) {
             "use strict";
-            (n.d(e, {
+            n.d(e, {
                 I: function () {
                     return r;
                 },
             }),
-                n(13694));
+                n(13694);
             let r = n(94725).hj.create({
                 name: "color",
                 addOptions: () => ({ types: ["textStyle"] }),
@@ -7547,7 +7544,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             });
             var r = n(94725),
                 i = function () {};
-            ((i.prototype.append = function (t) {
+            (i.prototype.append = function (t) {
                 return t.length ? ((t = i.from(t)), (!this.length && t) || (t.length < 200 && this.leafAppend(t)) || (this.length < 200 && t.leafPrepend(this)) || this.appendInner(t)) : this;
             }),
                 (i.prototype.prepend = function (t) {
@@ -7563,10 +7560,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (!(t < 0) && !(t >= this.length)) return this.getInner(t);
                 }),
                 (i.prototype.forEach = function (t, e, n) {
-                    (void 0 === e && (e = 0), void 0 === n && (n = this.length), e <= n ? this.forEachInner(t, e, n, 0) : this.forEachInvertedInner(t, e, n, 0));
+                    void 0 === e && (e = 0), void 0 === n && (n = this.length), e <= n ? this.forEachInner(t, e, n, 0) : this.forEachInvertedInner(t, e, n, 0);
                 }),
                 (i.prototype.map = function (t, e, n) {
-                    (void 0 === e && (e = 0), void 0 === n && (n = this.length));
+                    void 0 === e && (e = 0), void 0 === n && (n = this.length);
                     var r = [];
                     return (
                         this.forEach(
@@ -7581,12 +7578,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }),
                 (i.from = function (t) {
                     return t instanceof i ? t : t && t.length ? new o(t) : i.empty;
-                }));
+                });
             var o = (function (t) {
                 function e(e) {
-                    (t.call(this), (this.values = e));
+                    t.call(this), (this.values = e);
                 }
-                (t && (e.__proto__ = t), (e.prototype = Object.create(t && t.prototype)), (e.prototype.constructor = e));
+                t && (e.__proto__ = t), (e.prototype = Object.create(t && t.prototype)), (e.prototype.constructor = e);
                 var n = { length: { configurable: !0 }, depth: { configurable: !0 } };
                 return (
                     (e.prototype.flatten = function () {
@@ -7623,7 +7620,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             i.empty = new o([]);
             var s = (function (t) {
                     function e(e, n) {
-                        (t.call(this), (this.left = e), (this.right = n), (this.length = e.length + n.length), (this.depth = Math.max(e.depth, n.depth) + 1));
+                        t.call(this), (this.left = e), (this.right = n), (this.length = e.length + n.length), (this.depth = Math.max(e.depth, n.depth) + 1);
                     }
                     return (
                         t && (e.__proto__ = t),
@@ -7671,7 +7668,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 l = n(17213);
             class c {
                 constructor(t, e) {
-                    ((this.items = t), (this.eventCount = e));
+                    (this.items = t), (this.eventCount = e);
                 }
                 popEvent(t, e) {
                     let n, r, i, o;
@@ -7690,17 +7687,16 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         this.items.forEach(
                             (t, e) => {
                                 if (!t.step) {
-                                    (n || (r = (n = this.remapping(s, e + 1)).maps.length), r--, h.push(t));
+                                    n || (r = (n = this.remapping(s, e + 1)).maps.length), r--, h.push(t);
                                     return;
                                 }
                                 if (n) {
                                     h.push(new u(t.map));
                                     let e = t.step.map(n.slice(r)),
                                         i;
-                                    (e && a.maybeStep(e).doc && ((i = a.mapping.maps[a.mapping.maps.length - 1]), l.push(new u(i, void 0, void 0, l.length + h.length))), r--, i && n.appendMap(i, r));
+                                    e && a.maybeStep(e).doc && ((i = a.mapping.maps[a.mapping.maps.length - 1]), l.push(new u(i, void 0, void 0, l.length + h.length))), r--, i && n.appendMap(i, r);
                                 } else a.maybeStep(t.step);
-                                if (t.selection)
-                                    return ((i = n ? t.selection.map(n.slice(r)) : t.selection), (o = new c(this.items.slice(0, s).append(h.reverse().concat(l)), this.eventCount - 1)), !1);
+                                if (t.selection) return (i = n ? t.selection.map(n.slice(r)) : t.selection), (o = new c(this.items.slice(0, s).append(h.reverse().concat(l)), this.eventCount - 1)), !1;
                             },
                             this.items.length,
                             0
@@ -7719,7 +7715,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         let i = t.steps[n].invert(t.docs[n]),
                             o = new u(t.mapping.maps[n], i, e),
                             s;
-                        ((s = p && p.merge(o)) && ((o = s), n ? a.pop() : (h = h.slice(0, h.length - 1))), a.push(o), e && (l++, (e = void 0)), r || (p = o));
+                        (s = p && p.merge(o)) && ((o = s), n ? a.pop() : (h = h.slice(0, h.length - 1))), a.push(o), e && (l++, (e = void 0)), r || (p = o);
                     }
                     let f = l - n.depth;
                     return (
@@ -7727,7 +7723,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             ((i = h),
                             (o = f),
                             i.forEach((t, e) => {
-                                if (t.selection && 0 == o--) return ((s = e), !1);
+                                if (t.selection && 0 == o--) return (s = e), !1;
                             }),
                             (h = i.slice(s)),
                             (l -= f)),
@@ -7770,13 +7766,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (e.step) {
                             let o = t.steps[r].invert(t.docs[r]),
                                 c = e.selection && e.selection.map(i.slice(a + 1, r));
-                            (c && s++, n.push(new u(l, o, c)));
+                            c && s++, n.push(new u(l, o, c));
                         } else n.push(new u(l));
                     }, r);
                     let l = [];
                     for (let t = e; t < o; t++) l.push(new u(i.maps[t]));
                     let h = new c(this.items.slice(0, r).append(l).append(n), s);
-                    return (h.emptyItemCount() > 500 && (h = h.compress(this.items.length - n.length)), h);
+                    return h.emptyItemCount() > 500 && (h = h.compress(this.items.length - n.length)), h;
                 }
                 emptyItemCount() {
                     let t = 0;
@@ -7795,7 +7791,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return (
                         this.items.forEach(
                             (i, s) => {
-                                if (s >= t) (r.push(i), i.selection && o++);
+                                if (s >= t) r.push(i), i.selection && o++;
                                 else if (i.step) {
                                     let t = i.step.map(e.slice(n)),
                                         s = t && t.getMap();
@@ -7819,7 +7815,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             c.empty = new c(i.empty, 0);
             class u {
                 constructor(t, e, n, r) {
-                    ((this.map = t), (this.step = e), (this.selection = n), (this.mirrorOffset = r));
+                    (this.map = t), (this.step = e), (this.selection = n), (this.mirrorOffset = r);
                 }
                 merge(t) {
                     if (this.step && t.step && !t.selection) {
@@ -7830,13 +7826,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class h {
                 constructor(t, e, n, r, i) {
-                    ((this.done = t), (this.undone = e), (this.prevRanges = n), (this.prevTime = r), (this.prevComposition = i));
+                    (this.done = t), (this.undone = e), (this.prevRanges = n), (this.prevTime = r), (this.prevComposition = i);
                 }
             }
             let d = 20;
             function p(t) {
                 let e = [];
-                return (t.forEach((t, n, r, i) => e.push(r, i)), e);
+                return t.forEach((t, n, r, i) => e.push(r, i)), e;
             }
             function f(t, e) {
                 if (!t) return null;
@@ -7863,7 +7859,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function v(t) {
                 let e = t.plugins;
                 if (y != e) {
-                    ((g = !1), (y = e));
+                    (g = !1), (y = e);
                     for (let t = 0; t < e.length; t++)
                         if (e[t].spec.historyPreserveItems) {
                             g = !0;
@@ -8081,7 +8077,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     },
                     addKeyboardShortcuts() {
                         let t = {};
-                        return ((0, r.eE)() ? (t["Mod-Shift-s"] = () => this.editor.commands.toggleStrike()) : (t["Ctrl-Shift-s"] = () => this.editor.commands.toggleStrike()), t);
+                        return (0, r.eE)() ? (t["Mod-Shift-s"] = () => this.editor.commands.toggleStrike()) : (t["Ctrl-Shift-s"] = () => this.editor.commands.toggleStrike()), t;
                     },
                     addInputRules() {
                         return [(0, r.Cf)({ find: i, type: this.type })];
@@ -8235,7 +8231,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     );
             class l extends r.Component {
                 constructor(t) {
-                    (super(t), (this.editorContentRef = r.createRef()), (this.initialized = !1), (this.state = { renderers: {} }));
+                    super(t), (this.editorContentRef = r.createRef()), (this.initialized = !1), (this.state = { renderers: {} });
                 }
                 componentDidMount() {
                     this.init();
@@ -8248,7 +8244,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (t && t.options.element) {
                         if (t.contentComponent) return;
                         let e = this.editorContentRef.current;
-                        (e.append(...t.options.element.childNodes), t.setOptions({ element: e }), (t.contentComponent = this), t.createNodeViews(), (this.initialized = !0));
+                        e.append(...t.options.element.childNodes), t.setOptions({ element: e }), (t.contentComponent = this), t.createNodeViews(), (this.initialized = !0);
                     }
                 }
                 maybeFlushSync(t) {
@@ -8263,7 +8259,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     this.maybeFlushSync(() => {
                         this.setState(({ renderers: e }) => {
                             let n = { ...e };
-                            return (delete n[t], { renderers: n });
+                            return delete n[t], { renderers: n };
                         });
                     });
                 }
@@ -8271,7 +8267,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     let { editor: t } = this.props;
                     if (!t || ((this.initialized = !1), t.isDestroyed || t.view.setProps({ nodeViews: {} }), (t.contentComponent = null), !t.options.element.firstChild)) return;
                     let e = document.createElement("div");
-                    (e.append(...t.options.element.childNodes), t.setOptions({ element: e }));
+                    e.append(...t.options.element.childNodes), t.setOptions({ element: e });
                 }
                 render() {
                     let { editor: t, innerRef: e, ...n } = this.props;
@@ -8285,7 +8281,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 u = r.memo(c);
             class h extends o.ML {
                 constructor() {
-                    (super(...arguments), (this.contentComponent = null));
+                    super(...arguments), (this.contentComponent = null);
                 }
             }
             let d = (t = {}, e = []) => {
@@ -8429,12 +8425,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(57242);
             class i {
                 constructor(t, e, n) {
-                    ((this.position = { x: t, y: e }), (this.type = n));
+                    (this.position = { x: t, y: e }), (this.type = n);
                 }
             }
             class o extends i {
                 constructor(t, e, n) {
-                    (super(t, e, "circle"), (this.radius = n));
+                    super(t, e, "circle"), (this.radius = n);
                 }
                 contains(t) {
                     return (0, r.Sp)(t, this.position) <= this.radius;
@@ -8454,7 +8450,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class s extends i {
                 constructor(t, e, n, r) {
-                    (super(t, e, "rectangle"), (this.size = { height: r, width: n }));
+                    super(t, e, "rectangle"), (this.size = { height: r, width: n });
                 }
                 contains(t) {
                     let e = this.size.width,
@@ -8492,12 +8488,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 constructor(t, e, n) {
                     if (
                         ((this._updateFromAngle = (t, e) => {
-                            ((this.x = Math.cos(t) * e), (this.y = Math.sin(t) * e));
+                            (this.x = Math.cos(t) * e), (this.y = Math.sin(t) * e);
                         }),
                         !(0, i.hj)(t) && t)
                     )
-                        ((this.x = t.x), (this.y = t.y), (this.z = t.z ? t.z : o.z));
-                    else if (void 0 !== t && void 0 !== e) ((this.x = t), (this.y = e), (this.z = n ?? o.z));
+                        (this.x = t.x), (this.y = t.y), (this.z = t.z ? t.z : o.z);
+                    else if (void 0 !== t && void 0 !== e) (this.x = t), (this.y = e), (this.z = n ?? o.z);
                     else throw Error(`${r.gK} Vector3d not initialized correctly`);
                 }
                 static get origin() {
@@ -8525,7 +8521,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return s.create(this.x + t.x, this.y + t.y, this.z + t.z);
                 }
                 addTo(t) {
-                    ((this.x += t.x), (this.y += t.y), (this.z += t.z));
+                    (this.x += t.x), (this.y += t.y), (this.z += t.z);
                 }
                 copy() {
                     return s.clone(this);
@@ -8540,7 +8536,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return s.create(this.x / t, this.y / t, this.z / t);
                 }
                 divTo(t) {
-                    ((this.x /= t), (this.y /= t), (this.z /= t));
+                    (this.x /= t), (this.y /= t), (this.z /= t);
                 }
                 getLengthSq() {
                     return this.x ** 2 + this.y ** 2;
@@ -8549,7 +8545,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return s.create(this.x * t, this.y * t, this.z * t);
                 }
                 multTo(t) {
-                    ((this.x *= t), (this.y *= t), (this.z *= t));
+                    (this.x *= t), (this.y *= t), (this.z *= t);
                 }
                 normalize() {
                     let t = this.length;
@@ -8559,13 +8555,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return s.create(this.x * Math.cos(t) - this.y * Math.sin(t), this.x * Math.sin(t) + this.y * Math.cos(t), o.z);
                 }
                 setTo(t) {
-                    ((this.x = t.x), (this.y = t.y), (this.z = t.z ? t.z : o.z));
+                    (this.x = t.x), (this.y = t.y), (this.z = t.z ? t.z : o.z);
                 }
                 sub(t) {
                     return s.create(this.x - t.x, this.y - t.y, this.z - t.z);
                 }
                 subFrom(t) {
-                    ((this.x -= t.x), (this.y -= t.y), (this.z -= t.z));
+                    (this.x -= t.x), (this.y -= t.y), (this.z -= t.z);
                 }
             }
             class a extends s {
@@ -8595,11 +8591,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 o = n(3921);
             class s extends o.O {
                 constructor() {
-                    (super(), (this.animation = new i.h()));
+                    super(), (this.animation = new i.h());
                 }
                 static create(t, e) {
                     let n = new s();
-                    return (n.load(t), void 0 !== e && ((0, r.HD)(e) || (0, r.kJ)(e) ? n.load({ value: e }) : n.load(e)), n);
+                    return n.load(t), void 0 !== e && ((0, r.HD)(e) || (0, r.kJ)(e) ? n.load({ value: e }) : n.load(e)), n;
                 }
                 load(t) {
                     if ((super.load(t), !t)) return;
@@ -8621,7 +8617,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(57242);
             class i {
                 constructor() {
-                    ((this.count = 0), (this.enable = !1), (this.speed = 1), (this.decay = 0), (this.delay = 0), (this.sync = !1));
+                    (this.count = 0), (this.enable = !1), (this.speed = 1), (this.decay = 0), (this.delay = 0), (this.sync = !1);
                 }
                 load(t) {
                     t &&
@@ -8635,10 +8631,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class o extends i {
                 constructor() {
-                    (super(), (this.mode = "auto"), (this.startValue = "random"));
+                    super(), (this.mode = "auto"), (this.startValue = "random");
                 }
                 load(t) {
-                    (super.load(t), t && (void 0 !== t.mode && (this.mode = t.mode), void 0 !== t.startValue && (this.startValue = t.startValue)));
+                    super.load(t), t && (void 0 !== t.mode && (this.mode = t.mode), void 0 !== t.startValue && (this.startValue = t.startValue));
                 }
             }
         },
@@ -8653,10 +8649,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 i = n(57242);
             class o extends r.P {
                 constructor() {
-                    (super(), (this.offset = 0), (this.sync = !0));
+                    super(), (this.offset = 0), (this.sync = !0);
                 }
                 load(t) {
-                    (super.load(t), t && void 0 !== t.offset && (this.offset = (0, i.Cs)(t.offset)));
+                    super.load(t), t && void 0 !== t.offset && (this.offset = (0, i.Cs)(t.offset));
                 }
             }
         },
@@ -8670,7 +8666,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(45946);
             class i {
                 constructor() {
-                    ((this.h = new r.y()), (this.s = new r.y()), (this.l = new r.y()));
+                    (this.h = new r.y()), (this.s = new r.y()), (this.l = new r.y());
                 }
                 load(t) {
                     t && (this.h.load(t.h), this.s.load(t.s), this.l.load(t.l));
@@ -8686,7 +8682,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             });
             class r {
                 constructor() {
-                    ((this.enable = !1), (this.mode = []));
+                    (this.enable = !1), (this.mode = []);
                 }
                 load(t) {
                     t && (void 0 !== t.enable && (this.enable = t.enable), void 0 !== t.mode && (this.mode = t.mode));
@@ -8694,7 +8690,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class i {
                 constructor() {
-                    ((this.selectors = []), (this.enable = !1), (this.mode = []), (this.type = "circle"));
+                    (this.selectors = []), (this.enable = !1), (this.mode = []), (this.type = "circle");
                 }
                 load(t) {
                     t &&
@@ -8706,7 +8702,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class o {
                 constructor() {
-                    ((this.enable = !1), (this.force = 2), (this.smooth = 10));
+                    (this.enable = !1), (this.force = 2), (this.smooth = 10);
                 }
                 load(t) {
                     t && (void 0 !== t.enable && (this.enable = t.enable), void 0 !== t.force && (this.force = t.force), void 0 !== t.smooth && (this.smooth = t.smooth));
@@ -8714,7 +8710,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class s {
                 constructor() {
-                    ((this.enable = !1), (this.mode = []), (this.parallax = new o()));
+                    (this.enable = !1), (this.mode = []), (this.parallax = new o());
                 }
                 load(t) {
                     t && (void 0 !== t.enable && (this.enable = t.enable), void 0 !== t.mode && (this.mode = t.mode), this.parallax.load(t.parallax));
@@ -8722,7 +8718,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class a {
                 constructor() {
-                    ((this.delay = 0.5), (this.enable = !0));
+                    (this.delay = 0.5), (this.enable = !0);
                 }
                 load(t) {
                     void 0 !== t && (void 0 !== t.delay && (this.delay = t.delay), void 0 !== t.enable && (this.enable = t.enable));
@@ -8731,19 +8727,19 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var l = n(96066);
             class c {
                 constructor() {
-                    ((this.onClick = new r()), (this.onDiv = new i()), (this.onHover = new s()), (this.resize = new a()));
+                    (this.onClick = new r()), (this.onDiv = new i()), (this.onHover = new s()), (this.resize = new a());
                 }
                 load(t) {
                     if (!t) return;
                     this.onClick.load(t.onClick);
                     let e = t.onDiv;
-                    (void 0 !== e &&
+                    void 0 !== e &&
                         (this.onDiv = (0, l.KH)(e, t => {
                             let e = new i();
-                            return (e.load(t), e);
+                            return e.load(t), e;
                         })),
                         this.onHover.load(t.onHover),
-                        this.resize.load(t.resize));
+                        this.resize.load(t.resize);
                 }
             }
         },
@@ -8757,7 +8753,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(99533);
             class i {
                 constructor(t, e) {
-                    ((this._engine = t), (this._container = e));
+                    (this._engine = t), (this._container = e);
                 }
                 load(t) {
                     if (!t || !this._container) return;
@@ -8767,12 +8763,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class o {
                 constructor(t, e) {
-                    ((this.detectsOn = "window"), (this.events = new r.z()), (this.modes = new i(t, e)));
+                    (this.detectsOn = "window"), (this.events = new r.z()), (this.modes = new i(t, e));
                 }
                 load(t) {
                     if (!t) return;
                     let e = t.detectsOn;
-                    (void 0 !== e && (this.detectsOn = e), this.events.load(t.events), this.modes.load(t.modes));
+                    void 0 !== e && (this.detectsOn = e), this.events.load(t.events), this.modes.load(t.modes);
                 }
             }
         },
@@ -8801,7 +8797,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 i = n(3921);
             class o {
                 constructor() {
-                    ((this.color = new i.O()), (this.color.value = ""), (this.image = ""), (this.position = ""), (this.repeat = ""), (this.size = ""), (this.opacity = 1));
+                    (this.color = new i.O()), (this.color.value = ""), (this.image = ""), (this.position = ""), (this.repeat = ""), (this.size = ""), (this.opacity = 1);
                 }
                 load(t) {
                     t &&
@@ -8824,7 +8820,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var a = n(21717);
             class l {
                 constructor() {
-                    ((this.composite = "destination-out"), (this.cover = new s()), (this.enable = !1));
+                    (this.composite = "destination-out"), (this.cover = new s()), (this.enable = !1);
                 }
                 load(t) {
                     if (t) {
@@ -8839,7 +8835,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class c {
                 constructor() {
-                    ((this.enable = !0), (this.zIndex = 0));
+                    (this.enable = !0), (this.zIndex = 0);
                 }
                 load(t) {
                     t && (void 0 !== t.enable && (this.enable = t.enable), void 0 !== t.zIndex && (this.zIndex = t.zIndex));
@@ -8853,7 +8849,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 m = n(57242);
             class g {
                 constructor(t, e) {
-                    ((this._findDefaultTheme = t => this.themes.find(e => e.default.value && e.default.mode === t) ?? this.themes.find(t => t.default.value && "any" === t.default.mode)),
+                    (this._findDefaultTheme = t => this.themes.find(e => e.default.value && e.default.mode === t) ?? this.themes.find(t => t.default.value && "any" === t.default.mode)),
                         (this._importPreset = t => {
                             this.load(this._engine.getPreset(t));
                         }),
@@ -8878,43 +8874,43 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (this.smooth = !1),
                         (this.style = {}),
                         (this.themes = []),
-                        (this.zLayers = 100));
+                        (this.zLayers = 100);
                 }
                 load(t) {
                     if (!t) return;
-                    (void 0 !== t.preset && (0, r.KH)(t.preset, t => this._importPreset(t)),
+                    void 0 !== t.preset && (0, r.KH)(t.preset, t => this._importPreset(t)),
                         void 0 !== t.autoPlay && (this.autoPlay = t.autoPlay),
                         void 0 !== t.clear && (this.clear = t.clear),
                         void 0 !== t.key && (this.key = t.key),
                         void 0 !== t.name && (this.name = t.name),
-                        void 0 !== t.delay && (this.delay = (0, m.Cs)(t.delay)));
+                        void 0 !== t.delay && (this.delay = (0, m.Cs)(t.delay));
                     let e = t.detectRetina;
-                    (void 0 !== e && (this.detectRetina = e), void 0 !== t.duration && (this.duration = (0, m.Cs)(t.duration)));
+                    void 0 !== e && (this.detectRetina = e), void 0 !== t.duration && (this.duration = (0, m.Cs)(t.duration));
                     let n = t.fpsLimit;
-                    (void 0 !== n && (this.fpsLimit = n),
+                    void 0 !== n && (this.fpsLimit = n),
                         void 0 !== t.pauseOnBlur && (this.pauseOnBlur = t.pauseOnBlur),
                         void 0 !== t.pauseOnOutsideViewport && (this.pauseOnOutsideViewport = t.pauseOnOutsideViewport),
                         void 0 !== t.zLayers && (this.zLayers = t.zLayers),
-                        this.background.load(t.background));
+                        this.background.load(t.background);
                     let i = t.fullScreen;
-                    ((0, a.jn)(i) ? (this.fullScreen.enable = i) : this.fullScreen.load(i),
+                    (0, a.jn)(i) ? (this.fullScreen.enable = i) : this.fullScreen.load(i),
                         this.backgroundMask.load(t.backgroundMask),
                         this.interactivity.load(t.interactivity),
                         t.manualParticles &&
                             (this.manualParticles = t.manualParticles.map(t => {
                                 let e = new h.h();
-                                return (e.load(t), e);
+                                return e.load(t), e;
                             })),
                         this.particles.load(t.particles),
                         (this.style = (0, r.ZB)(this.style, t.style)),
                         this._engine.loadOptions(this, t),
-                        void 0 !== t.smooth && (this.smooth = t.smooth));
+                        void 0 !== t.smooth && (this.smooth = t.smooth);
                     let o = this._engine.interactors.get(this._container);
                     if (o) for (let e of o) e.loadOptions && e.loadOptions(this, t);
                     if (void 0 !== t.responsive)
                         for (let e of t.responsive) {
                             let t = new d.E();
-                            (t.load(e), this.responsive.push(t));
+                            t.load(e), this.responsive.push(t);
                         }
                     if ((this.responsive.sort((t, e) => t.maxWidth - e.maxWidth), void 0 !== t.themes))
                         for (let e of t.themes) {
@@ -8922,15 +8918,15 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             if (t) t.load(e);
                             else {
                                 let t = new p.Q();
-                                (t.load(e), this.themes.push(t));
+                                t.load(e), this.themes.push(t);
                             }
                         }
-                    ((this.defaultThemes.dark = this._findDefaultTheme("dark")?.name), (this.defaultThemes.light = this._findDefaultTheme("light")?.name));
+                    (this.defaultThemes.dark = this._findDefaultTheme("dark")?.name), (this.defaultThemes.light = this._findDefaultTheme("light")?.name);
                 }
                 setResponsive(t, e, n) {
                     this.load(n);
                     let r = this.responsive.find(n => ("screen" === n.mode && screen ? n.maxWidth > screen.availWidth : n.maxWidth * e > t));
-                    return (this.load(r?.options), r?.maxWidth);
+                    return this.load(r?.options), r?.maxWidth;
                 }
                 setTheme(t) {
                     if (t) {
@@ -8959,7 +8955,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 static create(t, e) {
                     let n = new i();
-                    return (n.load(t), void 0 !== e && ((0, r.HD)(e) || (0, r.kJ)(e) ? n.load({ value: e }) : n.load(e)), n);
+                    return n.load(t), void 0 !== e && ((0, r.HD)(e) || (0, r.kJ)(e) ? n.load({ value: e }) : n.load(e)), n;
                 }
                 load(t) {
                     t?.value !== void 0 && (this.value = t.value);
@@ -8976,7 +8972,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(22584);
             class i {
                 constructor() {
-                    ((this.horizontal = new r.u()), (this.vertical = new r.u()));
+                    (this.horizontal = new r.u()), (this.vertical = new r.u());
                 }
                 load(t) {
                     t && (this.horizontal.load(t.horizontal), this.vertical.load(t.vertical));
@@ -8993,7 +8989,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(69621);
             class i extends r.SW {
                 constructor() {
-                    (super(), (this.value = 1));
+                    super(), (this.value = 1);
                 }
             }
         },
@@ -9014,7 +9010,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class i {
                 constructor() {
-                    ((this.enable = !0), (this.retries = 0));
+                    (this.enable = !0), (this.retries = 0);
                 }
                 load(t) {
                     t && (void 0 !== t.enable && (this.enable = t.enable), void 0 !== t.retries && (this.retries = t.retries));
@@ -9024,7 +9020,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 s = n(57242);
             class a {
                 constructor() {
-                    ((this.absorb = new r()), (this.bounce = new o.b()), (this.enable = !1), (this.maxSpeed = 50), (this.mode = "bounce"), (this.overlap = new i()));
+                    (this.absorb = new r()), (this.bounce = new o.b()), (this.enable = !1), (this.maxSpeed = 50), (this.mode = "bounce"), (this.overlap = new i());
                 }
                 load(t) {
                     t &&
@@ -9049,7 +9045,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 o = n(87918);
             class s {
                 constructor() {
-                    ((this.x = 50), (this.y = 50), (this.mode = "percent"), (this.radius = 0));
+                    (this.x = 50), (this.y = 50), (this.mode = "percent"), (this.radius = 0);
                 }
                 load(t) {
                     t && (void 0 !== t.x && (this.x = t.x), void 0 !== t.y && (this.y = t.y), void 0 !== t.mode && (this.mode = t.mode), void 0 !== t.radius && (this.radius = t.radius));
@@ -9065,7 +9061,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class h {
                 constructor() {
-                    ((this.enable = !1), (this.length = 10), (this.fill = new u()));
+                    (this.enable = !1), (this.length = 10), (this.fill = new u());
                 }
                 load(t) {
                     t && (void 0 !== t.enable && (this.enable = t.enable), void 0 !== t.fill && this.fill.load(t.fill), void 0 !== t.length && (this.length = t.length));
@@ -9088,7 +9084,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 f = n(57242);
             class m {
                 constructor() {
-                    ((this.angle = new i.k()),
+                    (this.angle = new i.k()),
                         (this.attract = new o.k()),
                         (this.center = new s()),
                         (this.decay = 0),
@@ -9106,11 +9102,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (this.straight = !1),
                         (this.trail = new h()),
                         (this.vibrate = !1),
-                        (this.warp = !1));
+                        (this.warp = !1);
                 }
                 load(t) {
                     if (!t) return;
-                    (this.angle.load((0, r.hj)(t.angle) ? { value: t.angle } : t.angle),
+                    this.angle.load((0, r.hj)(t.angle) ? { value: t.angle } : t.angle),
                         this.attract.load(t.attract),
                         this.center.load(t.center),
                         void 0 !== t.decay && (this.decay = (0, f.Cs)(t.decay)),
@@ -9118,9 +9114,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         void 0 !== t.distance && (this.distance = (0, r.hj)(t.distance) ? { horizontal: t.distance, vertical: t.distance } : { ...t.distance }),
                         void 0 !== t.drift && (this.drift = (0, f.Cs)(t.drift)),
                         void 0 !== t.enable && (this.enable = t.enable),
-                        this.gravity.load(t.gravity));
+                        this.gravity.load(t.gravity);
                     let e = t.outModes;
-                    (void 0 !== e && ((0, r.Kn)(e) ? this.outModes.load(e) : this.outModes.load({ default: e })),
+                    void 0 !== e && ((0, r.Kn)(e) ? this.outModes.load(e) : this.outModes.load({ default: e })),
                         this.path.load(t.path),
                         void 0 !== t.random && (this.random = t.random),
                         void 0 !== t.size && (this.size = t.size),
@@ -9129,7 +9125,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         void 0 !== t.straight && (this.straight = t.straight),
                         this.trail.load(t.trail),
                         void 0 !== t.vibrate && (this.vibrate = t.vibrate),
-                        void 0 !== t.warp && (this.warp = t.warp));
+                        void 0 !== t.warp && (this.warp = t.warp);
                 }
             }
         },
@@ -9143,7 +9139,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(57242);
             class i {
                 constructor() {
-                    ((this.offset = 0), (this.value = 90));
+                    (this.offset = 0), (this.value = 90);
                 }
                 load(t) {
                     t && (void 0 !== t.offset && (this.offset = (0, r.Cs)(t.offset)), void 0 !== t.value && (this.value = (0, r.Cs)(t.value)));
@@ -9160,7 +9156,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(57242);
             class i {
                 constructor() {
-                    ((this.distance = 200), (this.enable = !1), (this.rotate = { x: 3e3, y: 3e3 }));
+                    (this.distance = 200), (this.enable = !1), (this.rotate = { x: 3e3, y: 3e3 });
                 }
                 load(t) {
                     if (t && (void 0 !== t.distance && (this.distance = (0, r.Cs)(t.distance)), void 0 !== t.enable && (this.enable = t.enable), t.rotate)) {
@@ -9182,7 +9178,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(57242);
             class i {
                 constructor() {
-                    ((this.acceleration = 9.81), (this.enable = !1), (this.inverse = !1), (this.maxSpeed = 50));
+                    (this.acceleration = 9.81), (this.enable = !1), (this.inverse = !1), (this.maxSpeed = 50);
                 }
                 load(t) {
                     t &&
@@ -9204,7 +9200,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 i = n(96066);
             class o {
                 constructor() {
-                    ((this.clamp = !0), (this.delay = new r.SW()), (this.enable = !1), (this.options = {}));
+                    (this.clamp = !0), (this.delay = new r.SW()), (this.enable = !1), (this.options = {});
                 }
                 load(t) {
                     t &&
@@ -9227,7 +9223,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 i = n(57242);
             class o {
                 constructor() {
-                    ((this.acceleration = 0), (this.enable = !1));
+                    (this.acceleration = 0), (this.enable = !1);
                 }
                 load(t) {
                     t &&
@@ -9248,7 +9244,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 i = n(69621);
             class o extends i.md {
                 constructor() {
-                    (super(), (this.animation = new r.O()), (this.value = 1));
+                    super(), (this.animation = new r.O()), (this.value = 1);
                 }
                 load(t) {
                     if (!t) return;
@@ -9268,10 +9264,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(70737);
             class i extends r.B {
                 constructor() {
-                    (super(), (this.destroy = "none"), (this.speed = 2));
+                    super(), (this.destroy = "none"), (this.speed = 2);
                 }
                 load(t) {
-                    (super.load(t), t && void 0 !== t.destroy && (this.destroy = t.destroy));
+                    super.load(t), t && void 0 !== t.destroy && (this.destroy = t.destroy);
                 }
             }
         },
@@ -9287,7 +9283,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 o = n(92164);
             class s {
                 constructor() {
-                    ((this.close = !0), (this.fill = !0), (this.options = {}), (this.type = []));
+                    (this.close = !0), (this.fill = !0), (this.options = {}), (this.type = []);
                 }
                 load(t) {
                     if (!t) return;
@@ -9297,7 +9293,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             let n = e[t];
                             n && (this.options[t] = (0, r.ZB)(this.options[t] ?? {}, n));
                         }
-                    (void 0 !== t.close && (this.close = t.close), void 0 !== t.fill && (this.fill = t.fill), void 0 !== t.type && (this.type = t.type));
+                    void 0 !== t.close && (this.close = t.close), void 0 !== t.fill && (this.fill = t.fill), void 0 !== t.type && (this.type = t.type);
                 }
             }
             var a = n(62693),
@@ -9305,7 +9301,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 c = n(97805);
             class u {
                 constructor() {
-                    ((this.enable = !1), (this.width = 1920), (this.height = 1080));
+                    (this.enable = !1), (this.width = 1920), (this.height = 1080);
                 }
                 load(t) {
                     if (!t) return;
@@ -9318,7 +9314,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class h {
                 constructor() {
-                    ((this.mode = "delete"), (this.value = 0));
+                    (this.mode = "delete"), (this.value = 0);
                 }
                 load(t) {
                     t && (void 0 !== t.mode && (this.mode = t.mode), void 0 !== t.value && (this.value = t.value));
@@ -9326,7 +9322,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class d {
                 constructor() {
-                    ((this.density = new u()), (this.limit = new h()), (this.value = 0));
+                    (this.density = new u()), (this.limit = new h()), (this.value = 0);
                 }
                 load(t) {
                     t && (this.density.load(t.density), this.limit.load(t.limit), void 0 !== t.value && (this.value = t.value));
@@ -9335,7 +9331,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var p = n(3921);
             class f {
                 constructor() {
-                    ((this.blur = 0), (this.color = new p.O()), (this.enable = !1), (this.offset = { x: 0, y: 0 }), (this.color.value = "#000"));
+                    (this.blur = 0), (this.color = new p.O()), (this.enable = !1), (this.offset = { x: 0, y: 0 }), (this.color.value = "#000");
                 }
                 load(t) {
                     t &&
@@ -9351,7 +9347,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 v = n(6824);
             class b {
                 constructor(t, e) {
-                    ((this._engine = t),
+                    (this._engine = t),
                         (this._container = e),
                         (this.bounce = new c.b()),
                         (this.collisions = new o.y()),
@@ -9367,7 +9363,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (this.shape = new m.b()),
                         (this.size = new g.$()),
                         (this.stroke = new y.m()),
-                        (this.zIndex = new v.K()));
+                        (this.zIndex = new v.K());
                 }
                 load(t) {
                     if (!t) return;
@@ -9377,7 +9373,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             let n = t.groups[e];
                             void 0 !== n && (this.groups[e] = (0, r.ZB)(this.groups[e] ?? {}, n));
                         }
-                    (void 0 !== t.reduceDuplicates && (this.reduceDuplicates = t.reduceDuplicates),
+                    void 0 !== t.reduceDuplicates && (this.reduceDuplicates = t.reduceDuplicates),
                         this.bounce.load(t.bounce),
                         this.color.load(i.R.create(this.color, t.color)),
                         this.effect.load(t.effect),
@@ -9389,13 +9385,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         this.shadow.load(t.shadow),
                         this.zIndex.load(t.zIndex),
                         this.collisions.load(t.collisions),
-                        void 0 !== t.interactivity && (this.interactivity = (0, r.ZB)({}, t.interactivity)));
+                        void 0 !== t.interactivity && (this.interactivity = (0, r.ZB)({}, t.interactivity));
                     let e = t.stroke;
                     if (
                         (e &&
                             (this.stroke = (0, r.KH)(e, t => {
                                 let e = new y.m();
-                                return (e.load(t), e);
+                                return e.load(t), e;
                             })),
                         this._container)
                     ) {
@@ -9417,7 +9413,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(96066);
             class i {
                 constructor() {
-                    ((this.close = !0), (this.fill = !0), (this.options = {}), (this.type = "circle"));
+                    (this.close = !0), (this.fill = !0), (this.options = {}), (this.type = "circle");
                 }
                 load(t) {
                     if (!t) return;
@@ -9427,7 +9423,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             let n = e[t];
                             n && (this.options[t] = (0, r.ZB)(this.options[t] ?? {}, n));
                         }
-                    (void 0 !== t.close && (this.close = t.close), void 0 !== t.fill && (this.fill = t.fill), void 0 !== t.type && (this.type = t.type));
+                    void 0 !== t.close && (this.close = t.close), void 0 !== t.fill && (this.fill = t.fill), void 0 !== t.type && (this.type = t.type);
                 }
             }
         },
@@ -9442,7 +9438,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 i = n(34392);
             class o extends r.md {
                 constructor() {
-                    (super(), (this.animation = new i.a()), (this.value = 3));
+                    super(), (this.animation = new i.a()), (this.value = 3);
                 }
                 load(t) {
                     if ((super.load(t), !t)) return;
@@ -9461,10 +9457,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(70737);
             class i extends r.B {
                 constructor() {
-                    (super(), (this.destroy = "none"), (this.speed = 5));
+                    super(), (this.destroy = "none"), (this.speed = 5);
                 }
                 load(t) {
-                    (super.load(t), t && void 0 !== t.destroy && (this.destroy = t.destroy));
+                    super.load(t), t && void 0 !== t.destroy && (this.destroy = t.destroy);
                 }
             }
         },
@@ -9499,14 +9495,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(69621);
             class i extends r.SW {
                 constructor() {
-                    (super(), (this.opacityRate = 1), (this.sizeRate = 1), (this.velocityRate = 1));
+                    super(), (this.opacityRate = 1), (this.sizeRate = 1), (this.velocityRate = 1);
                 }
                 load(t) {
-                    (super.load(t),
+                    super.load(t),
                         t &&
                             (void 0 !== t.opacityRate && (this.opacityRate = t.opacityRate),
                             void 0 !== t.sizeRate && (this.sizeRate = t.sizeRate),
-                            void 0 !== t.velocityRate && (this.velocityRate = t.velocityRate)));
+                            void 0 !== t.velocityRate && (this.velocityRate = t.velocityRate));
                 }
             }
         },
@@ -9520,7 +9516,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(96066);
             class i {
                 constructor() {
-                    ((this.maxWidth = 1 / 0), (this.options = {}), (this.mode = "canvas"));
+                    (this.maxWidth = 1 / 0), (this.options = {}), (this.mode = "canvas");
                 }
                 load(t) {
                     t &&
@@ -9539,7 +9535,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             });
             class r {
                 constructor() {
-                    ((this.auto = !1), (this.mode = "any"), (this.value = !1));
+                    (this.auto = !1), (this.mode = "any"), (this.value = !1);
                 }
                 load(t) {
                     t && (void 0 !== t.auto && (this.auto = t.auto), void 0 !== t.mode && (this.mode = t.mode), void 0 !== t.value && (this.value = t.value));
@@ -9548,7 +9544,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var i = n(96066);
             class o {
                 constructor() {
-                    ((this.name = ""), (this.default = new r()));
+                    (this.name = ""), (this.default = new r());
                 }
                 load(t) {
                     t && (void 0 !== t.name && (this.name = t.name), this.default.load(t.default), void 0 !== t.options && (this.options = (0, i.ZB)({}, t.options)));
@@ -9577,7 +9573,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class s extends o {
                 constructor() {
-                    (super(), (this.animation = new r.P()));
+                    super(), (this.animation = new r.P());
                 }
                 load(t) {
                     if ((super.load(t), !t)) return;
@@ -9587,7 +9583,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class a extends s {
                 constructor() {
-                    (super(), (this.animation = new r.B()));
+                    super(), (this.animation = new r.B());
                 }
                 load(t) {
                     super.load(t);
@@ -9624,10 +9620,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             });
             var r = n(63792);
             function i(t, e, n) {
-                (t.beginPath(), t.moveTo(e.x, e.y), t.lineTo(n.x, n.y), t.closePath());
+                t.beginPath(), t.moveTo(e.x, e.y), t.lineTo(n.x, n.y), t.closePath();
             }
             function o(t, e, n) {
-                ((t.fillStyle = n ?? "rgba(0,0,0,0)"), t.fillRect(0, 0, e.width, e.height));
+                (t.fillStyle = n ?? "rgba(0,0,0,0)"), t.fillRect(0, 0, e.width, e.height);
             }
             function s(t, e, n, r) {
                 n && ((t.globalAlpha = r), t.drawImage(n, 0, 0, e.width, e.height), (t.globalAlpha = 1));
@@ -9641,13 +9637,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     f = i.rotation + (i.pathRotation ? i.velocity.angle : 0),
                     m = { sin: Math.sin(f), cos: Math.cos(f) },
                     g = { a: m.cos * (d.a ?? 1), b: m.sin * (d.b ?? 1), c: -m.sin * (d.c ?? 1), d: m.cos * (d.d ?? 1) };
-                (n.setTransform(g.a, g.b, g.c, g.d, p.x, p.y), a && (n.globalCompositeOperation = l));
+                n.setTransform(g.a, g.b, g.c, g.d, p.x, p.y), a && (n.globalCompositeOperation = l);
                 let y = i.shadowColor;
-                (h.enable && y && ((n.shadowBlur = h.blur), (n.shadowColor = (0, r.iz)(y)), (n.shadowOffsetX = h.offset.x), (n.shadowOffsetY = h.offset.y)), s.fill && (n.fillStyle = s.fill));
+                h.enable && y && ((n.shadowBlur = h.blur), (n.shadowColor = (0, r.iz)(y)), (n.shadowOffsetX = h.offset.x), (n.shadowOffsetY = h.offset.y)), s.fill && (n.fillStyle = s.fill);
                 let v = i.strokeWidth ?? 0;
-                ((n.lineWidth = v), s.stroke && (n.strokeStyle = s.stroke));
+                (n.lineWidth = v), s.stroke && (n.strokeStyle = s.stroke);
                 let b = { container: e, context: n, particle: i, radius: c, opacity: u, delta: o, transformData: g, strokeWidth: v };
-                ((function (t) {
+                (function (t) {
                     let { container: e, context: n, particle: r, radius: i, opacity: o, delta: s, strokeWidth: a, transformData: l } = t;
                     if (!r.shape) return;
                     let c = e.shapeDrawers.get(r.shape);
@@ -9671,7 +9667,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         l && l.draw({ context: n, particle: r, radius: i, opacity: o, delta: s, pixelRatio: e.retina.pixelRatio, transformData: { ...a } });
                     })(b),
                     (n.globalCompositeOperation = "source-over"),
-                    n.resetTransform());
+                    n.resetTransform();
             }
             function c(t, e, n) {
                 e.draw && e.draw(t, n);
@@ -9824,7 +9820,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function v(t, e, n, i) {
                 let o = t,
                     s = e;
-                return (void 0 === o.r && (o = p(t)), void 0 === s.r && (s = p(e)), { b: (0, r.CD)(o.b, s.b, n, i), g: (0, r.CD)(o.g, s.g, n, i), r: (0, r.CD)(o.r, s.r, n, i) });
+                return void 0 === o.r && (o = p(t)), void 0 === s.r && (s = p(e)), { b: (0, r.CD)(o.b, s.b, n, i), g: (0, r.CD)(o.g, s.g, n, i), r: (0, r.CD)(o.r, s.r, n, i) };
             }
             function b(t, e, n) {
                 if (n === a) return m();
@@ -9848,10 +9844,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             function S(t, e, n) {
                 let r = { h: { enable: !1, value: t.h }, s: { enable: !1, value: t.s }, l: { enable: !1, value: t.l } };
-                return (e && (k(r.h, e.h, n), k(r.s, e.s, n), k(r.l, e.l, n)), r);
+                return e && (k(r.h, e.h, n), k(r.s, e.s, n), k(r.l, e.l, n)), r;
             }
             function k(t, e, n) {
-                ((t.enable = e.enable),
+                (t.enable = e.enable),
                     t.enable
                         ? ((t.velocity = ((0, r.Gu)(e.speed) / o.tZ) * n),
                           (t.decay = 1 - (0, r.Gu)(e.decay)),
@@ -9863,7 +9859,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                           e.sync || ((t.velocity *= (0, r.sZ)()), (t.value *= (0, r.sZ)())),
                           (t.initialValue = t.value),
                           (t.offset = (0, r.Cs)(e.offset)))
-                        : (t.velocity = 0));
+                        : (t.velocity = 0);
             }
             function M(t, e, n, i) {
                 if (
@@ -9878,17 +9874,17 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     a = t.decay ?? 1,
                     l = (0, r.KI)(e),
                     c = (0, r.Uv)(e);
-                (n && "increasing" !== t.status
+                n && "increasing" !== t.status
                     ? ((t.value -= s), t.value < 0 && (t.loops || (t.loops = 0), t.loops++, (t.status = "increasing")))
                     : ((t.value += s), t.value > l && (t.loops || (t.loops = 0), t.loops++, n ? (t.status = "decreasing") : (t.value -= l))),
                     t.velocity && 1 !== a && (t.velocity *= a),
-                    (t.value = (0, r.uZ)(t.value, c, l)));
+                    (t.value = (0, r.uZ)(t.value, c, l));
             }
             function C(t, e) {
                 if (!t) return;
                 let { h: n, s: r, l: i } = t,
                     o = { h: { min: 0, max: 360 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } };
-                (n && M(n, o.h, !1, e), r && M(r, o.s, !0, e), i && M(i, o.l, !0, e));
+                n && M(n, o.h, !1, e), r && M(r, o.s, !0, e), i && M(i, o.l, !0, e);
             }
         },
         57242: function (t, e, n) {
@@ -9978,7 +9974,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function f(t) {
                 let e = y(t),
                     n = g(t);
-                return (e === n && (n = 0), h() * (e - n) + n);
+                return e === n && (n = 0), h() * (e - n) + n;
             }
             function m(t) {
                 return (0, i.hj)(t) ? t : f(t);
@@ -10029,7 +10025,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             function S(t) {
                 let e = r.O.origin;
-                return ((e.length = 1), (e.angle = t), e);
+                return (e.length = 1), (e.angle = t), e;
             }
             function k(t, e, n, i) {
                 return r.O.create((t.x * (n - i)) / (n + i) + (2 * e.x * i) / (n + i), t.y);
@@ -10057,7 +10053,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             function o(t, e, ...n) {
                 let s = new r.B(t, e);
-                return (i(s, ...n), s);
+                return i(s, ...n), s;
             }
         },
         21717: function (t, e, n) {
@@ -10285,7 +10281,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     m = (0, r.hA)(p, d, u, h),
                     g = f.rotate(-c),
                     y = m.rotate(-c);
-                ((t.velocity.x = g.x * t.factor.x), (t.velocity.y = g.y * t.factor.y), (e.velocity.x = y.x * e.factor.x), (e.velocity.y = y.y * e.factor.y));
+                (t.velocity.x = g.x * t.factor.x), (t.velocity.y = g.y * t.factor.y), (e.velocity.x = y.x * e.factor.x), (e.velocity.y = y.y * e.factor.y);
             }
             function M(t, e) {
                 let n = v(t.getPosition(), t.getRadius()),
@@ -10345,16 +10341,16 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     let t = "auto" === o.mode;
                     switch (o.startValue) {
                         case "min":
-                            ((s.value = s.min), t && (s.status = "increasing"));
+                            (s.value = s.min), t && (s.status = "increasing");
                             break;
                         case "max":
-                            ((s.value = s.max), t && (s.status = "decreasing"));
+                            (s.value = s.max), t && (s.status = "decreasing");
                             break;
                         default:
-                            ((s.value = (0, r.vd)(s)), t && (s.status = (0, r.sZ)() >= i.vq ? "increasing" : "decreasing"));
+                            (s.value = (0, r.vd)(s)), t && (s.status = (0, r.sZ)() >= i.vq ? "increasing" : "decreasing");
                     }
                 }
-                return ((s.initialValue = s.value), s);
+                return (s.initialValue = s.value), s;
             }
             function T(t, e) {
                 return (function (t, e) {
@@ -10379,7 +10375,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         case "decreasing":
                             e.value <= a ? (n ? (e.status = "increasing") : (e.value += l), e.loops || (e.loops = 0), e.loops++) : (e.value -= s);
                     }
-                    (e.velocity && 1 !== c && (e.velocity *= c),
+                    e.velocity && 1 !== c && (e.velocity *= c),
                         (function (t, e, n, r, i) {
                             switch (e) {
                                 case "max":
@@ -10389,7 +10385,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     n <= r && t.destroy();
                             }
                         })(t, i, e.value, a, l),
-                        t.destroyed || (e.value = (0, r.uZ)(e.value, a, l)));
+                        t.destroyed || (e.value = (0, r.uZ)(e.value, a, l));
                 }
             }
         },
@@ -10568,7 +10564,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 addEventListener(t, e) {
                     this.removeEventListener(t, e);
                     let n = this._listeners.get(t);
-                    (n || ((n = []), this._listeners.set(t, n)), n.push(e));
+                    n || ((n = []), this._listeners.set(t, n)), n.push(e);
                 }
                 dispatchEvent(t, e) {
                     let n = this._listeners.get(t);
@@ -10591,7 +10587,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var s = n(57242);
             async function a(t, e, n, r = !1) {
                 let i = e.get(t);
-                return ((!i || r) && ((i = await Promise.all([...n.values()].map(e => e(t)))), e.set(t, i)), i);
+                return (!i || r) && ((i = await Promise.all([...n.values()].map(e => e(t)))), e.set(t, i)), i;
             }
             async function l(t) {
                 let e = (0, i.wA)(t.url, t.index);
@@ -10601,7 +10597,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class c {
                 constructor() {
-                    ((this._configs = new Map()),
+                    (this._configs = new Map()),
                         (this._domArray = []),
                         (this._eventDispatcher = new o()),
                         (this._initialized = !1),
@@ -10613,7 +10609,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (this.presets = new Map()),
                         (this.effectDrawers = new Map()),
                         (this.shapeDrawers = new Map()),
-                        (this.pathGenerators = new Map()));
+                        (this.pathGenerators = new Map());
                 }
                 get configs() {
                     let t = {};
@@ -10625,43 +10621,43 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 addConfig(t) {
                     let e = t.key ?? t.name ?? "default";
-                    (this._configs.set(e, t), this._eventDispatcher.dispatchEvent("configAdded", { data: { name: e, config: t } }));
+                    this._configs.set(e, t), this._eventDispatcher.dispatchEvent("configAdded", { data: { name: e, config: t } });
                 }
                 async addEffect(t, e, n = !0) {
-                    ((0, i.KH)(t, t => {
+                    (0, i.KH)(t, t => {
                         this.getEffectDrawer(t) || this.effectDrawers.set(t, e);
                     }),
-                        await this.refresh(n));
+                        await this.refresh(n);
                 }
                 addEventListener(t, e) {
                     this._eventDispatcher.addEventListener(t, e);
                 }
                 async addInteractor(t, e, n = !0) {
-                    (this._initializers.interactors.set(t, e), await this.refresh(n));
+                    this._initializers.interactors.set(t, e), await this.refresh(n);
                 }
                 async addMover(t, e, n = !0) {
-                    (this._initializers.movers.set(t, e), await this.refresh(n));
+                    this._initializers.movers.set(t, e), await this.refresh(n);
                 }
                 async addParticleUpdater(t, e, n = !0) {
-                    (this._initializers.updaters.set(t, e), await this.refresh(n));
+                    this._initializers.updaters.set(t, e), await this.refresh(n);
                 }
                 async addPathGenerator(t, e, n = !0) {
-                    (this.getPathGenerator(t) || this.pathGenerators.set(t, e), await this.refresh(n));
+                    this.getPathGenerator(t) || this.pathGenerators.set(t, e), await this.refresh(n);
                 }
                 async addPlugin(t, e = !0) {
-                    (this.getPlugin(t.id) || this.plugins.push(t), await this.refresh(e));
+                    this.getPlugin(t.id) || this.plugins.push(t), await this.refresh(e);
                 }
                 async addPreset(t, e, n = !1, r = !0) {
-                    ((n || !this.getPreset(t)) && this.presets.set(t, e), await this.refresh(r));
+                    (n || !this.getPreset(t)) && this.presets.set(t, e), await this.refresh(r);
                 }
                 async addShape(t, e, n = !0) {
-                    ((0, i.KH)(t, t => {
+                    (0, i.KH)(t, t => {
                         this.getShapeDrawer(t) || this.shapeDrawers.set(t, e);
                     }),
-                        await this.refresh(n));
+                        await this.refresh(n);
                 }
                 clearPlugins(t) {
-                    (this.updaters.delete(t), this.movers.delete(t), this.interactors.delete(t));
+                    this.updaters.delete(t), this.movers.delete(t), this.interactors.delete(t);
                 }
                 dispatchEvent(t, e) {
                     this._eventDispatcher.dispatchEvent(t, e);
@@ -10735,10 +10731,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         let t = h.getElementsByTagName("canvas");
                         t.length ? ((e = t[0]).dataset[r.YU] = "false") : (((e = document.createElement("canvas")).dataset[r.YU] = "true"), h.appendChild(e));
                     }
-                    (e.style.width || (e.style.width = "100%"), e.style.height || (e.style.height = "100%"));
+                    e.style.width || (e.style.width = "100%"), e.style.height || (e.style.height = "100%");
                     let { Container: m } = await n.e(3821).then(n.bind(n, 43821)),
                         g = new m(this, o, d);
-                    return (f >= 0 ? p.splice(f, 0, g) : p.push(g), g.canvas.loadCanvas(e), await g.start(), g);
+                    return f >= 0 ? p.splice(f, 0, g) : p.push(g), g.canvas.loadCanvas(e), await g.start(), g;
                 }
                 loadOptions(t, e) {
                     for (let n of this.plugins) n.loadOptions(t, e);
@@ -10762,7 +10758,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var u = n(63792);
             class h {
                 constructor() {
-                    ((this.key = "hsl"), (this.stringPrefix = "hsl"));
+                    (this.key = "hsl"), (this.stringPrefix = "hsl");
                 }
                 handleColor(t) {
                     let e = t.value.hsl ?? t.value;
@@ -10780,7 +10776,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class d {
                 constructor() {
-                    ((this.key = "rgb"), (this.stringPrefix = "rgb"));
+                    (this.key = "rgb"), (this.stringPrefix = "rgb");
                 }
                 handleColor(t) {
                     let e = t.value.rgb ?? t.value;
@@ -10798,37 +10794,19 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class p {
                 constructor(t) {
-                    ((this.type = "external"), (this.container = t));
+                    (this.type = "external"), (this.container = t);
                 }
             }
             class f {
                 constructor(t) {
-                    ((this.type = "particles"), (this.container = t));
+                    (this.type = "particles"), (this.container = t);
                 }
             }
             var m = n(2579),
                 g = n(96860);
-            (n(48395), n(70737), n(45946), n(56894), n(99533), n(20353), n(347), n(43942));
+            n(48395), n(70737), n(45946), n(56894), n(99533), n(20353), n(347), n(43942);
             var y = n(3921);
-            (n(97805),
-                n(22584),
-                n(92164),
-                n(88835),
-                n(19702),
-                n(87918),
-                n(62693),
-                n(94254),
-                n(34900),
-                n(64815),
-                n(42149),
-                n(32798),
-                n(71133),
-                n(49050),
-                n(90919),
-                n(34392),
-                n(6824),
-                n(41005),
-                n(44087));
+            n(97805), n(22584), n(92164), n(88835), n(19702), n(87918), n(62693), n(94254), n(34900), n(64815), n(42149), n(32798), n(71133), n(49050), n(90919), n(34392), n(6824), n(41005), n(44087);
             var v = n(69621),
                 b = n(47809);
             n(295);
@@ -10836,9 +10814,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             let x = (function () {
                 let t = new d(),
                     e = new h();
-                ((0, u.VI)(t), (0, u.VI)(e));
+                (0, u.VI)(t), (0, u.VI)(e);
                 let n = new c();
-                return (n.init(), n);
+                return n.init(), n;
             })();
             (0, i.Kr)() || (window.tsParticles = x);
         },
@@ -10863,7 +10841,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         return (
                             r.S6.load({ id: e, url: t.url, options: t.options }).then(e => {
                                 var r;
-                                ((n = e), null == (r = t.particlesLoaded) || r.call(t, e));
+                                (n = e), null == (r = t.particlesLoaded) || r.call(t, e);
                             }),
                             () => {
                                 null == n || n.destroy();
@@ -10905,7 +10883,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     { loadRotateUpdater: C } = await n.e(8093).then(n.bind(n, 98093)),
                     { loadStrokeColorUpdater: E } = await n.e(517).then(n.bind(n, 20517)),
                     { loadBasic: O } = await n.e(2434).then(n.bind(n, 72434));
-                (await r(t, !1),
+                await r(t, !1),
                     await i(t, !1),
                     await o(t, !1),
                     await s(t, !1),
@@ -10929,7 +10907,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     await M(t, !1),
                     await C(t, !1),
                     await E(t, !1),
-                    await O(t, e));
+                    await O(t, e);
             }
             n.d(e, {
                 S: function () {
@@ -10962,7 +10940,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function i(t) {
                 let e = (0, r.Q)(t),
                     n = new Date(Date.UTC(e.getFullYear(), e.getMonth(), e.getDate(), e.getHours(), e.getMinutes(), e.getSeconds(), e.getMilliseconds()));
-                return (n.setUTCFullYear(e.getFullYear()), +t - +n);
+                return n.setUTCFullYear(e.getFullYear()), +t - +n;
             }
         },
         78198: function (t, e, n) {
@@ -11099,7 +11077,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(99649);
             function i(t) {
                 let e = (0, r.Q)(t);
-                return (e.setHours(0, 0, 0, 0), e);
+                return e.setHours(0, 0, 0, 0), e;
             }
         },
         99649: function (t, e, n) {
@@ -11188,9 +11166,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         add: function (n, r, i, o = { passive: !0 }) {
                             let s;
                             return (
-                                "addEventListener" in n ? (n.addEventListener(r, i, o), (s = () => n.removeEventListener(r, i, o))) : (n.addListener(i), (s = () => n.removeListener(i))),
-                                t.push(s),
-                                e
+                                "addEventListener" in n ? (n.addEventListener(r, i, o), (s = () => n.removeEventListener(r, i, o))) : (n.addListener(i), (s = () => n.removeListener(i))), t.push(s), e
                             );
                         },
                         clear: function () {
@@ -11330,7 +11306,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         ((C = []),
                         {
                             init: function (t, e) {
-                                return ((C = e.filter(({ options: t }) => !1 !== _.optionsAtMedia(t).active)).forEach(e => e.init(t, _)), e.reduce((t, e) => Object.assign(t, { [e.name]: e }), {}));
+                                return (C = e.filter(({ options: t }) => !1 !== _.optionsAtMedia(t).active)).forEach(e => e.init(t, _)), e.reduce((t, e) => Object.assign(t, { [e.name]: e }), {});
                             },
                             destroy: function () {
                                 C = C.filter(t => t.destroy());
@@ -11345,13 +11321,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     t = e;
                                 },
                                 emit: function (r) {
-                                    return ((e[r] || []).forEach(e => e(t, r)), n);
+                                    return (e[r] || []).forEach(e => e(t, r)), n;
                                 },
                                 off: function (t, r) {
-                                    return ((e[t] = (e[t] || []).filter(t => t !== r)), n);
+                                    return (e[t] = (e[t] || []).filter(t => t !== r)), n;
                                 },
                                 on: function (t, r) {
-                                    return ((e[t] = (e[t] || []).concat([r])), n);
+                                    return (e[t] = (e[t] || []).concat([r])), n;
                                 },
                             };
                         return n;
@@ -11476,21 +11452,21 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                           .filter(t => t % n == 0)
                                                           .map(e => t.slice(e, e + n))
                                                     : t.length
-                                                      ? p(t)
-                                                            .reduce((n, a, c) => {
-                                                                let p = f(n) || 0,
-                                                                    y = a === m(t),
-                                                                    v = i[u] - o[p][u],
-                                                                    b = i[u] - o[a][d],
-                                                                    w = r || 0 !== p ? 0 : g(s),
-                                                                    x = h(b - (!r && y ? g(l) : 0) - (v + w));
-                                                                return (c && x > e + 2 && n.push(a), y && n.push(t.length), n);
-                                                            }, [])
-                                                            .map((e, n, r) => {
-                                                                let i = Math.max(r[n - 1] || 0);
-                                                                return t.slice(i, e);
-                                                            })
-                                                      : [];
+                                                    ? p(t)
+                                                          .reduce((n, a, c) => {
+                                                              let p = f(n) || 0,
+                                                                  y = a === m(t),
+                                                                  v = i[u] - o[p][u],
+                                                                  b = i[u] - o[a][d],
+                                                                  w = r || 0 !== p ? 0 : g(s),
+                                                                  x = h(b - (!r && y ? g(l) : 0) - (v + w));
+                                                              return c && x > e + 2 && n.push(a), y && n.push(t.length), n;
+                                                          }, [])
+                                                          .map((e, n, r) => {
+                                                              let i = Math.max(r[n - 1] || 0);
+                                                              return t.slice(i, e);
+                                                          })
+                                                    : [];
                                             },
                                         };
                                     })($, W, I, _, H, B, q, K, 0),
@@ -11553,7 +11529,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 return s;
                                             },
                                             set: function (t) {
-                                                return ((s = a(t)), c);
+                                                return (s = a(t)), c;
                                             },
                                             add: function (t) {
                                                 return l().set(s + t);
@@ -11565,7 +11541,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     ts = to.clone(),
                                     ta = p(n),
                                     tl = ({ dragHandler: t, scrollBody: e, scrollBounds: n, options: { loop: r } }) => {
-                                        (r || n.constrain(t.pointerDown()), e.seek());
+                                        r || n.constrain(t.pointerDown()), e.seek();
                                     },
                                     tc = (
                                         {
@@ -11584,11 +11560,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     ) => {
                                         let h = t.velocity(),
                                             d = t.settled();
-                                        (d && !s.pointerDown() && (a.stop(), l.emit("settle")),
-                                            d || l.emit("scroll"),
-                                            r.set(n.get() - h + h * u),
-                                            c && (i.loop(t.direction()), o.loop()),
-                                            e.to(r.get()));
+                                        d && !s.pointerDown() && (a.stop(), l.emit("settle")), d || l.emit("scroll"), r.set(n.get() - h + h * u), c && (i.loop(t.direction()), o.loop()), e.to(r.get());
                                     },
                                     tu = (function (t, e, n, r) {
                                         let i = b(),
@@ -11600,11 +11572,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                             if (!l) return;
                                             s || (s = t);
                                             let i = t - s;
-                                            for (s = t, a += i; a >= o; ) (n(), (a -= o));
-                                            (r(h(a / o)), l && e.requestAnimationFrame(c));
+                                            for (s = t, a += i; a >= o; ) n(), (a -= o);
+                                            r(h(a / o)), l && e.requestAnimationFrame(c);
                                         }
                                         function u() {
-                                            (e.cancelAnimationFrame(l), (s = null), (a = 0), (l = 0));
+                                            e.cancelAnimationFrame(l), (s = null), (a = 0), (l = 0);
                                         }
                                         return {
                                             init: function () {
@@ -11613,7 +11585,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 });
                                             },
                                             destroy: function () {
-                                                (u(), i.clear());
+                                                u(), i.clear();
                                             },
                                             start: function () {
                                                 l || (l = e.requestAnimationFrame(c));
@@ -11640,10 +11612,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                             c = t.get(),
                                             u = 0;
                                         function p(t) {
-                                            return ((a = t), m);
+                                            return (a = t), m;
                                         }
                                         function f(t) {
-                                            return ((l = t), m);
+                                            return (l = t), m;
                                         }
                                         let m = {
                                             direction: function () {
@@ -11658,7 +11630,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                             seek: function () {
                                                 let e = n.get() - t.get(),
                                                     r = 0;
-                                                return (a ? ((o += e / a), (o *= l), (c += o), t.add(o), (r = c - u)) : ((o = 0), t.set(n), (r = e)), (s = d(r)), (u = c), m);
+                                                return a ? ((o += e / a), (o *= l), (c += o), t.add(o), (r = c - u)) : ((o = 0), t.set(n), (r = e)), (s = d(r)), (u = c), m;
                                             },
                                             settled: function () {
                                                 return 0.001 > h(n.get() - e.get());
@@ -11710,7 +11682,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         function a(i) {
                                             let a = i.distance,
                                                 l = i.index !== e.get();
-                                            (o.add(a), a && (r.duration() ? t.start() : (t.update(), t.render(1), t.update())), l && (n.set(e.get()), e.set(i.index), s.emit("select")));
+                                            o.add(a), a && (r.duration() ? t.start() : (t.update(), t.render(1), t.update())), l && (n.set(e.get()), e.set(i.index), s.emit("select"));
                                         }
                                         return {
                                             distance: function (t, e) {
@@ -11739,7 +11711,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                             l = !1;
                                         return {
                                             init: function () {
-                                                ((i = new IntersectionObserver(
+                                                (i = new IntersectionObserver(
                                                     t => {
                                                         l ||
                                                             (t.forEach(t => {
@@ -11751,10 +11723,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                     },
                                                     { root: t.parentElement, threshold: r }
                                                 )),
-                                                    e.forEach(t => i.observe(t)));
+                                                    e.forEach(t => i.observe(t));
                                             },
                                             destroy: function () {
-                                                (i && i.disconnect(), (l = !0));
+                                                i && i.disconnect(), (l = !0);
                                             },
                                             get: function (t = !0) {
                                                 if (t && s) return s;
@@ -11762,9 +11734,9 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 let e = y(o).reduce((e, n) => {
                                                     let r = parseInt(n),
                                                         { isIntersecting: i } = o[r];
-                                                    return (((t && i) || (!t && !i)) && e.push(r), e);
+                                                    return ((t && i) || (!t && !i)) && e.push(r), e;
                                                 }, []);
-                                                return (t && (s = e), t || (a = e), e);
+                                                return t && (s = e), t || (a = e), e;
                                             },
                                         };
                                     })(e, n, s, D),
@@ -11777,11 +11749,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 return 1 === n.length
                                                     ? [o]
                                                     : t && "keepSnaps" !== e
-                                                      ? r.slice(a, l).map((t, e, n) => {
-                                                            let r = e === m(n);
-                                                            return e ? (r ? g(m(o) - f(n)[0] + 1, f(n)[0]) : t) : g(f(n[0]) + 1);
-                                                        })
-                                                      : r;
+                                                    ? r.slice(a, l).map((t, e, n) => {
+                                                          let r = e === m(n);
+                                                          return e ? (r ? g(m(o) - f(n)[0] + 1, f(n)[0]) : t) : g(f(n[0]) + 1);
+                                                      })
+                                                    : r;
                                             })(),
                                         };
                                     })(U, N, tr, tn, X, ta),
@@ -11806,7 +11778,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         }
                                         return {
                                             init: function () {
-                                                (o.add(document, "keydown", l, !1), e.forEach(c));
+                                                o.add(document, "keydown", l, !1), e.forEach(c);
                                             },
                                         };
                                     })(t, n, tx, ty, tm, tb),
@@ -11843,7 +11815,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                     l = h(n - j);
                                                 if (!F && !B && (!t.cancelable || !(F = s > l))) return W(t);
                                                 let c = o.pointerMove(t);
-                                                (s > x && (H = !0), u.useFriction(0.3).useDuration(1), a.start(), i.add(E(c)), t.preventDefault());
+                                                s > x && (H = !0), u.useFriction(0.3).useDuration(1), a.start(), i.add(E(c)), t.preventDefault();
                                             }
                                             function W(t) {
                                                 let e = p.byDistance(0, !1).index !== f.get(),
@@ -11859,7 +11831,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                         let i = ((n = h(t)), (r = h(e)), h(n - r));
                                                         return h(i / t);
                                                     })(n, r);
-                                                ((F = !1), (L = !1), P.clear(), u.useDuration(R - 10 * i).useFriction(0.68 + i / 50), l.distance(r, !y), (B = !1), m.emit("pointerUp"));
+                                                (F = !1), (L = !1), P.clear(), u.useDuration(R - 10 * i).useFriction(0.68 + i / 50), l.distance(r, !y), (B = !1), m.emit("pointerUp");
                                             }
                                             function Z(t) {
                                                 H && (t.stopPropagation(), t.preventDefault(), (H = !1));
@@ -11879,7 +11851,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                         (c(M) || M(t, a)) &&
                                                             (function (t) {
                                                                 let a = v(t, r);
-                                                                ((B = a),
+                                                                (B = a),
                                                                     (H = y && a && !t.buttons && N),
                                                                     (N = h(i.get() - s.get()) >= 2),
                                                                     (a && 0 !== t.button) ||
@@ -11897,7 +11869,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                                         })(),
                                                                         (z = o.readPoint(t)),
                                                                         (j = o.readPoint(t, C)),
-                                                                        m.emit("pointerDown")));
+                                                                        m.emit("pointerDown"));
                                                             })(a);
                                                     }
                                                 },
@@ -11905,7 +11877,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                     return L;
                                                 },
                                                 destroy: function () {
-                                                    (T.clear(), P.clear());
+                                                    T.clear(), P.clear();
                                                 },
                                             };
                                         })(
@@ -11926,12 +11898,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 }
                                                 return {
                                                     pointerDown: function (t) {
-                                                        return ((n = t), (r = t), o(t));
+                                                        return (n = t), (r = t), o(t);
                                                     },
                                                     pointerMove: function (t) {
                                                         let e = o(t) - o(r),
                                                             s = i(t) - i(n) > 170;
-                                                        return ((r = t), s && (n = t), e);
+                                                        return (r = t), s && (n = t), e;
                                                     },
                                                     pointerUp: function (t) {
                                                         if (!n || !r) return 0;
@@ -11988,7 +11960,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                                             c = o ? l : u[a];
                                                                         if (h(p(o ? t : r[a]) - c) >= 0.5) {
                                                                             n.requestAnimationFrame(() => {
-                                                                                (i.reInit(), e.emit("resize"));
+                                                                                i.reInit(), e.emit("resize");
                                                                             });
                                                                             break;
                                                                         }
@@ -11998,7 +11970,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                         [t].concat(r).forEach(t => a.observe(t)));
                                                 },
                                                 destroy: function () {
-                                                    (a && a.disconnect(), (d = !0));
+                                                    a && a.disconnect(), (d = !0);
                                                 },
                                             };
                                         })(e, s, i, n, $, z, F),
@@ -12015,7 +11987,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                         u = h(t[c] - e.get()),
                                                         d = n.get() - e.get(),
                                                         p = a.constrain(u / s);
-                                                    (n.subtract(d * p), !i && h(d) < o && (n.set(t.constrain(n.get())), r.useDuration(25).useBaseFriction()));
+                                                    n.subtract(d * p), !i && h(d) < o && (n.set(t.constrain(n.get())), r.useDuration(25).useBaseFriction());
                                                 },
                                                 toggleActive: function (t) {
                                                     l = !t;
@@ -12091,14 +12063,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                                 (function (e) {
                                                                     for (let n of e)
                                                                         if ("childList" === n.type) {
-                                                                            (t.reInit(), s.emit("slidesChanged"));
+                                                                            t.reInit(), s.emit("slidesChanged");
                                                                             break;
                                                                         }
                                                                 })(e);
                                                         })).observe(e, { childList: !0 });
                                                 },
                                                 destroy: function () {
-                                                    (u && u.disconnect(), (k = !0));
+                                                    u && u.disconnect(), (k = !0);
                                                 },
                                             }),
                                         slidesInView: tw,
@@ -12127,10 +12099,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 function W(t, e) {
                     let n = U();
-                    (Z(), $(D({ startIndex: n }, t), e), A.emit("reInit"));
+                    Z(), $(D({ startIndex: n }, t), e), A.emit("reInit");
                 }
                 function Z() {
-                    (r.dragHandler.destroy(),
+                    r.dragHandler.destroy(),
                         r.eventStore.clear(),
                         r.translate.clear(),
                         r.slideLooper.clear(),
@@ -12139,7 +12111,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         r.slidesInView.destroy(),
                         r.animation.destroy(),
                         T.destroy(),
-                        P.clear());
+                        P.clear();
                 }
                 function V(t, e, n) {
                     H.active && !L && (r.scrollBody.useBaseFriction().useDuration(!0 === e ? 0 : H.duration), r.scrollTo.index(t, n || 0));
@@ -12200,7 +12172,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         return r.slidesInView.get(!1);
                     },
                 };
-                return ($(e, n), setTimeout(() => A.emit("init"), 0), Y);
+                return $(e, n), setTimeout(() => A.emit("init"), 0), Y;
             }
             function C(t = {}, e = []) {
                 let n = (0, r.useRef)(t),
@@ -12215,7 +12187,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if ("undefined" != typeof window && window.document && window.document.createElement && c) {
                             M.globalOptions = C.globalOptions;
                             let t = M(c, n.current, i.current);
-                            return (l(t), () => t.destroy());
+                            return l(t), () => t.destroy();
                         }
                         l(void 0);
                     }, [c, l]),
@@ -12233,7 +12205,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     [u, a]
                 );
             }
-            ((M.globalOptions = void 0), (C.globalOptions = void 0));
+            (M.globalOptions = void 0), (C.globalOptions = void 0);
         },
         19653: function (t, e, n) {
             "use strict";
@@ -12248,11 +12220,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function s(t, e) {
                 [...e].reverse().forEach(n => {
                     let r = t.getVariant(n);
-                    (r && (0, i.C)(t, r),
+                    r && (0, i.C)(t, r),
                         t.variantChildren &&
                             t.variantChildren.forEach(t => {
                                 s(t, e);
-                            }));
+                            });
                 });
             }
             function a() {
@@ -12286,7 +12258,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         mount: () => (
                             (t = !0),
                             () => {
-                                ((t = !1), n.stop());
+                                (t = !1), n.stop();
                             }
                         ),
                     };
@@ -12296,7 +12268,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 c = n(11534);
             function u() {
                 let t = (0, l.h)(a);
-                return ((0, c.L)(t.mount, []), t);
+                return (0, c.L)(t.mount, []), t;
             }
         },
         77562: function (t, e, n) {
@@ -12321,11 +12293,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var i = (function t(e, n) {
                 function i(t, i, o) {
                     if ("undefined" != typeof document) {
-                        ("number" == typeof (o = r({}, n, o)).expires && (o.expires = new Date(Date.now() + 864e5 * o.expires)),
+                        "number" == typeof (o = r({}, n, o)).expires && (o.expires = new Date(Date.now() + 864e5 * o.expires)),
                             o.expires && (o.expires = o.expires.toUTCString()),
                             (t = encodeURIComponent(t)
                                 .replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent)
-                                .replace(/[()]/g, escape)));
+                                .replace(/[()]/g, escape));
                         var s = "";
                         for (var a in o) o[a] && ((s += "; " + a), !0 !== o[a] && (s += "=" + o[a].split(";")[0]));
                         return (document.cookie = t + "=" + e.write(i, t) + s);
@@ -12362,7 +12334,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             })(
                 {
                     read: function (t) {
-                        return ('"' === t[0] && (t = t.slice(1, -1)), t.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent));
+                        return '"' === t[0] && (t = t.slice(1, -1)), t.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent);
                     },
                     write: function (t) {
                         return encodeURIComponent(t).replace(/%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g, decodeURIComponent);
@@ -12456,7 +12428,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (n && n.slice.size < n.to - n.from) {
                             if (e) {
                                 let r = t.tr.step(n);
-                                (r.setSelection(d(c, "end") ? o.Y1.findFrom(r.doc.resolve(r.mapping.map(l.pos, -1)), -1) : o.qv.create(r.doc, l.pos - c.nodeSize)), e(r.scrollIntoView()));
+                                r.setSelection(d(c, "end") ? o.Y1.findFrom(r.doc.resolve(r.mapping.map(l.pos, -1)), -1) : o.qv.create(r.doc, l.pos - c.nodeSize)), e(r.scrollIntoView());
                             }
                             return !0;
                         }
@@ -12496,7 +12468,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 if (!u || u.from != a || (u instanceof r.Pu && u.slice.size >= c - a)) return !1;
                 if (n) {
                     let e = t.tr.step(u);
-                    (e.setSelection(o.Bs.create(e.doc, a)), n(e.scrollIntoView()));
+                    e.setSelection(o.Bs.create(e.doc, a)), n(e.scrollIntoView());
                 }
                 return !0;
             }
@@ -12542,7 +12514,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (n && n.slice.size < n.to - n.from) {
                             if (e) {
                                 let r = t.tr.step(n);
-                                (r.setSelection(d(l, "start") ? o.Y1.findFrom(r.doc.resolve(r.mapping.map(a.pos)), 1) : o.qv.create(r.doc, r.mapping.map(a.pos))), e(r.scrollIntoView()));
+                                r.setSelection(d(l, "start") ? o.Y1.findFrom(r.doc.resolve(r.mapping.map(a.pos)), 1) : o.qv.create(r.doc, r.mapping.map(a.pos))), e(r.scrollIntoView());
                             }
                             return !0;
                         }
@@ -12579,7 +12551,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     } else if (null == (s = (0, r.GJ)(t.doc, n.from, -1))) return !1;
                     if (e) {
                         let n = t.tr.join(s);
-                        (i && n.setSelection(o.qv.create(n.doc, s - t.doc.resolve(s).nodeBefore.nodeSize)), e(n.scrollIntoView()));
+                        i && n.setSelection(o.qv.create(n.doc, s - t.doc.resolve(s).nodeBefore.nodeSize)), e(n.scrollIntoView());
                     }
                     return !0;
                 },
@@ -12590,7 +12562,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (n.node.isTextblock || !(0, r.Mn)(t.doc, n.to)) return !1;
                         i = n.to;
                     } else if (null == (i = (0, r.GJ)(t.doc, n.to, 1))) return !1;
-                    return (e && e(t.tr.join(i).scrollIntoView()), !0);
+                    return e && e(t.tr.join(i).scrollIntoView()), !0;
                 },
                 x = (t, e) => {
                     let { $from: n, $to: i } = t.selection,
@@ -12619,7 +12591,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (e) {
                         let r = n.after(),
                             i = t.tr.replaceWith(r, r, a.createAndFill());
-                        (i.setSelection(o.Y1.near(i.doc.resolve(r), 1)), e(i.scrollIntoView()));
+                        i.setSelection(o.Y1.near(i.doc.resolve(r), 1)), e(i.scrollIntoView());
                     }
                     return !0;
                 },
@@ -12632,7 +12604,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (e) {
                         let n = (!r.parentOffset && i.index() < i.parent.childCount ? r : i).pos,
                             a = t.tr.insert(n, s.createAndFill());
-                        (a.setSelection(o.Bs.create(a.doc, n + 1)), e(a.scrollIntoView()));
+                        a.setSelection(o.Bs.create(a.doc, n + 1)), e(a.scrollIntoView());
                     }
                     return !0;
                 },
@@ -12641,7 +12613,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (!n || n.parent.content.size) return !1;
                     if (n.depth > 1 && n.after() != n.end(-1)) {
                         let i = n.before();
-                        if ((0, r.Ax)(t.doc, i)) return (e && e(t.tr.split(i).scrollIntoView()), !0);
+                        if ((0, r.Ax)(t.doc, i)) return e && e(t.tr.split(i).scrollIntoView()), !0;
                     }
                     let i = n.blockRange(),
                         o = i && (0, r.k9)(i);
@@ -12684,14 +12656,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         s = i.HY.from(c.copy(s));
                         let a = t.tr.step(new r.FC(e.pos - 1, o, e.pos, o, new i.p2(s, 1, 0), h.length, !0)),
                             l = o + 2 * h.length;
-                        ((0, r.Mn)(a.doc, l) && a.join(l), n(a.scrollIntoView()));
+                        (0, r.Mn)(a.doc, l) && a.join(l), n(a.scrollIntoView());
                     }
                     return !0;
                 }
                 let m = o.Y1.findFrom(e, 1),
                     g = m && m.$from.blockRange(m.$to),
                     y = g && (0, r.k9)(g);
-                if (null != y && y >= e.depth) return (n && n(t.tr.lift(g, y).scrollIntoView()), !0);
+                if (null != y && y >= e.depth) return n && n(t.tr.lift(g, y).scrollIntoView()), !0;
                 if (f && d(u, "start", !0) && d(c, "end")) {
                     let o = c,
                         s = [];
@@ -12917,12 +12889,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             )
                 r[48 + a] = r[96 + a] = String(a);
             for (var a = 1; a <= 24; a++) r[a + 111] = "F" + a;
-            for (var a = 65; a <= 90; a++) ((r[a] = String.fromCharCode(a + 32)), (i[a] = String.fromCharCode(a)));
+            for (var a = 65; a <= 90; a++) (r[a] = String.fromCharCode(a + 32)), (i[a] = String.fromCharCode(a));
             for (var l in r) i.hasOwnProperty(l) || (i[l] = r[l]);
             var c = n(17213);
             let u = "undefined" != typeof navigator && /Mac|iP(hone|[oa]d)/.test(navigator.platform);
             function h(t, e, n = !0) {
-                return (e.altKey && (t = "Alt-" + t), e.ctrlKey && (t = "Ctrl-" + t), e.metaKey && (t = "Meta-" + t), n && e.shiftKey && (t = "Shift-" + t), t);
+                return e.altKey && (t = "Alt-" + t), e.ctrlKey && (t = "Ctrl-" + t), e.metaKey && (t = "Meta-" + t), n && e.shiftKey && (t = "Shift-" + t), t;
             }
             function d(t) {
                 let e;
@@ -12950,7 +12922,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 else if (/^mod$/i.test(s)) u ? (i = !0) : (n = !0);
                                                 else throw Error("Unrecognized modifier name: " + s);
                                             }
-                                            return (e && (s = "Alt-" + s), n && (s = "Ctrl-" + s), i && (s = "Meta-" + s), r && (s = "Shift-" + s), s);
+                                            return e && (s = "Alt-" + s), n && (s = "Ctrl-" + s), i && (s = "Meta-" + s), r && (s = "Shift-" + s), s;
                                         })(n)
                                     ] = t[n];
                                 return e;
@@ -12994,7 +12966,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function r(t) {
                 this.content = t;
             }
-            (n.d(e, {
+            n.d(e, {
                 aw: function () {
                     return F;
                 },
@@ -13040,26 +13012,26 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         var i = n && n != t ? this.remove(n) : this,
                             o = i.find(t),
                             s = i.content.slice();
-                        return (-1 == o ? s.push(n || t, e) : ((s[o + 1] = e), n && (s[o] = n)), new r(s));
+                        return -1 == o ? s.push(n || t, e) : ((s[o + 1] = e), n && (s[o] = n)), new r(s);
                     },
                     remove: function (t) {
                         var e = this.find(t);
                         if (-1 == e) return this;
                         var n = this.content.slice();
-                        return (n.splice(e, 2), new r(n));
+                        return n.splice(e, 2), new r(n);
                     },
                     addToStart: function (t, e) {
                         return new r([t, e].concat(this.remove(t).content));
                     },
                     addToEnd: function (t, e) {
                         var n = this.remove(t).content.slice();
-                        return (n.push(t, e), new r(n));
+                        return n.push(t, e), new r(n);
                     },
                     addBefore: function (t, e, n) {
                         var i = this.remove(e),
                             o = i.content.slice(),
                             s = i.find(t);
-                        return (o.splice(-1 == s ? o.length : s, 0, e, n), new r(o));
+                        return o.splice(-1 == s ? o.length : s, 0, e, n), new r(o);
                     },
                     forEach: function (t) {
                         for (var e = 0; e < this.content.length; e += 2) t(this.content[e], this.content[e + 1]);
@@ -13094,7 +13066,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     var e = [];
                     if (t) for (var n in t) e.push(n, t[n]);
                     return new r(e);
-                }));
+                });
             class i {
                 constructor(t, e) {
                     if (((this.content = t), (this.size = e || 0), null == e)) for (let e = 0; e < t.length; e++) this.size += t[e].nodeSize;
@@ -13124,15 +13096,15 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 let l = s.isText
                                     ? s.text.slice(Math.max(t, a) - a, e - a)
                                     : s.isLeaf
-                                      ? r
-                                          ? "function" == typeof r
-                                              ? r(s)
-                                              : r
-                                          : s.type.spec.leafText
-                                            ? s.type.spec.leafText(s)
-                                            : ""
-                                      : "";
-                                (s.isBlock && ((s.isLeaf && l) || s.isTextblock) && n && (o ? (o = !1) : (i += n)), (i += l));
+                                    ? r
+                                        ? "function" == typeof r
+                                            ? r(s)
+                                            : r
+                                        : s.type.spec.leafText
+                                        ? s.type.spec.leafText(s)
+                                        : ""
+                                    : "";
+                                s.isBlock && ((s.isLeaf && l) || s.isTextblock) && n && (o ? (o = !1) : (i += n)), (i += l);
                             },
                             0
                         ),
@@ -13157,11 +13129,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         for (let i = 0, o = 0; o < e; i++) {
                             let s = this.content[i],
                                 a = o + s.nodeSize;
-                            (a > t &&
+                            a > t &&
                                 ((o < t || a > e) && (s = s.isText ? s.cut(Math.max(0, t - o), Math.min(s.text.length, e - o)) : s.cut(Math.max(0, t - o - 1), Math.min(s.content.size, e - o - 1))),
                                 n.push(s),
                                 (r += s.nodeSize)),
-                                (o = a));
+                                (o = a);
                         }
                     return new i(n, r);
                 }
@@ -13173,7 +13145,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (n == e) return this;
                     let r = this.content.slice(),
                         o = this.size + e.nodeSize - n.nodeSize;
-                    return ((r[t] = e), new i(r, o));
+                    return (r[t] = e), new i(r, o);
                 }
                 addToStart(t) {
                     return new i([t].concat(this.content), this.size + t.nodeSize);
@@ -13206,7 +13178,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 forEach(t) {
                     for (let e = 0, n = 0; e < this.content.length; e++) {
                         let r = this.content[e];
-                        (t(r, n, e), (n += r.nodeSize));
+                        t(r, n, e), (n += r.nodeSize);
                     }
                 }
                 findDiffStart(t, e = 0) {
@@ -13240,21 +13212,21 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 l = n.child(--s),
                                 c = a.nodeSize;
                             if (a == l) {
-                                ((r -= c), (i -= c));
+                                (r -= c), (i -= c);
                                 continue;
                             }
                             if (!a.sameMarkup(l)) return { a: r, b: i };
                             if (a.isText && a.text != l.text) {
                                 let t = 0,
                                     e = Math.min(a.text.length, l.text.length);
-                                for (; t < e && a.text[a.text.length - t - 1] == l.text[l.text.length - t - 1]; ) (t++, r--, i--);
+                                for (; t < e && a.text[a.text.length - t - 1] == l.text[l.text.length - t - 1]; ) t++, r--, i--;
                                 return { a: r, b: i };
                             }
                             if (a.content.size || l.content.size) {
                                 let e = t(a.content, l.content, r - 1, i - 1);
                                 if (e) return e;
                             }
-                            ((r -= c), (i -= c));
+                            (r -= c), (i -= c);
                         }
                     })(this, t, e, n);
                 }
@@ -13291,7 +13263,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         n = 0;
                     for (let r = 0; r < t.length; r++) {
                         let i = t[r];
-                        ((n += i.nodeSize), r && i.isText && t[r - 1].sameMarkup(i) ? (e || (e = t.slice(0, r)), (e[e.length - 1] = i.withText(e[e.length - 1].text + i.text))) : e && e.push(i));
+                        (n += i.nodeSize), r && i.isText && t[r - 1].sameMarkup(i) ? (e || (e = t.slice(0, r)), (e[e.length - 1] = i.withText(e[e.length - 1].text + i.text))) : e && e.push(i);
                     }
                     return new i(e || t, n);
                 }
@@ -13306,7 +13278,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             i.empty = new i([], 0);
             let o = { index: 0, offset: 0 };
             function s(t, e) {
-                return ((o.index = t), (o.offset = e), o);
+                return (o.index = t), (o.offset = e), o;
             }
             function a(t, e) {
                 if (t === e) return !0;
@@ -13324,7 +13296,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class l {
                 constructor(t, e) {
-                    ((this.type = t), (this.attrs = e));
+                    (this.type = t), (this.attrs = e);
                 }
                 addToSet(t) {
                     let e,
@@ -13335,10 +13307,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (this.type.excludes(i.type)) e || (e = t.slice(0, r));
                         else {
                             if (i.type.excludes(this.type)) return t;
-                            (!n && i.type.rank > this.type.rank && (e || (e = t.slice(0, r)), e.push(this), (n = !0)), e && e.push(i));
+                            !n && i.type.rank > this.type.rank && (e || (e = t.slice(0, r)), e.push(this), (n = !0)), e && e.push(i);
                         }
                     }
-                    return (e || (e = t.slice()), n || e.push(this), e);
+                    return e || (e = t.slice()), n || e.push(this), e;
                 }
                 removeFromSet(t) {
                     for (let e = 0; e < t.length; e++) if (this.eq(t[e])) return t.slice(0, e).concat(t.slice(e + 1));
@@ -13375,14 +13347,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (!t || (Array.isArray(t) && 0 == t.length)) return l.none;
                     if (t instanceof l) return [t];
                     let e = t.slice();
-                    return (e.sort((t, e) => t.type.rank - e.type.rank), e);
+                    return e.sort((t, e) => t.type.rank - e.type.rank), e;
                 }
             }
             l.none = [];
             class c extends Error {}
             class u {
                 constructor(t, e, n) {
-                    ((this.content = t), (this.openStart = e), (this.openEnd = n));
+                    (this.content = t), (this.openStart = e), (this.openEnd = n);
                 }
                 get size() {
                     return this.content.size - this.openStart - this.openEnd;
@@ -13423,7 +13395,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 toJSON() {
                     if (!this.content.size) return null;
                     let t = { content: this.content.toJSON() };
-                    return (this.openStart > 0 && (t.openStart = this.openStart), this.openEnd > 0 && (t.openEnd = this.openEnd), t);
+                    return this.openStart > 0 && (t.openStart = this.openStart), this.openEnd > 0 && (t.openEnd = this.openEnd), t;
                 }
                 static fromJSON(t, e) {
                     if (!e) return u.empty;
@@ -13445,7 +13417,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             function d(t, e, n) {
                 let r = t.node(n);
-                return (h(r, e.node(n)), r);
+                return h(r, e.node(n)), r;
             }
             function p(t, e) {
                 let n = e.length - 1;
@@ -13460,16 +13432,16 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 e && e.depth == n && e.textOffset && p(e.nodeBefore, r);
             }
             function m(t, e) {
-                return (t.type.checkContent(e), t.copy(e));
+                return t.type.checkContent(e), t.copy(e);
             }
             function g(t, e, n) {
                 let r = [];
-                return (f(null, t, n, r), t.depth > n && p(m(d(t, e, n + 1), g(t, e, n + 1)), r), f(e, null, n, r), new i(r));
+                return f(null, t, n, r), t.depth > n && p(m(d(t, e, n + 1), g(t, e, n + 1)), r), f(e, null, n, r), new i(r);
             }
             u.empty = new u(i.empty, 0, 0);
             class y {
                 constructor(t, e, n) {
-                    ((this.pos = t), (this.path = e), (this.parentOffset = n), (this.depth = e.length / 3 - 1));
+                    (this.pos = t), (this.path = e), (this.parentOffset = n), (this.depth = e.length / 3 - 1);
                 }
                 resolveDepth(t) {
                     return null == t ? this.depth : t < 0 ? this.depth + t : t;
@@ -13487,13 +13459,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return this.path[3 * this.resolveDepth(t) + 1];
                 }
                 indexAfter(t) {
-                    return ((t = this.resolveDepth(t)), this.index(t) + (t != this.depth || this.textOffset ? 1 : 0));
+                    return (t = this.resolveDepth(t)), this.index(t) + (t != this.depth || this.textOffset ? 1 : 0);
                 }
                 start(t) {
                     return 0 == (t = this.resolveDepth(t)) ? 0 : this.path[3 * t - 1] + 1;
                 }
                 end(t) {
-                    return ((t = this.resolveDepth(t)), this.start(t) + this.node(t).content.size);
+                    return (t = this.resolveDepth(t)), this.start(t) + this.node(t).content.size;
                 }
                 before(t) {
                     if (!(t = this.resolveDepth(t))) throw RangeError("There is no position before the top-level node");
@@ -13535,7 +13507,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         r = t.maybeChild(e);
                     if (!n) {
                         let t = n;
-                        ((n = r), (r = t));
+                        (n = r), (r = t);
                     }
                     let i = n.marks;
                     for (var o = 0; o < i.length; o++) !1 !== i[o].type.spec.inclusive || (r && i[o].isInSet(r.marks)) || (i = i[o--].removeFromSet(i));
@@ -13581,7 +13553,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         let { index: t, offset: o } = e.content.findIndex(i),
                             s = i - o;
                         if ((n.push(e, t, r + o), !s || (e = e.child(t)).isText)) break;
-                        ((i = s - 1), (r += o + 1));
+                        (i = s - 1), (r += o + 1);
                     }
                     return new y(e, n, i);
                 }
@@ -13591,7 +13563,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (r.pos == e && r.doc == t) return r;
                     }
                     let n = (v[b] = y.resolve(t, e));
-                    return ((b = (b + 1) % w), n);
+                    return (b = (b + 1) % w), n;
                 }
             }
             let v = [],
@@ -13599,7 +13571,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 w = 12;
             class x {
                 constructor(t, e, n) {
-                    ((this.$from = t), (this.$to = e), (this.depth = n));
+                    (this.$from = t), (this.$to = e), (this.depth = n);
                 }
                 get start() {
                     return this.$from.before(this.depth + 1);
@@ -13620,7 +13592,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             let S = Object.create(null);
             class k {
                 constructor(t, e, n, r = l.none) {
-                    ((this.type = t), (this.attrs = e), (this.marks = r), (this.content = n || i.empty));
+                    (this.type = t), (this.attrs = e), (this.marks = r), (this.content = n || i.empty);
                 }
                 get nodeSize() {
                     return this.isLeaf ? 1 : 2 + this.content.size;
@@ -13752,7 +13724,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 rangeHasMark(t, e, n) {
                     let r = !1;
-                    return (e > t && this.nodesBetween(t, e, t => (n.isInSet(t.marks) && (r = !0), !r)), r);
+                    return e > t && this.nodesBetween(t, e, t => (n.isInSet(t.marks) && (r = !0), !r)), r;
                 }
                 get isBlock() {
                     return this.type.isBlock;
@@ -13778,7 +13750,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 toString() {
                     if (this.type.spec.toDebugString) return this.type.spec.toDebugString(this);
                     let t = this.type.name;
-                    return (this.content.size && (t += "(" + this.content.toStringInner() + ")"), C(this.marks, t));
+                    return this.content.size && (t += "(" + this.content.toStringInner() + ")"), C(this.marks, t);
                 }
                 contentMatchAt(t) {
                     let e = this.type.contentMatch.matchFragment(this.content, 0, t);
@@ -13814,7 +13786,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         t.attrs = this.attrs;
                         break;
                     }
-                    return (this.content.size && (t.content = this.content.toJSON()), this.marks.length && (t.marks = this.marks.map(t => t.toJSON())), t);
+                    return this.content.size && (t.content = this.content.toJSON()), this.marks.length && (t.marks = this.marks.map(t => t.toJSON())), t;
                 }
                 static fromJSON(t, e) {
                     if (!e) throw RangeError("Invalid input for Node.fromJSON");
@@ -13863,7 +13835,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 toJSON() {
                     let t = super.toJSON();
-                    return ((t.text = this.text), t);
+                    return (t.text = this.text), t;
                 }
             }
             function C(t, e) {
@@ -13872,7 +13844,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class E {
                 constructor(t) {
-                    ((this.validEnd = t), (this.next = []), (this.wrapCache = []));
+                    (this.validEnd = t), (this.next = []), (this.wrapCache = []);
                 }
                 static parse(t, e) {
                     var n;
@@ -13891,7 +13863,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 let n = (function (e) {
                                                     if (e.eat("(")) {
                                                         let n = t(e);
-                                                        return (e.eat(")") || e.err("Missing closing paren"), n);
+                                                        return e.eat(")") || e.err("Missing closing paren"), n;
                                                     }
                                                     if (/\W/.test(e.next)) e.err("Unexpected token '" + e.next + "'");
                                                     else {
@@ -13904,14 +13876,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                                 let r = n[t];
                                                                 r.groups.indexOf(e) > -1 && i.push(r);
                                                             }
-                                                            return (0 == i.length && t.err("No node type or group '" + e + "' found"), i);
+                                                            return 0 == i.length && t.err("No node type or group '" + e + "' found"), i;
                                                         })(e, e.next).map(
                                                             t => (
                                                                 null == e.inline ? (e.inline = t.isInline) : e.inline != t.isInline && e.err("Mixing inline and block content"),
                                                                 { type: "name", value: t }
                                                             )
                                                         );
-                                                        return (e.pos++, 1 == t.length ? t[0] : { type: "choice", exprs: t });
+                                                        return e.pos++, 1 == t.length ? t[0] : { type: "choice", exprs: t };
                                                     }
                                                 })(e);
                                                 for (;;)
@@ -13923,9 +13895,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                             let n = _(t),
                                                                 r = n;
                                                             return (
-                                                                t.eat(",") && (r = "}" != t.next ? _(t) : -1),
-                                                                t.eat("}") || t.err("Unclosed braced range"),
-                                                                { type: "range", min: n, max: r, expr: e }
+                                                                t.eat(",") && (r = "}" != t.next ? _(t) : -1), t.eat("}") || t.err("Unclosed braced range"), { type: "range", min: n, max: r, expr: e }
                                                             );
                                                         })(e, n);
                                                     else break;
@@ -13955,22 +13925,22 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                             }
                                         else if ("star" == e.type) {
                                             let s = n();
-                                            return (r(o, s), i(t(e.expr, s), s), [r(s)]);
+                                            return r(o, s), i(t(e.expr, s), s), [r(s)];
                                         } else if ("plus" == e.type) {
                                             let s = n();
-                                            return (i(t(e.expr, o), s), i(t(e.expr, s), s), [r(s)]);
+                                            return i(t(e.expr, o), s), i(t(e.expr, s), s), [r(s)];
                                         } else if ("opt" == e.type) return [r(o)].concat(t(e.expr, o));
                                         else if ("range" == e.type) {
                                             let s = o;
                                             for (let r = 0; r < e.min; r++) {
                                                 let r = n();
-                                                (i(t(e.expr, s), r), (s = r));
+                                                i(t(e.expr, s), r), (s = r);
                                             }
                                             if (-1 == e.max) i(t(e.expr, s), s);
                                             else
                                                 for (let o = e.min; o < e.max; o++) {
                                                     let o = n();
-                                                    (r(s, o), i(t(e.expr, s), o), (s = o));
+                                                    r(s, o), i(t(e.expr, s), o), (s = o);
                                                 }
                                             return [r(s)];
                                         } else if ("name" == e.type) return [r(o, void 0, e.value)];
@@ -13985,7 +13955,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             }
                             function r(t, n, r) {
                                 let i = { term: r, to: n };
-                                return (e[t].push(i), i);
+                                return e[t].push(i), i;
                             }
                             function i(t, e) {
                                 t.forEach(t => (t.to = e));
@@ -14000,7 +13970,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     if (t) {
                                         for (let e = 0; e < i.length; e++) i[e][0] == t && (r = i[e][1]);
                                         P(n, e).forEach(e => {
-                                            (r || i.push([t, (r = [])]), -1 == r.indexOf(e) && r.push(e));
+                                            r || i.push([t, (r = [])]), -1 == r.indexOf(e) && r.push(e);
                                         });
                                     }
                                 });
@@ -14020,7 +13990,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     o = [];
                                 for (let e = 0; e < t.next.length; e++) {
                                     let { type: n, next: s } = t.next[e];
-                                    (o.push(n.name), i && !(n.isText || n.hasRequiredAttrs()) && (i = !1), -1 == r.indexOf(s) && r.push(s));
+                                    o.push(n.name), i && !(n.isText || n.hasRequiredAttrs()) && (i = !1), -1 == r.indexOf(s) && r.push(s);
                                 }
                                 i && e.err("Only non-generatable nodes (" + o.join(", ") + ") in a required position (see https://prosemirror.net/docs/guide/#generatable)");
                             }
@@ -14070,7 +14040,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 findWrapping(t) {
                     for (let e = 0; e < this.wrapCache.length; e += 2) if (this.wrapCache[e] == t) return this.wrapCache[e + 1];
                     let e = this.computeWrapping(t);
-                    return (this.wrapCache.push(t, e), e);
+                    return this.wrapCache.push(t, e), e;
                 }
                 computeWrapping(t) {
                     let e = Object.create(null),
@@ -14117,13 +14087,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             E.empty = new E(!0);
             class O {
                 constructor(t, e) {
-                    ((this.string = t),
+                    (this.string = t),
                         (this.nodeTypes = e),
                         (this.inline = null),
                         (this.pos = 0),
                         (this.tokens = t.split(/\s*(?=\b|\W|$)/)),
                         "" == this.tokens[this.tokens.length - 1] && this.tokens.pop(),
-                        "" == this.tokens[0] && this.tokens.shift());
+                        "" == this.tokens[0] && this.tokens.shift();
                 }
                 get next() {
                     return this.tokens[this.pos];
@@ -14138,7 +14108,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             function _(t) {
                 /\D/.test(t.next) && t.err("Expected number, got '" + t.next + "'");
                 let e = Number(t.next);
-                return (t.pos++, e);
+                return t.pos++, e;
             }
             function T(t, e) {
                 return e - t;
@@ -14187,7 +14157,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class R {
                 constructor(t, e, n) {
-                    ((this.name = t),
+                    (this.name = t),
                         (this.schema = e),
                         (this.spec = n),
                         (this.markSet = null),
@@ -14197,7 +14167,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (this.contentMatch = null),
                         (this.inlineContent = null),
                         (this.isBlock = !(n.inline || "text" == t)),
-                        (this.isText = "text" == t));
+                        (this.isText = "text" == t);
                 }
                 get isInline() {
                     return !this.isBlock;
@@ -14229,7 +14199,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return new k(this, this.computeAttrs(t), i.from(e), l.setFrom(n));
                 }
                 createChecked(t = null, e, n) {
-                    return ((e = i.from(e)), this.checkContent(e), new k(this, this.computeAttrs(t), e, l.setFrom(n)));
+                    return (e = i.from(e)), this.checkContent(e), new k(this, this.computeAttrs(t), e, l.setFrom(n));
                 }
                 createAndFill(t = null, e, n) {
                     if (((t = this.computeAttrs(t)), (e = i.from(e)).size)) {
@@ -14276,7 +14246,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class N {
                 constructor(t) {
-                    ((this.hasDefault = Object.prototype.hasOwnProperty.call(t, "default")), (this.default = t.default));
+                    (this.hasDefault = Object.prototype.hasOwnProperty.call(t, "default")), (this.default = t.default);
                 }
                 get isRequired() {
                     return !this.hasDefault;
@@ -14284,7 +14254,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class z {
                 constructor(t, e, n, r) {
-                    ((this.name = t), (this.rank = e), (this.schema = n), (this.spec = r), (this.attrs = I(r.attrs)), (this.excluded = null));
+                    (this.name = t), (this.rank = e), (this.schema = n), (this.spec = r), (this.attrs = I(r.attrs)), (this.excluded = null);
                     let i = A(this.attrs);
                     this.instance = i ? new l(this, i) : null;
                 }
@@ -14294,7 +14264,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 static compile(t, e) {
                     let n = Object.create(null),
                         r = 0;
-                    return (t.forEach((t, i) => (n[t] = new z(t, r++, e, i))), n);
+                    return t.forEach((t, i) => (n[t] = new z(t, r++, e, i))), n;
                 }
                 removeFromSet(t) {
                     for (var e = 0; e < t.length; e++) t[e].type == this && ((t = t.slice(0, e).concat(t.slice(e + 1))), e--);
@@ -14312,26 +14282,26 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     this.cached = Object.create(null);
                     let e = (this.spec = {});
                     for (let n in t) e[n] = t[n];
-                    ((e.nodes = r.from(t.nodes)), (e.marks = r.from(t.marks || {})), (this.nodes = R.compile(this.spec.nodes, this)), (this.marks = z.compile(this.spec.marks, this)));
+                    (e.nodes = r.from(t.nodes)), (e.marks = r.from(t.marks || {})), (this.nodes = R.compile(this.spec.nodes, this)), (this.marks = z.compile(this.spec.marks, this));
                     let n = Object.create(null);
                     for (let t in this.nodes) {
                         if (t in this.marks) throw RangeError(t + " can not be both a node and a mark");
                         let e = this.nodes[t],
                             r = e.spec.content || "",
                             i = e.spec.marks;
-                        ((e.contentMatch = n[r] || (n[r] = E.parse(r, this.nodes))),
+                        (e.contentMatch = n[r] || (n[r] = E.parse(r, this.nodes))),
                             (e.inlineContent = e.contentMatch.inlineContent),
-                            (e.markSet = "_" == i ? null : i ? L(this, i.split(" ")) : "" != i && e.inlineContent ? null : []));
+                            (e.markSet = "_" == i ? null : i ? L(this, i.split(" ")) : "" != i && e.inlineContent ? null : []);
                     }
                     for (let t in this.marks) {
                         let e = this.marks[t],
                             n = e.spec.excludes;
                         e.excluded = null == n ? [e] : "" == n ? [] : L(this, n.split(" "));
                     }
-                    ((this.nodeFromJSON = this.nodeFromJSON.bind(this)),
+                    (this.nodeFromJSON = this.nodeFromJSON.bind(this)),
                         (this.markFromJSON = this.markFromJSON.bind(this)),
                         (this.topNodeType = this.nodes[this.spec.topNode || "doc"]),
-                        (this.cached.wrappings = Object.create(null)));
+                        (this.cached.wrappings = Object.create(null));
                 }
                 node(t, e = null, n, r) {
                     if ("string" == typeof t) t = this.nodeType(t);
@@ -14345,7 +14315,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return new M(n, n.defaultAttrs, t, l.setFrom(e));
                 }
                 mark(t, e) {
-                    return ("string" == typeof t && (t = this.marks[t]), t.create(e));
+                    return "string" == typeof t && (t = this.marks[t]), t.create(e);
                 }
                 nodeFromJSON(t) {
                     return k.fromJSON(this, t);
@@ -14377,7 +14347,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class F {
                 constructor(t, e) {
-                    ((this.schema = t),
+                    (this.schema = t),
                         (this.rules = e),
                         (this.tags = []),
                         (this.styles = []),
@@ -14388,15 +14358,15 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             if (!/^(ul|ol)\b/.test(e.tag) || !e.node) return !1;
                             let n = t.nodes[e.node];
                             return n.contentMatch.matchType(n);
-                        })));
+                        }));
                 }
                 parse(t, e = {}) {
                     let n = new V(this, e, !1);
-                    return (n.addAll(t, e.from, e.to), n.finish());
+                    return n.addAll(t, e.from, e.to), n.finish();
                 }
                 parseSlice(t, e = {}) {
                     let n = new V(this, e, !0);
-                    return (n.addAll(t, e.from, e.to), u.maxOpen(n.finish()));
+                    return n.addAll(t, e.from, e.to), u.maxOpen(n.finish());
                 }
                 matchTag(t, e, n) {
                     for (let i = n ? this.tags.indexOf(n) + 1 : 0; i < this.tags.length; i++) {
@@ -14446,14 +14416,14 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         let r = t.marks[e].spec.parseDOM;
                         r &&
                             r.forEach(t => {
-                                (n((t = U(t))), t.mark || t.ignore || t.clearMark || (t.mark = e));
+                                n((t = U(t))), t.mark || t.ignore || t.clearMark || (t.mark = e);
                             });
                     }
                     for (let e in t.nodes) {
                         let r = t.nodes[e].spec.parseDOM;
                         r &&
                             r.forEach(t => {
-                                (n((t = U(t))), t.node || t.ignore || t.mark || (t.node = e));
+                                n((t = U(t))), t.node || t.ignore || t.mark || (t.node = e);
                             });
                     }
                     return e;
@@ -14503,7 +14473,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class Z {
                 constructor(t, e, n, r, i, o, s) {
-                    ((this.type = t),
+                    (this.type = t),
                         (this.attrs = e),
                         (this.marks = n),
                         (this.pendingMarks = r),
@@ -14512,7 +14482,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (this.content = []),
                         (this.activeMarks = l.none),
                         (this.stashMarks = []),
-                        (this.match = o || (4 & s ? null : t.contentMatch)));
+                        (this.match = o || (4 & s ? null : t.contentMatch));
                 }
                 findWrapping(t) {
                     if (!this.match) {
@@ -14537,7 +14507,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             (t.text.length == e[0].length ? this.content.pop() : (this.content[this.content.length - 1] = t.withText(t.text.slice(0, t.text.length - e[0].length))));
                     }
                     let e = i.from(this.content);
-                    return (!t && this.match && (e = e.append(this.match.fillBefore(i.empty, !0))), this.type ? this.type.create(this.attrs, e, this.marks) : e);
+                    return !t && this.match && (e = e.append(this.match.fillBefore(i.empty, !0))), this.type ? this.type.create(this.attrs, e, this.marks) : e;
                 }
                 popFromStashMark(t) {
                     for (let e = this.stashMarks.length - 1; e >= 0; e--) if (t.eq(this.stashMarks[e])) return this.stashMarks.splice(e, 1)[0];
@@ -14573,18 +14543,18 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class V {
                 constructor(t, e, n) {
-                    ((this.parser = t), (this.options = e), (this.isOpen = n), (this.open = 0));
+                    (this.parser = t), (this.options = e), (this.isOpen = n), (this.open = 0);
                     let r = e.topNode,
                         i,
                         o = W(null, e.preserveWhitespace, 0) | (n ? 4 : 0);
-                    ((i = r
+                    (i = r
                         ? new Z(r.type, r.attrs, l.none, l.none, !0, e.topMatch || r.type.contentMatch, o)
                         : n
-                          ? new Z(null, null, l.none, l.none, !0, null, o)
-                          : new Z(t.schema.topNodeType, null, l.none, l.none, !0, null, o)),
+                        ? new Z(null, null, l.none, l.none, !0, null, o)
+                        : new Z(t.schema.topNodeType, null, l.none, l.none, !0, null, o)),
                         (this.nodes = [i]),
                         (this.find = e.findPositions),
-                        (this.needsBlock = !1));
+                        (this.needsBlock = !1);
                 }
                 get top() {
                     return this.nodes[this.open];
@@ -14623,7 +14593,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                 i = t.previousSibling;
                             (!r || (i && "BR" == i.nodeName) || (r.isText && /[ \t\r\n\u000c]$/.test(r.text))) && (e = e.slice(1));
                         }
-                        (e && this.insertNode(this.parser.schema.text(e)), this.findInText(t));
+                        e && this.insertNode(this.parser.schema.text(e)), this.findInText(t);
                     } else this.findInside(t);
                 }
                 addElement(t, e) {
@@ -14638,18 +14608,18 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             }
                         })(t);
                     let i = (this.options.ruleFromNode && this.options.ruleFromNode(t)) || (r = this.parser.matchTag(t, this, e));
-                    if (i ? i.ignore : B.hasOwnProperty(n)) (this.findInside(t), this.ignoreFallback(t));
+                    if (i ? i.ignore : B.hasOwnProperty(n)) this.findInside(t), this.ignoreFallback(t);
                     else if (!i || i.skip || i.closeParent) {
                         i && i.closeParent ? (this.open = Math.max(0, this.open - 1)) : i && i.skip.nodeType && (t = i.skip);
                         let e,
                             r = this.top,
                             o = this.needsBlock;
-                        if (H.hasOwnProperty(n)) (r.content.length && r.content[0].isInline && this.open && (this.open--, (r = this.top)), (e = !0), r.type || (this.needsBlock = !0));
+                        if (H.hasOwnProperty(n)) r.content.length && r.content[0].isInline && this.open && (this.open--, (r = this.top)), (e = !0), r.type || (this.needsBlock = !0);
                         else if (!t.firstChild) {
                             this.leafFallback(t);
                             return;
                         }
-                        (i && i.skip ? this.addAll(t) : this.withStyleRules(t, () => this.addAll(t)), e && this.sync(r), (this.needsBlock = o));
+                        i && i.skip ? this.addAll(t) : this.withStyleRules(t, () => this.addAll(t)), e && this.sync(r), (this.needsBlock = o);
                     } else
                         this.withStyleRules(t, () => {
                             this.addElementByRule(t, i, !1 === i.consuming ? r : void 0);
@@ -14692,22 +14662,22 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     let s = this.top;
                     if (i && i.isLeaf) this.findInside(t);
                     else if (n) this.addElement(t, n);
-                    else if (e.getContent) (this.findInside(t), e.getContent(t, this.parser.schema).forEach(t => this.insertNode(t)));
+                    else if (e.getContent) this.findInside(t), e.getContent(t, this.parser.schema).forEach(t => this.insertNode(t));
                     else {
                         let n = t;
-                        ("string" == typeof e.contentElement
+                        "string" == typeof e.contentElement
                             ? (n = t.querySelector(e.contentElement))
                             : "function" == typeof e.contentElement
-                              ? (n = e.contentElement(t))
-                              : e.contentElement && (n = e.contentElement),
+                            ? (n = e.contentElement(t))
+                            : e.contentElement && (n = e.contentElement),
                             this.findAround(t, n, !0),
-                            this.addAll(n));
+                            this.addAll(n);
                     }
-                    (r && this.sync(s) && this.open--, o && this.removePendingMark(o, s));
+                    r && this.sync(s) && this.open--, o && this.removePendingMark(o, s);
                 }
                 addAll(t, e, n) {
                     let r = e || 0;
-                    for (let i = e ? t.childNodes[e] : t.firstChild, o = null == n ? null : t.childNodes[n]; i != o; i = i.nextSibling, ++r) (this.findAtPoint(t, r), this.addDOM(i));
+                    for (let i = e ? t.childNodes[e] : t.firstChild, o = null == n ? null : t.childNodes[n]; i != o; i = i.nextSibling, ++r) this.findAtPoint(t, r), this.addDOM(i);
                     this.findAtPoint(t, r);
                 }
                 findPlace(t) {
@@ -14730,23 +14700,23 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (this.findPlace(t)) {
                         this.closeExtra();
                         let e = this.top;
-                        (e.applyPending(t.type), e.match && (e.match = e.match.matchType(t.type)));
+                        e.applyPending(t.type), e.match && (e.match = e.match.matchType(t.type));
                         let n = e.activeMarks;
                         for (let r = 0; r < t.marks.length; r++) (!e.type || e.type.allowsMarkType(t.marks[r].type)) && (n = t.marks[r].addToSet(n));
-                        return (e.content.push(t.mark(n)), !0);
+                        return e.content.push(t.mark(n)), !0;
                     }
                     return !1;
                 }
                 enter(t, e, n) {
                     let r = this.findPlace(t.create(e));
-                    return (r && this.enterInner(t, e, !0, n), r);
+                    return r && this.enterInner(t, e, !0, n), r;
                 }
                 enterInner(t, e = null, n = !1, r) {
                     this.closeExtra();
                     let i = this.top;
-                    (i.applyPending(t), (i.match = i.match && i.match.matchType(t)));
+                    i.applyPending(t), (i.match = i.match && i.match.matchType(t));
                     let o = W(t, r, i.options);
-                    (4 & i.options && 0 == i.content.length && (o |= 4), this.nodes.push(new Z(t, e, i.activeMarks, i.pendingMarks, n, null, o)), this.open++);
+                    4 & i.options && 0 == i.content.length && (o |= 4), this.nodes.push(new Z(t, e, i.activeMarks, i.pendingMarks, n, null, o)), this.open++;
                 }
                 closeExtra(t = !1) {
                     let e = this.nodes.length - 1;
@@ -14756,10 +14726,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     }
                 }
                 finish() {
-                    return ((this.open = 0), this.closeExtra(this.isOpen), this.nodes[0].finish(this.isOpen || this.options.topOpen));
+                    return (this.open = 0), this.closeExtra(this.isOpen), this.nodes[0].finish(this.isOpen || this.options.topOpen);
                 }
                 sync(t) {
-                    for (let e = this.open; e >= 0; e--) if (this.nodes[e] == t) return ((this.open = e), !0);
+                    for (let e = this.open; e >= 0; e--) if (this.nodes[e] == t) return (this.open = e), !0;
                     return !1;
                 }
                 get currentPos() {
@@ -14830,7 +14800,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     let e = (function (t, e) {
                         for (let n = 0; n < e.length; n++) if (t.eq(e[n])) return e[n];
                     })(t, this.top.pendingMarks);
-                    (e && this.top.stashMarks.push(e), (this.top.pendingMarks = t.addToSet(this.top.pendingMarks)));
+                    e && this.top.stashMarks.push(e), (this.top.pendingMarks = t.addToSet(this.top.pendingMarks));
                 }
                 removePendingMark(t, e) {
                     for (let n = this.open; n >= 0; n--) {
@@ -14852,7 +14822,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class Y {
                 constructor(t, e) {
-                    ((this.nodes = t), (this.marks = e));
+                    (this.nodes = t), (this.marks = e);
                 }
                 serializeFragment(t, e = {}, n) {
                     n || (n = q(e).createDocumentFragment());
@@ -14870,7 +14840,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         continue;
                                     }
                                     if (!e.eq(i[n][0]) || !1 === e.type.spec.spanning) break;
-                                    (n++, o++);
+                                    n++, o++;
                                 }
                                 for (; n < i.length; ) r = i.pop()[1];
                                 for (; o < t.marks.length; ) {
@@ -14943,7 +14913,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 static nodesFromSchema(t) {
                     let e = J(t.nodes);
-                    return (e.text || (e.text = t => t.text), e);
+                    return e.text || (e.text = t => t.text), e;
                 }
                 static marksFromSchema(t) {
                     return J(t.marks);
@@ -14986,7 +14956,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     if (l.depth >= 2 && s.node(l.depth - 1).type.compatibleContent(t) && 0 == l.startIndex) {
                         if (0 == s.index(l.depth - 1)) return !1;
                         let t = n.doc.resolve(l.start - 2);
-                        ((u = new i.Ts(t, t, l.depth)), l.endIndex < l.parent.childCount && (l = new i.Ts(s, n.doc.resolve(a.end(l.depth)), l.depth)), (c = !0));
+                        (u = new i.Ts(t, t, l.depth)), l.endIndex < l.parent.childCount && (l = new i.Ts(s, n.doc.resolve(a.end(l.depth)), l.depth)), (c = !0);
                     }
                     let h = (0, r.nd)(u, t, e, l);
                     return (
@@ -15002,7 +14972,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     let c = n.length - l,
                                         u = e.start + n.length - (o ? 2 : 0),
                                         h = e.parent;
-                                    for (let n = e.startIndex, i = e.endIndex, o = !0; n < i; n++, o = !1) (!o && (0, r.Ax)(t.doc, u, c) && (t.split(u, c), (u += 2 * c)), (u += h.child(n).nodeSize));
+                                    for (let n = e.startIndex, i = e.endIndex, o = !0; n < i; n++, o = !1) !o && (0, r.Ax)(t.doc, u, c) && (t.split(u, c), (u += 2 * c)), (u += h.child(n).nodeSize);
                                     return t;
                                 })(n.tr, l, h, c, t).scrollIntoView()
                             ),
@@ -15029,12 +14999,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                       if (null == c) return !1;
                                       s.lift(o, c);
                                       let u = s.mapping.map(a, -1) - 1;
-                                      return ((0, r.Mn)(s.doc, u) && s.join(u), e(s.scrollIntoView()), !0);
+                                      return (0, r.Mn)(s.doc, u) && s.join(u), e(s.scrollIntoView()), !0;
                                   })(e, n, t, a)
                                 : (function (t, e, n) {
                                       let o = t.tr,
                                           s = n.parent;
-                                      for (let t = n.end, e = n.endIndex - 1, r = n.startIndex; e > r; e--) ((t -= s.child(e).nodeSize), o.delete(t - 1, t + 1));
+                                      for (let t = n.end, e = n.endIndex - 1, r = n.startIndex; e > r; e--) (t -= s.child(e).nodeSize), o.delete(t - 1, t + 1);
                                       let a = o.doc.resolve(n.start),
                                           l = a.nodeAfter;
                                       if (o.mapping.map(n.end) != n.start + a.nodeAfter.nodeSize) return !1;
@@ -15115,7 +15085,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             let o = Object.create(null);
             class s {
                 constructor(t, e, n) {
-                    ((this.$anchor = t), (this.$head = e), (this.ranges = n || [new a(t.min(e), t.max(e))]));
+                    (this.$anchor = t), (this.$head = e), (this.ranges = n || [new a(t.min(e), t.max(e))]);
                 }
                 get anchor() {
                     return this.$anchor.pos;
@@ -15146,13 +15116,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 replace(t, e = r.p2.empty) {
                     let n = e.content.lastChild,
                         i = null;
-                    for (let t = 0; t < e.openEnd; t++) ((i = n), (n = n.lastChild));
+                    for (let t = 0; t < e.openEnd; t++) (i = n), (n = n.lastChild);
                     let o = t.steps.length,
                         s = this.ranges;
                     for (let a = 0; a < s.length; a++) {
                         let { $from: l, $to: c } = s[a],
                             u = t.mapping.slice(o);
-                        (t.replaceRange(u.map(l.pos), u.map(c.pos), a ? r.p2.empty : e), 0 == a && y(t, o, (n ? n.isInline : i && i.isTextblock) ? -1 : 1));
+                        t.replaceRange(u.map(l.pos), u.map(c.pos), a ? r.p2.empty : e), 0 == a && y(t, o, (n ? n.isInline : i && i.isTextblock) ? -1 : 1);
                     }
                 }
                 replaceWith(t, e) {
@@ -15192,7 +15162,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 static jsonID(t, e) {
                     if (t in o) throw RangeError("Duplicate use of selection JSON ID " + t);
-                    return ((o[t] = e), (e.prototype.jsonID = t), e);
+                    return (o[t] = e), (e.prototype.jsonID = t), e;
                 }
                 getBookmark() {
                     return u.between(this.$anchor, this.$head).getBookmark();
@@ -15201,7 +15171,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             s.prototype.visible = !0;
             class a {
                 constructor(t, e) {
-                    ((this.$from = t), (this.$to = e));
+                    (this.$from = t), (this.$to = e);
                 }
             }
             let l = !1;
@@ -15210,7 +15180,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class u extends s {
                 constructor(t, e = t) {
-                    (c(t), c(e), super(t, e));
+                    c(t), c(e), super(t, e);
                 }
                 get $cursor() {
                     return this.$anchor.pos == this.$head.pos ? this.$head : null;
@@ -15251,13 +15221,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (!t) return s.near(e, n);
                         e = t.$head;
                     }
-                    return (t.parent.inlineContent || (0 == r ? (t = e) : (t = (s.findFrom(t, -n, !0) || s.findFrom(t, n, !0)).$anchor).pos < e.pos == r < 0 || (t = e)), new u(t, e));
+                    return t.parent.inlineContent || (0 == r ? (t = e) : (t = (s.findFrom(t, -n, !0) || s.findFrom(t, n, !0)).$anchor).pos < e.pos == r < 0 || (t = e)), new u(t, e);
                 }
             }
             s.jsonID("text", u);
             class h {
                 constructor(t, e) {
-                    ((this.anchor = t), (this.head = e));
+                    (this.anchor = t), (this.head = e);
                 }
                 map(t) {
                     return new h(t.map(this.anchor), t.map(this.head));
@@ -15269,7 +15239,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             class d extends s {
                 constructor(t) {
                     let e = t.nodeAfter;
-                    (super(t, t.node(0).resolve(t.pos + e.nodeSize)), (this.node = e));
+                    super(t, t.node(0).resolve(t.pos + e.nodeSize)), (this.node = e);
                 }
                 map(t, e) {
                     let { deleted: n, pos: r } = e.mapResult(this.anchor),
@@ -15299,7 +15269,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return !t.isText && !1 !== t.type.spec.selectable;
                 }
             }
-            ((d.prototype.visible = !1), s.jsonID("node", d));
+            (d.prototype.visible = !1), s.jsonID("node", d);
             class p {
                 constructor(t) {
                     this.anchor = t;
@@ -15375,13 +15345,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class v extends i.wx {
                 constructor(t) {
-                    (super(t.doc),
+                    super(t.doc),
                         (this.curSelectionFor = 0),
                         (this.updated = 0),
                         (this.meta = Object.create(null)),
                         (this.time = Date.now()),
                         (this.curSelection = t.selection),
-                        (this.storedMarks = t.storedMarks));
+                        (this.storedMarks = t.storedMarks);
                 }
                 get selection() {
                     return (
@@ -15392,16 +15362,16 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 setSelection(t) {
                     if (t.$from.doc != this.doc) throw RangeError("Selection passed to setSelection must point at the current document");
-                    return ((this.curSelection = t), (this.curSelectionFor = this.steps.length), (this.updated = (1 | this.updated) & -3), (this.storedMarks = null), this);
+                    return (this.curSelection = t), (this.curSelectionFor = this.steps.length), (this.updated = (1 | this.updated) & -3), (this.storedMarks = null), this;
                 }
                 get selectionSet() {
                     return (1 & this.updated) > 0;
                 }
                 setStoredMarks(t) {
-                    return ((this.storedMarks = t), (this.updated |= 2), this);
+                    return (this.storedMarks = t), (this.updated |= 2), this;
                 }
                 ensureMarks(t) {
-                    return (r.vc.sameSet(this.storedMarks || this.selection.$from.marks(), t) || this.setStoredMarks(t), this);
+                    return r.vc.sameSet(this.storedMarks || this.selection.$from.marks(), t) || this.setStoredMarks(t), this;
                 }
                 addStoredMark(t) {
                     return this.ensureMarks(t.addToSet(this.storedMarks || this.selection.$head.marks()));
@@ -15413,20 +15383,20 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return (2 & this.updated) > 0;
                 }
                 addStep(t, e) {
-                    (super.addStep(t, e), (this.updated = -3 & this.updated), (this.storedMarks = null));
+                    super.addStep(t, e), (this.updated = -3 & this.updated), (this.storedMarks = null);
                 }
                 setTime(t) {
-                    return ((this.time = t), this);
+                    return (this.time = t), this;
                 }
                 replaceSelection(t) {
-                    return (this.selection.replace(this, t), this);
+                    return this.selection.replace(this, t), this;
                 }
                 replaceSelectionWith(t, e = !0) {
                     let n = this.selection;
-                    return (e && (t = t.mark(this.storedMarks || (n.empty ? n.$from.marks() : n.$from.marksAcross(n.$to) || r.vc.none))), n.replaceWith(this, t), this);
+                    return e && (t = t.mark(this.storedMarks || (n.empty ? n.$from.marks() : n.$from.marksAcross(n.$to) || r.vc.none))), n.replaceWith(this, t), this;
                 }
                 deleteSelection() {
-                    return (this.selection.replace(this), this);
+                    return this.selection.replace(this), this;
                 }
                 insertText(t, e, n) {
                     let r = this.doc.type.schema;
@@ -15438,11 +15408,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             let t = this.doc.resolve(e);
                             i = n == e ? t.marks() : t.marksAcross(this.doc.resolve(n));
                         }
-                        return (this.replaceRangeWith(e, n, r.text(t, i)), this.selection.empty || this.setSelection(s.near(this.selection.$to)), this);
+                        return this.replaceRangeWith(e, n, r.text(t, i)), this.selection.empty || this.setSelection(s.near(this.selection.$to)), this;
                     }
                 }
                 setMeta(t, e) {
-                    return ((this.meta["string" == typeof t ? t : t.key] = e), this);
+                    return (this.meta["string" == typeof t ? t : t.key] = e), this;
                 }
                 getMeta(t) {
                     return this.meta["string" == typeof t ? t : t.key];
@@ -15452,7 +15422,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return !0;
                 }
                 scrollIntoView() {
-                    return ((this.updated |= 4), this);
+                    return (this.updated |= 4), this;
                 }
                 get scrolledIntoView() {
                     return (4 & this.updated) > 0;
@@ -15463,7 +15433,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class w {
                 constructor(t, e, n) {
-                    ((this.name = t), (this.init = b(e.init, n)), (this.apply = b(e.apply, n)));
+                    (this.name = t), (this.init = b(e.init, n)), (this.apply = b(e.apply, n));
                 }
             }
             let x = [
@@ -15474,15 +15444,15 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             ];
             class S {
                 constructor(t, e) {
-                    ((this.schema = t),
+                    (this.schema = t),
                         (this.plugins = []),
                         (this.pluginsByKey = Object.create(null)),
                         (this.fields = x.slice()),
                         e &&
                             e.forEach(t => {
                                 if (this.pluginsByKey[t.key]) throw RangeError("Adding different instances of a keyed plugin (" + t.key + ")");
-                                (this.plugins.push(t), (this.pluginsByKey[t.key] = t), t.spec.state && this.fields.push(new w(t.key, t.spec.state, t)));
-                            }));
+                                this.plugins.push(t), (this.pluginsByKey[t.key] = t), t.spec.state && this.fields.push(new w(t.key, t.spec.state, t));
+                            });
                 }
             }
             class k {
@@ -15524,7 +15494,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                         r = [];
                                         for (let t = 0; t < this.config.plugins.length; t++) r.push(t < o ? { state: n, n: e.length } : { state: this, n: 0 });
                                     }
-                                    (e.push(c), (n = n.applyInner(c)), (i = !0));
+                                    e.push(c), (n = n.applyInner(c)), (i = !0);
                                 }
                                 r && (r[o] = { state: n, n: e.length });
                             }
@@ -15601,17 +15571,17 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class M {
                 constructor(t) {
-                    ((this.spec = t),
+                    (this.spec = t),
                         (this.props = {}),
                         t.props &&
                             (function t(e, n, r) {
                                 for (let i in e) {
                                     let o = e[i];
-                                    (o instanceof Function ? (o = o.bind(n)) : "handleDOMEvents" == i && (o = t(o, n, {})), (r[i] = o));
+                                    o instanceof Function ? (o = o.bind(n)) : "handleDOMEvents" == i && (o = t(o, n, {})), (r[i] = o);
                                 }
                                 return r;
                             })(t.props, this, this.props),
-                        (this.key = t.key ? t.key.key : E("plugin")));
+                        (this.key = t.key ? t.key.key : E("plugin"));
                 }
                 getState(t) {
                     return t[this.key];
@@ -15673,7 +15643,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             var r = n(10121);
             class i {
                 constructor(t, e, n) {
-                    ((this.pos = t), (this.delInfo = e), (this.recover = n));
+                    (this.pos = t), (this.delInfo = e), (this.recover = n);
                 }
                 get deleted() {
                     return (8 & this.delInfo) > 0;
@@ -15720,7 +15690,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             if (n) return s;
                             let d = t == (e < 0 ? l : h) ? null : a / 3 + (t - l) * 65536,
                                 p = t == l ? 2 : t == h ? 1 : 4;
-                            return ((e < 0 ? t != l : t != h) && (p |= 8), new i(s, p, d));
+                            return (e < 0 ? t != l : t != h) && (p |= 8), new i(s, p, d);
                         }
                         r += u - c;
                     }
@@ -15749,7 +15719,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             a = o + (this.inverted ? 0 : i),
                             l = this.ranges[r + e],
                             c = this.ranges[r + n];
-                        (t(s, s + l, a, a + c), (i += c - l));
+                        t(s, s + l, a, a + c), (i += c - l);
                     }
                 }
                 invert() {
@@ -15765,7 +15735,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             o.empty = new o([]);
             class s {
                 constructor(t = [], e, n = 0, r = t.length) {
-                    ((this.maps = t), (this.mirror = e), (this.from = n), (this.to = r));
+                    (this.maps = t), (this.mirror = e), (this.from = n), (this.to = r);
                 }
                 slice(t = 0, e = this.maps.length) {
                     return new s(this.maps, this.mirror, t, e);
@@ -15774,7 +15744,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     return new s(this.maps.slice(), this.mirror && this.mirror.slice(), this.from, this.to);
                 }
                 appendMap(t, e) {
-                    ((this.to = this.maps.push(t)), null != e && this.setMirror(this.maps.length - 1, e));
+                    (this.to = this.maps.push(t)), null != e && this.setMirror(this.maps.length - 1, e);
                 }
                 appendMapping(t) {
                     for (let e = 0, n = this.maps.length; e < t.maps.length; e++) {
@@ -15788,7 +15758,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     }
                 }
                 setMirror(t, e) {
-                    (this.mirror || (this.mirror = []), this.mirror.push(t, e));
+                    this.mirror || (this.mirror = []), this.mirror.push(t, e);
                 }
                 appendMappingInverted(t) {
                     for (let e = t.maps.length - 1, n = this.maps.length + t.maps.length; e >= 0; e--) {
@@ -15798,7 +15768,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 invert() {
                     let t = new s();
-                    return (t.appendMappingInverted(this), t);
+                    return t.appendMappingInverted(this), t;
                 }
                 map(t, e = 1) {
                     if (this.mirror) return this._map(t, e, !0);
@@ -15815,11 +15785,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (null != i.recover) {
                             let e = this.getMirror(n);
                             if (null != e && e > n && e < this.to) {
-                                ((n = e), (t = this.maps[e].recover(i.recover)));
+                                (n = e), (t = this.maps[e].recover(i.recover));
                                 continue;
                             }
                         }
-                        ((r |= i.delInfo), (t = i.pos));
+                        (r |= i.delInfo), (t = i.pos);
                     }
                     return n ? t : new i(t, r, null);
                 }
@@ -15840,12 +15810,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 static jsonID(t, e) {
                     if (t in a) throw RangeError("Duplicate use of step JSON ID " + t);
-                    return ((a[t] = e), (e.prototype.jsonID = t), e);
+                    return (a[t] = e), (e.prototype.jsonID = t), e;
                 }
             }
             class c {
                 constructor(t, e) {
-                    ((this.doc = t), (this.failed = e));
+                    (this.doc = t), (this.failed = e);
                 }
                 static ok(t) {
                     return new c(t, null);
@@ -15866,13 +15836,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 let i = [];
                 for (let r = 0; r < t.childCount; r++) {
                     let o = t.child(r);
-                    (o.content.size && (o = o.copy(u(o.content, e, o))), o.isInline && (o = e(o, n, r)), i.push(o));
+                    o.content.size && (o = o.copy(u(o.content, e, o))), o.isInline && (o = e(o, n, r)), i.push(o);
                 }
                 return r.HY.fromArray(i);
             }
             class h extends l {
                 constructor(t, e, n) {
-                    (super(), (this.from = t), (this.to = e), (this.mark = n));
+                    super(), (this.from = t), (this.to = e), (this.mark = n);
                 }
                 apply(t) {
                     let e = t.slice(this.from, this.to),
@@ -15907,7 +15877,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             l.jsonID("addMark", h);
             class d extends l {
                 constructor(t, e, n) {
-                    (super(), (this.from = t), (this.to = e), (this.mark = n));
+                    super(), (this.from = t), (this.to = e), (this.mark = n);
                 }
                 apply(t) {
                     let e = t.slice(this.from, this.to),
@@ -15940,7 +15910,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             l.jsonID("removeMark", d);
             class p extends l {
                 constructor(t, e) {
-                    (super(), (this.pos = t), (this.mark = e));
+                    super(), (this.pos = t), (this.mark = e);
                 }
                 apply(t) {
                     let e = t.nodeAt(this.pos);
@@ -15974,7 +15944,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             l.jsonID("addNodeMark", p);
             class f extends l {
                 constructor(t, e) {
-                    (super(), (this.pos = t), (this.mark = e));
+                    super(), (this.pos = t), (this.mark = e);
                 }
                 apply(t) {
                     let e = t.nodeAt(this.pos);
@@ -16001,7 +15971,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             l.jsonID("removeNodeMark", f);
             class m extends l {
                 constructor(t, e, n, r = !1) {
-                    (super(), (this.from = t), (this.to = e), (this.slice = n), (this.structure = r));
+                    super(), (this.from = t), (this.to = e), (this.slice = n), (this.structure = r);
                 }
                 apply(t) {
                     return this.structure && y(t, this.from, this.to) ? c.fail("Structure replace would overwrite content") : c.fromReplace(t, this.from, this.to, this.slice);
@@ -16033,7 +16003,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 toJSON() {
                     let t = { stepType: "replace", from: this.from, to: this.to };
-                    return (this.slice.size && (t.slice = this.slice.toJSON()), this.structure && (t.structure = !0), t);
+                    return this.slice.size && (t.slice = this.slice.toJSON()), this.structure && (t.structure = !0), t;
                 }
                 static fromJSON(t, e) {
                     if ("number" != typeof e.from || "number" != typeof e.to) throw RangeError("Invalid input for ReplaceStep.fromJSON");
@@ -16043,7 +16013,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             l.jsonID("replace", m);
             class g extends l {
                 constructor(t, e, n, r, i, o, s = !1) {
-                    (super(), (this.from = t), (this.to = e), (this.gapFrom = n), (this.gapTo = r), (this.slice = i), (this.insert = o), (this.structure = s));
+                    super(), (this.from = t), (this.to = e), (this.gapFrom = n), (this.gapTo = r), (this.slice = i), (this.insert = o), (this.structure = s);
                 }
                 apply(t) {
                     if (this.structure && (y(t, this.from, this.gapFrom) || y(t, this.gapTo, this.to))) return c.fail("Structure gap-replace would overwrite content");
@@ -16076,7 +16046,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 toJSON() {
                     let t = { stepType: "replaceAround", from: this.from, to: this.to, gapFrom: this.gapFrom, gapTo: this.gapTo, insert: this.insert };
-                    return (this.slice.size && (t.slice = this.slice.toJSON()), this.structure && (t.structure = !0), t);
+                    return this.slice.size && (t.slice = this.slice.toJSON()), this.structure && (t.structure = !0), t;
                 }
                 static fromJSON(t, e) {
                     if ("number" != typeof e.from || "number" != typeof e.to || "number" != typeof e.gapFrom || "number" != typeof e.gapTo || "number" != typeof e.insert)
@@ -16088,12 +16058,12 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 let r = t.resolve(e),
                     i = n - e,
                     o = r.depth;
-                for (; i > 0 && o > 0 && r.indexAfter(o) == r.node(o).childCount; ) (o--, i--);
+                for (; i > 0 && o > 0 && r.indexAfter(o) == r.node(o).childCount; ) o--, i--;
                 if (i > 0) {
                     let t = r.node(o).maybeChild(r.indexAfter(o));
                     for (; i > 0; ) {
                         if (!t || t.isLeaf) return !0;
-                        ((t = t.firstChild), i--);
+                        (t = t.firstChild), i--;
                     }
                 }
                 return !1;
@@ -16171,8 +16141,8 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         (t == r.depth
                             ? ((i = r.nodeBefore), (o = r.nodeAfter))
                             : n > 0
-                              ? ((i = r.node(t + 1)), s++, (o = r.node(t).maybeChild(s)))
-                              : ((i = r.node(t).maybeChild(s - 1)), (o = r.node(t + 1))),
+                            ? ((i = r.node(t + 1)), s++, (o = r.node(t).maybeChild(s)))
+                            : ((i = r.node(t).maybeChild(s - 1)), (o = r.node(t + 1))),
                         i && !i.isTextblock && k(i, o) && r.node(t).canReplace(s, s + 1))
                     )
                         return e;
@@ -16212,7 +16182,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             l.jsonID("replaceAround", g);
             class _ {
                 constructor(t, e, n) {
-                    ((this.$from = t), (this.$to = e), (this.unplaced = n), (this.frontier = []), (this.placed = r.HY.empty));
+                    (this.$from = t), (this.$to = e), (this.unplaced = n), (this.frontier = []), (this.placed = r.HY.empty);
                     for (let e = 0; e <= t.depth; e++) {
                         let n = t.node(e);
                         this.frontier.push({ type: n.type, match: n.contentMatchAt(t.indexAfter(e)) });
@@ -16235,7 +16205,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     let o = this.placed,
                         s = n.depth,
                         a = i.depth;
-                    for (; s && a && 1 == o.childCount; ) ((o = o.firstChild.content), s--, a--);
+                    for (; s && a && 1 == o.childCount; ) (o = o.firstChild.content), s--, a--;
                     let l = new r.p2(o, s, a);
                     return t > -1 ? new g(n.pos, t, this.$to.pos, this.$to.end(), l, e) : l.size || n.pos != this.$to.pos ? new m(n.pos, i.pos, l) : null;
                 }
@@ -16310,13 +16280,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             ));
                     }
                     let f = c == a.childCount;
-                    (f || (p = -1),
+                    f || (p = -1),
                         (this.placed = P(this.placed, e, r.HY.from(u))),
                         (this.frontier[e].match = h),
-                        f && p < 0 && n && n.type == this.frontier[this.depth].type && this.frontier.length > 1 && this.closeFrontierNode());
+                        f && p < 0 && n && n.type == this.frontier[this.depth].type && this.frontier.length > 1 && this.closeFrontierNode();
                     for (let t = 0, e = a; t < p; t++) {
                         let t = e.lastChild;
-                        (this.frontier.push({ type: t.type, match: t.contentMatchAt(t.childCount) }), (e = t.content));
+                        this.frontier.push({ type: t.type, match: t.contentMatchAt(t.childCount) }), (e = t.content);
                     }
                     this.unplaced = f ? (0 == t ? r.p2.empty : new r.p2(T(s.content, t - 1, 1), t - 1, p < 0 ? s.openEnd : t - 1)) : new r.p2(T(s.content, t, c), s.openStart, s.openEnd);
                 }
@@ -16350,7 +16320,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     let e = this.findCloseLevel(t);
                     if (!e) return null;
                     for (; this.depth > e.depth; ) this.closeFrontierNode();
-                    (e.fit.childCount && (this.placed = P(this.placed, e.depth, e.fit)), (t = e.move));
+                    e.fit.childCount && (this.placed = P(this.placed, e.depth, e.fit)), (t = e.move);
                     for (let n = e.depth + 1; n <= t.depth; n++) {
                         let e = t.node(n),
                             r = e.type.contentMatch.fillBefore(e.content, !0, t.index(n));
@@ -16360,7 +16330,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 openFrontierNode(t, e = null, n) {
                     let i = this.frontier[this.depth];
-                    ((i.match = i.match.matchType(t)), (this.placed = P(this.placed, this.depth, r.HY.from(t.create(e, n)))), this.frontier.push({ type: t, match: t.contentMatch }));
+                    (i.match = i.match.matchType(t)), (this.placed = P(this.placed, this.depth, r.HY.from(t.create(e, n)))), this.frontier.push({ type: t, match: t.contentMatch });
                 }
                 closeFrontierNode() {
                     let t = this.frontier.pop().match.fillBefore(r.HY.empty, !0);
@@ -16402,7 +16372,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             class R extends l {
                 constructor(t, e, n) {
-                    (super(), (this.pos = t), (this.attr = e), (this.value = n));
+                    super(), (this.pos = t), (this.attr = e), (this.value = n);
                 }
                 apply(t) {
                     let e = t.nodeAt(this.pos);
@@ -16434,7 +16404,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             l.jsonID("attr", R);
             class N extends l {
                 constructor(t, e) {
-                    (super(), (this.attr = t), (this.value = e));
+                    super(), (this.attr = t), (this.value = e);
                 }
                 apply(t) {
                     let e = Object.create(null);
@@ -16462,15 +16432,15 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
             }
             l.jsonID("docAttr", N);
             let z = class extends Error {};
-            (((z = function t(e) {
+            ((z = function t(e) {
                 let n = Error.call(this, e);
-                return ((n.__proto__ = t.prototype), n);
+                return (n.__proto__ = t.prototype), n;
             }).prototype = Object.create(Error.prototype)),
                 (z.prototype.constructor = z),
-                (z.prototype.name = "TransformError"));
+                (z.prototype.name = "TransformError");
             class j {
                 constructor(t) {
-                    ((this.doc = t), (this.steps = []), (this.docs = []), (this.mapping = new s()));
+                    (this.doc = t), (this.steps = []), (this.docs = []), (this.mapping = new s());
                 }
                 get before() {
                     return this.docs.length ? this.docs[0] : this.doc;
@@ -16482,17 +16452,17 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                 }
                 maybeStep(t) {
                     let e = t.apply(this.doc);
-                    return (e.failed || this.addStep(t, e.doc), e);
+                    return e.failed || this.addStep(t, e.doc), e;
                 }
                 get docChanged() {
                     return this.steps.length > 0;
                 }
                 addStep(t, e) {
-                    (this.docs.push(this.doc), this.steps.push(t), this.mapping.appendMap(t.getMap()), (this.doc = e));
+                    this.docs.push(this.doc), this.steps.push(t), this.mapping.appendMap(t.getMap()), (this.doc = e);
                 }
                 replace(t, e = t, n = r.p2.empty) {
                     let i = E(this.doc, t, e, n);
-                    return (i && this.step(i), this);
+                    return i && this.step(i), this;
                 }
                 replaceWith(t, e, n) {
                     return this.replace(t, e, new r.p2(r.HY.from(n), 0, 0));
@@ -16681,7 +16651,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     let a = t.mapping.slice(s),
                                         l = a.map(n, 1),
                                         c = a.map(n + e.nodeSize, 1);
-                                    return (t.step(new g(l, c, l + 1, c - 1, new r.p2(r.HY.from(i.create(o, null, e.marks)), 0, 0), 1, !0)), !1);
+                                    return t.step(new g(l, c, l + 1, c - 1, new r.p2(r.HY.from(i.create(o, null, e.marks)), 0, 0), 1, !0)), !1;
                                 }
                             });
                         })(this, t, e, n, i),
@@ -16703,13 +16673,13 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     );
                 }
                 setNodeAttribute(t, e, n) {
-                    return (this.step(new R(t, e, n)), this);
+                    return this.step(new R(t, e, n)), this;
                 }
                 setDocAttribute(t, e) {
-                    return (this.step(new N(t, e)), this);
+                    return this.step(new N(t, e)), this;
                 }
                 addNodeMark(t, e) {
-                    return (this.step(new p(t, e)), this);
+                    return this.step(new p(t, e)), this;
                 }
                 removeNodeMark(t, e) {
                     if (!(e instanceof r.vc)) {
@@ -16717,7 +16687,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         if (!n) throw RangeError("No node at position " + t);
                         if (!(e = e.isInSet(n.marks))) return this;
                     }
-                    return (this.step(new f(t, e)), this);
+                    return this.step(new f(t, e)), this;
                 }
                 split(t, e = 1, n) {
                     return (
@@ -16772,7 +16742,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                             if (n instanceof r.ZU) {
                                 let t = i.marks,
                                     e;
-                                for (; (e = n.isInSet(t)); ) ((l || (l = [])).push(e), (t = e.removeFromSet(t)));
+                                for (; (e = n.isInSet(t)); ) (l || (l = [])).push(e), (t = e.removeFromSet(t));
                             } else n ? n.isInSet(i.marks) && (l = [n]) : (l = i.marks);
                             if (l && l.length) {
                                 let n = Math.min(a + i.nodeSize, e);
@@ -16809,7 +16779,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                             e = /\r?\n|\r/g,
                                             i;
                                         for (; (t = e.exec(l.text)); )
-                                            (i || (i = new r.p2(r.HY.from(n.schema.text(" ", n.allowedMarks(l.marks))), 0, 0)), s.push(new m(a + t.index, a + t.index + t[0].length, i)));
+                                            i || (i = new r.p2(r.HY.from(n.schema.text(" ", n.allowedMarks(l.marks))), 0, 0)), s.push(new m(a + t.index, a + t.index + t[0].length, i));
                                     }
                                 } else s.push(new m(a, c, r.p2.empty));
                                 a = c;
@@ -16861,10 +16831,10 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     n = (0, r.useRef)(function (t) {
                         e.current && e.current(t);
                     });
-                return ((e.current = t), n.current);
+                return (e.current = t), n.current;
             }
             var a = function (t, e, n) {
-                    return (void 0 === e && (e = 0), void 0 === n && (n = 1), t > n ? n : t < e ? e : t);
+                    return void 0 === e && (e = 0), void 0 === n && (n = 1), t > n ? n : t < e ? e : t;
                 },
                 l = function (t) {
                     return "touches" in t;
@@ -16897,7 +16867,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         y = (0, r.useMemo)(
                             function () {
                                 var t = function (t) {
-                                        (h(t), (l(t) ? t.touches.length > 0 : t.buttons > 0) && d.current ? p(u(d.current, t, m.current)) : n(!1));
+                                        h(t), (l(t) ? t.touches.length > 0 : t.buttons > 0) && d.current ? p(u(d.current, t, m.current)) : n(!1);
                                     },
                                     e = function () {
                                         return n(!1);
@@ -16906,7 +16876,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                     var r = g.current,
                                         i = c(d.current),
                                         o = n ? i.addEventListener : i.removeEventListener;
-                                    (o(r ? "touchmove" : "mousemove", t), o(r ? "touchend" : "mouseup", e));
+                                    o(r ? "touchmove" : "mousemove", t), o(r ? "touchend" : "mouseup", e);
                                 }
                                 return [
                                     function (t) {
@@ -16918,7 +16888,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                                                 var i = e.changedTouches || [];
                                                 i.length && (m.current = i[0].identifier);
                                             }
-                                            (r.focus(), p(u(r, e, m.current)), n(!0));
+                                            r.focus(), p(u(r, e, m.current)), n(!0);
                                         }
                                     },
                                     function (t) {
@@ -16958,7 +16928,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                     );
                 },
                 m = function (t, e, n) {
-                    return (void 0 === e && (e = 0), void 0 === n && (n = Math.pow(10, e)), Math.round(n * t) / n);
+                    return void 0 === e && (e = 0), void 0 === n && (n = Math.pow(10, e)), Math.round(n * t) / n;
                 },
                 g = function (t) {
                     return C(y(t));
@@ -16999,7 +16969,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         n = t.s,
                         r = t.v,
                         i = t.a;
-                    ((e = (e / 360) * 6), (n /= 100), (r /= 100));
+                    (e = (e / 360) * 6), (n /= 100), (r /= 100);
                     var o = Math.floor(e),
                         s = r * (1 - n),
                         a = r * (1 - (e - o) * n),
@@ -17098,7 +17068,7 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         function () {
                             if (!t.equal(e, c.current.color)) {
                                 var n = t.toHsva(e);
-                                ((c.current = { hsva: n, color: e }), l(n));
+                                (c.current = { hsva: n, color: e }), l(n);
                             }
                         },
                         [e, t]
@@ -17128,11 +17098,11 @@ Please read the updated README.md at https://github.com/SortableJS/react-sortabl
                         var e = t.current ? t.current.ownerDocument : document;
                         if (void 0 !== e && !I.has(e)) {
                             var r = e.createElement("style");
-                            ((r.innerHTML =
+                            (r.innerHTML =
                                 '.react-colorful{position:relative;display:flex;flex-direction:column;width:200px;height:200px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default}.react-colorful__saturation{position:relative;flex-grow:1;border-color:transparent;border-bottom:12px solid #000;border-radius:8px 8px 0 0;background-image:linear-gradient(0deg,#000,transparent),linear-gradient(90deg,#fff,hsla(0,0%,100%,0))}.react-colorful__alpha-gradient,.react-colorful__pointer-fill{content:"";position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none;border-radius:inherit}.react-colorful__alpha-gradient,.react-colorful__saturation{box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}.react-colorful__alpha,.react-colorful__hue{position:relative;height:24px}.react-colorful__hue{background:linear-gradient(90deg,red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)}.react-colorful__last-control{border-radius:0 0 8px 8px}.react-colorful__interactive{position:absolute;left:0;top:0;right:0;bottom:0;border-radius:inherit;outline:none;touch-action:none}.react-colorful__pointer{position:absolute;z-index:1;box-sizing:border-box;width:28px;height:28px;transform:translate(-50%,-50%);background-color:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 2px 4px rgba(0,0,0,.2)}.react-colorful__interactive:focus .react-colorful__pointer{transform:translate(-50%,-50%) scale(1.1)}.react-colorful__alpha,.react-colorful__alpha-pointer{background-color:#fff;background-image:url(\'data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill-opacity=".05"><path d="M8 0h8v8H8zM0 8h8v8H0z"/></svg>\')}.react-colorful__saturation-pointer{z-index:3}.react-colorful__hue-pointer{z-index:2}'),
-                                I.set(e, r));
+                                I.set(e, r);
                             var i = A || n.nc;
-                            (i && r.setAttribute("nonce", i), e.head.appendChild(r));
+                            i && r.setAttribute("nonce", i), e.head.appendChild(r);
                         }
                     }, []);
                 },

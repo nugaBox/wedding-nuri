@@ -145,12 +145,12 @@
                                     }),
                                     onPointerDown: (0, i.M)(a.onPointerDown, e => {
                                         let t = e.target;
-                                        (t.hasPointerCapture(e.pointerId) && t.releasePointerCapture(e.pointerId),
-                                            0 === e.button && !1 === e.ctrlKey && (b(), (d.triggerPointerDownPosRef.current = { x: Math.round(e.pageX), y: Math.round(e.pageY) }), e.preventDefault()));
+                                        t.hasPointerCapture(e.pointerId) && t.releasePointerCapture(e.pointerId),
+                                            0 === e.button && !1 === e.ctrlKey && (b(), (d.triggerPointerDownPosRef.current = { x: Math.round(e.pageX), y: Math.round(e.pageY) }), e.preventDefault());
                                     }),
                                     onKeyDown: (0, i.M)(a.onKeyDown, e => {
                                         let t = "" !== v.current;
-                                        (e.ctrlKey || e.altKey || e.metaKey || 1 !== e.key.length || m(e.key), (!t || " " !== e.key) && R.includes(e.key) && (b(), e.preventDefault()));
+                                        e.ctrlKey || e.altKey || e.metaKey || 1 !== e.key.length || m(e.key), (!t || " " !== e.key) && R.includes(e.key) && (b(), e.preventDefault());
                                     }),
                                 }
                             )
@@ -184,11 +184,11 @@
                     n.open)
                         ? (0, r.createElement)(Y, (0, l.Z)({}, e, { ref: t }))
                         : a
-                          ? (0, o.createPortal)(
-                                (0, r.createElement)(z, { scope: e.__scopeSelect }, (0, r.createElement)(M.Slot, { scope: e.__scopeSelect }, (0, r.createElement)("div", null, e.children))),
-                                a
-                            )
-                          : null;
+                        ? (0, o.createPortal)(
+                              (0, r.createElement)(z, { scope: e.__scopeSelect }, (0, r.createElement)(M.Slot, { scope: e.__scopeSelect }, (0, r.createElement)("div", null, e.children))),
+                              a
+                          )
+                        : null;
                 }),
                 [z, q] = V(F),
                 Y = (0, r.forwardRef)((e, t) => {
@@ -219,10 +219,10 @@
                         B = I(n),
                         [N, K] = (0, r.useState)(!1),
                         U = (0, r.useRef)(!1);
-                    ((0, r.useEffect)(() => {
+                    (0, r.useEffect)(() => {
                         if (P) return (0, _.Ry)(P);
                     }, [P]),
-                        (0, f.EW)());
+                        (0, f.EW)();
                     let q = (0, r.useCallback)(
                             e => {
                                 let [t, ...n] = B().map(e => e.ref.current),
@@ -246,7 +246,7 @@
                         N && Y();
                     }, [N, Y]);
                     let { onOpenChange: G, triggerPointerDownPosRef: J } = T;
-                    ((0, r.useEffect)(() => {
+                    (0, r.useEffect)(() => {
                         if (P) {
                             let e = { x: 0, y: 0 },
                                 t = t => {
@@ -257,12 +257,12 @@
                                     };
                                 },
                                 n = n => {
-                                    (e.x <= 10 && e.y <= 10 ? n.preventDefault() : P.contains(n.target) || G(!1), document.removeEventListener("pointermove", t), (J.current = null));
+                                    e.x <= 10 && e.y <= 10 ? n.preventDefault() : P.contains(n.target) || G(!1), document.removeEventListener("pointermove", t), (J.current = null);
                                 };
                             return (
                                 null !== J.current && (document.addEventListener("pointermove", t), document.addEventListener("pointerup", n, { capture: !0, once: !0 })),
                                 () => {
-                                    (document.removeEventListener("pointermove", t), document.removeEventListener("pointerup", n, { capture: !0 }));
+                                    document.removeEventListener("pointermove", t), document.removeEventListener("pointerup", n, { capture: !0 });
                                 }
                             );
                         }
@@ -273,10 +273,10 @@
                                 window.addEventListener("blur", e),
                                 window.addEventListener("resize", e),
                                 () => {
-                                    (window.removeEventListener("blur", e), window.removeEventListener("resize", e));
+                                    window.removeEventListener("blur", e), window.removeEventListener("resize", e);
                                 }
                             );
-                        }, [G]));
+                        }, [G]);
                     let [$, Q] = eb(e => {
                             let t = B().filter(e => !e.disabled),
                                 n = t.find(e => e.ref.current === document.activeElement),
@@ -329,7 +329,7 @@
                                     },
                                     onUnmountAutoFocus: (0, i.M)(a, e => {
                                         var t;
-                                        (null === (t = T.trigger) || void 0 === t || t.focus({ preventScroll: !0 }), e.preventDefault());
+                                        null === (t = T.trigger) || void 0 === t || t.focus({ preventScroll: !0 }), e.preventDefault();
                                     }),
                                 },
                                 (0, r.createElement)(
@@ -376,7 +376,7 @@
                                                                 l = t.indexOf(n);
                                                             t = t.slice(l + 1);
                                                         }
-                                                        (setTimeout(() => q(t)), e.preventDefault());
+                                                        setTimeout(() => q(t)), e.preventDefault();
                                                     }
                                                 }),
                                             }
@@ -412,7 +412,7 @@
                                         u = Math.max(c, t.width),
                                         d = window.innerWidth - 10,
                                         p = (0, a.u)(o, [10, d - u]);
-                                    ((s.style.minWidth = c + "px"), (s.style.left = p + "px"));
+                                    (s.style.minWidth = c + "px"), (s.style.left = p + "px");
                                 } else {
                                     let r = t.right - l.right,
                                         o = window.innerWidth - n.right - r,
@@ -421,7 +421,7 @@
                                         u = Math.max(c, t.width),
                                         d = window.innerWidth - 10,
                                         p = (0, a.u)(o, [10, d - u]);
-                                    ((s.style.minWidth = c + "px"), (s.style.right = p + "px"));
+                                    (s.style.minWidth = c + "px"), (s.style.right = p + "px");
                                 }
                                 let r = h(),
                                     i = window.innerHeight - 20,
@@ -447,9 +447,9 @@
                                     let e = S === r[0].ref.current;
                                     s.style.top = "0px";
                                     let t = Math.max(k, p + y.offsetTop + (e ? x : 0) + R);
-                                    ((s.style.height = t + (w - T) + "px"), (y.scrollTop = T - k + y.offsetTop));
+                                    (s.style.height = t + (w - T) + "px"), (y.scrollTop = T - k + y.offsetTop);
                                 }
-                                ((s.style.margin = "10px 0"), (s.style.minHeight = b + "px"), (s.style.maxHeight = i + "px"), null == o || o(), requestAnimationFrame(() => (g.current = !0)));
+                                (s.style.margin = "10px 0"), (s.style.minHeight = b + "px"), (s.style.maxHeight = i + "px"), null == o || o(), requestAnimationFrame(() => (g.current = !0));
                             }
                         }, [h, c.trigger, c.valueNode, s, f, y, S, C, c.dir, o]);
                     (0, E.b)(() => _(), [_]);
@@ -530,7 +530,7 @@
                                                     let o = r + e,
                                                         a = Math.min(l, o),
                                                         i = o - a;
-                                                    ((n.style.height = a + "px"), "0px" === n.style.bottom && ((t.scrollTop = i > 0 ? i : 0), (n.style.justifyContent = "flex-end")));
+                                                    (n.style.height = a + "px"), "0px" === n.style.bottom && ((t.scrollTop = i > 0 ? i : 0), (n.style.justifyContent = "flex-end"));
                                                 }
                                             }
                                         }
@@ -680,7 +680,7 @@
                                 function e() {
                                     i(t.scrollTop > 0);
                                 }
-                                return (e(), t.addEventListener("scroll", e), () => t.removeEventListener("scroll", e));
+                                return e(), t.addEventListener("scroll", e), () => t.removeEventListener("scroll", e);
                             }
                         }, [n.viewport, n.isPositioned]),
                         a
@@ -711,7 +711,7 @@
                                     let e = t.scrollHeight - t.clientHeight;
                                     i(Math.ceil(t.scrollTop) < e);
                                 }
-                                return (e(), t.addEventListener("scroll", e), () => t.removeEventListener("scroll", e));
+                                return e(), t.addEventListener("scroll", e), () => t.removeEventListener("scroll", e);
                             }
                         }, [n.viewport, n.isPositioned]),
                         a
@@ -753,7 +753,7 @@
                                 }),
                                 onPointerMove: (0, i.M)(a.onPointerMove, () => {
                                     var e;
-                                    (null === (e = c.onItemLeave) || void 0 === e || e.call(c), null === u.current && (u.current = window.setInterval(o, 50)));
+                                    null === (e = c.onItemLeave) || void 0 === e || e.call(c), null === u.current && (u.current = window.setInterval(o, 50));
                                 }),
                                 onPointerLeave: (0, i.M)(a.onPointerLeave, () => {
                                     s();
@@ -780,7 +780,7 @@
                             t = Object.getOwnPropertyDescriptor(window.HTMLSelectElement.prototype, "value").set;
                         if (c !== n && t) {
                             let l = new Event("change", { bubbles: !0 });
-                            (t.call(e, n), e.dispatchEvent(l));
+                            t.call(e, n), e.dispatchEvent(l);
                         }
                     }, [c, n]),
                     (0, r.createElement)(x, { asChild: !0 }, (0, r.createElement)("select", (0, l.Z)({}, o, { ref: i, defaultValue: n })))
@@ -793,17 +793,17 @@
                     o = (0, r.useCallback)(
                         e => {
                             let r = n.current + e;
-                            (t(r),
+                            t(r),
                                 (function e(t) {
-                                    ((n.current = t), window.clearTimeout(l.current), "" !== t && (l.current = window.setTimeout(() => e(""), 1e3)));
-                                })(r));
+                                    (n.current = t), window.clearTimeout(l.current), "" !== t && (l.current = window.setTimeout(() => e(""), 1e3));
+                                })(r);
                         },
                         [t]
                     ),
                     a = (0, r.useCallback)(() => {
-                        ((n.current = ""), window.clearTimeout(l.current));
+                        (n.current = ""), window.clearTimeout(l.current);
                     }, []);
-                return ((0, r.useEffect)(() => () => window.clearTimeout(l.current), []), [n, o, a]);
+                return (0, r.useEffect)(() => () => window.clearTimeout(l.current), []), [n, o, a];
             }
             function ey(e, t, n) {
                 var l;
@@ -879,7 +879,7 @@
                                         onNativeOptionRemove: (0, r.useCallback)(e => {
                                             Z(t => {
                                                 let n = new Set(t);
-                                                return (n.delete(e), n);
+                                                return n.delete(e), n;
                                             });
                                         }, []),
                                     },
