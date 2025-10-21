@@ -61,20 +61,20 @@
                             "sakura" === a.backgroundImage
                                 ? o(N)
                                 : "leaf" === a.backgroundImage
-                                  ? o(D)
-                                  : "ginkgo" === a.backgroundImage
-                                    ? o(F)
-                                    : "maple" === a.backgroundImage
-                                      ? o(V)
-                                      : "tuliip" === a.backgroundImage
-                                        ? o(B)
-                                        : "star" === a.backgroundImage
-                                          ? o(E)
-                                          : "confetti" === a.backgroundImage
-                                            ? o(S)
-                                            : "snow" === a.backgroundImage
-                                              ? o(A)
-                                              : o(N);
+                                ? o(D)
+                                : "ginkgo" === a.backgroundImage
+                                ? o(F)
+                                : "maple" === a.backgroundImage
+                                ? o(V)
+                                : "tuliip" === a.backgroundImage
+                                ? o(B)
+                                : "star" === a.backgroundImage
+                                ? o(E)
+                                : "confetti" === a.backgroundImage
+                                ? o(S)
+                                : "snow" === a.backgroundImage
+                                ? o(A)
+                                : o(N);
                         }, [a.backgroundImage]),
                         (0, s.jsx)(s.Fragment, {
                             children: (0, s.jsx)(c.E.div, {
@@ -1696,17 +1696,17 @@
                             visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 1.2 } },
                         },
                     };
-                ((0, d.useEffect)(() => {
+                (0, d.useEffect)(() => {
                     let e = a.filter(e => "cover" === e.category),
                         t = a.filter(e => "cover-2" === e.category);
-                    (e.length > 0 ? x(e[0].originFile) : D.startsWith("/editor") && x("preview"), t.length > 0 ? b(t[0].originFile) : D.startsWith("/editor") && b("preview-2"));
+                    e.length > 0 ? x(e[0].originFile) : D.startsWith("/editor") && x("preview"), t.length > 0 ? b(t[0].originFile) : D.startsWith("/editor") && b("preview-2");
                 }, [a]),
                     (0, d.useEffect)(() => {
                         if (v.current && "number" == typeof t.introPosition) {
                             let e = t.introPosition || 50;
-                            ((v.current.style.top = "".concat(e, "%")), (v.current.style.transform = "translateY(-".concat(e, "%)")), N(e => e + 1));
+                            (v.current.style.top = "".concat(e, "%")), (v.current.style.transform = "translateY(-".concat(e, "%)")), N(e => e + 1);
                         }
-                    }, [t.introPosition]));
+                    }, [t.introPosition]);
                 let V = (0, r.l)(e => e.setThemeInfo);
                 (0, d.useEffect)(() => {
                     V(m.np[e.themeId]);
@@ -1739,7 +1739,7 @@
                 };
                 return (
                     (0, d.useEffect)(() => {
-                        (window.scrollTo(0, 0), E(t.isIntroUsed), t.isIntroUsed && (document.body.style.overflow = "hidden"));
+                        window.scrollTo(0, 0), E(t.isIntroUsed), t.isIntroUsed && (document.body.style.overflow = "hidden");
                     }, [t.introType]),
                     (0, s.jsxs)(c.E.div, {
                         initial: { opacity: 0, y: 0 },
@@ -1772,11 +1772,11 @@
                                                             autoplay: !0,
                                                             animationData: t.introColor ? (0, C.flatten)(t.introColor, L()) : L(),
                                                             onComplete: () => {
-                                                                (A.start({ opacity: 0 }),
+                                                                A.start({ opacity: 0 }),
                                                                     S.current && clearTimeout(S.current),
                                                                     (S.current = setTimeout(() => {
-                                                                        ((document.body.style.overflow = "auto"), E(!1));
-                                                                    }, 800)));
+                                                                        (document.body.style.overflow = "auto"), E(!1);
+                                                                    }, 800));
                                                             },
                                                             className: "w-full",
                                                         },
@@ -1855,24 +1855,24 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i),
+                            er.ZP.registerPlugin(eo.i),
                                 eo.i.create({
                                     trigger: ".gsap-bg-color",
                                     start: "top 35%",
                                     end: "bottom 35%",
                                     onEnter: () => {
-                                        (er.ZP.to(".gsap-bg-color", { backgroundColor: t && t.theme6, overwrite: "auto" }),
+                                        er.ZP.to(".gsap-bg-color", { backgroundColor: t && t.theme6, overwrite: "auto" }),
                                             er.ZP.to(".gsap-opacity", { opacity: 1 }),
-                                            er.ZP.fromTo(".reveal-text", { duration: 3, y: "80", opacity: 0 }, { y: "0", opacity: 1, stagger: 0.055 }));
+                                            er.ZP.fromTo(".reveal-text", { duration: 3, y: "80", opacity: 0 }, { y: "0", opacity: 1, stagger: 0.055 });
                                     },
                                     onEnterBack: () => {
-                                        (er.ZP.to(".gsap-bg-color", { backgroundColor: t && t.theme6, overwrite: "auto" }),
+                                        er.ZP.to(".gsap-bg-color", { backgroundColor: t && t.theme6, overwrite: "auto" }),
                                             er.ZP.to(".gsap-opacity", { opacity: 1 }),
-                                            er.ZP.fromTo(".reveal-text", { duration: 3, y: "80", opacity: 0 }, { y: "0", opacity: 1, stagger: 0.055 }));
+                                            er.ZP.fromTo(".reveal-text", { duration: 3, y: "80", opacity: 0 }, { y: "0", opacity: 1, stagger: 0.055 });
                                     },
                                     onLeave: () => er.ZP.to(".gsap-bg-color", { backgroundColor: "#fff", overwrite: "auto" }),
                                     onLeaveBack: () => er.ZP.to(".gsap-bg-color", { backgroundColor: "#fff", overwrite: "auto" }),
-                                }));
+                                });
                         },
                         { scope: e, dependencies: [t, i, a.type], revertOnUpdate: !0 }
                     ),
@@ -2015,7 +2015,7 @@
                     o = (0, r.l)(e => e.themeInfo),
                     [c, m] = (0, d.useState)(""),
                     x = (0, ec.v)(e => e.inc);
-                ((0, d.useEffect)(() => {
+                (0, d.useEffect)(() => {
                     if (l.length > 0) {
                         let e = l.find(e => "invitation-note" === e.category);
                         e && m(null == e ? void 0 : e.originFile);
@@ -2023,10 +2023,10 @@
                 }, [l]),
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-text", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-text", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 });
                         },
                         { scope: e }
-                    ));
+                    );
                 let p = (0, d.useRef)(null),
                     f = (0, d.useRef)(null),
                     u = (0, ey.Y)(f, { once: !1 });
@@ -2142,7 +2142,7 @@
                     t = (0, r.l)(e => e.themeInfo);
                 (0, el.V)(
                     () => {
-                        (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }));
+                        er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 });
                     },
                     { scope: e }
                 );
@@ -2439,7 +2439,7 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 });
                         },
                         { scope: t }
                     ),
@@ -2765,7 +2765,7 @@
                                             let a = e.target();
                                             if (r === e.index && 0 !== a) {
                                                 let e = Math.sign(a);
-                                                (-1 === e && (l = t - (1 + s)), 1 === e && (l = t + (1 - s)));
+                                                -1 === e && (l = t - (1 + s)), 1 === e && (l = t + (1 - s));
                                             }
                                         });
                                     let o = e5(1 - Math.abs(l * p.current), 0, 1).toString();
@@ -2886,7 +2886,7 @@
                     let { currentIndex: t, total: a } = e,
                         i = (0, r.l)(e => e.themeInfo),
                         n = t - Math.floor(2.5);
-                    (n < 0 && (n = 0), n + 5 > a && (n = a - 5));
+                    n < 0 && (n = 0), n + 5 > a && (n = a - 5);
                     let l = Math.min(n + 5, a),
                         o = n + Math.floor((l - n) / 2);
                     return (0, s.jsx)("div", {
@@ -2916,7 +2916,7 @@
                         i.isBrief ? h(!1) : h(!0);
                     }, [i.isBrief]);
                     let p = () => {
-                        (h(!0), l());
+                        h(!0), l();
                     };
                     return (0, s.jsxs)("div", {
                         children: [
@@ -3118,7 +3118,7 @@
                 let { className: a, ...i } = e;
                 return (0, s.jsx)("div", { ref: t, className: (0, ta.cn)("rounded-lg border bg-card text-card-foreground shadow-sm", a), ...i });
             });
-            ((ts.displayName = "Card"),
+            (ts.displayName = "Card"),
                 (d.forwardRef((e, t) => {
                     let { className: a, ...i } = e;
                     return (0, s.jsx)("div", { ref: t, className: (0, ta.cn)("flex flex-col space-y-1.5 p-6", a), ...i });
@@ -3130,16 +3130,16 @@
                 (d.forwardRef((e, t) => {
                     let { className: a, ...i } = e;
                     return (0, s.jsx)("p", { ref: t, className: (0, ta.cn)("text-sm text-muted-foreground", a), ...i });
-                }).displayName = "CardDescription"));
+                }).displayName = "CardDescription");
             let ti = d.forwardRef((e, t) => {
                 let { className: a, ...i } = e;
                 return (0, s.jsx)("div", { ref: t, className: (0, ta.cn)("p-6 pt-0", a), ...i });
             });
-            ((ti.displayName = "CardContent"),
+            (ti.displayName = "CardContent"),
                 (d.forwardRef((e, t) => {
                     let { className: a, ...i } = e;
                     return (0, s.jsx)("div", { ref: t, className: (0, ta.cn)("flex items-center p-6 pt-0", a), ...i });
-                }).displayName = "CardFooter"));
+                }).displayName = "CardFooter");
             var tn = a(95186),
                 tr = a(76818),
                 tl = a(3016),
@@ -3160,7 +3160,7 @@
                 let e = (0, d.useRef)(null);
                 (0, el.V)(
                     () => {
-                        (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 70%" }, opacity: 0, y: 40, duration: 1, stagger: 0.15 }));
+                        er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 70%" }, opacity: 0, y: 40, duration: 1, stagger: 0.15 });
                     },
                     { scope: e }
                 );
@@ -3177,7 +3177,7 @@
                             eR.A.error("샘플 청첩장은 방명록을 작성할 수 없습니다.");
                             return;
                         }
-                        (n(!0),
+                        n(!0),
                             await fetch("".concat("https://toourguest.com", "/api/card/").concat(l.cardId, "/guestbook/contents"), { method: "POST", body: JSON.stringify(e) })
                                 .then(async e => {
                                     200 === e.status ? (a(!1), h([await e.json(), ...x]), p.reset(), eR.A.success("메시지가 등록 되었습니다")) : eR.A.error("메시지 등록에 실패했습니다");
@@ -3185,7 +3185,7 @@
                                 .catch(() => {
                                     eR.A.error("메시지 등록에 실패했습니다");
                                 }),
-                            n(!1));
+                            n(!1);
                     });
                 return (0, s.jsx)("div", {
                     ref: e,
@@ -3370,7 +3370,7 @@
                     h = (0, tx.M)(e => e.guestbookContent),
                     p = (0, tx.M)(e => e.setGuestbookContent),
                     f = (e, t) => {
-                        (n(!0), o({ ...l, id: e, cardId: t }));
+                        n(!0), o({ ...l, id: e, cardId: t });
                     };
                 (0, d.useEffect)(() => {
                     i || (o({}), u.reset());
@@ -3584,7 +3584,7 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 });
                         },
                         { scope: t }
                     ),
@@ -4074,7 +4074,7 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.15 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.15 });
                         },
                         { scope: n }
                     ),
@@ -4610,7 +4610,7 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 });
                         },
                         { scope: a }
                     ),
@@ -4791,9 +4791,9 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i),
+                            er.ZP.registerPlugin(eo.i),
                                 er.ZP.from(".gsap-text", { scrollTrigger: { trigger: ".gsap-div ", start: "top 75%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 }),
-                                er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, duration: 1, stagger: 0.05 }));
+                                er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, duration: 1, stagger: 0.05 });
                         },
                         { scope: c }
                     ),
@@ -4857,7 +4857,7 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.015 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.015 });
                         },
                         { scope: t }
                     ),
@@ -4938,26 +4938,26 @@
                                 0 == e
                                     ? (0, s.jsx)("div", {}, "date-".concat(t))
                                     : e == c
-                                      ? (0, s.jsx)(
-                                            "div",
-                                            {
-                                                className: "flex justify-center gsap-opacity",
-                                                children: (0, s.jsxs)("div", {
-                                                    className: "text-white rounded-full font-extralight w-8 h-8 flex justify-center items-center",
-                                                    style: { backgroundColor: i && i.theme6 },
-                                                    children: [e, ""],
-                                                }),
-                                            },
-                                            "date-".concat(t)
-                                        )
-                                      : (0, s.jsxs)(
-                                            "div",
-                                            {
-                                                className: (0, M.Z)("font-extralight px-2 py-1 gsap-opacity", { "text-red-400": 0 === t || m({ date: e }), "text-tog-666": 6 === t }),
-                                                children: [e, ""],
-                                            },
-                                            "date-".concat(t)
-                                        )
+                                    ? (0, s.jsx)(
+                                          "div",
+                                          {
+                                              className: "flex justify-center gsap-opacity",
+                                              children: (0, s.jsxs)("div", {
+                                                  className: "text-white rounded-full font-extralight w-8 h-8 flex justify-center items-center",
+                                                  style: { backgroundColor: i && i.theme6 },
+                                                  children: [e, ""],
+                                              }),
+                                          },
+                                          "date-".concat(t)
+                                      )
+                                    : (0, s.jsxs)(
+                                          "div",
+                                          {
+                                              className: (0, M.Z)("font-extralight px-2 py-1 gsap-opacity", { "text-red-400": 0 === t || m({ date: e }), "text-tog-666": 6 === t }),
+                                              children: [e, ""],
+                                          },
+                                          "date-".concat(t)
+                                      )
                             )
                         );
                     return (0, s.jsxs)("div", {
@@ -5068,9 +5068,9 @@
                 let e = (0, d.useRef)(null);
                 (0, el.V)(
                     () => {
-                        (er.ZP.registerPlugin(eo.i),
+                        er.ZP.registerPlugin(eo.i),
                             er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 70%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }),
-                            er.ZP.to(".gsap-rotate", { rotate: 360, repeat: -1, ease: "none", duration: 5 }));
+                            er.ZP.to(".gsap-rotate", { rotate: 360, repeat: -1, ease: "none", duration: 5 });
                     },
                     { scope: e }
                 );
@@ -5288,7 +5288,7 @@
                                     }),
                                     (0, s.jsx)("button", {
                                         onClick: () => {
-                                            (c(!1), ae.Z.set("dismiss", "true", { expires: 1 }));
+                                            c(!1), ae.Z.set("dismiss", "true", { expires: 1 });
                                         },
                                         className: "text-center text-tog-999 mb-1",
                                         children: "오늘 하루 보지 않기",
@@ -5320,7 +5320,7 @@
                                 eR.A.error("샘플 청첩장은 참석 의사를 전달할 수 없습니다.");
                                 return;
                             }
-                            (h(!1),
+                            h(!1),
                                 200 === (await fetch("".concat("https://toourguest.com", "/api/card/").concat(m.cardId, "/rsvp"), { method: "POST", body: JSON.stringify({ rsvpContent: n }) })).status
                                     ? (p(!1),
                                       eR.A.success("작성하신 내용을 전달했습니다.", {
@@ -5339,7 +5339,7 @@
                                     : eR.A.error("오류가 발생했습니다. 잠시 후 다시 시도해주세요."),
                                 h(!0),
                                 t(!1),
-                                c());
+                                c();
                         };
                     return (0, s.jsxs)(eq.Vq, {
                         open: e,
@@ -5437,7 +5437,7 @@
                                                             children: [
                                                                 (0, s.jsx)("button", {
                                                                     onClick: () => {
-                                                                        (u(!1), o({ ...n, totalPeople: "0" }));
+                                                                        u(!1), o({ ...n, totalPeople: "0" });
                                                                     },
                                                                     className: "w-full",
                                                                     children: (0, s.jsx)("div", {
@@ -5452,7 +5452,7 @@
                                                                 }),
                                                                 (0, s.jsx)("button", {
                                                                     onClick: () => {
-                                                                        (u(!0), o({ ...n, totalPeople: "1" }));
+                                                                        u(!0), o({ ...n, totalPeople: "1" });
                                                                     },
                                                                     className: "w-full",
                                                                     children: (0, s.jsx)("div", {
@@ -5619,7 +5619,7 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 });
                         },
                         { scope: t }
                     ),
@@ -5674,7 +5674,7 @@
                 let x = (0, d.useRef)(null);
                 (0, el.V)(
                     () => {
-                        (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div", start: "top bottom" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }));
+                        er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div", start: "top bottom" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 });
                     },
                     { scope: x }
                 );
@@ -5840,7 +5840,7 @@
                         i = (0, aZ.Vt)({ id: e }),
                         n = (0, aZ.TT)({ id: e }),
                         r = (0, aZ.hx)({ id: e });
-                    (es({ backgroundImage: "tuliip", isBackgroundEffect: !0, isScrollEffect: !0, fontFamily: "suit", fontSize: "0.95em", themeId: (0, aZ.y_)({ id: e }), isSameFont: !1 }),
+                    es({ backgroundImage: "tuliip", isBackgroundEffect: !0, isScrollEffect: !0, fontFamily: "suit", fontSize: "0.95em", themeId: (0, aZ.y_)({ id: e }), isSameFont: !1 }),
                         en({
                             coverMessage: t,
                             coverType: e,
@@ -5852,7 +5852,7 @@
                             imageBrightness: (0, aZ.Y9)({ id: e }),
                             isIntroOpacity: !0,
                         }),
-                        el({ description: "사진을 클릭하시면 전체 화면 보기가 가능합니다", designType: i, gridColumn: 3, isBrief: !0, isViewer: !0, isSlider: !0, sliderType: n }));
+                        el({ description: "사진을 클릭하시면 전체 화면 보기가 가능합니다", designType: i, gridColumn: 3, isBrief: !0, isViewer: !0, isSlider: !0, sliderType: n });
                 }, [e]);
                 let eo = [
                         { id: "invitation-note", isUsed: !0 },
@@ -5912,30 +5912,30 @@
                         decoration: aZ.D_[Math.floor(Math.random() * aZ.D_.length)],
                     },
                     em = {
-                        groomFirstName: "민호",
-                        groomLastName: "이",
-                        groomDadFirstName: "정빈",
-                        groomDadLastName: "이",
-                        groomMomFirstName: "지은",
-                        groomMomLastName: "홍",
+                        groomFirstName: "윤성",
+                        groomLastName: "최",
+                        groomDadFirstName: "철주",
+                        groomDadLastName: "최",
+                        groomMomFirstName: "경희",
+                        groomMomLastName: "서",
                         groomRelation: "아들",
                         groomDadRelation: "아버지",
                         groomMomRelation: "어머니",
-                        groomDadRip: !1,
-                        groomMomRip: !0,
-                        groomNickname: "MINHO",
-                        brideFirstName: "하윤",
-                        brideLastName: "배",
-                        brideDadFirstName: "준영",
-                        brideDadLastName: "배",
-                        brideMomFirstName: "미연",
-                        brideMomLastName: "유",
+                        groomDadRip: !0,
+                        groomMomRip: !1,
+                        groomNickname: "YUNSEONG",
+                        brideFirstName: "누리",
+                        brideLastName: "장",
+                        brideDadFirstName: "실",
+                        brideDadLastName: "장",
+                        brideMomFirstName: "명희",
+                        brideMomLastName: "성",
                         brideRelation: "딸",
                         brideDadRelation: "아버지",
                         brideMomRelation: "어머니",
                         brideDadRip: !1,
                         brideMomRip: !1,
-                        brideNickname: "HAYOON",
+                        brideNickname: "NURI",
                         isNicknameUsed: !0,
                         isGroomFirst: !0,
                     },
@@ -5974,7 +5974,7 @@
                         description: "참석이 어려우신 분들을 위해 기재했습니다\n  너그러운 마음으로 양해 부탁드립니다",
                         isAccountHidden: !0,
                         isKakaoPay: !0,
-                        groomName: "이민호",
+                        groomName: "최윤성",
                         groomBank: "토그은행",
                         groomAccount: "123-456-789012",
                         groomKakaoPay: "https://toourguest.com",
@@ -5986,7 +5986,7 @@
                         groomMomBank: "토그은행",
                         groomMomAccount: "123-456-789012",
                         groomMomKakaoPay: "https://toourguest.com",
-                        brideName: "배하윤",
+                        brideName: "장누리",
                         brideBank: "토그은행",
                         brideAccount: "123-456-789012",
                         brideKakaoPay: "https://toourguest.com",
@@ -6031,7 +6031,7 @@
                         brideContent: "\n배준영 \xb7 유미연의 딸\n1995년 7월 제주 출생\n감성 과다 제주소녀 \uD83C\uDF4A\n    ",
                     },
                     eD = {
-                        name: "신랑 이민호 \xb7 신부 배하윤 피로연",
+                        name: "신랑 최윤성 \xb7 신부 장누리 피로연",
                         time: "9월 20일 토요일 오후 5시 - 7시",
                         address: "서울 종로구 돈화문로11가길 47",
                         venue: "투아워게스트 가든",
@@ -6222,7 +6222,7 @@
                                                         children: [
                                                             (0, s.jsx)("button", {
                                                                 onClick: () => {
-                                                                    (n && (W({ ...v, ...em }), Z({ ...f, ...eh }), z({ ...C, ...ex }), J({ ...w, ...eb }), _({ ...y, ...ep }), R(ec)),
+                                                                    n && (W({ ...v, ...em }), Z({ ...f, ...eh }), z({ ...C, ...ex }), J({ ...w, ...eb }), _({ ...y, ...ep }), R(ec)),
                                                                         A({ ...h, ...ea }),
                                                                         S(eo),
                                                                         L({ ...p, ...ei }),
@@ -6240,7 +6240,7 @@
                                                                         ee(ey),
                                                                         et({ ...E, ...eD }),
                                                                         i(!1),
-                                                                        x(!1));
+                                                                        x(!1);
                                                                 },
                                                                 className: "w-full py-3 justify-center text-center shadow-md rounded-lg flex bg-tog-pink text-tog-444",
                                                                 children: "적용하기",
@@ -6307,12 +6307,12 @@
                         if (l.length > 0) {
                             let e = l.find(e => "about-groom" === e.category),
                                 t = l.find(e => "about-bride" === e.category);
-                            (e && x(e.thumbFile ? e.thumbFile : e.originFile), t && p(t.thumbFile ? t.thumbFile : t.originFile));
+                            e && x(e.thumbFile ? e.thumbFile : e.originFile), t && p(t.thumbFile ? t.thumbFile : t.originFile);
                         }
                     }, [l]),
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 });
                         },
                         { scope: e }
                     ),
@@ -6603,7 +6603,7 @@
                             let s = await (0, aX.A)(m, g),
                                 i = t.filter(e => e.fileId === c)[0].category,
                                 n = new FormData();
-                            (n.append("fileId", c),
+                            n.append("fileId", c),
                                 n.append("cardId", e.cardId.toString()),
                                 n.append("category", i),
                                 n.append("thumb", s),
@@ -6613,13 +6613,13 @@
                                               if (e.fileId !== c) return e;
                                               {
                                                   let t = URL.createObjectURL(s);
-                                                  return (C([...y, t]), { ...e, thumbFile: t });
+                                                  return C([...y, t]), { ...e, thumbFile: t };
                                               }
                                           })
                                       ),
                                       x(!1))
                                     : eR.A.error("썸네일 저장 과정에 오류가 발생했습니다. 잠시후 다시 시도해주세요."),
-                                l(!0));
+                                l(!0);
                         },
                         v = async () => {
                             l(!1);
@@ -6642,24 +6642,24 @@
                                     var d;
                                     let n = await s.json(),
                                         r = new FormData();
-                                    (r.append("fileId", c),
+                                    r.append("fileId", c),
                                         r.append("thumbId", null !== (d = n.result.id) && void 0 !== d ? d : ""),
                                         r.append("cardId", e.cardId.toString()),
-                                        r.append("category", "gallery"));
+                                        r.append("category", "gallery");
                                     let o = await fetch("/api/v2/bucket/thumbnail", { method: "PUT", body: r, next: { revalidate: 0 } });
-                                    (200 === o.status
+                                    200 === o.status
                                         ? (a(
                                               t.map(e => {
                                                   if (e.fileId !== c) return e;
                                                   {
                                                       let t = URL.createObjectURL(i);
-                                                      return (C([...y, t]), { ...e, thumbFile: t });
+                                                      return C([...y, t]), { ...e, thumbFile: t };
                                                   }
                                               })
                                           ),
                                           x(!1))
                                         : eR.A.error("썸네일 저장 과정에 오류가 발생했습니다. 잠시후 다시 시도해주세요."),
-                                        l(!0));
+                                        l(!0);
                                 } else throw Error("업로드 실패");
                             } catch (e) {
                                 throw (console.error("Error occurred during file upload:", e), e);
@@ -6795,16 +6795,16 @@
                             p(!1);
                             try {
                                 for (let a of t)
-                                    (a.originFile && "string" == typeof a.originFile && URL.revokeObjectURL(a.originFile),
+                                    a.originFile && "string" == typeof a.originFile && URL.revokeObjectURL(a.originFile),
                                         a.thumbFile && "string" == typeof a.thumbFile && URL.revokeObjectURL(a.thumbFile),
                                         c.cardId < 15e3
                                             ? await fetch("/api/bucket", { method: "DELETE", body: JSON.stringify({ fileId: a.fileId, cardId: c.cardId }) })
-                                            : await fetch("/api/v2/bucket", { method: "DELETE", body: JSON.stringify({ fileId: a.fileId, cardId: c.cardId, category: e, isThumb: !1 }) }));
+                                            : await fetch("/api/v2/bucket", { method: "DELETE", body: JSON.stringify({ fileId: a.fileId, cardId: c.cardId, category: e, isThumb: !1 }) });
                                 h(x.filter(t => t.category !== e));
                                 let a = d.filter(e => e.contentId !== l);
-                                (m(a), eR.A.success("타임라인이 삭제되었습니다."));
+                                m(a), eR.A.success("타임라인이 삭제되었습니다.");
                             } catch (e) {
-                                (console.error("타임라인 삭제 중 오류 발생:", e), eR.A.error("타임라인 삭제 중 오류가 발생했습니다."));
+                                console.error("타임라인 삭제 중 오류 발생:", e), eR.A.error("타임라인 삭제 중 오류가 발생했습니다.");
                             } finally {
                                 p(!0);
                             }
@@ -6921,7 +6921,7 @@
                             let s = await (0, aX.A)(m, g),
                                 i = t.filter(e => e.fileId === c)[0].category,
                                 n = new FormData();
-                            (n.append("fileId", c),
+                            n.append("fileId", c),
                                 n.append("cardId", e.cardId.toString()),
                                 n.append("category", i),
                                 n.append("thumb", s),
@@ -6931,13 +6931,13 @@
                                               if (e.fileId !== c) return e;
                                               {
                                                   let t = URL.createObjectURL(s);
-                                                  return (C([...y, t]), { ...e, thumbFile: t });
+                                                  return C([...y, t]), { ...e, thumbFile: t };
                                               }
                                           })
                                       ),
                                       x(!1))
                                     : eR.A.error("썸네일 저장 과정에 오류가 발생했습니다. 잠시후 다시 시도해주세요."),
-                                l(!0));
+                                l(!0);
                         },
                         v = async () => {
                             l(!1);
@@ -6954,27 +6954,27 @@
                                     var s;
                                     let i = await h.json(),
                                         r = new FormData();
-                                    (r.append("fileId", c),
+                                    r.append("fileId", c),
                                         r.append("thumbId", null !== (s = i.result.id) && void 0 !== s ? s : ""),
                                         r.append("cardId", e.cardId.toString()),
-                                        r.append("category", "gallery"));
+                                        r.append("category", "gallery");
                                     let o = await fetch("/api/v2/bucket/thumbnail", { method: "PUT", body: r, next: { revalidate: 0 } });
-                                    (200 === o.status
+                                    200 === o.status
                                         ? (a(
                                               t.map(e => {
                                                   if (e.fileId !== c) return e;
                                                   {
                                                       let t = URL.createObjectURL(n);
-                                                      return (C([...y, t]), { ...e, thumbFile: t });
+                                                      return C([...y, t]), { ...e, thumbFile: t };
                                                   }
                                               })
                                           ),
                                           x(!1))
                                         : eR.A.error("썸네일 저장 과정에 오류가 발생했습니다. 잠시후 다시 시도해주세요."),
-                                        l(!0));
+                                        l(!0);
                                 } else throw Error("업로드 실패");
                             } catch (e) {
-                                (console.error("Error occurred during file upload:", e), eR.A.error("오류가 발생했습니다. 잠시후 다시 시도해주세요."), l(!0));
+                                console.error("Error occurred during file upload:", e), eR.A.error("오류가 발생했습니다. 잠시후 다시 시도해주세요."), l(!0);
                             }
                         };
                     return (0, s.jsx)(s.Fragment, {
@@ -7053,14 +7053,14 @@
                 return (
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i),
+                            er.ZP.registerPlugin(eo.i),
                                 er.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }),
                                 er.ZP.from(".gsap-dot", { scrollTrigger: { trigger: ".gsap-div ", start: "top 40%" }, opacity: 0, duration: 2, stagger: 0.5 }),
                                 er.ZP.fromTo(
                                     ".timeline-line",
                                     { scaleY: 0, transformOrigin: "top center" },
                                     { scaleY: 1, duration: 3, ease: "easeInOut", scrollTrigger: { trigger: ".timeline-line", start: "top 40%" } }
-                                ));
+                                );
                         },
                         { scope: i }
                     ),
@@ -7113,8 +7113,8 @@
                                                                                                   : i.thumbFile) && void 0 !== r
                                                                                           ? r
                                                                                           : null === (n = o.find(e => e.category === "timeline-".concat(t.contentId))) || void 0 === n
-                                                                                            ? void 0
-                                                                                            : n.originFile,
+                                                                                          ? void 0
+                                                                                          : n.originFile,
                                                                                   alt: "timeline-".concat(t.contentId),
                                                                                   fill: !0,
                                                                                   unoptimized: !0,
@@ -7180,7 +7180,7 @@
                     o = (0, r.l)(e => e.themeInfo),
                     [x, h] = (0, d.useState)(""),
                     p = (0, ec.v)(e => e.inc);
-                ((0, d.useEffect)(() => {
+                (0, d.useEffect)(() => {
                     if (l.length > 0) {
                         let e = l.find(e => "reception" === e.category);
                         e && h(null == e ? void 0 : e.originFile);
@@ -7188,10 +7188,10 @@
                 }, [l]),
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-text", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-text", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 });
                         },
                         { scope: e }
-                    ));
+                    );
                 let [f, u] = (0, d.useState)(!!ae.Z.get("reception-confirmation-".concat(a.cardId)));
                 return (0, s.jsx)("div", {
                     ref: e,
@@ -7234,7 +7234,7 @@
                                                               whileHover: { scale: 1.05 },
                                                               whileTap: { scale: 0.95 },
                                                               onClick: () => {
-                                                                  (ae.Z.set("reception-confirmation-".concat(a.cardId), "true", { expires: 30 }), u(!0));
+                                                                  ae.Z.set("reception-confirmation-".concat(a.cardId), "true", { expires: 30 }), u(!0);
                                                               },
                                                               className: "w-32 h-10 font-semibold text-sm rounded-lg mt-4 flex items-center justify-center gap-2 mx-auto border",
                                                               style: { borderColor: o && o.theme6, color: o && o.theme6 },
@@ -7340,7 +7340,7 @@
                                 (0, s.jsxs)("div", {
                                     children: [
                                         (0, s.jsx)(t6.Z, { label: "행사 이름" }),
-                                        (0, s.jsx)(tp.Q, { value: t.name, onChange: e => a({ ...t, name: e.target.value }), placeholder: "신랑 이민호 \xb7 신부 배하윤 피로연" }),
+                                        (0, s.jsx)(tp.Q, { value: t.name, onChange: e => a({ ...t, name: e.target.value }), placeholder: "신랑 최윤성 \xb7 신부 장누리 피로연" }),
                                     ],
                                 }),
                                 (0, s.jsxs)("div", {
@@ -7436,7 +7436,7 @@
                     }, []),
                     (0, el.V)(
                         () => {
-                            (er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-text", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 }));
+                            er.ZP.registerPlugin(eo.i), er.ZP.from(".gsap-text", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.05 });
                         },
                         { scope: i }
                     ),
@@ -7873,15 +7873,15 @@
                         var e;
                         let t = (null === (e = h.linkUrl) || void 0 === e ? void 0 : e.trim()) || "";
                         if (!t) {
-                            (i("링크 URL을 입력해주세요."), o(!1));
+                            i("링크 URL을 입력해주세요."), o(!1);
                             return;
                         }
                         if (!t.startsWith("https://")) {
-                            (i("링크 URL은 https:// 부터 입력해주세요."), o(!1));
+                            i("링크 URL은 https:// 부터 입력해주세요."), o(!1);
                             return;
                         }
                         if (!/^https:\/\/[^/]+\.dayalbum\.com\/[^/]+$/.test(t)) {
-                            (i("입력한 도메인 주소를 확인해주세요."), o(!1));
+                            i("입력한 도메인 주소를 확인해주세요."), o(!1);
                             return;
                         }
                         try {
@@ -7891,24 +7891,24 @@
                             if (e.ok && void 0 !== a.status && void 0 !== a.password_hash) {
                                 i("데이앨범을 사용할 준비가 완료되었습니다!");
                                 let e = [];
-                                ("private" === a.status && e.push("앨범이 비공개 상태입니다.\n예식 당일에는 비공개 설정을 해제해주세요."),
+                                "private" === a.status && e.push("앨범이 비공개 상태입니다.\n예식 당일에는 비공개 설정을 해제해주세요."),
                                     !0 === a.password_hash && e.push("앨범에 비밀번호가 설정되어 있습니다.\n하객 분들에게 비밀번호를 미리 알려주세요."),
                                     r(e.join("\n\n")),
-                                    o(!0));
+                                    o(!0);
                             } else
-                                (a.message
+                                a.message
                                     ? (i(a.message),
                                       "앨범을 찾을 수 없습니다." === a.message
                                           ? r("입력하신 데이앨범 URL을 다시 확인해주세요.")
                                           : "쿠폰 사용 내역을 찾을 수 없습니다." === a.message
-                                            ? r("데이앨범 쿠폰이 등록되지 않았습니다.\n쿠폰 등록 후 다시 시도해주세요.")
-                                            : "앨범 업로드가 허용되지 않았습니다." === a.message
-                                              ? r("데이앨범에서 업로드 권한을 허용해주세요.")
-                                              : r("문제가 지속되면 톡톡으로 문의 부탁드립니다."))
+                                          ? r("데이앨범 쿠폰이 등록되지 않았습니다.\n쿠폰 등록 후 다시 시도해주세요.")
+                                          : "앨범 업로드가 허용되지 않았습니다." === a.message
+                                          ? r("데이앨범에서 업로드 권한을 허용해주세요.")
+                                          : r("문제가 지속되면 톡톡으로 문의 부탁드립니다."))
                                     : (i("응답을 처리할 수 없습니다."), r("잠시 후 다시 시도해주세요.")),
-                                    o(!1));
+                                    o(!1);
                         } catch (e) {
-                            (i("연동 확인 중 오류가 발생했습니다."), r("잠시 후 다시 시도해주세요."), o(!1));
+                            i("연동 확인 중 오류가 발생했습니다."), r("잠시 후 다시 시도해주세요."), o(!1);
                         } finally {
                             x(!1);
                         }
@@ -8604,21 +8604,21 @@
                         if ((j(k.zoomLevel + 16), x.current)) {
                             a.current = new window.naver.maps.Map(x.current, e);
                             let s = new naver.maps.Marker({ position: new naver.maps.LatLng(u.lat, u.lng), map: a.current });
-                            (f.current.push(s),
+                            f.current.push(s),
                                 "design" === t &&
                                     naver.maps.Event.addListener(a.current, "click", function (e) {
                                         let t = e.coord,
                                             a = t.lat(),
                                             s = t.lng();
                                         g({ ...u, lat: a, lng: s });
-                                    }));
+                                    });
                         }
                     }, [u.lat, u.lng, k.zoomLevel, k.isZoomLocked]);
                 return (
                     (0, o.useEffect)(() => {
                         if (a.current) {
                             let e = new naver.maps.LatLng(u.lat, u.lng);
-                            (a.current.setCenter(e), f.current.forEach(e => e.setMap(null)), (f.current = []));
+                            a.current.setCenter(e), f.current.forEach(e => e.setMap(null)), (f.current = []);
                             let t = new naver.maps.Marker({ position: e, map: a.current });
                             f.current.push(t);
                         }
@@ -8646,7 +8646,7 @@
                     }, [k.isSkyView]),
                     (0, o.useEffect)(
                         () => () => {
-                            (f.current.forEach(e => e.setMap(null)), a.current && a.current.destroy());
+                            f.current.forEach(e => e.setMap(null)), a.current && a.current.destroy();
                         },
                         []
                     ),
@@ -8844,9 +8844,9 @@
                 return (
                     (0, n.V)(
                         () => {
-                            (i.ZP.registerPlugin(r.i),
+                            i.ZP.registerPlugin(r.i),
                                 i.ZP.from(".gsap-opacity", { scrollTrigger: { trigger: ".gsap-div ", start: "top 50%" }, opacity: 0, y: 40, duration: 1, stagger: 0.1 }),
-                                i.ZP.to(".gsap-rotate", { rotate: -360, repeat: -1, ease: "none", duration: 60 }));
+                                i.ZP.to(".gsap-rotate", { rotate: -360, repeat: -1, ease: "none", duration: 60 });
                         },
                         { scope: x }
                     ),
@@ -9587,7 +9587,7 @@
                     }),
                     [P, T] = (0, i.useState)(!1),
                     H = e => {
-                        (G.commands.setContent(e), a && a(e), T(!1));
+                        G.commands.setContent(e), a && a(e), T(!1);
                     },
                     [_, R] = (0, i.useState)("기본값"),
                     [z, U] = (0, i.useState)("#000000"),
@@ -9597,34 +9597,34 @@
                     [Q, $] = (0, i.useState)(!1),
                     [X, ee] = (0, i.useState)(!1),
                     et = (0, i.useCallback)(() => {
-                        (G.chain().focus().toggleBold().run(), K(!1));
+                        G.chain().focus().toggleBold().run(), K(!1);
                     }, [G]),
                     ea = (0, i.useCallback)(() => {
-                        (G.chain().focus().toggleUnderline().run(), K(!1));
+                        G.chain().focus().toggleUnderline().run(), K(!1);
                     }, [G]),
                     es = (0, i.useCallback)(() => {
-                        (G.chain().focus().toggleItalic().run(), K(!1));
+                        G.chain().focus().toggleItalic().run(), K(!1);
                     }, [G]),
                     ei = (0, i.useCallback)(() => {
-                        (G.chain().focus().setTextAlign("left").run(), J(!1));
+                        G.chain().focus().setTextAlign("left").run(), J(!1);
                     }, [G]),
                     en = (0, i.useCallback)(() => {
-                        (G.chain().focus().setTextAlign("center").run(), J(!1));
+                        G.chain().focus().setTextAlign("center").run(), J(!1);
                     }, [G]),
                     er = (0, i.useCallback)(() => {
-                        (G.chain().focus().setTextAlign("right").run(), J(!1));
+                        G.chain().focus().setTextAlign("right").run(), J(!1);
                     }, [G]),
                     el = (0, i.useCallback)(
                         e => {
-                            ("default" === e ? G.chain().focus().setMark("textStyle", { fontSize: null }).removeEmptyTextStyle().run() : G.chain().focus().setFontSize(e).run(),
+                            "default" === e ? G.chain().focus().setMark("textStyle", { fontSize: null }).removeEmptyTextStyle().run() : G.chain().focus().setFontSize(e).run(),
                                 R("default" === e ? "기본값" : e.replace("px", "")),
-                                q(!1));
+                                q(!1);
                         },
                         [G]
                     ),
                     eo = (0, i.useCallback)(
                         e => {
-                            (G.state.selection.empty && M.A.info("텍스트를 선택 또는 드래그 하신 후 변경해주세요."), G.chain().focus().setColor(e).run(), U(e), $(!1));
+                            G.state.selection.empty && M.A.info("텍스트를 선택 또는 드래그 하신 후 변경해주세요."), G.chain().focus().setColor(e).run(), U(e), $(!1);
                         },
                         [G]
                     );
@@ -9751,7 +9751,7 @@
                                                       (0, s.jsxs)(B.h_, {
                                                           open: Q,
                                                           onOpenChange: e => {
-                                                              ($(e), e || ee(!1));
+                                                              $(e), e || ee(!1);
                                                           },
                                                           children: [
                                                               (0, s.jsx)(B.$F, { asChild: !0, children: (0, s.jsx)("button", { children: (0, s.jsx)(w.Z, { className: "w-4 text-tog-999" }) }) }),
@@ -9783,7 +9783,7 @@
                                                                                             }),
                                                                                             (0, s.jsx)("button", {
                                                                                                 onClick: () => {
-                                                                                                    (eo(z), ee(!1));
+                                                                                                    eo(z), ee(!1);
                                                                                                 },
                                                                                                 className: "w-24 px-2.5 py-2 text-xs bg-tog-pink text-tog-444 rounded hover:bg-tog-pink/90",
                                                                                                 children: "적용",
@@ -10212,7 +10212,7 @@
                     ...i,
                 });
             });
-            ((p.displayName = "CarouselItem"),
+            (p.displayName = "CarouselItem"),
                 (i.forwardRef((e, t) => {
                     let { className: a, variant: i = "outline", size: n = "icon", ...l } = e,
                         { orientation: d, scrollPrev: x, canScrollPrev: h } = m();
@@ -10240,7 +10240,7 @@
                         ...r,
                         children: [(0, s.jsx)(l.Z, { className: "h-4 w-4" }), (0, s.jsx)("span", { className: "sr-only", children: "Next slide" })],
                     });
-                }).displayName = "CarouselNext"));
+                }).displayName = "CarouselNext");
         },
         15681: function (e, t, a) {
             a.d(t, {
@@ -10294,23 +10294,23 @@
                         r = i.useId();
                     return (0, s.jsx)(h.Provider, { value: { id: r }, children: (0, s.jsx)("div", { ref: t, className: (0, l.cn)("space-y-2", a), ...n }) });
                 });
-            ((p.displayName = "FormItem"),
+            (p.displayName = "FormItem"),
                 (i.forwardRef((e, t) => {
                     let { className: a, ...i } = e,
                         { error: n, formItemId: r } = x();
                     return (0, s.jsx)(o.Label, { ref: t, className: (0, l.cn)(n && "text-destructive", a), htmlFor: r, ...i });
-                }).displayName = "FormLabel"));
+                }).displayName = "FormLabel");
             let f = i.forwardRef((e, t) => {
                 let { ...a } = e,
                     { error: i, formItemId: r, formDescriptionId: l, formMessageId: o } = x();
                 return (0, s.jsx)(n.g7, { ref: t, id: r, "aria-describedby": i ? "".concat(l, " ").concat(o) : "".concat(l), "aria-invalid": !!i, ...a });
             });
-            ((f.displayName = "FormControl"),
+            (f.displayName = "FormControl"),
                 (i.forwardRef((e, t) => {
                     let { className: a, ...i } = e,
                         { formDescriptionId: n } = x();
                     return (0, s.jsx)("p", { ref: t, id: n, className: (0, l.cn)("text-sm text-muted-foreground", a), ...i });
-                }).displayName = "FormDescription"));
+                }).displayName = "FormDescription");
             let u = i.forwardRef((e, t) => {
                 let { className: a, children: i, ...n } = e,
                     { error: r, formMessageId: o } = x(),
@@ -10814,54 +10814,54 @@
                     1 === e
                         ? "January"
                         : 2 === e
-                          ? "February"
-                          : 3 === e
-                            ? "March"
-                            : 4 === e
-                              ? "April"
-                              : 5 === e
-                                ? "May"
-                                : 6 === e
-                                  ? "June"
-                                  : 7 === e
-                                    ? "July"
-                                    : 8 === e
-                                      ? "August"
-                                      : 9 === e
-                                        ? "September"
-                                        : 10 === e
-                                          ? "October"
-                                          : 11 === e
-                                            ? "November"
-                                            : 12 === e
-                                              ? "December"
-                                              : void 0,
+                        ? "February"
+                        : 3 === e
+                        ? "March"
+                        : 4 === e
+                        ? "April"
+                        : 5 === e
+                        ? "May"
+                        : 6 === e
+                        ? "June"
+                        : 7 === e
+                        ? "July"
+                        : 8 === e
+                        ? "August"
+                        : 9 === e
+                        ? "September"
+                        : 10 === e
+                        ? "October"
+                        : 11 === e
+                        ? "November"
+                        : 12 === e
+                        ? "December"
+                        : void 0,
                 l = e =>
                     1 === e
                         ? "Jan"
                         : 2 === e
-                          ? "Feb"
-                          : 3 === e
-                            ? "Mar"
-                            : 4 === e
-                              ? "Apr"
-                              : 5 === e
-                                ? "May"
-                                : 6 === e
-                                  ? "Jun"
-                                  : 7 === e
-                                    ? "Jul"
-                                    : 8 === e
-                                      ? "Aug"
-                                      : 9 === e
-                                        ? "Sep"
-                                        : 10 === e
-                                          ? "Oct"
-                                          : 11 === e
-                                            ? "Nov"
-                                            : 12 === e
-                                              ? "Dec"
-                                              : void 0,
+                        ? "Feb"
+                        : 3 === e
+                        ? "Mar"
+                        : 4 === e
+                        ? "Apr"
+                        : 5 === e
+                        ? "May"
+                        : 6 === e
+                        ? "Jun"
+                        : 7 === e
+                        ? "Jul"
+                        : 8 === e
+                        ? "Aug"
+                        : 9 === e
+                        ? "Sep"
+                        : 10 === e
+                        ? "Oct"
+                        : 11 === e
+                        ? "Nov"
+                        : 12 === e
+                        ? "Dec"
+                        : void 0,
                 o = (e, t) => ("AM" === t || (12 === e ? (e = 12) : (e += 12)), e),
                 c = () => {
                     let e = new Date(),
@@ -10881,11 +10881,11 @@
                     s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2160,
                     i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2160,
                     n = new Image();
-                ((n.crossOrigin = "anonymous"),
+                (n.crossOrigin = "anonymous"),
                     (n.src = e),
                     await new Promise((e, t) => {
-                        ((n.onload = e), (n.onerror = t));
-                    }));
+                        (n.onload = e), (n.onerror = t);
+                    });
                 let r = document.createElement("canvas"),
                     l = r.getContext("2d");
                 if (!l) throw Error("Failed to get canvas context");
@@ -10979,23 +10979,24 @@
                 i = e => {
                     let { id: t } = e;
                     switch (t) {
+                        // 2번째 파트 - 신랑 최윤성, 신부 장누리
                         case "seychelles":
                         default:
                             return {
-                                groomFirstName: "민호",
-                                groomLastName: "이",
-                                groomDadFirstName: "상현",
-                                groomDadLastName: "이",
-                                groomMomFirstName: "미정",
-                                groomMomLastName: "김",
-                                groomNickname: "MINHO",
-                                brideFirstName: "하윤",
-                                brideLastName: "배",
-                                brideDadFirstName: "종우",
-                                brideDadLastName: "배",
-                                brideMomFirstName: "정은",
-                                brideMomLastName: "최",
-                                brideNickname: "HAYOON",
+                                groomFirstName: "윤성",
+                                groomLastName: "최",
+                                groomDadFirstName: "철주",
+                                groomDadLastName: "최",
+                                groomMomFirstName: "경희",
+                                groomMomLastName: "서",
+                                groomNickname: "YUNSEONG",
+                                brideFirstName: "누리",
+                                brideLastName: "장",
+                                brideDadFirstName: "실",
+                                brideDadLastName: "장",
+                                brideMomFirstName: "명희",
+                                brideMomLastName: "성",
+                                brideNickname: "NURI",
                             };
                         case "copenhagen":
                             return {
@@ -11752,38 +11753,38 @@
                     "car" === e
                         ? "자차"
                         : "bus" === e
-                          ? "버스"
-                          : "subway" === e
-                            ? "지하철"
-                            : "train" === e
-                              ? "기차"
-                              : "parking" === e
-                                ? "주차"
-                                : "shuttle" === e
-                                  ? "셔틀"
-                                  : "charter" === e
-                                    ? "전세버스"
-                                    : "airplane" === e
-                                      ? "항공"
-                                      : void 0,
+                        ? "버스"
+                        : "subway" === e
+                        ? "지하철"
+                        : "train" === e
+                        ? "기차"
+                        : "parking" === e
+                        ? "주차"
+                        : "shuttle" === e
+                        ? "셔틀"
+                        : "charter" === e
+                        ? "전세버스"
+                        : "airplane" === e
+                        ? "항공"
+                        : void 0,
                 h = (e, t) =>
                     "car" === e
                         ? (0, s.jsx)(r, { color: t })
                         : "bus" === e
-                          ? (0, s.jsx)(n, { color: t })
-                          : "subway" === e
-                            ? (0, s.jsx)(d, { color: t })
-                            : "train" === e
-                              ? (0, s.jsx)(m, { color: t })
-                              : "parking" === e
-                                ? (0, s.jsx)(o, { color: t })
-                                : "shuttle" === e
-                                  ? (0, s.jsx)(c, { color: t })
-                                  : "charter" === e
-                                    ? (0, s.jsx)(l, { color: t })
-                                    : "airplane" === e
-                                      ? (0, s.jsx)(i, { color: t })
-                                      : void 0;
+                        ? (0, s.jsx)(n, { color: t })
+                        : "subway" === e
+                        ? (0, s.jsx)(d, { color: t })
+                        : "train" === e
+                        ? (0, s.jsx)(m, { color: t })
+                        : "parking" === e
+                        ? (0, s.jsx)(o, { color: t })
+                        : "shuttle" === e
+                        ? (0, s.jsx)(c, { color: t })
+                        : "charter" === e
+                        ? (0, s.jsx)(l, { color: t })
+                        : "airplane" === e
+                        ? (0, s.jsx)(i, { color: t })
+                        : void 0;
         },
     },
 ]);
