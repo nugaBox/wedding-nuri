@@ -4093,7 +4093,7 @@
                                 (0, s.jsx)("div", { className: "gsap-opacity", children: i.isGroomFirst ? (0, s.jsx)(tI, { isGroom: !1 }) : (0, s.jsx)(tI, { isGroom: !0 }) }),
                                 (a.groomPhone || a.bridePhone) &&
                                     (0, s.jsx)("div", {
-                                        className: "px-5",
+                                        className: "hidden px-5",
                                         children: (0, s.jsxs)(eq.Vq, {
                                             children: [
                                                 (0, s.jsx)(eq.hg, {
@@ -5918,8 +5918,8 @@
                         groomRelation: "아들",
                         groomDadRelation: "아버지",
                         groomMomRelation: "어머니",
-                        groomDadRip: !0,
-                        groomMomRip: !1,
+                        groomDadRip: !1,
+                        groomMomRip: !0,
                         groomNickname: "YUNSEONG",
                         brideFirstName: "누리",
                         brideLastName: "장",
@@ -5930,10 +5930,10 @@
                         brideRelation: "딸",
                         brideDadRelation: "아버지",
                         brideMomRelation: "어머니",
-                        brideDadRip: !1,
-                        brideMomRip: !1,
+                        brideDadRip: !0,
+                        brideMomRip: !0,
                         brideNickname: "NURI",
-                        isNicknameUsed: !0,
+                        isNicknameUsed: !1,
                         isGroomFirst: !0,
                     },
                     ex = {
@@ -5944,7 +5944,7 @@
                         groomDadPhone: "010-1234-5678",
                         groomMomPhone: "010-5678-1234",
                     },
-                    eh = { venueName: "더 플라자", venueDetail: "지스텀하우스 (22층)", address: "서울 중구 소공로 119", lat: 37.5646641418657, lng: 126.978090221167, contact: "010-1234-5678" },
+                    eh = { venueName: "복된교회", venueDetail: "본당", address: "광주 서구 월암신기길 146-1", lat: 37.5646641418657, lng: 126.978090221167, contact: "062-375-4991" },
                     ep = { isIcon: !0, mapType: "default", isToolAvailable: !0, isZoomLocked: !0, zoomLevel: 0, isSkyView: !1 },
                     ef = { description: "저희 둘에게 따뜻한 방명록을 남겨주세요" },
                     eu = { title: "참석 의사", description: "모든 분들을 소중히 모실 수 있도록 전해주세요" },
@@ -11371,7 +11371,7 @@
                         case "dubai":
                         case "seoul":
                         default:
-                            return { venueName: "더 플라자", venueDetail: "지스텀하우스 (22층)", address: "서울 중구 소공로 119" };
+                            return { venueName: "복된교회", venueDetail: "본당", address: "광주 서구 월암신기길 146-1" };
                         case "nice":
                             return { venueName: "그랜드 인터컨티넨탈 서울", venueDetail: "파르나스 아트리움", address: "서울 강남구 테헤란로 521" };
                         case "barcelona":
