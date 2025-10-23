@@ -556,8 +556,8 @@
                         groomRelation: "아들",
                         groomDadRelation: "아버지",
                         groomMomRelation: "어머니",
-                        groomDadRip: !1,
-                        groomMomRip: !0,
+                        groomDadRip: !0,
+                        groomMomRip: !1,
                         groomNickname: (0, _.wA)({ id: t }).groomNickname,
                         brideFirstName: (0, _.wA)({ id: t }).brideFirstName,
                         brideLastName: (0, _.wA)({ id: t }).brideLastName,
@@ -617,13 +617,14 @@
                         sliderType: (0, _.TT)({ id: t }),
                     },
                     B = {
+                        // ABOUT US 내용 수정
                         cardId: 0,
                         align: "center",
                         title: "저희 커플을 소개합니다",
-                        description: "하나로 이어진 두개의 우주",
+                        description: "",
                         designType: "vertical",
-                        groomContent: "\n이정빈 \xb7 홍지은의 아들\n1991년 4월 서울 출생\n호기심 많은 손재주 왕 \uD83D\uDCFD   \n      ",
-                        brideContent: "\n배준영 \xb7 유미연의 딸\n1995년 7월 제주 출생\n감성 과다 제주소녀 \uD83C\uDF4A\n      ",
+                        groomContent: "\n최철주 \xb7 서경희의 아들\n1989년 1월 광주 출생\n호기심 많은 손재주 왕 \uD83D\uDCFD   \n      ",
+                        brideContent: "\n장 실 \xb7 성명희의 딸\n1993년 11월 영광 출생\n감성 과다 소녀 \uD83C\uDF4A\n      ",
                     },
                     q = [
                         {

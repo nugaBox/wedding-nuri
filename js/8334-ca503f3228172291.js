@@ -4271,21 +4271,45 @@
                                   relation: a.brideRelation,
                                   nickName: a.brideNickname,
                               };
-                    switch (i.contactType) {
-                        case "one":
-                        default:
-                            return (0, s.jsx)(tG, { info: n, isNicknameUsed: a.isNicknameUsed });
-                        case "two":
-                            return (0, s.jsx)(tP, { info: n, isNicknameUsed: a.isNicknameUsed });
-                        case "three":
-                            return (0, s.jsx)(tT, { info: n, isNicknameUsed: a.isNicknameUsed });
-                        case "four":
-                            return (0, s.jsx)(tH, { info: n, isNicknameUsed: a.isNicknameUsed });
-                    }
+
+                    // 디버깅을 위한 console.debug 추가
+                    console.debug("=== ContactInfo 디버깅 ===");
+                    console.debug("isGroom:", t);
+                    console.debug("coupleInfo:", a);
+                    console.debug("contactInfo:", i);
+                    console.debug("contactType:", i.contactType);
+                    console.debug("isNicknameUsed:", a.isNicknameUsed);
+                    console.debug("신랑/신부 정보:", n);
+                    console.debug("신랑 아버지 RIP:", a.groomDadRip, "신랑 어머니 RIP:", a.groomMomRip);
+                    console.debug("신부 아버지 RIP:", a.brideDadRip, "신부 어머니 RIP:", a.brideMomRip);
+                    console.debug("========================");
+                    // tT 컴포넌트만 사용하도록 고정
+                    return (0, s.jsx)(tT, { info: n, isNicknameUsed: a.isNicknameUsed });
+
+                    // 원래 코드 (주석 처리)
+                    // switch (i.contactType) {
+                    //     case "one":
+                    //     default:
+                    //         return (0, s.jsx)(tG, { info: n, isNicknameUsed: a.isNicknameUsed });
+                    //     case "two":
+                    //         return (0, s.jsx)(tP, { info: n, isNicknameUsed: a.isNicknameUsed });
+                    //     case "three":
+                    //         return (0, s.jsx)(tT, { info: n, isNicknameUsed: a.isNicknameUsed });
+                    //     case "four":
+                    //         return (0, s.jsx)(tH, { info: n, isNicknameUsed: a.isNicknameUsed });
+                    // }
                 },
                 tG = e => {
                     let { info: t, isNicknameUsed: a } = e,
                         i = (0, tL.a)(e => e.contactInfo);
+
+                    // tG 컴포넌트 디버깅
+                    console.debug("=== tG 컴포넌트 디버깅 ===");
+                    console.debug("info:", t);
+                    console.debug("isNicknameUsed:", a);
+                    console.debug("isFatherRip:", t.isFatherRip, "isMotherRip:", t.isMotherRip);
+                    console.debug("nickName:", t.nickName);
+                    console.debug("========================");
                     return (0, s.jsxs)("div", {
                         className: "flex flex-col w-full px-14 gap-y-8",
                         children: [
@@ -4332,6 +4356,14 @@
                     let { info: t, isNicknameUsed: a } = e,
                         i = (0, tL.a)(e => e.contactInfo),
                         n = (0, r.l)(e => e.themeInfo);
+
+                    // tP 컴포넌트 디버깅
+                    console.debug("=== tP 컴포넌트 디버깅 ===");
+                    console.debug("info:", t);
+                    console.debug("isNicknameUsed:", a);
+                    console.debug("isFatherRip:", t.isFatherRip, "isMotherRip:", t.isMotherRip);
+                    console.debug("nickName:", t.nickName);
+                    console.debug("========================");
                     return (0, s.jsxs)("div", {
                         className: "flex flex-col w-full px-8 gap-y-8 items-center justify-center",
                         children: [
@@ -4386,6 +4418,14 @@
                 tT = e => {
                     let { info: t, isNicknameUsed: a } = e,
                         i = (0, tL.a)(e => e.contactInfo);
+
+                    // tT 컴포넌트 디버깅
+                    console.debug("=== tT 컴포넌트 디버깅 ===");
+                    console.debug("info:", t);
+                    console.debug("isNicknameUsed:", a);
+                    console.debug("isFatherRip:", t.isFatherRip, "isMotherRip:", t.isMotherRip);
+                    console.debug("nickName:", t.nickName);
+                    console.debug("========================");
                     return (0, s.jsxs)("div", {
                         className: "flex flex-col w-full px-8 gap-y-8",
                         children: [
@@ -4432,6 +4472,14 @@
                 tH = e => {
                     let { info: t, isNicknameUsed: a } = e,
                         i = (0, tL.a)(e => e.contactInfo);
+
+                    // tH 컴포넌트 디버깅
+                    console.debug("=== tH 컴포넌트 디버깅 ===");
+                    console.debug("info:", t);
+                    console.debug("isNicknameUsed:", a);
+                    console.debug("isFatherRip:", t.isFatherRip, "isMotherRip:", t.isMotherRip);
+                    console.debug("nickName:", t.nickName);
+                    console.debug("========================");
                     return (0, s.jsx)("div", {
                         className: "flex flex-col w-full px-[3.25rem] gap-y-8",
                         children:
@@ -5921,8 +5969,8 @@
                         groomRelation: "아들",
                         groomDadRelation: "아버지",
                         groomMomRelation: "어머니",
-                        groomDadRip: !1,
-                        groomMomRip: !0,
+                        groomDadRip: 1,
+                        groomMomRip: 0,
                         groomNickname: "YUNSEONG",
                         brideFirstName: "누리",
                         brideLastName: "장",
@@ -5933,19 +5981,19 @@
                         brideRelation: "딸",
                         brideDadRelation: "아버지",
                         brideMomRelation: "어머니",
-                        brideDadRip: !0,
-                        brideMomRip: !0,
+                        brideDadRip: 0,
+                        brideMomRip: 0,
                         brideNickname: "NURI",
-                        isNicknameUsed: !1,
-                        isGroomFirst: !0,
+                        isNicknameUsed: 0,
+                        isGroomFirst: 0,
                     },
                     ex = {
-                        bridePhone: "010-1234-5678",
-                        groomPhone: "010-5678-1234",
-                        brideDadPhone: "010-1234-5678",
-                        brideMomPhone: "010-5678-1234",
-                        groomDadPhone: "010-1234-5678",
-                        groomMomPhone: "010-5678-1234",
+                        bridePhone: "010-6416-3708",
+                        groomPhone: "010-6605-5432",
+                        brideDadPhone: "",
+                        brideMomPhone: "",
+                        groomDadPhone: "",
+                        groomMomPhone: "",
                     },
                     eh = { venueName: "복된교회", venueDetail: "본당", address: "광주 서구 월암신기길 146-1", lat: 37.5646641418657, lng: 126.978090221167, contact: "062-375-4991" },
                     ep = { isIcon: !0, mapType: "default", isToolAvailable: !0, isZoomLocked: !0, zoomLevel: 0, isSkyView: !1 },
@@ -6302,6 +6350,7 @@
                     o = (0, r.l)(e => e.themeInfo),
                     [c, x] = (0, d.useState)(""),
                     [h, p] = (0, d.useState)("");
+                // ABOUT US 렌더링
                 return (
                     (0, d.useEffect)(() => {
                         if (l.length > 0) {
@@ -7050,6 +7099,7 @@
                     l = (0, r.l)(e => e.cardInfo),
                     o = (0, n.V)(e => e.bucketInfo),
                     c = (0, r.l)(e => e.isZoomed);
+                // OUR TIMELINE 렌더링
                 return (
                     (0, el.V)(
                         () => {

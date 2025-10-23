@@ -237,8 +237,8 @@
                             "file-too-large" === t
                                 ? l.A.error("크기가 20mb 이하인 파일로 업로드 해주세요.")
                                 : "file-invalid-type" === t
-                                  ? l.A.error("png / jpg / jpeg 형식의 파일로 업로드 해주세요.")
-                                  : l.A.error("업로드를 실패했습니다. 잠시 후 다시 시도해주세요.");
+                                ? l.A.error("png / jpg / jpeg 형식의 파일로 업로드 해주세요.")
+                                : l.A.error("업로드를 실패했습니다. 잠시 후 다시 시도해주세요.");
                         },
                         onDropAccepted: e => {
                             D(e);
@@ -251,7 +251,7 @@
                         }
                         N(!1);
                         let a = new FormData();
-                        (a.append("cardId", m.cardId.toString()), a.append("size", e.length.toString()), a.append("category", t));
+                        a.append("cardId", m.cardId.toString()), a.append("size", e.length.toString()), a.append("category", t);
                         for (let t = 0; t < e.length; t++) {
                             a.append("id_".concat(t), (0, d.Z)());
                             try {
@@ -275,20 +275,20 @@
                             }
                         }
                         let n = await fetch("/api/bucket", { method: "POST", body: a, next: { revalidate: 0 } });
-                        (200 === n.status ? k([...g, ...(await n.json())]) : l.A.error("업로드를 실패했습니다. 잠시 후 다시 시도해주세요."), N(!0));
+                        200 === n.status ? k([...g, ...(await n.json())]) : l.A.error("업로드를 실패했습니다. 잠시 후 다시 시도해주세요."), N(!0);
                     },
                     I = async e => {
                         let { fileId: t } = e;
                         N(!1);
                         let a = { fileId: t, cardId: m.cardId };
-                        (200 === (await fetch("/api/bucket", { method: "DELETE", body: JSON.stringify(a) })).status
+                        200 === (await fetch("/api/bucket", { method: "DELETE", body: JSON.stringify(a) })).status
                             ? k(g.filter(e => e.fileId !== t))
                             : l.A.error("오류가 발생했습니다. 잠시후 다시 시도해주세요."),
-                            N(!0));
+                            N(!0);
                     },
                     B = e => {
                         let { fileId: t } = e;
-                        (A(t), E(g.filter(e => e.fileId === t)[0].originFile), v(!0));
+                        A(t), E(g.filter(e => e.fileId === t)[0].originFile), v(!0);
                     },
                     L = new Date().getMinutes();
                 return (0, n.jsx)("section", {
@@ -405,8 +405,8 @@
                                 "file-too-large" === t
                                     ? l.A.error("크기가 20mb 이하인 파일로 업로드 해주세요.")
                                     : "file-invalid-type" === t
-                                      ? l.A.error("png / jpg / jpeg 형식의 파일로 업로드 해주세요.")
-                                      : l.A.error("업로드를 실패했습니다. 잠시 후 다시 시도해주세요.");
+                                    ? l.A.error("png / jpg / jpeg 형식의 파일로 업로드 해주세요.")
+                                    : l.A.error("업로드를 실패했습니다. 잠시 후 다시 시도해주세요.");
                             },
                             onDropAccepted: e => {
                                 I(e);
@@ -420,7 +420,7 @@
                             v(!1);
                             let a = 1,
                                 n = new FormData();
-                            (n.append("cardId", m.cardId.toString()), n.append("size", e.length.toString()), n.append("category", t));
+                            n.append("cardId", m.cardId.toString()), n.append("size", e.length.toString()), n.append("category", t);
                             let o = m.cardId.toString(),
                                 r = await j(e.length),
                                 i = e.map(async (t, n) => {
@@ -447,7 +447,7 @@
                                         }
                                         throw Error("업로드 실패");
                                     } catch (e) {
-                                        return (console.error("Error occurred during file upload:", e), (a = 2), !1);
+                                        return console.error("Error occurred during file upload:", e), (a = 2), !1;
                                     }
                                 });
                             try {
@@ -472,14 +472,14 @@
                             let { fileId: a } = e;
                             v(!1);
                             let n = { fileId: a, cardId: m.cardId, category: t };
-                            (200 === (await fetch("/api/v2/bucket", { method: "DELETE", body: JSON.stringify(n) })).status
+                            200 === (await fetch("/api/v2/bucket", { method: "DELETE", body: JSON.stringify(n) })).status
                                 ? k(g.filter(e => e.fileId !== a))
                                 : l.A.error("오류가 발생했습니다. 잠시후 다시 시도해주세요."),
-                                v(!0));
+                                v(!0);
                         },
                         L = e => {
                             let { fileId: t } = e;
-                            (E(t), C(g.filter(e => e.fileId === t)[0].originFile), A(!0));
+                            E(t), C(g.filter(e => e.fileId === t)[0].originFile), A(!0);
                         },
                         R = new Date().getMinutes();
                     return (0, n.jsx)("section", {
@@ -732,7 +732,7 @@
                 l = a(94508);
             let c = r.fC,
                 m = r.xz;
-            (r.ZA,
+            r.ZA,
                 r.Uv,
                 r.Tr,
                 r.Ee,
@@ -755,7 +755,7 @@
                         ),
                         ...o,
                     });
-                }).displayName = r.tu.displayName));
+                }).displayName = r.tu.displayName);
             let h = o.forwardRef((e, t) => {
                 let { className: a, sideOffset: o = 4, ...i } = e;
                 return (0, n.jsx)(r.Uv, {
@@ -770,7 +770,7 @@
                     }),
                 });
             });
-            ((h.displayName = r.VY.displayName),
+            (h.displayName = r.VY.displayName),
                 (o.forwardRef((e, t) => {
                     let { className: a, inset: o, ...i } = e;
                     return (0, n.jsx)(r.ck, {
@@ -823,7 +823,7 @@
                 (o.forwardRef((e, t) => {
                     let { className: a, inset: o, ...i } = e;
                     return (0, n.jsx)(r.__, { ref: t, className: (0, l.cn)("px-2 py-1.5 text-sm font-semibold", o && "pl-8", a), ...i });
-                }).displayName = r.__.displayName));
+                }).displayName = r.__.displayName);
             let f = o.forwardRef((e, t) => {
                 let { className: a, ...o } = e;
                 return (0, n.jsx)(r.Z0, { ref: t, className: (0, l.cn)("-mx-1 my-1 h-px bg-muted", a), ...o });
@@ -980,7 +980,7 @@
                     groomRelation: "아들",
                     groomDadRelation: "아버지",
                     groomMomRelation: "어머니",
-                    groomDadRip: !1,
+                    groomDadRip: !0,
                     groomMomRip: !1,
                     groomDadRipImage: "",
                     groomMomRipImage: "",

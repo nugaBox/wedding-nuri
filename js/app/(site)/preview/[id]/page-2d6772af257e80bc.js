@@ -556,8 +556,8 @@
                         groomRelation: "아들",
                         groomDadRelation: "아버지",
                         groomMomRelation: "어머니",
-                        groomDadRip: !1,
-                        groomMomRip: !0,
+                        groomDadRip: !0,
+                        groomMomRip: !1,
                         groomNickname: (0, _.wA)({ id: t }).groomNickname,
                         brideFirstName: (0, _.wA)({ id: t }).brideFirstName,
                         brideLastName: (0, _.wA)({ id: t }).brideLastName,
@@ -746,7 +746,7 @@
                     eB = (0, Y.z)(e => e.setReception);
                 return (
                     (0, N.useEffect)(() => {
-                        (U(a),
+                        U(a),
                             T(v),
                             V(Q),
                             R(et),
@@ -773,7 +773,7 @@
                             ev(ex),
                             eA(eu),
                             eL(B),
-                            eB(eh));
+                            eB(eh);
                     }, []),
                     (0, F.V)(() => {
                         k.ZP.to(document.body, { backgroundColor: v.theme2 });
@@ -1386,7 +1386,7 @@
                         i = (0, n.l)(e => e.setCardInfo),
                         r = (0, L.K0)(e => e.setIsLoaded),
                         d = e => {
-                            (i({ ...l, themeId: e }), r(!1));
+                            i({ ...l, themeId: e }), r(!1);
                         };
                     return (0, s.jsx)("div", {
                         className: (0, A.Z)("rounded-md aspect-square", {
@@ -1484,13 +1484,13 @@
         },
     },
     function (e) {
-        (e.O(
+        e.O(
             0,
             [4705, 922, 3572, 7902, 6137, 2972, 9737, 602, 3897, 4438, 4917, 3145, 7955, 1662, 6885, 3134, 7882, 6066, 1871, 4173, 2028, 8667, 9215, 1077, 8334, 8729, 2971, 2117, 1744],
             function () {
                 return e((e.s = 26565));
             }
         ),
-            (_N_E = e.O()));
+            (_N_E = e.O());
     },
 ]);
