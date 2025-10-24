@@ -592,8 +592,8 @@
                         venueName: (0, _.nI)({ id: t }).venueName,
                         venueDetail: (0, _.nI)({ id: t }).venueDetail,
                         address: (0, _.nI)({ id: t }).address,
-                        lat: 37.5646641418657,
-                        lng: 126.978090221167,
+                        lat: 35.141799,
+                        lng: 126.849515,
                         contact: "010-1234-5678",
                     },
                     M = {

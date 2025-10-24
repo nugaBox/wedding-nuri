@@ -1059,7 +1059,7 @@
                 },
             });
             let n = (0, a(59625).Ue)(e => ({
-                venueInfo: { cardId: 0, venueName: "", venueDetail: "", contact: "", address: "", lat: 37.5656527811006, lng: 126.977962141468 },
+                venueInfo: { cardId: 0, venueName: "", venueDetail: "", contact: "", address: "", lat: 35.141799, lng: 126.849515 },
                 setVenueInfo: t => e({ venueInfo: t }),
             }));
         },

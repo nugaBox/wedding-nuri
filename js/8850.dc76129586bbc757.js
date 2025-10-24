@@ -3,12 +3,12 @@
     [8850],
     {
         38850: function (e, t, o) {
-            (o.r(t),
+            o.r(t),
                 o.d(t, {
                     default: function () {
                         return p;
                     },
-                }));
+                });
             var r = o(57437),
                 l = o(36498),
                 s = o(23897),
@@ -20,6 +20,8 @@
                 let { type: t } = e,
                     o = (0, c.G)(e => e.specialLinkTwo),
                     p = (0, n.useRef)(null);
+                // 카드 (OUR SPOTS) 렌더링
+                /*
                 return (
                     (0, s.V)(
                         () => {
@@ -72,6 +74,8 @@
                         }),
                     })
                 );
+                */
+                return null;
             }
         },
     },

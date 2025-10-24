@@ -592,8 +592,8 @@
                         venueName: (0, _.nI)({ id: t }).venueName,
                         venueDetail: (0, _.nI)({ id: t }).venueDetail,
                         address: (0, _.nI)({ id: t }).address,
-                        lat: 37.5646641418657,
-                        lng: 126.978090221167,
+                        lat: 35.141799,
+                        lng: 126.849515,
                         contact: "010-1234-5678",
                     },
                     M = {
@@ -1018,35 +1018,40 @@
                     zoomLevel: 0,
                     isSkyView: !1,
                 },
+                // 오시는 길 방법 렌더링
                 el = [
+                    // 자차
                     {
                         id: 0,
                         content:
-                            '<p className="gsap-text"><span className="gsap-text">내비게이션 : \'서울 웨스틴조선호텔\' 검색</span></p><p className="gsap-text"><span className="gsap-text">서울시 중구 소공로 106 서울 웨스틴조선호텔</span></p>',
+                            '<p className="gsap-text"><span className="gsap-text">내비게이션 : \'복된교회\' 또는  \'복된장로교회\'검색</span></p><p className="gsap-text"><span className="gsap-text">광주 서구 월암신기길 146-1 복된교회</span></p>',
                         sequence: 0,
                         transportationId: "car",
                     },
-                    {
-                        id: 1,
-                        content:
-                            '<p className="gsap-text"><strong><span className="gsap-text">172(우리은행종로지점 방면)</span></strong></p><p className="gsap-text"><span className="gsap-text">서울광장역 하차 → 데미타스커피 왼쪽 방면 → 도보 5분</span></p><br /><p className="gsap-text"><strong><span className="gsap-text">405(롯데백화점 방면)</span></strong></p><p className="gsap-text"><span className="gsap-text">서울광장역 하차 → 데미타스커피 왼쪽 방면 → 도보 5분</span></p><br /><p className="gsap-text"><strong><span className="gsap-text">472(을지로입구 방면)</span></strong></p><p className="gsap-text"><span className="gsap-text">시청역 하차 → 도보 5분</span></p>',
-                        sequence: 1,
-                        transportationId: "bus",
-                    },
+                    // 버스
+                    // {
+                    //     id: 1,
+                    //     content:
+                    //         '<p className="gsap-text"><strong><span className="gsap-text">172(우리은행종로지점 방면)</span></strong></p><p className="gsap-text"><span className="gsap-text">서울광장역 하차 → 데미타스커피 왼쪽 방면 → 도보 5분</span></p><br /><p className="gsap-text"><strong><span className="gsap-text">405(롯데백화점 방면)</span></strong></p><p className="gsap-text"><span className="gsap-text">서울광장역 하차 → 데미타스커피 왼쪽 방면 → 도보 5분</span></p><br /><p className="gsap-text"><strong><span className="gsap-text">472(을지로입구 방면)</span></strong></p><p className="gsap-text"><span className="gsap-text">시청역 하차 → 도보 5분</span></p>',
+                    //     sequence: 1,
+                    //     transportationId: "bus",
+                    // },
+                    // 지하철
                     {
                         id: 2,
                         content:
-                            '<p className="gsap-text"><strong><span className="gsap-text" style="color: rgb(60, 120, 216)">1호선(시청역)</span></strong></p><p className="gsap-text">시청역 11번 출구 → 10번 출구 도보 5분</p><br /><p className="gsap-text"><strong><span className="gsap-text" style="color: rgb(106, 168, 79)">2호선 (을지로입구역)</span></strong></p><p className="gsap-text">을지로입구역 4번 출구 → 10번 출구 도보 5분</p>',
+                            '<p className="gsap-text"><strong><span className="gsap-text" style="color: rgb(60, 120, 216)">1호선(상무역)</span></strong></p><p className="gsap-text">상무역 2번 출구 → 서광주로 방면 도보 10분</p>',
                         sequence: 2,
                         transportationId: "subway",
                     },
-                    {
-                        id: 3,
-                        content:
-                            '<p className="gsap-text"><span className="gsap-text">더 플라자 호텔 주차장 : 하객 3시간 무료</span></p><p className="gsap-text"><span className="gsap-text">주차현장 주차 요원 안내를 받아주세요.</span></p>',
-                        sequence: 3,
-                        transportationId: "parking",
-                    },
+                    // 주차
+                    // {
+                    //     id: 3,
+                    //     content:
+                    //         '<p className="gsap-text"><span className="gsap-text">더 플라자 호텔 주차장 : 하객 3시간 무료</span></p><p className="gsap-text"><span className="gsap-text">주차현장 주차 요원 안내를 받아주세요.</span></p>',
+                    //     sequence: 3,
+                    //     transportationId: "parking",
+                    // },
                 ],
                 ei = {
                     cardId: 0,

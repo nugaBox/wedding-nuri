@@ -3187,6 +3187,8 @@
                                 }),
                             n(!1);
                     });
+                // 방명록(MESSAGE) 렌더링
+                /*
                 return (0, s.jsx)("div", {
                     ref: e,
                     children: (0, s.jsxs)("div", {
@@ -3359,6 +3361,8 @@
                         ],
                     }),
                 });
+                */
+                return null;
             }
             let tk = e => {
                 let { cardId: t } = e,
@@ -4655,6 +4659,8 @@
                     t = (0, tR.T)(e => e.noticeInfo),
                     a = (0, d.useRef)(null),
                     i = (0, r.l)(e => e.cardInfo);
+                // 공지사항(INFORMATION) 렌더링
+                /*
                 return (
                     (0, el.V)(
                         () => {
@@ -4685,6 +4691,8 @@
                         }),
                     })
                 );
+                */
+                return null;
             }
             let tU = () => {
                 let e = (0, r.l)(e => e.themeInfo),
@@ -5133,6 +5141,8 @@
                     p = (0, l.b)(e => e.coverInfo),
                     f = (0, r.l)(e => e.cardInfo),
                     u = (0, Q.usePathname)();
+                // RSVP 렌더링
+                /*
                 return (
                     (0, d.useEffect)(() => {
                         x({ ...c, cardId: o.cardId });
@@ -5233,6 +5243,8 @@
                         ],
                     })
                 );
+                */
+                return null;
             }
             let aa = () => {
                     let e = (0, r.l)(e => e.cardInfo),
@@ -5747,6 +5759,8 @@
                     }
                     m(!1);
                 };
+                // 공유 부분 렌더링
+                /*
                 return (0, s.jsx)("div", {
                     ref: x,
                     children: (0, s.jsxs)("div", {
@@ -5803,7 +5817,9 @@
                             }),
                         ],
                     }),
-                });
+                }); 
+                */
+                return null;
             }
             var ap = a(42820),
                 af = a(49998),
@@ -5995,7 +6011,7 @@
                         groomDadPhone: "",
                         groomMomPhone: "",
                     },
-                    eh = { venueName: "복된교회", venueDetail: "본당", address: "광주 서구 월암신기길 146-1", lat: 37.5646641418657, lng: 126.978090221167, contact: "062-375-4991" },
+                    eh = { venueName: "복된교회", venueDetail: "본당", address: "광주 서구 월암신기길 146-1", lat: 35.141799, lng: 126.849515, contact: "062-375-4991" },
                     ep = { isIcon: !0, mapType: "default", isToolAvailable: !0, isZoomLocked: !0, zoomLevel: 0, isSkyView: !1 },
                     ef = { description: "저희 둘에게 따뜻한 방명록을 남겨주세요" },
                     eu = { title: "참석 의사", description: "모든 분들을 소중히 모실 수 있도록 전해주세요" },
@@ -6351,6 +6367,7 @@
                     [c, x] = (0, d.useState)(""),
                     [h, p] = (0, d.useState)("");
                 // ABOUT US 렌더링
+                /*
                 return (
                     (0, d.useEffect)(() => {
                         if (l.length > 0) {
@@ -6424,6 +6441,8 @@
                         }),
                     })
                 );
+                */
+                return null;
             }
             let aq = e => {
                     let { type: t, content: a, imageUrl: i } = e,
@@ -7100,6 +7119,7 @@
                     o = (0, n.V)(e => e.bucketInfo),
                     c = (0, r.l)(e => e.isZoomed);
                 // OUR TIMELINE 렌더링
+                /*
                 return (
                     (0, el.V)(
                         () => {
@@ -7219,6 +7239,8 @@
                         }),
                     })
                 );
+                */
+                return null;
             }
             var sa = a(5095);
             function ss() {
@@ -7243,6 +7265,8 @@
                         { scope: e }
                     );
                 let [f, u] = (0, d.useState)(!!ae.Z.get("reception-confirmation-".concat(a.cardId)));
+                // RECEPTION 렌더링
+                /*
                 return (0, s.jsx)("div", {
                     ref: e,
                     children: (0, s.jsxs)("div", {
@@ -7320,6 +7344,8 @@
                         ],
                     }),
                 });
+                */
+                return null;
             }
             let si = () => {
                     let e = (0, r.l)(e => e.themeInfo);
@@ -8902,6 +8928,8 @@
                     ),
                     (0, s.jsxs)(s.Fragment, {
                         children: [
+                            // 카드 - 화환 렌더링
+                            /*
                             (0, s.jsx)("div", {
                                 ref: x,
                                 children: (0, s.jsxs)("div", {
@@ -8943,6 +8971,7 @@
                                     ],
                                 }),
                             }),
+                            */
                             (0, s.jsx)(w, {}),
                         ],
                     })
