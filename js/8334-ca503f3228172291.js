@@ -2225,7 +2225,7 @@
                                                           children: [
                                                               i.isNaverMap &&
                                                                   (0, s.jsxs)("a", {
-                                                                      href: "https://map.naver.com/?lat=".concat(a.lat, "&lng=").concat(a.lng, "&dlevel=14"),
+                                                                      href: "https://map.naver.com/?lat=".concat(a.lat, "&lng=").concat(a.lng, "&dlevel=12"),
                                                                       className: "gsap-opacity text-center flex-1 flex items-center justify-center gap-2 bg-white px-2 py-3 rounded-md shadow-md",
                                                                       target: "_blank",
                                                                       children: [(0, s.jsx)(eY, {}), (0, s.jsx)("span", { className: "text-tog-444 text-sm", children: " 네이버 " })],
@@ -6012,7 +6012,7 @@
                         groomMomPhone: "",
                     },
                     eh = { venueName: "복된교회", venueDetail: "본당", address: "광주 서구 월암신기길 146-1", lat: 35.141799, lng: 126.849515, contact: "062-375-4991" },
-                    ep = { isIcon: !0, mapType: "default", isToolAvailable: !0, isZoomLocked: !0, zoomLevel: 0, isSkyView: !1 },
+                    ep = { isIcon: !0, mapType: "default", isToolAvailable: !0, isZoomLocked: !0, zoomLevel: 10, isSkyView: !1 },
                     ef = { description: "저희 둘에게 따뜻한 방명록을 남겨주세요" },
                     eu = { title: "참석 의사", description: "모든 분들을 소중히 모실 수 있도록 전해주세요" },
                     eg = { title: "저희 연애의 타임라인입니다", description: "서로에게 참 소중하고 감사한 존재" },
@@ -6367,7 +6367,6 @@
                     [c, x] = (0, d.useState)(""),
                     [h, p] = (0, d.useState)("");
                 // ABOUT US 렌더링
-                /*
                 return (
                     (0, d.useEffect)(() => {
                         if (l.length > 0) {
@@ -6441,8 +6440,6 @@
                         }),
                     })
                 );
-                */
-                return null;
             }
             let aq = e => {
                     let { type: t, content: a, imageUrl: i } = e,
@@ -7119,7 +7116,6 @@
                     o = (0, n.V)(e => e.bucketInfo),
                     c = (0, r.l)(e => e.isZoomed);
                 // OUR TIMELINE 렌더링
-                /*
                 return (
                     (0, el.V)(
                         () => {
@@ -7239,8 +7235,6 @@
                         }),
                     })
                 );
-                */
-                return null;
             }
             var sa = a(5095);
             function ss() {
