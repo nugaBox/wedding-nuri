@@ -631,10 +631,10 @@
                             cardId: 0,
                             fileId: "cover",
                             category: "cover",
-                            originFile:
-                                "seoul" === t || "dubai" === t
-                                    ? "https://hellomybrand.com/wed/images/sample/cover/".concat(t, "-1.jpg")
-                                    : "https://hellomybrand.com/wed/images/sample/cover/".concat(t, ".jpg"),
+                            originFile: "/images/main.jpg"
+                                // "seoul" === t || "dubai" === t
+                                //     ? "https://hellomybrand.com/wed/images/sample/cover/".concat(t, "-1.jpg")
+                                //     : "https://hellomybrand.com/wed/images/sample/cover/".concat(t, ".jpg"),
                         },
                         {
                             cardId: 0,
@@ -672,7 +672,7 @@
                             cardId: 0,
                             fileId: "note",
                             category: "invitation-note",
-                            originFile: "https://hellomybrand.com/wed/images/sample/invite.jpg",
+                            originFile: "/images/invite.jpg",
                         },
                         {
                             cardId: 0,
