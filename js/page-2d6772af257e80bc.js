@@ -623,18 +623,18 @@
                         title: "저희 커플을 소개합니다",
                         description: "",
                         designType: "vertical",
-                        groomContent: "\n최철주 \xb7 서경희의 아들\n1988년 3월 출생\n#ENFJ\n마음이 따뜻한 다정함을 품은 소년 ☺️",
-                        brideContent: "\n장 실 \xb7 성명희의 딸\n1993년 11월 출생\n#ISFJ\n음악을 사랑하는 감성 소녀 🎶",
+                        groomContent: "\n최철주 \xb7 서경희의 아들\n#ENFJ",
+                        brideContent: "\n장 실 \xb7 성명희의 딸\n#ISFJ",
                     },
                     q = [
                         {
                             cardId: 0,
                             fileId: "cover",
                             category: "cover",
-                            originFile: "/images/main.jpg"
-                                // "seoul" === t || "dubai" === t
-                                //     ? "https://hellomybrand.com/wed/images/sample/cover/".concat(t, "-1.jpg")
-                                //     : "https://hellomybrand.com/wed/images/sample/cover/".concat(t, ".jpg"),
+                            originFile: "/images/main.jpg",
+                            // "seoul" === t || "dubai" === t
+                            //     ? "https://hellomybrand.com/wed/images/sample/cover/".concat(t, "-1.jpg")
+                            //     : "https://hellomybrand.com/wed/images/sample/cover/".concat(t, ".jpg"),
                         },
                         {
                             cardId: 0,
@@ -658,15 +658,15 @@
                             cardId: 0,
                             fileId: "about-groom",
                             category: "about-groom",
-                            originFile: "/images/child-groom.png",
-                            thumbFile: "/images/child-groom.png",
+                            originFile: "/images/about/groom.jpg",
+                            thumbFile: "/images/about/groom.jpg",
                         },
                         {
                             cardId: 0,
                             fileId: "about-bride",
                             category: "about-bride",
-                            originFile: "/images/child-bride.png",
-                            thumbFile: "/images/child-bride.png",
+                            originFile: "/images/about/bride.jpg",
+                            thumbFile: "/images/about/bride.jpg",
                         },
                         {
                             cardId: 0,
@@ -678,7 +678,9 @@
                             cardId: 0,
                             fileId: "quote",
                             category: "quote",
-                            originFile: "https://hellomybrand.com/wed/images/sample/ending-3.jpg",
+                            originFile:
+                                // "https://hellomybrand.com/wed/images/sample/ending-3.jpg",
+                                "/images/epilogue.jpg",
                         },
                         {
                             cardId: 0,
@@ -690,25 +692,37 @@
                             cardId: 0,
                             fileId: "timeline-1",
                             category: "timeline-1",
-                            originFile: "https://hellomybrand.com/wed/images/sample/timeline/timline-1.png",
+                            originFile: "/images/timeline/timeline-1.png",
                         },
                         {
                             cardId: 0,
                             fileId: "timeline-2",
                             category: "timeline-2",
-                            originFile: "https://hellomybrand.com/wed/images/sample/timeline/timline-2.png",
+                            originFile: "/images/timeline/timeline-2.png",
                         },
                         {
                             cardId: 0,
                             fileId: "timeline-3",
                             category: "timeline-3",
-                            originFile: "https://hellomybrand.com/wed/images/sample/timeline/timline-3.png",
+                            originFile: "/images/timeline/timeline-3.png",
                         },
                         {
                             cardId: 0,
                             fileId: "timeline-4",
                             category: "timeline-4",
-                            originFile: "https://hellomybrand.com/wed/images/sample/timeline/timline-4.png",
+                            originFile: "/images/timeline/timeline-4.png",
+                        },
+                        {
+                            cardId: 0,
+                            fileId: "timeline-5",
+                            category: "timeline-5",
+                            originFile: "/images/timeline/timeline-5.png",
+                        },
+                        {
+                            cardId: 0,
+                            fileId: "timeline-6",
+                            category: "timeline-6",
+                            originFile: "/images/timeline/timeline-6.png",
                         },
                         {
                             cardId: 0,
@@ -1149,35 +1163,51 @@
                 ep = [
                     {
                         id: 0,
-                        badge: "16년 7월, 광주",
-                        title: "☕️ 운명 같은 첫 인연",
-                        content: "우연히 뜻하지 않은 곳에서\n만나 첫눈에 반한 우리",
+                        badge: "88년 봄",
+                        title: "☺️ 윤성의 등장",
+                        content: "마음이 따뜻한 다정함을 품은 소년 ",
                         sequence: 0,
                         contentId: "1",
                     },
                     {
                         id: 1,
-                        badge: "연애 기간 3,400일",
-                        title: " \uD83D\uDC95 행복했던 9년 너머의 날들",
-                        content: "항상 대화와 웃음이 머물던\n여러 계절들의 우리",
+                        badge: "93년 가을",
+                        title: "🎶 누리의 등장",
+                        content: "음악을 사랑하는 감성 소녀 ",
                         sequence: 1,
                         contentId: "2",
                     },
                     {
                         id: 2,
-                        badge: "첫 데이트 장소에서",
-                        title: "\uD83D\uDC8D 프로포즈",
-                        content: "우연이 겹치면,그것은 운명이라 하죠.\n서로의 세계를 만나\n하나의 사랑이 되었습니다.",
+                        badge: "16년 7월, 광주",
+                        title: "☕️ 운명 같은 첫 인연",
+                        content: "우연히 뜻하지 않은 곳에서\n만나 첫눈에 반한 우리",
                         sequence: 2,
                         contentId: "3",
                     },
                     {
                         id: 3,
+                        badge: "연애 기간 3,400일",
+                        title: " \uD83D\uDC95 행복했던 9년 너머의 날들",
+                        content: "항상 대화와 웃음이 머물던\n여러 계절들의 우리",
+                        sequence: 3,
+                        contentId: "4",
+                    },
+                    {
+                        id: 4,
+                        badge: "첫 데이트 장소에서",
+                        title: "\uD83D\uDC8D 프로포즈",
+                        content: "우연이 겹치면,그것은 운명이라 하죠.\n서로의 세계를 만나\n하나의 사랑이 되었습니다.",
+                        sequence: 4,
+                        contentId: "5",
+                    },
+                    {
+                        id: 5,
                         badge: "25년 11월 29일, 광주",
                         title: "\uD83D\uDC70‍♀️\uD83E\uDD35 웨딩데이",
                         content: "이제는 둘이 아닌\n하나로 걷기 시작하는 날",
-                        sequence: 3,
-                        contentId: "4",
+                        sequence: 5,
+                        contentId: "6",
                     },
                 ],
                 eh = {
@@ -1218,7 +1248,7 @@
                 ey = {
                     cardId: 0,
                     content:
-                        '<p className="gsap-text" className="gsap-text" className="gsap-text" style="text-align: center"><span className="gsap-text" className="gsap-text" className="gsap-text" style="color: #fff">"당신은 내가 더 좋은 사람이고 싶게 만들어요."</span></p><br /><p className="gsap-text" className="gsap-text" className="gsap-text" style="text-align: center"><span className="gsap-text" className="gsap-text" className="gsap-text" style="color: #fff">- 영화 \'이보다 더 좋을 순 없다\' 중</span></p>',
+                        '<p className="gsap-text" className="gsap-text" className="gsap-text" style="text-align: center"><span className="gsap-text" className="gsap-text" className="gsap-text" style="color: #000">"당신은 내가 더 좋은 사람이고 싶게 만들어요."</span></p><br /><p className="gsap-text" className="gsap-text" className="gsap-text" style="text-align: center"><span className="gsap-text" className="gsap-text" className="gsap-text" style="color: #000">- 영화 \'이보다 더 좋을 순 없다\' 중</span></p>',
                     isImageUploaded: !0,
                     isGradation: !0,
                 },
