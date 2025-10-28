@@ -11845,8 +11845,9 @@
                     [C, j] = (0, o.useState)(16),
                     b = (0, o.useCallback)(() => {
                         let e = {
+                            // 네이버지도 옵션 설정
                             center: new window.naver.maps.LatLng(u.lat, u.lng),
-                            zoom: k.zoomLevel + 16,
+                            zoom: k.zoomLevel + 14,
                             mapTypeId: k.isSkyView ? naver.maps.MapTypeId.HYBRID : naver.maps.MapTypeId.NORMAL,
                             draggable: !k.isZoomLocked,
                             disableKineticPan: k.isZoomLocked,
@@ -11856,7 +11857,7 @@
                             disableDoubleTapZoom: k.isZoomLocked,
                             disableTwoFingerTapZoom: k.isZoomLocked,
                         };
-                        if ((j(k.zoomLevel + 16), x.current)) {
+                        if ((j(k.zoomLevel + 14), x.current)) {
                             a.current = new window.naver.maps.Map(x.current, e);
                             let s = new naver.maps.Marker({
                                 position: new naver.maps.LatLng(u.lat, u.lng),
@@ -11888,7 +11889,7 @@
                         a.current && a.current.setZoom(C);
                     }, [C]),
                     (0, o.useEffect)(() => {
-                        a.current && a.current.setZoom(k.zoomLevel + 16);
+                        a.current && a.current.setZoom(k.zoomLevel + 14);
                     }, [k.zoomLevel]),
                     (0, o.useEffect)(() => {
                         a.current &&

@@ -594,7 +594,7 @@
                         address: (0, _.nI)({ id: t }).address,
                         lat: 35.141799,
                         lng: 126.849515,
-                        contact: "010-1234-5678",
+                        contact: "062-375-4991",
                     },
                     M = {
                         cardId: 0,

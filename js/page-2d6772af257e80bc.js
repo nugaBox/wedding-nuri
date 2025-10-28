@@ -594,7 +594,7 @@
                         address: (0, _.nI)({ id: t }).address,
                         lat: 35.141799,
                         lng: 126.849515,
-                        contact: "010-1234-5678",
+                        contact: "062-375-4991",
                     },
                     M = {
                         cardId: 0,
@@ -968,7 +968,7 @@
                     isIcon: !0,
                     mapType: "default",
                     isToolAvailable: !0,
-                    isZoomLocked: !0,
+                    isZoomLocked: 0,
                     zoomLevel: 0,
                     isSkyView: !1,
                 },
@@ -978,7 +978,7 @@
                     {
                         id: 0,
                         content:
-                            '<p className="gsap-text"><span className="gsap-text">내비게이션 : \'복된교회\' 또는  \'복된장로교회\'검색</span></p><p className="gsap-text"><span className="gsap-text">광주 서구 월암신기길 146-1 복된교회</span></p>',
+                            '<p className="gsap-text"><strong><span className="gsap-text">광주 서구 월암신기길 146-1 복된교회</span></strong></p><p className="gsap-text"><span className="gsap-text">내비게이션 : \'복된교회\' 또는  \'복된장로교회\'검색</span></p>',
                         sequence: 0,
                         transportationId: "car",
                     },
