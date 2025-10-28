@@ -6,12 +6,12 @@
         },
         73277: function (C, e, n) {
             "use strict";
-            (n.r(e),
+            n.r(e),
                 n.d(e, {
                     default: function () {
                         return L;
                     },
-                }));
+                });
             var t = n(57437);
             function s() {
                 return (0, t.jsxs)(t.Fragment, {
@@ -31,7 +31,7 @@
                             }),
                         }),
                         (0, t.jsx)("div", {
-                            className: "block md:hidden",
+                            className: "block hidden",
                             children: (0, t.jsx)("svg", {
                                 width: 102,
                                 height: 49,
@@ -60,9 +60,9 @@
         },
     },
     function (C) {
-        (C.O(0, [2971, 2117, 1744], function () {
+        C.O(0, [2971, 2117, 1744], function () {
             return C((C.s = 60612));
         }),
-            (_N_E = C.O()));
+            (_N_E = C.O());
     },
 ]);

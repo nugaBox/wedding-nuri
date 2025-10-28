@@ -57,7 +57,7 @@
                 return (0, t.jsxs)(t.Fragment, {
                     children: [
                         (0, t.jsx)("div", {
-                            className: "block md:hidden",
+                            className: "block hidden",
                             children: (0, t.jsxs)("svg", {
                                 width: 36,
                                 height: 40,
@@ -93,8 +93,7 @@
                                                 width: "35.6",
                                                 height: 40,
                                                 fill: "white",
-                                                transform:
-                                                    "translate(0.199219)",
+                                                transform: "translate(0.199219)",
                                             }),
                                         }),
                                     }),
@@ -138,8 +137,7 @@
                                                 width: "48.7671",
                                                 height: "54.7945",
                                                 fill: "white",
-                                                transform:
-                                                    "translate(0.617188)",
+                                                transform: "translate(0.617188)",
                                             }),
                                         }),
                                     }),
@@ -162,8 +160,7 @@
             function h(C) {
                 let { paymentInfo: l } = C;
                 return (0, t.jsx)("div", {
-                    className:
-                        "flex-col w-full space-y-4 text-center py-11 bg-white md:rounded-b-3xl",
+                    className: "flex-col w-full space-y-4 text-center py-11 bg-white md:rounded-b-3xl",
                     children: (() => {
                         switch (l && l.orderId) {
                             case "gohyoby":
@@ -192,14 +189,12 @@
                     (0, t.jsxs)("a", {
                         href: "https://nugabox.io",
                         target: "_blank",
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-4",
+                        className: "flex flex-col items-center justify-center w-full gap-4",
                         children: [(0, t.jsx)(e.Z, {}), (0, t.jsx)(i.Z, {})],
                     }),
                 r = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://linktr.ee/gohyoby",
@@ -212,8 +207,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
@@ -223,8 +217,7 @@
                     }),
                 x = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://litt.ly/posepose?utm_source=google&utm_medium=footer&utm_campaign=tog_logo",
@@ -237,8 +230,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
@@ -248,8 +240,7 @@
                     }),
                 c = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://www.instagram.com/pino.card/profilecard",
@@ -262,8 +253,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
@@ -273,8 +263,7 @@
                     }),
                 n = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://www.instagram.com/likecrazy_card",
@@ -287,8 +276,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
@@ -298,8 +286,7 @@
                     }),
                 d = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://www.instagram.com/its_moment.card",
@@ -312,8 +299,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
@@ -323,8 +309,7 @@
                     }),
                 V = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://www.instagram.com/tofrom.archive",
@@ -337,8 +322,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
@@ -348,8 +332,7 @@
                     }),
                 H = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://www.instagram.com/artevo.design",
@@ -362,8 +345,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
@@ -373,8 +355,7 @@
                     }),
                 j = () =>
                     (0, t.jsxs)("div", {
-                        className:
-                            "flex flex-col items-center justify-center w-full gap-y-2.5",
+                        className: "flex flex-col items-center justify-center w-full gap-y-2.5",
                         children: [
                             (0, t.jsx)("a", {
                                 href: "https://www.instagram.com/pie.co.kr",
@@ -387,8 +368,7 @@
                                 className: "space-y-2.5",
                                 children: [
                                     (0, t.jsx)("span", {
-                                        className:
-                                            "font-suit opacity-35 text-sm",
+                                        className: "font-suit opacity-35 text-sm",
                                         children: "with",
                                     }),
                                     (0, t.jsx)(m, {}),
