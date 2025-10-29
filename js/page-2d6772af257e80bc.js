@@ -541,7 +541,7 @@
                         isBackgroundEffect: !0,
                         isScrollEffect: !0,
                         fontFamily: "suit",
-                        fontSize: "0.95em",
+                        fontSize: "1.1em",
                         themeId: (0, _.y_)({ id: t }),
                         isSameFont: !1,
                     },
@@ -1200,7 +1200,7 @@
                 ey = {
                     cardId: 0,
                     content:
-                        '<p className="gsap-text" style="text-align: center; font-size:1.7rem;"><span className="gsap-text font-handwriting" style="color: #b7978c">사랑으로 시작해, 믿음으로 이어가겠습니다.</span><br /><span className="gsap-text font-handwriting" style="color: #b7978c;">작은 손을 맞잡고 큰 사랑을 배워가겠습니다.</span><br /><span className="gsap-text font-handwriting" style="color: #b7978c; font-weight: bold;">최윤성 💛 장누리 드림</span></p>',
+                        '<p className="gsap-text" style="text-align: center; font-size:1.6rem;"><span className="gsap-text font-handwriting" style="color: #b7978c">사랑으로 시작해, 믿음으로 이어가겠습니다.</span><br /><span className="gsap-text font-handwriting" style="color: #b7978c;">작은 손을 맞잡고 큰 사랑을 배워가겠습니다.</span><br /><span className="gsap-text font-handwriting" style="color: #b7978c; font-weight: bold;">최윤성 💛 장누리 드림</span></p>',
                     isImageUploaded: !0,
                     isGradation: !0,
                 },

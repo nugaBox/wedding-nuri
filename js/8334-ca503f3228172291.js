@@ -2845,7 +2845,7 @@
                                 ref: e,
                                 style: { backgroundColor: t && t.theme0 },
                                 children: (0, s.jsxs)("div", {
-                                    className: "gsap-div min-h-96 h-full flex flex-col items-center justify-center py-16 leading-snug",
+                                    className: "gsap-div min-h-96 h-full flex flex-col items-center justify-center py-16 leading-snug text-lg",
                                     children: [
                                         (0, s.jsx)("p", {
                                             className: (0, M.Z)("tracking-wider gsap-opacity", {
@@ -4825,8 +4825,8 @@
                                           children: [
                                               (0, s.jsx)(tj.o4, {
                                                   about: "second",
-                                                  className: "bg-white border-none rounded-lg data-[state=open]:rounded-b-none p-4 text-sm text-tog-444 h-[3.75rem] hover:bg-white",
-                                                  children: "신랑측에게",
+                                                  className: "bg-white border-none rounded-lg data-[state=open]:rounded-b-none p-4 text-base text-tog-444 h-[3.75rem] hover:bg-white",
+                                                  children: "🤵🏻 신랑측에게",
                                               }),
                                               (0, s.jsx)(tj.vF, {
                                                   className: "px-3 py-4 rounded-b-lg",
@@ -4892,8 +4892,8 @@
                                           children: [
                                               (0, s.jsx)(tj.o4, {
                                                   about: "second",
-                                                  className: "bg-white border-none rounded-lg data-[state=open]:rounded-b-none p-4 text-sm text-tog-444 h-[3.75rem] hover:bg-white",
-                                                  children: "신부측에게",
+                                                  className: "bg-white border-none rounded-lg data-[state=open]:rounded-b-none p-4 text-base text-tog-444 h-[3.75rem] hover:bg-white",
+                                                  children: "👰🏻‍♀️ 신부측에게",
                                               }),
                                               (0, s.jsx)(tj.vF, {
                                                   className: "px-3 py-4 rounded-b-lg",
@@ -4980,7 +4980,7 @@
                         a = (0, tC.k)(e => e.honeymoonFund),
                         i = "horizontal" === a.designType ? tF : "vertical" === a.designType ? tV : tB;
                     return (0, s.jsxs)("div", {
-                        className: "text-[0.875em] font-normal space-y-2",
+                        className: "text-sm font-normal space-y-2",
                         children: [
                             "groom" === t
                                 ? a.groomAccount &&
@@ -5202,7 +5202,7 @@
                                                             children: n,
                                                         }),
                                                         (0, s.jsx)("span", {
-                                                            className: "text-xs text-tog-444 tracking-wider",
+                                                            className: "text-base text-tog-444 tracking-wider",
                                                             children: r,
                                                         }),
                                                     ],
@@ -5328,7 +5328,7 @@
                         ref: n,
                         style: { backgroundColor: t && t.theme0, color: m._4 },
                         children: (0, s.jsxs)("div", {
-                            className: "gsap-div flex flex-col justify-center h-full min-h-96 py-20 px-4",
+                            className: "gsap-div flex flex-col justify-center h-full min-h-96 py-20 px-4 text-lg",
                             style: { opacity: 0.9 },
                             children: [
                                 (0, s.jsx)("div", {
@@ -6415,6 +6415,7 @@
                                             "<br />" !== t.content &&
                                             (0, s.jsx)("div", {
                                                 className: "py-16 px-11 text-white gsap-text",
+                                                style: { background: "linear-gradient(180deg, #e8dedb, transparent)" },
                                                 children: (0, j.ZP)(t.content),
                                             }),
                                     ],
@@ -8520,7 +8521,7 @@
                     (0, s.jsx)("div", {
                         ref: e,
                         children: (0, s.jsxs)("div", {
-                            className: "flex flex-col items-center justify-center h-full py-20 gsap-div min-h-80",
+                            className: "flex flex-col items-center justify-center h-full py-20 gsap-div min-h-80 text-lg",
                             style: { backgroundColor: o && o.theme1 },
                             children: [
                                 (0, s.jsx)("p", {
@@ -8647,7 +8648,7 @@
                         o = (0, T.n)(e => e.coupleInfo),
                         c = (0, r.l)(e => e.isZoomed);
                     return (0, s.jsxs)("div", {
-                        className: "flex flex-col items-center bg-white rounded-xl shadow-md p-8 space-y-4 w-full h-full text-sm",
+                        className: "flex flex-col items-center bg-white rounded-xl shadow-md p-8 space-y-4 w-full h-full text-base",
                         children: [
                             i
                                 ? (0, s.jsxs)("div", {
