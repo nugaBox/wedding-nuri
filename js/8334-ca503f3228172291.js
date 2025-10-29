@@ -8081,7 +8081,7 @@
                     },
                     eF = {
                         content:
-                            '<p className="gsap-text" style="text-align: center"><span className="gsap-text" style="color: #b7978c">사랑으로 시작해, 믿음으로 이어가겠습니다.</span></p><br /><p className="gsap-text" style="text-align: center"><span className="gsap-text" style="color: #b7978c; font-weight: bold;">작은 손을 맞잡고 큰 사랑을 배워가겠습니다.</span></p>',
+                            '<p className="gsap-text" style="text-align: center"><span className="gsap-text font-handwriting" style="color: #b7978c">사랑으로 시작해, 믿음으로 이어가겠습니다.</span></p><br /><p className="gsap-text" style="text-align: center"><span className="gsap-text font-handwriting" style="color: #b7978c;">작은 손을 맞잡고 큰 사랑을 배워가겠습니다.</span></p><br /><p className="gsap-text" style="text-align: center"><span className="gsap-text font-handwriting" style="color: #b7978c; font-weight: bold;">최윤성 💛 장누리 드림</span></p>',
                         isImageUploaded: !1,
                     };
                 return (0, s.jsxs)(s.Fragment, {

@@ -3399,6 +3399,15 @@ body {
 .\[translate\:0_0\] {
     translate: 0 0;
 }
+.font-handwriting {
+    font-family: GangwonEducationSaeum;
+}
+@font-face {
+    font-family: GangwonEducationSaeum;
+    src: url(/fonts/GangwonEduSaeeum_OTFMediumA.woff) format("woff");
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
     font-family: GowunDodum;
     src: url(/fonts/subset/GowunDodum-Regular.woff2) format("woff2");
